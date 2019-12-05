@@ -1,0 +1,15 @@
+snippet main "Basic C Style" b
+int main(${1:void}) {
+	$0
+
+	return 0;
+}
+endsnippet
+
+snippet println "print newline" b
+printf("$1\n"$2);$0
+endsnippet
+
+snippet inc "include" b
+#include <${1:stdio}.h>$0
+endsnippet
