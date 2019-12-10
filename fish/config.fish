@@ -12,6 +12,8 @@ alias tmuxconf "vim ~/.tmux.conf"
 alias gcmg "gcc main.c -g -o main"
 alias gdm "gdb main"
 
+alias goset "cd ~/dotfiles"
+
 stty -ixon
 
 if [ $SHLVL = 1 ]
@@ -35,6 +37,12 @@ function cz
 	set -l directory (fd -i -td | fzf +m)
 	echo "$directory"
 	cd "$directory"
+end
+
+function ch
+    set -l directory (fd -i -td . ~/ | fzf +m)
+    echo "$directory"
+    cd "$directory"
 end
 
 function javar
