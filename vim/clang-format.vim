@@ -13,3 +13,5 @@ autocmd FileType c,cpp,objc map <buffer><Leader>x <Plug>(operator-clang-format)
 nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 autocmd FileType c ClangFormatAutoEnable
+
+let g:clang_format#code_style = "llvm"
