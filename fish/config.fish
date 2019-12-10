@@ -9,8 +9,10 @@ alias eixt "exit"
 alias vm "vim main.*"
 alias tmuxconf "vim ~/.tmux.conf"
 
+alias gcm "gcc main.c -o main"
 alias gcmg "gcc main.c -g -o main"
 alias gdm "gdb main"
+alias valm "valgrind ./main"
 
 alias goset "cd ~/dotfiles"
 
