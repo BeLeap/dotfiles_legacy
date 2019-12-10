@@ -10,6 +10,7 @@ so ~/dotfiles/vim/others.vim
 so ~/dotfiles/vim/vim-coc.vim
 so ~/dotfiles/vim/snippets.vim
 so ~/dotfiles/vim/airline.vim
+so ~/dotfiles/vim/clang-format.vim
 
 autocmd VimEnter *
   \  if !empty(filter(copy(g:plugs), '!isdirectory(v:val.dir)'))

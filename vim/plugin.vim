@@ -11,4 +11,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'townk/vim-autoclose'
+Plug 'rhysd/vim-clang-format'
+Plug 'kana/vim-operator-user'
 call plug#end()
