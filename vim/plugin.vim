@@ -10,4 +10,5 @@ Plug 'djoshea/vim-autoread'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'townk/vim-autoclose'
 call plug#end()
