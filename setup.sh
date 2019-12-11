@@ -1,6 +1,7 @@
 #!/bin/sh
 
 git clone https://github.com/BeLeap/dotfiles ~/dotfiles
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 mkdir ~/.config
 mkdir ~/.config/fish
@@ -19,3 +20,4 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 yes | ~/.fzf/install
 
 vim +PlugInstall +qall
+~/.tmux/plugins/tpm/bin/install_plugins
