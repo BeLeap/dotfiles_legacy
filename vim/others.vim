@@ -15,3 +15,5 @@ syntax on
 hi Visual term=reverse cterm=reverse guibg=Grey
 set autoread
 set confirm
+nnoremap q: <nop>
+nnoremap Q <nop>
