@@ -6,9 +6,9 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 mkdir ~/.config
 mkdir ~/.config/fish
 
-ln -s ./vim/.vimrc ~/.vimrc
-ln -s ./fish/config.fish ~/.config/fish/config.fish
-ln -s ./tmux/.tmux.conf ~/.tmux.conf
+ln -s ~/dotfiles/vim/.vimrc ~/.vimrc
+ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/dotfiles/tmux/.tmux.conf ~/.tmux.conf
 
 sudo apt update
 sudo apt upgrade -y
