@@ -3,6 +3,8 @@
 git clone https://github.com/BeLeap/dotfiles ~/dotfiles
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
+echo "alias fd \"fdfind\"" >> ~/dotfiles/fish/alias.fish #will be work over ubuntu 19.04
+
 mkdir ~/.config
 mkdir ~/.config/fish
 
