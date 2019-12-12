@@ -13,3 +13,7 @@ alias gdm "gdb main"
 alias valm "valgrind ./main"
 
 alias goset "cd ~/dotfiles"
+
+alias spac "sudo pacman"
+alias spac-install "sudo pacman -S"
+alias spac-update "sudo pacman -Syu"
