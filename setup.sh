@@ -12,7 +12,7 @@ ln -s ./tmux/.tmux.conf ~/.tmux.conf
 
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y fish tmux vim
+sudo apt install -y fish tmux vim fd-find #will be work over ubuntu 19.04
 
 chsh -s /usr/bin/fish $USER
 
