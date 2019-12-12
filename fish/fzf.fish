@@ -20,7 +20,7 @@ end
 
 # for Windows Subsystem for Linux
 function cwh
-    set -l directory (fd -i td . /mnt/c/Users/ckdtj/ | fzf +m)
+    set -l directory (fd -i -td . /mnt/c/Users/ckdtj/ | fzf +m)
     echo "$directory"
     cd "$directory"
 end
