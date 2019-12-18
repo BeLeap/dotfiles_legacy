@@ -17,6 +17,7 @@ alias goset "cd ~/dotfiles"
 alias spac "sudo pacman"
 alias spac-install "sudo pacman -S"
 alias spac-update "sudo pacman -Syu"
+alias spac-remove "sudo pacman -R"
 
 # for Windows Subsystem Linux
 alias guniv "cd /mnt/c/Users/ckdtj/University/"
