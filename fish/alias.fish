@@ -18,6 +18,7 @@ alias spac "sudo pacman"
 alias spac-install "sudo pacman -S"
 alias spac-update "sudo pacman -Syu"
 alias spac-remove "sudo pacman -R"
+alias spac-clean "sudo pacman -Rns (pacman -Qtdq)"
 
 # for Windows Subsystem Linux
 alias guniv "cd /mnt/c/Users/ckdtj/University/"
