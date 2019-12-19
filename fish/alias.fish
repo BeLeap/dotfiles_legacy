@@ -20,5 +20,7 @@ alias spac-update "sudo pacman -Syu"
 alias spac-remove "sudo pacman -R"
 alias spac-clean "sudo pacman -Rns (pacman -Qtdq)"
 
+alias server "ssh ckdtj1012@ckdtj.kro.kr"
+
 # for Windows Subsystem Linux
 alias guniv "cd /mnt/c/Users/ckdtj/University/"
