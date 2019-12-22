@@ -14,3 +14,7 @@ inoremap <M-j> <down>
 inoremap <M-k> <up>
 inoremap <M-l> <right>
 inoremap <leader>A <ESC>A
+inoremap <leader>cf <ESC>:ClangFormat<CR>i
+nnoremap <leader>cf :ClangFormat<CR>
+inoremap <leader>rf <ESC>:RustFmt<CR>i
+nnoremap <leader>rf :RustFmt<CR>

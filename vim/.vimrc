@@ -6,3 +6,4 @@ so ~/dotfiles/vim/vim-coc.vim
 so ~/dotfiles/vim/snippets.vim
 so ~/dotfiles/vim/airline.vim
 so ~/dotfiles/vim/clang-format.vim
+so ~/dotfiles/vim/js-beautifier.vim

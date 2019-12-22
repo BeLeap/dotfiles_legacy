@@ -102,7 +102,10 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "
 let g:coc_global_extensions = [
+            \"coc-json",
             \"coc-snippets",
             \"coc-java",
-            \"coc-python"
+            \"coc-python",
+            \"coc-tsserver",
+            \"coc-rls"
             \]

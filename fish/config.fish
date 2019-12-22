@@ -4,3 +4,4 @@ source ~/dotfiles/fish/bash.fish
 source ~/dotfiles/fish/tmux.fish
 source ~/dotfiles/fish/others.fish
 source ~/dotfiles/fish/git.fish
+source ~/dotfiles/fish/rust.fish

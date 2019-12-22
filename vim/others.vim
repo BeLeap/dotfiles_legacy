@@ -8,7 +8,6 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
 set laststatus=2
 set scrolloff=100
 set wildmenu
-set mouse=a
 set ignorecase
 set smartcase
 syntax on
@@ -17,3 +16,11 @@ set autoread
 set confirm
 nnoremap q: <nop>
 nnoremap Q <nop>
+inoremap ' ''<left>
+inoremap " ""<left>
+inoremap ( ()<left>
+inoremap { {}<left>
+inoremap [ []<left>
+inoremap (; ();<left><left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
