@@ -1,0 +1,21 @@
+{
+    "tasks": [
+        {
+            "label": "Build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "${file}",
+                "-o",
+                "${fileBasenameNoExtension}"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Run",
+            "type": "shell",
+            "command": "${workspaceFolder}/${fileBasenameNoExtension}"
+        }
+    ],
+    "version": "2.0.0"
+}
