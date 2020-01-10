@@ -4,6 +4,8 @@ function vs
     vim src/"$argv"
 end
 
+alias c.. "cd ../"
+
 alias vimrc "vim ~/.vimrc"
 alias fishrc "vim ~/.config/fish/config.fish"
 alias sofish "source ~/.config/fish/config.fish"

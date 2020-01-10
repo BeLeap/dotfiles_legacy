@@ -14,4 +14,5 @@ Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-operator-user'
 Plug 'beautify-web/js-beautify'
 Plug 'rust-lang/rust.vim'
+Plug 'pboettch/vim-cmake-syntax'
 call plug#end()
