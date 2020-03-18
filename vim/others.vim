@@ -16,14 +16,3 @@ set autoread
 set confirm
 nnoremap q: <nop>
 nnoremap Q <nop>
-inoremap ' ''<left>
-inoremap " ""<left>
-inoremap ( ()<left>
-inoremap { {}<left>
-inoremap {} {}
-inoremap () ()
-inoremap [ []<left>
-inoremap (; ();<left><left>
-inoremap (<CR> (<CR>)<ESC>O
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O

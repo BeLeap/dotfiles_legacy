@@ -1,4 +1,5 @@
 alias v "vim"
+alias p "python"
 
 function vs
     vim src/"$argv"

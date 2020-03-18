@@ -15,4 +15,6 @@ Plug 'kana/vim-operator-user'
 Plug 'beautify-web/js-beautify'
 Plug 'rust-lang/rust.vim'
 Plug 'pboettch/vim-cmake-syntax'
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
 call plug#end()
