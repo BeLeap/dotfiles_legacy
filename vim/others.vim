@@ -16,3 +16,4 @@ set autoread
 set confirm
 nnoremap q: <nop>
 nnoremap Q <nop>
+set mouse=a
