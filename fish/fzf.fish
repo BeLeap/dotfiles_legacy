@@ -24,3 +24,11 @@ function cwh
     echo "$directory"
     cd "$directory"
 end
+
+function vwh
+    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m)
+    echo "$file"
+    if [ ! -z "$file" ]
+        vim "$file"
+    end
+end
