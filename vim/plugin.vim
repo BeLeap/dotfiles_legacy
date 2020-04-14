@@ -8,7 +8,6 @@ Plug 'Quramy/tsuquyomi'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'djoshea/vim-autoread'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-operator-user'
@@ -17,4 +16,5 @@ Plug 'rust-lang/rust.vim'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
+Plug 'lervag/vimtex'
 call plug#end()

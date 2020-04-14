@@ -8,3 +8,4 @@ so ~/dotfiles/vim/airline.vim
 so ~/dotfiles/vim/clang-format.vim
 so ~/dotfiles/vim/js-beautifier.vim
 so ~/dotfiles/vim/copy-paste.vim
+so ~/dotfiles/vim/latex.vim
