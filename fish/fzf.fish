@@ -19,14 +19,14 @@ function ch
     end
 end
 
-function vgr
+function vg
 	set -l file (fd -i . (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
 	if [ ! -z "$file" ]
 		vim "$file"
 	end
 end
 
-function cgr
+function cg
 	set -l directory (fd -i -td . (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --preview "exa -1 --color=always {}")
 	if [ ! -z "$directory" ]
 		vim "$directory"
