@@ -8,7 +8,7 @@ Plug 'Quramy/tsuquyomi'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'djoshea/vim-autoread'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips'
+"Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-operator-user'

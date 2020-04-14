@@ -5,6 +5,10 @@ function vs
     vim src/"$argv"
 end
 
+function vm
+    vim "main.$argv"
+end
+
 alias c.. "cd ../"
 
 alias vimrc "vim ~/.vimrc"
@@ -12,7 +16,6 @@ alias fishrc "vim ~/.config/fish/config.fish"
 alias sofish "source ~/.config/fish/config.fish"
 alias clera "clear"
 alias eixt "exit"
-alias vm "vim main.*"
 alias tmuxconf "vim ~/.tmux.conf"
 
 alias gcm "gcc main.c -o main"
@@ -55,7 +58,16 @@ function rustcr
     ./"$file"
 end
 
-alias cargobr "cargo build; cargo run"
-
 # for Windows Subsystem Linux
 alias guniv "cd /mnt/c/Users/ckdtj/University/"
+
+# Rust commands
+alias ls "exa"
+alias ll "exa -l"
+alias lt "exa -l -T -L2"
+
+alias cat "bat"
+
+alias od "hexyl"
+
+alias grep "rg"

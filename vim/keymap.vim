@@ -5,8 +5,10 @@ inoremap <C-s> <ESC>:update<CR>
 nnoremap <C-s> :update<CR>
 inoremap <leader>O <ESC>O
 inoremap <leader>o <ESC>o
-nnoremap <leader>O O<ESC>
-nnoremap <leader>o o<ESC>
+nnoremap <leader>O O
+nnoremap <leader>o o
+nnoremap o o<ESC>
+nnoremap O O<ESC>
 inoremap <leader>u <ESC>:u<CR>i
 nnoremap <leader>u :u<CR>
 inoremap <M-h> <left> 

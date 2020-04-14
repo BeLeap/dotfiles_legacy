@@ -1,8 +1,8 @@
 function export
 	if [ $argv ]
-		set var (echo $argv | cut -f1 -d=)
-		set val (echo $argv | cut -f2 -d=)
-		set -g -x $var &val
+		set -l var1 (echo $argv | cut -f1 -d=)
+		set -l var2 (echo $argv | cut -f2 -d=)
+		set -g -x $var1 &var2
 	else
 		echo 'export var=value'
 	end
