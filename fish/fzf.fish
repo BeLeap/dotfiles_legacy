@@ -50,3 +50,17 @@ function fif
         echo "검색어를 입력해주세요"
     end
 end
+
+function fzf-bcd-widget -d 'cd backwards'
+	pwd | awk -v RS=/ '/\n/ {exit} {p=p $0 "/"; print p}' | tac | eval (__fzfcmd) +m --select-1 --exit-0 $FZF_BCD_OPTS | read -l result
+	[ "$result" ]; and cd $result
+	commandline -f repaint
+end
+
+function fco -d "Fuzzy-find and checkout a branch"
+  git branch --all | rg -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
+end
+
+function fcoc -d "Fuzzy-find and checkout a commit"
+  git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout "$result"
+end
