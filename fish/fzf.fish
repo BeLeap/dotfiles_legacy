@@ -1,6 +1,5 @@
 function vz
-	set -l file (fd -i | fzf -i +m --border --height 80% --extended --reverse --cycle --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
-	echo "$file"
+	set -l file (fd -i | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
 	if [ ! -z "$file" ]
 		vim "$file"
 	end
@@ -8,26 +7,35 @@ end
 
 function cz
 	set -l directory (fd -i -td | fzf -i +m --border --height 80% --extended --reverse --cycle --preview "exa -1 --color=always {}")
-	echo "$directory"
-	cd "$directory"
+        if [ ! -z "$directory" ]
+	    cd "$directory"
+        end
 end
 
 function ch
     set -l directory (fd -i -td . ~/ | fzf -i +m --border --height 80% --extended --reverse --cycle --preview "exa -1 --color=always {}")
-    echo "$directory"
-    cd "$directory"
+    if [ ! -z "$directory" ]
+        cd "$directory"
+    end
+end
+
+function vgr
+	set -l file (fd -i --full-path (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
+	if [ ! -z "$file" ]
+		vim "$file"
+	end
 end
 
 # for Windows Subsystem for Linux
 function cwh
     set -l directory (fd -i -td . /mnt/c/Users/ckdtj/ | fzf -i +m --border --height 80% --extended --reverse --cycle --preview "exa -1 --color=always {}")
-    echo "$directory"
-    cd "$directory"
+    if [ ! -z "$directory" ]
+        cd "$directory"
+    end
 end
 
 function vwh
-    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m --border --height 80% --extended --reverse --cycle --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
-    echo "$file"
+    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
     if [ ! -z "$file" ]
         vim "$file"
     end
