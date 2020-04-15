@@ -1,5 +1,6 @@
-alias v "vim"
-alias p "python"
+function v 
+    vim "$agrv"
+end
 
 function vs
     vim src/"$argv"
@@ -9,30 +10,29 @@ function vm
     vim "main.$argv"
 end
 
-alias c.. "cd ../"
+function c..
+    cd ../
+end
 
-alias vimrc "vim ~/.vimrc"
-alias fishrc "vim ~/.config/fish/config.fish"
-alias sofish "source ~/.config/fish/config.fish"
-alias clera "clear"
-alias eixt "exit"
-alias tmuxconf "vim ~/.tmux.conf"
+function vimrc 
+    vim ~/.vimrc
+end
+function fishrc 
+    vim ~/.config/fish/config.fish
+end
+function sofish 
+    source ~/.config/fish/config.fish
+end
+function tmuxconf 
+    vim ~/.tmux.conf
+end
 
-alias gcm "gcc main.c -o main"
-alias gcmg "gcc main.c -g -o main"
-alias gdm "gdb main"
-
-alias valm "valgrind ./main"
-
-alias goset "cd ~/dotfiles"
-
-alias spac "sudo pacman"
-alias spac-install "sudo pacman -S"
-alias spac-update "sudo pacman -Syu"
-alias spac-remove "sudo pacman -R"
-alias spac-clean "sudo pacman -Rns (pacman -Qtdq)"
-
-alias server "ssh ckdtj1012@ckdtj.kro.kr"
+function clera 
+    clear
+end
+function eixt 
+    exit
+end
 
 function ccr
     echo "$argv" > ~/.ccr.tmp
@@ -60,6 +60,7 @@ end
 
 # for Windows Subsystem Linux
 alias guniv "cd /mnt/c/Users/ckdtj/University/"
+alias start "cmd.exe /c start"
 
 # Rust commands
 alias ls "exa"
