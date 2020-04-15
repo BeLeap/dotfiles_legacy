@@ -1,2 +1,2 @@
 let g:tex_flavor='latex'
-let g:vimtex_latexmk_options='-auxdir=~/.aux -outdir=./'
+autocmd BufWritePost *.tex !rm *.aux *.fls *.log *.synctex.gz *.fdb_latexmk
