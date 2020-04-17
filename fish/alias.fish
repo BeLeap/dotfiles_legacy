@@ -1,7 +1,4 @@
-function v 
-    vim "$agrv"
-end
-
+alias v "vim"
 function vs
     vim src/"$argv"
 end
@@ -72,3 +69,5 @@ alias cat "bat"
 alias od "hexyl"
 
 alias grep "rg"
+
+alias ltclear "rm *.aux *.fdb_latexmk *.fls *.log *.synctex.gz"

@@ -1,5 +1,5 @@
 function vz
-	set -l file (fd -i | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
+	set -l file (fd -i | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100")
 	if [ ! -z "$file" ]
 		vim "$file"
 	end
@@ -20,7 +20,7 @@ function ch
 end
 
 function vg
-	set -l file (fd -i . (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
+	set -l file (fd -i . (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100")
 	if [ ! -z "$file" ]
 		vim "$file"
 	end
@@ -42,7 +42,7 @@ function cwh
 end
 
 function vwh
-    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {}")
+    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100")
     if [ ! -z "$file" ]
         vim "$file"
     end
