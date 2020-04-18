@@ -2,7 +2,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'jnurmine/Zenburn'
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'makerj/vim-pdf'
 Plug 'Quramy/tsuquyomi'
 Plug 'neovimhaskell/haskell-vim'
@@ -16,7 +16,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
-Plug 'lervag/vimtex'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'vim-latex/vim-latex'
 call plug#end()

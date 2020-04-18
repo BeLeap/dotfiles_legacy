@@ -1,7 +1,5 @@
-fish_vi_key_bindings
-
 function tm
 	touch main."$argv"
 end
 
-stty -ixon
+status --is-interactive;and stty -ixon

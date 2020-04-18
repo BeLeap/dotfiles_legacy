@@ -107,8 +107,7 @@ let g:coc_global_extensions = [
             \"coc-java",
             \"coc-python",
             \"coc-tsserver",
-            \"coc-rls",
-            \"coc-vimtex"
+            \"coc-rls"
             \]
 
 inoremap <silent><expr> <TAB>

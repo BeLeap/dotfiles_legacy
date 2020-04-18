@@ -70,4 +70,4 @@ alias od "hexyl"
 
 alias grep "rg"
 
-alias ltclear "rm *.aux *.fdb_latexmk *.fls *.log *.synctex.gz"
+alias ltclear "rm *.aux *.dvi *.log"
