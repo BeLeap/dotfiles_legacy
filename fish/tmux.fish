@@ -1,6 +1,6 @@
-if [ $SHLVL = 1 ]
-	cd
-	tmux
+if status is-interactive
+and not set -q TMUX
+    exec tmux
 end
 
 alias sotmux "tmux source ~/.tmux.conf"

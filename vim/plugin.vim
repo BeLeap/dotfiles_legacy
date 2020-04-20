@@ -19,4 +19,5 @@ Plug 'alvan/vim-closetag'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-latex/vim-latex'
+Plug 'vhda/verilog_systemverilog.vim'
 call plug#end()
