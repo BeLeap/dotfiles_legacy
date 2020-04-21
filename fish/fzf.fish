@@ -73,8 +73,13 @@ function fzf-bcd-widget -d 'cd backwards'
 	commandline -f repaint
 end
 
-function fco -d "Fuzzy-find and checkout a branch"
-  git branch --all | rg -v HEAD | string trim | fzf | read -l result; and git checkout "$result"
+function fbr -d "Fuzzy-find and checkout br"
+    set isgit (git rev-parse --is-inside-work-tree)
+    if test $isgit = "true"
+        set branch (git branch -a | fzf -i +m --border --height 80% --extended --reverse --cycle); and git checkout $branch
+    else
+        echo "Not a git repository"
+    end
 end
 
 function fcoc -d "Fuzzy-find and checkout a commit"
