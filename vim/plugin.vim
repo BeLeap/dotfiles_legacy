@@ -11,7 +11,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'honza/vim-snippets'
 Plug 'rhysd/vim-clang-format'
 Plug 'kana/vim-operator-user'
-Plug 'beautify-web/js-beautify'
 Plug 'rust-lang/rust.vim'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'jiangmiao/auto-pairs'
@@ -20,4 +19,5 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-latex/vim-latex'
 Plug 'vhda/verilog_systemverilog.vim'
+Plug 'sheerun/vim-polyglot'
 call plug#end()

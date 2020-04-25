@@ -107,6 +107,9 @@ let g:coc_global_extensions = [
             \"coc-java",
             \"coc-python",
             \"coc-tsserver",
+            \"coc-tslint",
+            \"coc-eslint",
+            \"coc-css",
             \"coc-rls"
             \]
 
