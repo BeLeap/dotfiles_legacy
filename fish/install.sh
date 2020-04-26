@@ -6,18 +6,16 @@ cd ~/.config
 mkdir fish
 echo "[LINK] fish config"
 ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
-echo "[INSTALL] fish, git, curl(apt)"
-sudo apt install fish git curl -y
+echo "[INSTALL] fish, git, curl, make(apt)"
+sudo apt install fish git curl make -y
 echo "[CHANGE_DIR] home"
 cd ~/
-echo "[INSTALL] fzf(git)"
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
+echo "[INSTALL] fzf(apt)"
+sudo apt install fzf -y
 echo "[CHANGE_DIR] home"
 cd ~/
-echo "[INSTALL] rustup(curl)"
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-set -gx PATH ~/.cargo/bin $PATH
+echo "[INSTALL] cargo(apt)"
+sudo apt install cargo -y
 echo "[INSTALL] exa(cargo)"
 cargo install exa
 echo "[INSTALL] ripgrep(cargo)"
