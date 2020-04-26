@@ -64,7 +64,7 @@ alias ls "exa"
 alias ll "exa -l"
 alias lt "exa -l -T -L2"
 
-alias cat "bat"
+alias cat "batcat"
 
 alias od "hexyl"
 

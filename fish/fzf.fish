@@ -1,5 +1,5 @@
 function vz
-	set -l file (fd -i | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
+	set -l file (fd -i | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "batcat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
 	if [ ! -z "$file" ]
 		vim "$file"
 	end
@@ -20,7 +20,7 @@ function ch
 end
 
 function vg
-	set -l file (fd -i . (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
+	set -l file (fd -i . (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "batcat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
 	if [ ! -z "$file" ]
 		vim "$file"
 	end
@@ -42,7 +42,7 @@ function cwh
 end
 
 function vwh
-    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
+    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "batcat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
     if [ ! -z "$file" ]
         vim "$file"
     end
@@ -60,7 +60,7 @@ function fif
         --header 'Find in File'\
         --bind 'ctrl-u:preview-up,ctrl-d:preview-down'\
         --bind 'ctrl-v:execute(vim {} >/dev/tty </dev/tty)'\
-        --preview "bat --theme='OneHalfDark' --style=numbers --color=always {} | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$argv[1]';or rg --ignore-case --pretty --context 10 '$argv[1]' {}"\
+        --preview "batcat --theme='OneHalfDark' --style=numbers --color=always {} | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$argv[1]';or rg --ignore-case --pretty --context 10 '$argv[1]' {}"\
         --preview-window noborder
     else
         echo "검색어를 입력해주세요"
