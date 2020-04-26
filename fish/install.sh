@@ -7,7 +7,11 @@ mkdir fish
 echo "[LINK] fish config"
 ln -s ~/dotfiles/fish/config.fish ~/.config/fish/config.fish
 echo "[INSTALL] exa, ripgrep,(cargo)"
-cargo install exa ripgrep hexyl bat fd-find
+cargo install exa
+cargo install ripgrep
+cargo install hexyl
+cargo install bat
+cargo install fd-find
 echo "[CHANGE_DIR] home"
 cd ~/
 echo "[INSTALL] oh-my-fish(curl)"
