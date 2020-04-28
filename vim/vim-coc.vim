@@ -110,7 +110,8 @@ let g:coc_global_extensions = [
             \"coc-tslint",
             \"coc-eslint",
             \"coc-css",
-            \"coc-rls"
+            \"coc-rls",
+            \"coc-tabnine"
             \]
 
 inoremap <silent><expr> <TAB>

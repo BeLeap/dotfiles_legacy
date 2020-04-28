@@ -20,4 +20,5 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-latex/vim-latex'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'gko/vim-coloresque'
 call plug#end()
