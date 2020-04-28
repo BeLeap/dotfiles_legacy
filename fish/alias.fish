@@ -60,7 +60,7 @@ alias rm "echo 'This is not a command what you intended to run.'; printf 'Please
 # for Windows Subsystem Linux
 alias guniv "cd /mnt/c/Users/ckdtj/University/"
 alias start "cmd.exe /c start"
-alias open "wsl-open"
+alias open "explorer.exe"
 
 # Rust commands
 alias ls "exa"
