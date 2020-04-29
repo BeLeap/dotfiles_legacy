@@ -20,3 +20,5 @@ inoremap <leader>cf <ESC>:ClangFormat<CR>i
 nnoremap <leader>cf :ClangFormat<CR>
 inoremap <leader>rf <ESC>:RustFmt<CR>i
 nnoremap <leader>rf :RustFmt<CR>
+let g:user_emmet_mode='a'
+let g:user_emmet_leader_key='<C-x>'

@@ -73,4 +73,10 @@ alias od "hexyl"
 
 alias grep "rg"
 
+# Latex
 alias ltclear "rm *.aux *.fdb_latexmk *.synctex.gz *.fls *.log"
+
+# Trash-cli
+alias tput "trash-put"
+alias tlist "trash-list";
+alias tempty "trash-empty"
