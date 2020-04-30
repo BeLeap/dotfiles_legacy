@@ -10,5 +10,3 @@ function! s:check_back_space() abort
 endfunction
 
 let g:coc_snippet_next = '<TAB>'
-
-let g:UltiSnipsSnippetDirectories = ['~/dotfiles/vim/snippets']
