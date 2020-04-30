@@ -34,7 +34,7 @@ end
 function ccr
     echo "$argv" > ~/.ccr.tmp
     set -l file (cut -d '.' -f1 ~/.ccr.tmp)
-    rm -f ~/.ccr.tmp
+    /bin/rm -f ~/.ccr.tmp
     gcc "$argv" -o "$file"
     ./"$file"
 end
@@ -42,7 +42,7 @@ end
 function javacr
     echo "$argv" > ~/.jcr.tmp
     set -l file (cut -d '.' -f1 ~/.jcr.tmp)
-    rm -f ~/.jcr.tmp
+    /bin/rm -f ~/.jcr.tmp
     javac "$argv"
     java "$file"
 end
@@ -50,7 +50,7 @@ end
 function rustcr
     echo "$argv" > ~/.rcr.tmp
     set -l file (cut -d '.' -f1 ~/.rcr.tmp)
-    rm -f ~/.rcr.tmp
+    /bin/rm -f ~/.rcr.tmp
     rustc "$argv"
     ./"$file"
 end
