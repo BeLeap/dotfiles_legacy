@@ -14,7 +14,7 @@ def upgrade(password):
         check_succeed(res)
 
 def install_dependencies(password):
-    dependencies = [
+    dependency_list = [
         'fish',
         'tmux',
         'vim-gtk',
@@ -28,8 +28,8 @@ def install_dependencies(password):
         'ccls',
         'clang'
     ]
+    dependency = " ".join(dependency_list)
     with Spinner():
-        for dependency in dependencies:
-            res = os.system(f"echo {password} | sudo -S apt install {dependency} -y > /dev/null 2>&1")
-            check_succeed(res)
+        res = os.system(f"echo {password} | sudo -S apt install {dependency} -y > /dev/null 2>&1")
+        check_succeed(res)
 
