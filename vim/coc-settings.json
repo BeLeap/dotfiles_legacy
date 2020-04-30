@@ -15,6 +15,9 @@
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "js", "ts"],
-  "python.jediEnabled": false
+  "python.jediEnabled": false,
+  "snippets.ultisnips.directories": [
+      "~/dotfiles/vim/snippets"
+  ]
 }
 
