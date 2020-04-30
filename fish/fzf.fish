@@ -35,14 +35,14 @@ end
 
 # for Windows Subsystem for Linux
 function cwh
-    set -l directory (fd -i -td . /mnt/c/Users/ckdtj/ | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "exa --tree --level=2 --color=always {}" --preview-window noborder)
+    set -l directory (fd -i -td . ~/winhome/ | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "exa --tree --level=2 --color=always {}" --preview-window noborder)
     if [ ! -z "$directory" ]
         cd "$directory"
     end
 end
 
 function vwh
-    set -l file (fd -i . /mnt/c/Users/ckdtj | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
+    set -l file (fd -i . ~/winhome | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
     if [ ! -z "$file" ]
         vim "$file"
     end
