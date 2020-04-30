@@ -4,6 +4,8 @@ from install.check_os import get_linux_distro, check_supported
 from install.password import get_passwd
 from install.apt import update, upgrade, install_dependencies
 
+from install import fish
+
 print(bcolors.HEADER + "[CHECK]" + bcolors.ENDC + " OS")
 linux_distro = get_linux_distro()
 if check_supported(linux_distro) == False:
@@ -23,3 +25,4 @@ print(bcolors.HEADER + "[INSTALL]" + bcolors.ENDC + " Installing required depend
 install_dependencies(password)
 
 print(bcolors.HEADER + "[CALL]" + bcolors.ENDC + " Fish configuration setup")
+fish.setup(password)
