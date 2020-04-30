@@ -77,7 +77,7 @@ function fbr -d "Fuzzy-find and checkout br"
     set isgit (git rev-parse --is-inside-work-tree)
     if test $isgit = "true"
         set branch (git branch -a | fzf -i +m --border --height 80% --extended --reverse --cycle)
-        set trim_branch(string trim $branch); and git checkout $trim_branch
+        set trim_branch (string trim $branch); and git checkout $trim_branch
     else
         echo "Not a git repository"
     end
