@@ -1,14 +1,17 @@
 import os
 
 from .spinner import Spinner
+from .password import check_succeed
 
 def update(password):
     with Spinner():
-        os.system(f"echo {password} | sudo -S apt update > /dev/null 2>&1")
+        res = os.system(f"echo {password} | sudo -S apt update > /dev/null 2>&1")
+        check_succeed(res)
 
 def upgrade(password):
     with Spinner():
-        os.system(f"echo {password} | sudo -S apt upgrade -y > /dev/null 2>&1")
+        res = os.system(f"echo {password} | sudo -S apt upgrade -y > /dev/null 2>&1")
+        check_succeed(res)
 
 def install_dependencies(password):
     dependencies = [
@@ -27,5 +30,6 @@ def install_dependencies(password):
     ]
     with Spinner():
         for dependency in dependencies:
-            os.system(f"echo {password} | sudo -S apt install {dependency} -y > /dev/null 2>&1")
+            res = os.system(f"echo {password} | sudo -S apt install {dependency} -y > /dev/null 2>&1")
+            check_succeed(res)
 
