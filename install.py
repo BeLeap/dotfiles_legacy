@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-import platform
-import os
-import getpass
-
 from install.check_os import get_linux_distro, check_supported
+from install.password import get_passwd
 from install.apt import update, upgrade, install_dependencies
 
 print("[CHECK] OS")
@@ -13,12 +10,15 @@ if check_supported(linux_distro) == False:
 
 print("This script requires root permissions.")
 print("Please insert your password to run sudo.")
-password = getpass.getpass(prompt = '>> ')
+password = get_passwd()
 
 print("[UPDATE] Running pacakge manager update.")
 update(password)
+
 print("[UPGRADE] Running package manager upgrade.")
 upgrade(password)
+
 print("[INSTALL] Installing required dependencies.")
 install_dependencies(password)
+
 print("[CALL] Fish configuration setup")
