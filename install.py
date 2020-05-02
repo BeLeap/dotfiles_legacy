@@ -20,6 +20,8 @@ if check_supported(linux_distro) == False:
 
 password = 'test'
 if args.env != 'dev':
+    from install.command import system_prod
+    os.system = system_prod()
     print("This script requires root permissions.")
     print("Please insert your password to run sudo.")
     password = get_passwd()
