@@ -8,8 +8,7 @@ from .error import print_succeed, print_failed, check_success
 def create_config_dir(homedir):
     print_header("CREATE", "Creating fish configuration direcotry.")
     try:
-        os.makedir(homedir + '/.config')
-        os.makedir(homedir + '/.config/fish')
+        os.makedirs(homedir + '/.config/fish')
     except:
         print_failed()
     print_succeed()
@@ -19,8 +18,11 @@ def link_fish_conf(dotdir, homedir):
     try:
         os.symlink(dotdir + "/fish/config.fish", homedir + "/.config/fish/config.fish")
     except:
-        os.remove(dotdir + "/.config/fish/config.fish")
-        os.symlink(dotdir + "/fish/config.fish", homedir + "/.config/fish/config.fish")
+        try:
+            os.remove(dotdir + "/.config/fish/config.fish")
+            os.symlink(dotdir + "/fish/config.fish", homedir + "/.config/fish/config.fish")
+        except:
+            print_failed()
     print_succeed()
 
 def cargo_install():

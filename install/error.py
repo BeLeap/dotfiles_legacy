@@ -5,6 +5,7 @@ def print_succeed():
 
 def print_failed():
     print("\b" + bcolors.FAIL + "Execution Failed" + bcolors.ENDC)
+    exit(1)
 
 def check_success(res):
     if res != 0:
