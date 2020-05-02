@@ -61,9 +61,15 @@ def setup(password):
     print("homedir:", homedir)
     dotdir = os.getcwd()
     print("dotdir:", dotdir)
-    create_config_dir(homedir)
-    link_fish_conf(dotdir, homedir)
-    cargo_install()
-    omf_install()
-    nvm_install()
-    change_shell(password)
+    with Spinner():
+        create_config_dir(homedir)
+    with Spinner():
+        link_fish_conf(dotdir, homedir)
+    with Spinner():
+        cargo_install()
+    with Spinner():
+        omf_install()
+    with Spinner():
+        nvm_install()
+    with Spinner():
+        change_shell(password)
