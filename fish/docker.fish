@@ -584,3 +584,5 @@ function __fish_print_docker_containers --description 'Print a list of docker co
     complete -c docker -f -n '__fish_docker_no_subcommand' -a wait -d 'Block until a container stops, then print its exit code'
     complete -c docker -A -f -n '__fish_seen_subcommand_from wait' -l help -d 'Print usage'
     complete -c docker -A -f -n '__fish_seen_subcommand_from wait' -a '(__fish_print_docker_containers running)' -d "Container"
+
+alias diempty "docker rmi (docker images -f \"dangling=true\" -q)"
