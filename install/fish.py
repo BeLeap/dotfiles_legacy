@@ -25,7 +25,7 @@ def link_fish_conf(dotdir, homedir):
             print_failed()
     print_succeed()
 
-def cargo_install():
+def cargo_install(homedir):
     cargo_dependency_list = [
         'exa',
         'ripgrep',
@@ -36,6 +36,8 @@ def cargo_install():
     cargo_dependency = " ".join(cargo_dependency_list)
     print("INSTALL", cargo_dependency + " using cargo")
     res = os.system("cargo install " + cargo_dependency)
+    check_success(res)
+    res = os.system("set -U fish_user_paths " + homedir + "/.cargo/bin")
     check_success(res)
 
 def omf_install():
@@ -66,7 +68,7 @@ def setup(password):
     with Spinner():
         link_fish_conf(dotdir, homedir)
     with Spinner():
-        cargo_install()
+        cargo_install(homedir)
     with Spinner():
         omf_install()
     with Spinner():
