@@ -37,7 +37,7 @@ def cargo_install(homedir):
     print("INSTALL", cargo_dependency + " using cargo")
     res = os.system("cargo install " + cargo_dependency)
     check_success(res)
-    res = os.system("set -U fish_user_paths " + homedir + "/.cargo/bin")
+    res = os.system("set -U fish_user_paths " + homedir + "/.cargo/bin | fish")
     check_success(res)
 
 def omf_install():
