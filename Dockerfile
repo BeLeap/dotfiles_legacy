@@ -1,6 +1,6 @@
 FROM ubuntu:20.04
 
-RUN sed -i 's/archive.ubuntu.com/ftp.daumkakao.com/g' /etc/apt/sources.list
+RUN sed -i 's/archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get upgrade -y
