@@ -17,3 +17,4 @@ set confirm
 nnoremap q: <nop>
 nnoremap Q <nop>
 set mouse=a
+autocmd BufEnter *.v :setlocal filetype=systemverilog
