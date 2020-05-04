@@ -5,12 +5,12 @@ from .error import check_success
 
 def update(password):
     with Spinner():
-        res = os.system(f"echo {password} | sudo -S apt update")
+        res = os.system(f"echo {password} | sudo -S apt update > /dev/null 2>&1")
         check_success(res)
 
 def upgrade(password):
     with Spinner():
-        res = os.system(f"echo {password} | sudo -S apt upgrade -y")
+        res = os.system(f"echo {password} | sudo -S apt upgrade -y > /dev/null 2>&1")
         check_success(res)
 
 def install_dependencies(password):
@@ -30,6 +30,6 @@ def install_dependencies(password):
     ]
     dependency = " ".join(dependency_list)
     with Spinner():
-        res = os.system(f"echo {password} | sudo -S apt install {dependency} -y")
+        res = os.system(f"echo {password} | sudo -S apt install {dependency} -y > /dev/null 2>&1")
         check_success(res)
 

@@ -1,13 +1,12 @@
 #!/usr/bin/python3
 import argparse
 
-from install import fish, tmux, vim, link, print, check_os, password, apt, command
+from install import fish, tmux, vim, link, print, check_os, password, apt
 
 from install.print import print_header
 from install.check_os import get_linux_distro, check_supported
 from install.password import get_passwd
 from install.apt import update, upgrade, install_dependencies
-from install.command import system_prod
 
 
 parser = argparse.ArgumentParser(description='development')
@@ -22,7 +21,6 @@ if check_supported(linux_distro) == False:
 
 password = 'test'
 if args.env != 'dev':
-    os.system = system_prod()
     print("This script requires root permissions.")
     print("Please insert your password to run sudo.")
     password = get_passwd()

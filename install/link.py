@@ -44,7 +44,7 @@ def link_fish(homedir, dotdir):
     os.system("tinstall | fish")
     os.system("curl -L https://get.oh-my.fish | fish")
     os.system("fish -c \"omf install agnoster\"")
-    os.system("curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash")
+    os.system("curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash > /dev/null 2>&1")
     os.system("fish -c \"omf install nvm\"")
 
 def link():

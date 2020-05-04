@@ -15,14 +15,14 @@ def cargo_install(homedir):
     ]
     cargo_dependency = " ".join(cargo_dependency_list)
     print("INSTALL", cargo_dependency + " using cargo")
-    res = os.system("cargo install " + cargo_dependency)
+    res = os.system("cargo install " + cargo_dependency + " > /dev/null 2>&1")
     check_success(res)
-    res = os.system("set -U fish_user_paths " + homedir + "/.cargo/bin | fish")
+    res = os.system("set -U fish_user_paths " + homedir + "/.cargo/bin | fish > /dev/null 2>&1")
     check_success(res)
 
 def change_shell(password):
     print_header("REGISTER", "fish shell")
-    res = os.system(f"echo {password} | chsh -s /usr/bin/fish")
+    res = os.system(f"echo {password} | chsh -s /usr/bin/fish > /dev/null 2>&1")
     check_success(res)
 
 def setup(password):
