@@ -1,41 +1,43 @@
 #!/usr/bin/python3
 import argparse
 
-from install.bcolor import bcolors
+from install import fish, tmux, print, check_os, password, apt, command
+
+from install.print import print_header
 from install.check_os import get_linux_distro, check_supported
 from install.password import get_passwd
 from install.apt import update, upgrade, install_dependencies
+from install.command import system_prod
 
-from install import fish
 
 parser = argparse.ArgumentParser(description='development')
 parser.add_argument('--env', required=False, default='prod', help='Development ENV')
 
 args = parser.parse_args()
 
-print(bcolors.HEADER + "[CHECK]" + bcolors.ENDC + " OS")
+print_header("CHECK", "OS")
 linux_distro = get_linux_distro()
 if check_supported(linux_distro) == False:
     exit(1)
 
 password = 'test'
 if args.env != 'dev':
-    from install.command import system_prod
     os.system = system_prod()
     print("This script requires root permissions.")
     print("Please insert your password to run sudo.")
     password = get_passwd()
 
-print(bcolors.HEADER + "[UPDATE]" + bcolors.ENDC + " Running pacakge manager update.")
+print_header("UPDATE", "Running package manager update.")
 update(password)
 
-print(bcolors.HEADER + "[UPGRADE]"+ bcolors.ENDC + " Running package manager upgrade.")
+print_header("UPGRADE", "Running package manager upgrade.")
 upgrade(password)
 
-print(bcolors.HEADER + "[INSTALL]" + bcolors.ENDC + " Installing required dependencies.")
+print_header("INSTALL", "Installing required dependencies.")
 install_dependencies(password)
 
-print(bcolors.HEADER + "[CALL]" + bcolors.ENDC + " Fish configuration setup")
+print_header("CALL", "Fish configuration setup")
 fish.setup(password)
 
-log_file.close()
+print_header("CALL", "Tmux configuration setup")
+tmux.setup()

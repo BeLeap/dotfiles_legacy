@@ -14,8 +14,6 @@ def install_tpm_plugins():
     check_success(res)
 
 def setup():
-    homedir = get_home()
-    dotdir = os.getcwd()
     with Spinner():
         install_tpm()
     with Spinner():
