@@ -5,26 +5,6 @@ from .print import print_header
 from .password import get_home
 from .error import print_succeed, print_failed, check_success
 
-def create_config_dir(homedir):
-    print_header("CREATE", "Creating fish configuration direcotry.")
-    try:
-        os.makedirs(homedir + '/.config/fish')
-    except:
-        print_failed()
-    print_succeed()
-
-def link_fish_conf(dotdir, homedir):
-    print_header("LINK", "Linking fish configuration file")
-    try:
-        os.symlink(dotdir + "/fish/config.fish", homedir + "/.config/fish/config.fish")
-    except:
-        try:
-            os.remove(dotdir + "/.config/fish/config.fish")
-            os.symlink(dotdir + "/fish/config.fish", homedir + "/.config/fish/config.fish")
-        except:
-            print_failed()
-    print_succeed()
-
 def cargo_install(homedir):
     cargo_dependency_list = [
         'exa',
@@ -63,10 +43,6 @@ def setup(password):
     print("homedir:", homedir)
     dotdir = os.getcwd()
     print("dotdir:", dotdir)
-    with Spinner():
-        create_config_dir(homedir)
-    with Spinner():
-        link_fish_conf(dotdir, homedir)
     with Spinner():
         cargo_install(homedir)
     with Spinner():
