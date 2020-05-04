@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import argparse
 
-from install import fish, tmux, print, check_os, password, apt, command
+from install import fish, tmux, vim, link, print, check_os, password, apt, command
 
 from install.print import print_header
 from install.check_os import get_linux_distro, check_supported
@@ -41,3 +41,9 @@ fish.setup(password)
 
 print_header("CALL", "Tmux configuration setup")
 tmux.setup()
+
+print_header("CALL", "Vim configuration setup")
+vim.setup()
+
+print_header("CALL", "Link configuration files")
+link.link()
