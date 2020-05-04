@@ -20,11 +20,6 @@ def cargo_install(homedir):
     res = os.system("set -U fish_user_paths " + homedir + "/.cargo/bin | fish")
     check_success(res)
 
-def omf_install():
-    print_header("INSTALL", "oh-my-fish using curl")
-    res = os.system("curl -L https://get.oh-my.fish | fish")
-    check_success(res)
-
 def nvm_install():
     print_header("INSTALL", "nvm using curl")
     res = os.system("curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash")
@@ -45,8 +40,6 @@ def setup(password):
     print("dotdir:", dotdir)
     with Spinner():
         cargo_install(homedir)
-    with Spinner():
-        omf_install()
     with Spinner():
         nvm_install()
     with Spinner():
