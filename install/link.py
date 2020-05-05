@@ -1,6 +1,6 @@
 import os
 
-from .print import print_header
+from .myprint import print_header
 from .error import print_failed, print_succeed, check_success
 from .password import get_home
 from .spinner import Spinner

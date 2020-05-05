@@ -1,7 +1,7 @@
 import os
 
 from .spinner import Spinner
-from .print import print_header
+from .myprint import print_header
 from .password import get_home
 from .error import print_succeed, print_failed, check_success
 
