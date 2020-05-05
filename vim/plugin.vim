@@ -17,8 +17,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-latex/vim-latex'
 Plug 'vhda/verilog_systemverilog.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'gko/vim-coloresque'
+Plug 'xuhdev/vim-latex-live-preview'
 call plug#end()
