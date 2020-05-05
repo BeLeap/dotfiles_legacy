@@ -37,7 +37,7 @@ def link_vim(homedir, dotdir):
 def link_fish(homedir, dotdir):
     try:
         print_header("LINK", "Linking fish configuration file")
-        os.symlink(dotdir + "/fish/config.fish", homedir + "/.config/fish/fish.conf")
+        os.symlink(dotdir + "/fish/config.fish", homedir + "/.config/fish/config.fish")
     except:
         print_failed()
     print_succeed()
