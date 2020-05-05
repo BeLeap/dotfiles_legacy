@@ -3,7 +3,7 @@ import argparse
 
 from install import fish, tmux, vim, link, print, check_os, password, apt
 
-from install.print import print_header
+from install.myprint import print_header
 from install.check_os import get_linux_distro, check_supported
 from install.password import get_passwd
 from install.apt import update, upgrade, install_dependencies
