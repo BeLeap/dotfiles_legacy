@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import argparse
 
-from install import fish, tmux, vim, link, print, check_os, password, apt
+from install import fish, tmux, vim, link, myprint, check_os, password, apt
 
 from install.myprint import print_header
 from install.check_os import get_linux_distro, check_supported
