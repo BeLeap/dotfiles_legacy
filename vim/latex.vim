@@ -1,1 +1,1 @@
-let g:tex_flavor='latex'
+let g:liveprevie_previewer = 'evince'
