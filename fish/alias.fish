@@ -24,6 +24,8 @@ function tmuxconf
     vim ~/.tmux.conf
 end
 
+alias lear "clear"
+
 function clera 
     clear
 end
@@ -36,6 +38,14 @@ function ccr
     set -l file (cut -d '.' -f1 ~/.ccr.tmp)
     /bin/rm -f ~/.ccr.tmp
     gcc "$argv" -o "$file"
+    ./"$file"
+end
+
+function cppcr
+    echo "$argv" > ~/.cppcr.tmp
+    set -l file(cut -d '.' -f1 ~/.ccr.tmp)
+    /bin/rm -f ~/.ccr.tmp
+    g++ "$argv" -o "$file"
     ./"$file"
 end
 
