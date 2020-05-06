@@ -9,7 +9,6 @@
   - ~/.config/fish
 
 - link:
-  ~/.dotfiles: ''
   ~/.tmux.conf: tmux/.tmux.conf
   ~/.vimrc: vim/.vimrc
   ~/.config/fish/config.fish: fish/config.fish
