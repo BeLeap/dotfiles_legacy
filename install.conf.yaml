@@ -4,13 +4,15 @@
 
 - clean: ['~']
 
+- create:
+  - ~/.config
+  - ~/.config/fish
+
 - link:
   ~/.dotfiles: ''
   ~/.tmux.conf: tmux/.tmux.conf
   ~/.vimrc: vim/.vimrc
-  ~/.config/fish/config.fish:
-    create: true
-    path: fish/config.fish
+  ~/.config/fish/config.fish: fish/config.fish
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
