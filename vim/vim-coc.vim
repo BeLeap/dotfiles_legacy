@@ -129,4 +129,4 @@ function! s:check_back_space() abort
     let g:coc_snippet_next = '<tab>'
 
 hi CocHighlightText ctermbg=71
-let g:coc_config_home = "~/dotfiles/vim"
+let g:coc_config_home = "~/.dotfiles/vim"
