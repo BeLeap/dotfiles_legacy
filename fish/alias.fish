@@ -44,7 +44,7 @@ end
 function cppcr
     echo "$argv" > ~/.cppcr.tmp
     set -l file(cut -d '.' -f1 ~/.ccr.tmp)
-    /bin/rm -f ~/.ccr.tmp
+    /bin/rm -f ~/.cppcr.tmp
     g++ "$argv" -o "$file"
     ./"$file"
 end
