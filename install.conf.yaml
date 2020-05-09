@@ -10,6 +10,9 @@
 - clean: ['~']
 
 - shell:
+  - [sudo apt install fish vim-gtk tmux curl ccls fzf cargo, Installing dependencies]
+  - [fish -c "set -U fish_user_paths ~/.cargo/bin $fish_user_paths", Add cargo to path]
+  - [cargo install exa, ripgrep, fd-find, hexyl, Installing dependencies]
   - [git submodule update --init --recursive, Installing modules]
   - [curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim, Installing vim-plug]
   - [vim +PlugInstall +qall, Installing vim plugins]
