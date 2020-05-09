@@ -1,11 +1,11 @@
 - defaults:
-    link:
-      create: true
-      relink: true
     shell:
       stdin: true
       stdout: true
       stderr: true
+    link:
+      create: true
+      relink: true
 
 - clean: ['~']
 
