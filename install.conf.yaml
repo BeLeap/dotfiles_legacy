@@ -4,6 +4,7 @@
       stdout: true
       stderr: true
     link:
+      force: true
       create: true
       relink: true
 
