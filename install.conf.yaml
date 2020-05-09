@@ -29,6 +29,7 @@
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.vimrc: vim/.vimrc
     ~/.config/fish/config.fish: fish/config.fish
+    ~/.gdbinit: gdb/.gdbinit
 
 - shell:
   - [tinstall | fish, Installing tmux plugin]
