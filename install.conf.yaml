@@ -17,12 +17,12 @@
   - [cargo install fd-find, Installing fd-find]
   - [cargo install hexyl, Installing hexyl]
   - [cargo install bat, Installing bat]
-  - [chsh -s /usr/bin/fish]
+  - [chsh -s /usr/bin/fish, Change default shell to fish]
   - [git submodule update --init --recursive, Installing modules]
   - [curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim, Installing vim-plug]
   - [curl -L https://get.oh-my.fish > ~/omf, Getting oh-my-fish installer]
   - [fish ~/omf --path=~/.local/share/omf --noninteractive, Installing oh-my-fish]
-  - [/bin/rm ~/omf]
+  - [/bin/rm ~/omf, Removing oh-my-fish installer]
 
 - link:
     ~/.dotfiles: ""
