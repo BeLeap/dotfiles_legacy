@@ -9,3 +9,4 @@ so ~/.dotfiles/vim/clang-format.vim
 so ~/.dotfiles/vim/copy-paste.vim
 so ~/.dotfiles/vim/latex.vim
 so ~/.dotfiles/vim/fzf.vim
+so ~/.dotfiles/vim/tabs.vim

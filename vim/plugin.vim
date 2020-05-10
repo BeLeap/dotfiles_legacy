@@ -21,4 +21,5 @@ Plug 'vhda/verilog_systemverilog.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'gko/vim-coloresque'
 Plug 'xuhdev/vim-latex-live-preview'
+Plug 'ap/vim-buftabline'
 call plug#end()
