@@ -22,4 +22,5 @@ Plug 'sheerun/vim-polyglot'
 Plug 'gko/vim-coloresque'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'ap/vim-buftabline'
+Plug 'puremourning/vimspector'
 call plug#end()
