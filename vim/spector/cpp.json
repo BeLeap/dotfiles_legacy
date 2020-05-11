@@ -6,23 +6,13 @@
                 "name": "gdb",
                 "type": "cppdbg",
                 "request": "launch",
-                "program": "${workspaceFolder}/a.out",
+                "program": "${fileDirname}/a.out",
                 "stopAtEntry": true,
-                "launchCompleteCommand": "exec-run",
                 "args": [],
                 "cwd": "${workspaceFolder}",
                 "environment": [],
                 "externalConsole": true,
-                "MIMode": "gdb",
-                "setupCommands": [
-                    {
-                        "description": "Enable pretty-printing for gdb",
-                        "text": "-enable-pretty-print",
-                        "ignoreFailures": true
-                    }
-                ],
-                "miDebuggerPath": "/usr/bin/gdb",
-                "miDebuggerArgs": "-q"
+                "MIMode": "gdb"
             }
         }
         
