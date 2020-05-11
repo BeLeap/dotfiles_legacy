@@ -23,4 +23,5 @@ Plug 'xuhdev/vim-latex-live-preview'
 Plug 'ap/vim-buftabline'
 Plug 'puremourning/vimspector'
 Plug 'zxqfl/tabnine-vim'
+Plug 'tpope/vim-dispatch'
 call plug#end()

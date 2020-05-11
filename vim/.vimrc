@@ -10,3 +10,4 @@ so ~/.dotfiles/vim/latex.vim
 so ~/.dotfiles/vim/fzf.vim
 so ~/.dotfiles/vim/tabs.vim
 so ~/.dotfiles/vim/vimspector.vim
+so ~/.dotfiles/vim/dispatch.vim
