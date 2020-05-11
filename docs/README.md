@@ -6,13 +6,22 @@
 cd <path-to-dotfiles>
 ./install
 ```
-### Tabnine config
+### Tabnine setup
 
 ```
 Tabnine::sem
 ```
 
-Inside vim, type above to enable semantic completion(using lsp)
+Inside vim, type above to enable semantic completion(Language Server Protocol)
+
+### Vimspector setup
+
+```bash
+cd ~/.vim/plugged/vimspector
+./install_gadgets.py
+```
+
+Using command above, vimspector will be enabled(Debugger Adapter Protocol)
 
 ## Fish Shell
 
