@@ -1,1 +1,1 @@
-let g:liveprevie_previewer = 'evince'
+autocmd BufEnter *.tex :setlocal filetype=tex
