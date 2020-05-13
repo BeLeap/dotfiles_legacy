@@ -1,3 +1,3 @@
-color onehalfdark
-let g:airline_theme='onehalfdark'
+color zenburn 
+let g:airline_theme='zenburn'
 set t_Co=256

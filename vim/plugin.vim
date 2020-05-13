@@ -2,7 +2,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'sonph/onehalf', {'rtp': 'vim/'}
 Plug 'makerj/vim-pdf'
 Plug 'Quramy/tsuquyomi'
 Plug 'neovimhaskell/haskell-vim'
@@ -24,4 +23,6 @@ Plug 'ap/vim-buftabline'
 Plug 'puremourning/vimspector'
 Plug 'zxqfl/tabnine-vim'
 Plug 'tpope/vim-dispatch'
+Plug 'jnurmine/Zenburn'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
