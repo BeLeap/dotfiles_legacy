@@ -28,4 +28,5 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'conornewton/vim-pandoc-markdown-preview'
+Plug 'mattn/emmet-vim'
 call plug#end()
