@@ -1,4 +1,5 @@
-alias v "vim"
+alias v "nvim"
+alias vim "nvim"
 function vs
     vim src/"$argv"
 end

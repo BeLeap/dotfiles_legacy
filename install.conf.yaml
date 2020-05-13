@@ -11,7 +11,7 @@
 - clean: ['~']
 
 - shell:
-  - [sudo apt install -y fish vim-gtk tmux curl clang ccls fzf cargo, Installing dependencies]
+  - [sudo apt install -y fish nvim tmux curl clang ccls fzf cargo, Installing dependencies]
   - [fish -c "set -U fish_user_paths ~/.cargo/bin $fish_user_paths", Add cargo to path]
   - [cargo install exa, Installing exa]
   - [cargo install ripgrep, Installing ripgrep]
@@ -27,6 +27,7 @@
     ~/.dotfiles: ""
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.vimrc: vim/.vimrc
+    ~/.config/nvim/init.vim: vim/init.vim
     ~/.config/fish/config.fish: fish/config.fish
     ~/.gdbinit: gdb/.gdbinit
 
