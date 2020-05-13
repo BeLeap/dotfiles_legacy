@@ -1,3 +1,2 @@
-let g:UltiSnipsJumpForwardTrigger="<TAB>"
-let g:UltiSnipsJumpBackwardTrigger="<M-TAB>"
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.dotfiles/vim/snippets']
+let g:UltiSnipsJumpForwardTrigger="<C-j>"
+let g:UltiSnipsJumpBackwardTrigger="<C-b>"
