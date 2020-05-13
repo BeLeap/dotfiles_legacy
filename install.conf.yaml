@@ -8,7 +8,11 @@
       create: true
       relink: true
 
-- clean: ['~']
+- clean:
+    ~/:
+      force: true
+    ~/.config:
+      recursive: true
 
 - shell:
   - [sudo apt install -y fish neovim tmux curl clang ccls fzf cargo, Installing dependencies]
@@ -30,6 +34,7 @@
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.config/fish/config.fish: fish/config.fish
     ~/.gdbinit: gdb/.gdbinit
+    ~/.config/TabNine/Tabnine.toml: vim/TabNine.toml
 
 - shell:
   - [tinstall | fish, Installing tmux plugin]
