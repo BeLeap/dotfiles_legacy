@@ -6,12 +6,12 @@ install = [
 ]
 
 [language.javascript]
-command = "flow"
+command = "/usr/local/bin/flow"
 args = ["lsp"]
 install = [["npm", "install", "-g", "flow-bin"]]
 
 [language.typescript]
-command = "typescript-language-server"
+command = "/usr/local/bin/typescript-language-server"
 args = ["--stdio"]
 install = [["npm", "install", "-g", "typescript-language-server"]]
 
@@ -26,8 +26,8 @@ args = ["--stdio"]
 install = [["npm", "install", "-g", "ocaml-language-server"]]
 
 [language.python]
-command = "pyls"
-install = [["pip", "install", "python-language-server"]]
+command = "/home/beleap/.local/bin/pyls"
+install = [["pip3", "install", "python-language-server"]]
 
 [language.c]
 command = "/usr/bin/clangd"
@@ -56,12 +56,12 @@ args = ["stdio"]
 install = [["gem", "install", "solargraph"]]
 
 [language.css]
-command = "css-languageserver"
+command = "/usr/local/bin/css-languageserver"
 args = ["--stdio"]
 install = [["npm", "install", "-g", "vscode-css-languageserver-bin"]]
 
 [language.scss]
-command = "css-languageserver"
+command = "/usr/local/bin/css-languageserver"
 args = ["--stdio"]
 install = [["npm", "install", "-g", "vscode-css-languageserver-bin"]]
 

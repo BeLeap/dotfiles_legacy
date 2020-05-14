@@ -30,4 +30,5 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'conornewton/vim-pandoc-markdown-preview'
 Plug 'mattn/emmet-vim'
 Plug 'SirVer/ultisnips'
+Plug 'w0rp/ale'
 call plug#end()
