@@ -34,8 +34,9 @@
     ~/.config/nvim/init.vim: vim/init.vim
     ~/.config/fish/config.fish: fish/config.fish
     ~/.gdbinit: gdb/.gdbinit
-    ~/.config/TabNine/Tabnine.toml: vim/TabNine.toml
     ~/.cargo/bin: bin/
+    ~/.config/nvim/coc-settings.json: vim/coc-settings.json
+    ~/.config/nvim/tasks.ini: vim/tasks.ini
 
 - shell:
   - [tinstall | fish, Installing tmux plugin]
