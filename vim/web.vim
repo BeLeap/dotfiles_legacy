@@ -6,6 +6,14 @@ let g:ale_fixers = {
             \ 'typescript': ['prettier', 'eslint']
             \
             \}
+let g:ale_linters = {
+            \'javascript': ['eslint'],
+            \'typescript': ['eslint'],
+            \'python': ['pylint', 'pyls'],
+            \'rust': ['cargo', 'rls'],
+            \'c': ['ccls', 'clangd'],
+            \'cpp': ['ccls', 'clangd']
+            \}
 let g:ale_sign_error = '>>'
 let g:ale_sign_warning = '--'
 let g:ale_fix_on_save = 1

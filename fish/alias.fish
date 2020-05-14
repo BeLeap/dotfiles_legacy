@@ -66,6 +66,13 @@ function rustcr
     ./"$file"
 end
 
+function npg
+    set -l location (pwd)
+    ggr
+    npm "$argv"
+    cd pwd
+end
+
 alias rm "echo 'This is not a command what you intended to run.'; printf 'Please use'; echo (set_color green) 'trash-put' (set_color normal); printf 'If you want to execute it, use'; echo (set_color red) '/bin/rm' (set_color normal)"
 
 # for Windows Subsystem Linux
