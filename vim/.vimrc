@@ -10,8 +10,8 @@ so ~/.dotfiles/vim/markdown.vim
 so ~/.dotfiles/vim/fzf.vim
 so ~/.dotfiles/vim/tabs.vim
 so ~/.dotfiles/vim/vimspector.vim
-so ~/.dotfiles/vim/dispatch.vim
-so ~/.dotfiles/vim/web.vim
+so ~/.dotfiles/vim/coc.vim
+so ~/.dotfiles/vim/asynctask.vim
 
 if !has('nvim')
     so ~/.dotfiles/vim/nvim.vim

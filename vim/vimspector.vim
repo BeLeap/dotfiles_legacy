@@ -1,5 +1,5 @@
 let g:vimspector_enable_mappings='HUMAN'
-nnoremap <leader>r :VimspectorReset<CR>
+nnoremap <leader>e :VimspectorReset<CR>
 
 sign define vimspectorBP text=🔴 texthl=Normal
 sign define vimspectorBPDisabled text=🔵 texthl=Normal

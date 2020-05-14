@@ -18,11 +18,12 @@ Plug 'gko/vim-coloresque'
 Plug 'xuhdev/vim-latex-live-preview'
 Plug 'ap/vim-buftabline'
 Plug 'puremourning/vimspector'
-Plug 'tpope/vim-dispatch'
 Plug 'jnurmine/Zenburn'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'conornewton/vim-pandoc-markdown-preview'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim'
 call plug#end()

@@ -6,7 +6,7 @@
                 "name": "gdb",
                 "type": "cppdbg",
                 "request": "launch",
-                "program": "${fileDirname}/a.out",
+                "program": "${fileDirname}/${fileBasenameNoExtension}",
                 "stopAtEntry": true,
                 "args": [],
                 "cwd": "${workspaceFolder}",
