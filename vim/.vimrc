@@ -5,7 +5,6 @@ so ~/.dotfiles/vim/others.vim
 so ~/.dotfiles/vim/snippets.vim
 so ~/.dotfiles/vim/airline.vim
 so ~/.dotfiles/vim/clang-format.vim
-so ~/.dotfiles/vim/copy-paste.vim
 so ~/.dotfiles/vim/markdown.vim
 so ~/.dotfiles/vim/fzf.vim
 so ~/.dotfiles/vim/tabs.vim
