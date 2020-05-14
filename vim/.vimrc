@@ -13,6 +13,6 @@ so ~/.dotfiles/vim/vimspector.vim
 so ~/.dotfiles/vim/coc.vim
 so ~/.dotfiles/vim/asynctask.vim
 
-if !has('nvim')
+if has('nvim')
     so ~/.dotfiles/vim/nvim.vim
 endif
