@@ -1,11 +1,11 @@
 function v
-    nvim "$argv"
+    nvim $argv
 end
 function vim
-    nvim "$argv"
+    nvim $argv
 end
 function vs
-    vim src/"$argv"
+    vim src/$argv
 end
 
 function vm
@@ -37,42 +37,42 @@ function eixt
 end
 
 function ccr
-    echo "$argv" > ~/.ccr.tmp
+    echo $argv > ~/.ccr.tmp
     set -l file (cut -d '.' -f1 ~/.ccr.tmp)
     /bin/rm -f ~/.ccr.tmp
-    gcc "$argv" -o "$file"
-    ./"$file"
+    gcc $argv -o $file
+    ./$file
 end
 
 function cppcr
-    echo "$argv" > ~/.cppcr.tmp
+    echo $argv > ~/.cppcr.tmp
     set -l file(cut -d '.' -f1 ~/.ccr.tmp)
     /bin/rm -f ~/.cppcr.tmp
-    g++ "$argv" -o "$file"
-    ./"$file"
+    g++ $argv -o $file
+    ./$file
 end
 
 function javacr
-    echo "$argv" > ~/.jcr.tmp
+    echo $argv > ~/.jcr.tmp
     set -l file (cut -d '.' -f1 ~/.jcr.tmp)
     /bin/rm -f ~/.jcr.tmp
-    javac "$argv"
-    java "$file"
+    javac $argv
+    java $file
 end
 
 function rustcr
-    echo "$argv" > ~/.rcr.tmp
+    echo $argv > ~/.rcr.tmp
     set -l file (cut -d '.' -f1 ~/.rcr.tmp)
     /bin/rm -f ~/.rcr.tmp
-    rustc "$argv"
-    ./"$file"
+    rustc $argv
+    ./$file
 end
 
 function npg
     set -l location (pwd)
     ggr
-    npm "$argv"
-    cd "$location"
+    npm $argv
+    cd $location
 end
 
 function rm
@@ -81,7 +81,7 @@ end
 
 # for Windows Subsystem Linux
 function open
-    explorer.exe "$argv"
+    explorer.exe $argv
 end
 
 # Rust commands
