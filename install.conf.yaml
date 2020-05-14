@@ -35,6 +35,7 @@
     ~/.config/fish/config.fish: fish/config.fish
     ~/.gdbinit: gdb/.gdbinit
     ~/.config/TabNine/Tabnine.toml: vim/TabNine.toml
+    ~/.cargo/bin: bin/
 
 - shell:
   - [tinstall | fish, Installing tmux plugin]

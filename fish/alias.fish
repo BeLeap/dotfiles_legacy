@@ -12,25 +12,25 @@ function c..
     cd ../
 end
 
-function vimrc 
+function vimrc
     vim ~/.vimrc
 end
-function fishrc 
+function fishrc
     vim ~/.config/fish/config.fish
 end
-function sofish 
+function sofish
     source ~/.config/fish/config.fish
 end
-function tmuxconf 
+function tmuxconf
     vim ~/.tmux.conf
 end
 
 alias lear "clear"
 
-function clera 
+function clera
     clear
 end
-function eixt 
+function eixt
     exit
 end
 
@@ -73,15 +73,15 @@ alias start "cmd.exe /c start"
 alias open "explorer.exe"
 
 # Rust commands
-alias ls "exa"
-alias ll "exa -l"
-alias lt "exa -l -T -L2"
+alias ls "~/.dotfiles/bin/exa"
+alias ll "~/.dotfiles/bin/exa -l"
+alias lt "~/.dotfiles/bin/exa -l -T -L2"
 
-alias cat "bat"
+alias cat "~/.dotfiles/bin/bat"
 
-alias od "hexyl"
+alias od "~/.dotfiles/bin/hexyl"
 
-alias grep "rg"
+alias grep "~/.dotfiles/bin/rg"
 
 # Latex
 alias ltclear "rm *.aux *.fdb_latexmk *.synctex.gz *.fls *.log"
