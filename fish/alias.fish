@@ -69,10 +69,7 @@ function rustcr
 end
 
 function npg
-    set -l location (pwd)
-    ggr
-    npm $argv
-    cd $location
+    npm $argv --prefix (git rev-parse --show-toplevel)
 end
 
 function rm
