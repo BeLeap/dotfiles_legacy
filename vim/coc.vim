@@ -182,5 +182,6 @@ let g:coc_global_extensions = [
             \"coc-vimlsp",
             \"coc-xml",
             \"coc-yaml",
-            \"coc-yank"
+            \"coc-yank",
+            \"coc-tasks"
             \]
