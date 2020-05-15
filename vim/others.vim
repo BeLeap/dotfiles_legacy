@@ -4,7 +4,11 @@ set hlsearch
 set nu
 set cindent		
 set autoindent
-set tabstop=8 softtabstop=0 expandtab shiftwidth=4 smarttab
+set smartindent
+set tabstop=4
+set expandtab
+set smarttab
+set shiftwidth=4
 set laststatus=2
 set scrolloff=100
 set wildmenu
