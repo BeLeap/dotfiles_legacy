@@ -174,7 +174,6 @@ let g:coc_global_extensions = [
             \"coc-python",
             \"coc-rls",
             \"coc-snippets",
-            \"coc-spell-checker",
             \"coc-tabnine",
             \"coc-template",
             \"coc-texlab",
@@ -183,5 +182,6 @@ let g:coc_global_extensions = [
             \"coc-xml",
             \"coc-yaml",
             \"coc-yank",
-            \"coc-tasks"
+            \"coc-tasks",
+            \"coc-prettier"
             \]
