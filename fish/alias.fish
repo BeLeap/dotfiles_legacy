@@ -82,15 +82,15 @@ function open
 end
 
 # Rust commands
-alias ls "~/.dotfiles/bin/exa"
-alias ll "~/.dotfiles/bin/exa -l"
-alias lt "~/.dotfiles/bin/exa -l -T -L2"
+alias ls "exa"
+alias ll "exa -l"
+alias lt "exa -l -T -L2"
 
-alias cat "~/.dotfiles/bin/bat"
+alias cat "bat"
 
-alias od "~/.dotfiles/bin/hexyl"
+alias od "hexyl"
 
-alias grep "~/.dotfiles/bin/rg"
+alias grep "rg"
 
 # Trash-cli
 alias tput "trash-put"
