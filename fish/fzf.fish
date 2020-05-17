@@ -29,7 +29,7 @@ end
 function cg
 	set -l directory (fd -i -td . (git rev-parse --show-toplevel)| fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "exa --tree --level=2 --color=always {}" --preview-window noborder)
 	if [ ! -z "$directory" ]
-		vim $directory
+		cd $directory
 	end
 end
 
