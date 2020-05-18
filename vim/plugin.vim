@@ -15,7 +15,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'gko/vim-coloresque'
-Plug 'xuhdev/vim-latex-live-preview'
 Plug 'ap/vim-buftabline'
 Plug 'puremourning/vimspector'
 Plug 'jnurmine/Zenburn'
