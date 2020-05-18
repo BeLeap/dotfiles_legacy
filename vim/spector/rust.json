@@ -7,7 +7,7 @@
         "type": "cppdbg",
         "request": "launch",
         "program": "${workspaceRoot}/target/debug/${workspaceFolderBasename}",
-        "stopAtEntry": true,
+        "stopAtEntry": false,
         "args": [],
         "cwd": "${workspaceFolder}",
         "environment": [],
