@@ -102,5 +102,5 @@ function open
 end
 
 function psql
-    psql -U postgres -h localhost
+    command psql -U postgres -h localhost
 end
