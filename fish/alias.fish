@@ -104,3 +104,7 @@ end
 function psql
     command psql -U postgres -h localhost
 end
+
+function flutter
+    command cmd.exe /c flutter $argv
+end
