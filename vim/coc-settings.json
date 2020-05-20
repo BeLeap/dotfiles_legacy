@@ -1,16 +1,16 @@
 {
-    "languageserver": {
-        "svls": {
-            "command": "svls",
-            "filetypes": [
-                "systemverilog"
-            ]
-        }
-    },
-    "coc.preferences.formatOnSaveFiletypes": [
-        "*"
-    ],
-    "snippets.ultisnips.directories": [
-        "~/.dotfiles/vim/snippets"
-    ]
+  "languageserver": {
+    "svls": {
+      "command": "svls",
+      "filetypes": ["systemverilog"]
+    }
+  },
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "snippets.ultisnips.directories": ["~/.dotfiles/vim/snippets"],
+  "coc.preferences.rootPatterns": [
+    ".git",
+    ".hg",
+    ".projections.json",
+    "package.json"
+  ]
 }

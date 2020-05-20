@@ -6,9 +6,10 @@
 cd <path-to-dotfiles>
 ./install
 ```
+
 ### Tabnine setup
 
-```
+```vim
 Tabnine::sem
 ```
 
@@ -18,7 +19,7 @@ Inside vim, type above to enable semantic completion(Language Server Protocol)
 
 ```bash
 cd ~/.vim/plugged/vimspector
-./install_gadgets.py
+./install_gadgets.py --all
 ```
 
 Using command above, vimspector will be enabled(Debugger Adapter Protocol)
