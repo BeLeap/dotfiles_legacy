@@ -28,6 +28,8 @@
     - [cargo install fd-find, Installing fd-find]
     - [cargo install hexyl, Installing hexyl]
     - [cargo install bat, Installing bat]
+    - [sudo npm install -g neovim]
+    - [pip3 install jedi neovim pynvim]
     - [chsh -s /usr/bin/fish, Change default shell to fish]
     - [git submodule update --init --recursive, Installing modules]
     - [
