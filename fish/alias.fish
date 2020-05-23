@@ -41,33 +41,25 @@ end
 
 # Build and Run
 function ccr
-    echo $argv > ~/.ccr.tmp
-    set -l file (cut -d '.' -f1 ~/.ccr.tmp)
-    /bin/rm -f ~/.ccr.tmp
+    set -l file (echo "$argv" | cut -f 1 -d '.')
     gcc $argv -o $file
     ./$file
 end
 
 function cppcr
-    echo $argv > ~/.cppcr.tmp
-    set -l file(cut -d '.' -f1 ~/.ccr.tmp)
-    /bin/rm -f ~/.cppcr.tmp
+    set -l file (echo "$argv" | cut -f 1 -d '.')
     g++ $argv -o $file
     ./$file
 end
 
 function javacr
-    echo $argv > ~/.jcr.tmp
-    set -l file (cut -d '.' -f1 ~/.jcr.tmp)
-    /bin/rm -f ~/.jcr.tmp
+    set -l file (echo "$argv" | cut -f 1 -d '.')
     javac $argv
     java $file
 end
 
 function rustcr
-    echo $argv > ~/.rcr.tmp
-    set -l file (cut -d '.' -f1 ~/.rcr.tmp)
-    /bin/rm -f ~/.rcr.tmp
+    set -l file (echo "$argv" | cut -f 1 -d '.')
     rustc $argv
     ./$file
 end
@@ -94,6 +86,12 @@ alias tempty "trash-empty"
 
 function rm
     echo 'This is not a command what you intended to run.'; printf 'Please use'; echo (set_color green) 'trash-put' (set_color normal); printf 'If you want to execute it, use'; echo (set_color red) '/bin/rm' (set_color normal)
+end
+
+# Pandoc
+function pbuild
+    set -l file (echo $argv | cut -f 1 -d '.')
+    pandoc --template eisvogel --pdf-engine=xelatex $argv -o $file
 end
 
 # for Windows Subsystem Linux
