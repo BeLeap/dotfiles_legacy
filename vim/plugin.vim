@@ -26,4 +26,5 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'segeljakt/vim-silicon'
+Plug 'tpope/vim-surround'
 call plug#end()
