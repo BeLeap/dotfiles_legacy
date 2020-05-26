@@ -25,4 +25,5 @@ Plug 'conornewton/vim-pandoc-markdown-preview'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
+Plug 'segeljakt/vim-silicon'
 call plug#end()
