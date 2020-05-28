@@ -91,7 +91,7 @@ end
 # Pandoc
 function pbuild
     set -l file (echo $argv | cut -f 1 -d '.')
-    pandoc --template eisvogel --pdf-engine=xelatex $argv -o $file".pdf"
+    pandoc --pdf-engine=xelatex $argv -o $file".pdf"
 end
 
 # for Windows Subsystem Linux
