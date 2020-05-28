@@ -1,4 +1,11 @@
 let mapleader = ","
+inoremap <leader>d <ESC>
+nnoremap <leader>d <ESC>
+vnoremap <leader>d <ESC>
+snoremap <leader>d <ESC>
+xnoremap <leader>d <ESC>
+cnoremap <leader>d <ESC>
+onoremap <leader>d <ESC>
 inoremap <C-q> <ESC>:q<CR>
 nnoremap <C-q> :q<CR>
 inoremap <C-s> <ESC>:update<CR>
