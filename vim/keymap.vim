@@ -32,3 +32,7 @@ let g:user_emmet_leader_key='<C-x>'
 nnoremap <leader>q :bd<CR>
 inoremap <leader>q <ESC>:bd<CR>
 tnoremap <ESC> <C-w>:q!<CR>
+nnoremap k gk
+nnoremap j gj
+vnoremap k gk
+vnoremap j gj
