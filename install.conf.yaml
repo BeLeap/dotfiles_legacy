@@ -16,7 +16,7 @@
 
 - shell:
     - [
-        sudo apt install -y fish neovim tmux nodejs npm curl clang fzf cargo,
+        sudo apt install -y fish neovim tmux nodejs npm curl clang fzf cargo cmake gperf pkg-config,
         Installing dependencies,
       ]
     - [
@@ -28,6 +28,7 @@
     - [cargo install fd-find, Installing fd-find]
     - [cargo install hexyl, Installing hexyl]
     - [cargo install bat, Installing bat]
+    - [cargo install silicon, Installing silicon - to capture code]
     - [sudo npm install -g neovim]
     - [pip3 install jedi neovim pynvim]
     - [chsh -s /usr/bin/fish, Change default shell to fish]
