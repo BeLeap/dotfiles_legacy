@@ -16,7 +16,7 @@
 
 - shell:
     - [
-        sudo apt install -y fish neovim tmux nodejs npm curl clang fzf cargo cmake gperf pkg-config,
+        sudo apt install -y fish neovim tmux nodejs npm curl clang fzf cargo cmake gperf pkg-config openssl libasound2-dev build-essential libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev libx11-dev,
         Installing dependencies,
       ]
     - [
