@@ -1,7 +1,6 @@
 "Others
 set encoding=utf-8
 set hlsearch
-set nu
 set cindent		
 set autoindent
 set smartindent
@@ -22,3 +21,11 @@ nnoremap q: <nop>
 nnoremap Q <nop>
 set mouse=a
 autocmd BufEnter *.v :setlocal filetype=systemverilog
+
+set number relativenumber
+
+augroup numbertoggle
+    autocmd!
+    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+    autocmd BUfLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
