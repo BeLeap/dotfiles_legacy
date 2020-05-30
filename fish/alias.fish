@@ -69,15 +69,15 @@ function npg
 end
 
 # Rust Commands
-alias ls "exa"
-alias ll "exa -l"
-alias lt "exa -l -T -L2"
+alias ls "~/.dotfiles/bin/exa"
+alias ll "~/.dotfiles/bin/exa -l"
+alias lt "~/.dotfiles/bin/exa -l -T -L2"
 
-alias cat "bat"
+alias cat "~/.dotfiles/bin/bat"
 
-alias od "hexyl"
+alias od "~/.dotfiles/bin/hexyl"
 
-alias grep "rg"
+alias grep "~/.dotfiles/bin/rg"
 
 # Trash-cli
 alias tput "trash-put"

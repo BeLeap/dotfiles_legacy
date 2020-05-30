@@ -23,11 +23,6 @@
         fish -c "set -U fish_user_paths ~/.cargo/bin $fish_user_paths",
         Add cargo to path,
       ]
-    - [cargo install exa, Installing exa]
-    - [cargo install ripgrep, Installing ripgrep]
-    - [cargo install fd-find, Installing fd-find]
-    - [cargo install hexyl, Installing hexyl]
-    - [cargo install bat, Installing bat]
     - [cargo install silicon, Installing silicon - to capture code]
     - [sudo npm install -g neovim]
     - [pip3 install jedi neovim pynvim]
