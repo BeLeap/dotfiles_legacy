@@ -1,4 +1,8 @@
-let g:vimspector_enable_mappings='HUMAN'
+nmap <F2> <Plug>VimspectorToggleBreakpoint
+nmap <F9> <Plug>VimspectorContinue
+nmap <F8> <Plug>VimspectorStepOver
+nmap <F7> <Plug>VimspectorStepInto
+
 nnoremap <leader>e :VimspectorReset<CR>
 
 sign define vimspectorBP text=🔴 texthl=Normal
