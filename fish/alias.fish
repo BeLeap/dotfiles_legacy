@@ -111,7 +111,3 @@ function open
         cd $curr
     end
 end
-
-function psql
-    command psql -U postgres -h localhost
-end
