@@ -29,3 +29,5 @@ augroup numbertoggle
     autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
     autocmd BUfLeave,FocusLost,InsertEnter * set norelativenumber
 augroup END
+
+set clipboard=unnamedplus

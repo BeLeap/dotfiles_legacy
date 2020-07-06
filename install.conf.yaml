@@ -51,4 +51,3 @@
 - shell:
     - [tinstall | fish, Installing tmux plugin]
     - [vim +PlugInstall +qall, Installing vim plugins]
-    - [fisher add oh-my-fish/theme-bobthefish | fish, Installing agnoster]
