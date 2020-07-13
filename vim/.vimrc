@@ -18,5 +18,5 @@ endif
 
 if has('win32')
     let g:python3_host_prog="C:\\Users\\ckdtj\\AppData\\Local\\Programs\\Python\\Python38-32\\python.exe"
-    set guifont=Fira\ Code\ Retina:h16
+    set guifont=Cascadia\ Mono:h16
 endif
