@@ -7,6 +7,9 @@ end
 function v
     vim $argv
 end
+function p
+    python3 $argv
+end
 function vs
     vim src/$argv
 end

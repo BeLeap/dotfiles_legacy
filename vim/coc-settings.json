@@ -14,7 +14,6 @@
     "package.json",
     ".vimspector.json"
   ],
-  "clangd.path": "/home/beleap/.config/coc/extensions/coc-clangd-data/install/10.0.0/clangd_10.0.0/bin/clangd",
   "eslint.autoFixOnSave": true,
   "eslint.options": {
     "configFile": "/home/beleap/.dotfiles/vim/.eslintrc.js"
