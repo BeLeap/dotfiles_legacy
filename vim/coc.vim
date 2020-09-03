@@ -155,7 +155,6 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 let g:coc_global_extensions = [
             \"coc-actions",
             \"coc-calc",
-            \"coc-clangd",
             \"coc-cmake",
             \"coc-css",
             \"coc-cssmodules",

@@ -3,6 +3,19 @@
     "svls": {
       "command": "svls",
       "filetypes": ["systemverilog"]
+    },
+    "clangd": {
+      "command": "clangd-10",
+      "filetypes": ["c", "cpp"]
+    },
+    "ocaml-lsp": {
+      "command": "opam",
+      "args": ["config", "exec", "--", "ocamllsp"],
+      "filetypes": ["ocaml", "reason"]
+    },
+    "nasm-lsp": {
+      "command": "nasm-lsp",
+      "filetypes": ["asm"]
     }
   },
   "coc.preferences.formatOnSaveFiletypes": ["*"],

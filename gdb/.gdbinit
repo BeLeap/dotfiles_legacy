@@ -5,5 +5,4 @@ define clear
     shell clear
 end
 
-alias disas='disassemble'
 alias exit='q'

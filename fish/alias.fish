@@ -83,13 +83,13 @@ alias od "~/.dotfiles/bin/hexyl"
 alias grep "~/.dotfiles/bin/rg"
 
 # Trash-cli
-alias tput "trash-put"
-alias tlist "trash-list";
-alias tempty "trash-empty"
+#alias tput "trash-put"
+#alias tlist "trash-list";
+#alias tempty "trash-empty"
 
-function rm
-    echo 'This is not a command what you intended to run.'; printf 'Please use'; echo (set_color green) 'trash-put' (set_color normal); printf 'If you want to execute it, use'; echo (set_color red) '/bin/rm' (set_color normal)
-end
+#function rm
+#    echo 'This is not a command what you intended to run.'; printf 'Please use'; echo (set_color green) 'trash-put' (set_color normal); printf 'If you want to execute it, use'; echo (set_color red) '/bin/rm' (set_color normal)
+#end
 
 # Pandoc
 function pbuild
