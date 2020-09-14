@@ -37,7 +37,7 @@
         Installin fisher,
       ]
     - [
-        opam pin add ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git && opam install ocaml-lsp-server
+        opam pin add ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git -y && opam install ocaml-lsp-server -y && opam install fmt -y
       ]
 
 - link:
