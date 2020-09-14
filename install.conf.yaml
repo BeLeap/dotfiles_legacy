@@ -16,7 +16,7 @@
 
 - shell:
     - [
-        sudo apt install -y fish neovim tmux nodejs npm curl clang fzf cargo cmake gperf pkg-config openssl libasound2-dev build-essential libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev libx11-dev trash-cli pandoc texlive-xetex,
+        sudo apt install -y fish neovim tmux nodejs npm curl clang fzf cargo cmake gperf pkg-config openssl libasound2-dev build-essential libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev libx11-dev trash-cli pandoc texlive-xetex ocaml opam,
         Installing dependencies,
       ]
     - [
@@ -35,6 +35,9 @@
     - [
         curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish,
         Installin fisher,
+      ]
+    - [
+        opam pin add ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git && opam install ocaml-lsp-server
       ]
 
 - link:
