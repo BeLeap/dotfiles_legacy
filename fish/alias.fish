@@ -19,6 +19,15 @@ end
 function c..
     cd ../
 end
+function t
+    tmux split-window "$argv"
+end
+function th
+    tmux split-window -dh "$argv"
+end
+function tv
+    tmux split-window -dv "$argv"
+end
 
 # Configuration Files
 function vimrc
