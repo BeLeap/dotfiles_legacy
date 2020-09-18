@@ -1,7 +1,5 @@
 # Neovim
-function vim
-    nvim $argv
-end
+alias vim "nvim"
 
 # Short-handed commands
 function v
