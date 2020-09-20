@@ -27,4 +27,5 @@ Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'segeljakt/vim-silicon'
 Plug 'tpope/vim-surround'
+Plug 'SirVer/ultisnips'
 call plug#end()

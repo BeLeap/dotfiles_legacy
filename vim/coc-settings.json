@@ -2,24 +2,41 @@
   "languageserver": {
     "svls": {
       "command": "svls",
-      "filetypes": ["systemverilog"]
+      "filetypes": [
+        "systemverilog"
+      ]
     },
     "clangd": {
       "command": "clangd-10",
-      "filetypes": ["c", "cpp"]
+      "filetypes": [
+        "c",
+        "cpp"
+      ]
     },
     "ocaml-lsp": {
       "command": "opam",
-      "args": ["config", "exec", "--", "ocamllsp"],
-      "filetypes": ["ocaml", "reason"]
+      "args": [
+        "config",
+        "exec",
+        "--",
+        "ocamllsp"
+      ],
+      "filetypes": [
+        "ocaml",
+        "reason"
+      ]
     },
     "nasm-lsp": {
       "command": "nasm-lsp",
-      "filetypes": ["asm"]
+      "filetypes": [
+        "asm"
+      ]
     }
   },
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "snippets.ultisnips.directories": ["~/.dotfiles/vim/snippets"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "*"
+  ],
+  "snippets.userSnippetsDirectory": "~/.dotfiles/vim/snippets",
   "coc.preferences.rootPatterns": [
     ".git",
     ".hg",

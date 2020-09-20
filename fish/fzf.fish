@@ -1,5 +1,5 @@
 function vz
-	set -l file (fd -i | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
+	set -l file (fd -i . | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'OneHalfDark' --style=numbers --color=always {} | head -100" --preview-window noborder)
 	if [ ! -z "$file" ]
 		vim $file
 	end
