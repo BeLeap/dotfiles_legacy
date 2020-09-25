@@ -47,5 +47,6 @@
   "eslint.autoFixOnSave": true,
   "eslint.options": {
     "configFile": "/home/beleap/.dotfiles/vim/.eslintrc.js"
-  }
+  },
+  "eslint.packageManager": "yarn"
 }
