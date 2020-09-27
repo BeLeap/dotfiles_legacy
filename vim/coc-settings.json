@@ -48,5 +48,8 @@
   "eslint.options": {
     "configFile": "/home/beleap/.dotfiles/vim/.eslintrc.js"
   },
-  "eslint.packageManager": "yarn"
+  "eslint.packageManager": "yarn",
+  "cSpell.userWords": [
+    "dotfiles"
+  ]
 }

@@ -182,5 +182,6 @@ let g:coc_global_extensions = [
             \"coc-yaml",
             \"coc-yank",
             \"coc-tasks",
-            \"coc-prettier"
+            \"coc-prettier",
+            \"coc-spell-checker",
             \]
