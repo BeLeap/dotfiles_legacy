@@ -121,3 +121,8 @@ function open
         cd $curr
     end
 end
+
+function dock
+    docker start $argv
+    docker attach $argv
+end
