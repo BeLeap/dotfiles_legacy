@@ -15,4 +15,4 @@ nmap <Leader>C :ClangFormatAutoToggle<CR>
 
 autocmd FileType c,cpp,objc ClangFormatAutoEnable
 
-let g:clang_format#code_style = "llvm"
+let g:clang_format#code_style = "google"
