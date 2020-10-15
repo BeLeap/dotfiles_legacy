@@ -100,8 +100,8 @@ alias grep "~/.dotfiles/bin/rg"
 
 # Pandoc
 function pbuild
-    set -l file (echo $argv | cut -f 1 -d '.')
-    pandoc --pdf-engine=xelatex $argv -o $file".pdf"
+    set -l file (basename $argv .md)
+    pandoc $argv -o $file".pdf" --pdf-engine=xelatex --from markdown --listing
 end
 
 # for Windows Subsystem Linux
