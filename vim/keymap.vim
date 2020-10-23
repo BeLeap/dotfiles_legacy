@@ -36,3 +36,6 @@ nnoremap k gk
 nnoremap j gj
 vnoremap k gk
 vnoremap j gj
+
+nmap <leader>b :AsyncTask file-build<CR>
+nmap <leader>r :AsyncTask file-run<CR>

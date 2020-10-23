@@ -1,38 +1,38 @@
 {
-  "languageserver": {
-    "svls": {
-      "command": "svls",
-      "filetypes": ["systemverilog"]
+    "languageserver": {
+        "svls": {
+            "command": "svls",
+            "filetypes": ["systemverilog"]
+        },
+        "clangd": {
+            "command": "clangd",
+            "filetypes": ["c", "cpp"]
+        },
+        "ocaml-lsp": {
+            "command": "opam",
+            "args": ["config", "exec", "--", "ocamllsp"],
+            "filetypes": ["ocaml", "reason"]
+        },
+        "nasm-lsp": {
+            "command": "nasm-lsp",
+            "filetypes": ["asm"]
+        }
     },
-    "clangd": {
-      "command": "clangd",
-      "filetypes": ["c", "cpp"]
+    "coc.preferences.formatOnSaveFiletypes": ["*"],
+    "snippets.userSnippetsDirectory": "~/.dotfiles/vim/snippets",
+    "coc.preferences.rootPatterns": [
+        ".git",
+        ".hg",
+        ".projections.json",
+        "package.json",
+        ".vimspector.json"
+    ],
+    "eslint.autoFixOnSave": true,
+    "eslint.options": {
+        "configFile": "/home/beleap/.dotfiles/vim/.eslintrc.js"
     },
-    "ocaml-lsp": {
-      "command": "opam",
-      "args": ["config", "exec", "--", "ocamllsp"],
-      "filetypes": ["ocaml", "reason"]
-    },
-    "nasm-lsp": {
-      "command": "nasm-lsp",
-      "filetypes": ["asm"]
-    }
-  },
-  "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "snippets.userSnippetsDirectory": "~/.dotfiles/vim/snippets",
-  "coc.preferences.rootPatterns": [
-    ".git",
-    ".hg",
-    ".projections.json",
-    "package.json",
-    ".vimspector.json"
-  ],
-  "eslint.autoFixOnSave": true,
-  "eslint.options": {
-    "configFile": "/home/beleap/.dotfiles/vim/.eslintrc.js"
-  },
-  "eslint.packageManager": "yarn",
-  "cSpell.userWords": ["dotfiles", "clangd"],
-  "prettier.trailingComma": "all",
-  "prettier.tabWidth": 4
+    "eslint.packageManager": "yarn",
+    "cSpell.userWords": ["dotfiles", "clangd", "ARQ", "px"],
+    "prettier.trailingComma": "all",
+    "prettier.tabWidth": 4
 }
