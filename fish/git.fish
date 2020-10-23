@@ -3,7 +3,7 @@ function gitlog
 end
 
 function gacp
-    git add .; and git commit -m $argv; and git push
+    git add *; and git commit -m $argv; and git push
 end
 
 function ggr
