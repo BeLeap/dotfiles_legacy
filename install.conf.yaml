@@ -16,7 +16,7 @@
 
 - shell:
     - [
-        sudo pacman -S --noconfirm clang-format fish neovim tmux nodejs npm curl clang fzf cargo cmake gperf pkg-config openssl libasound2-dev build-essential libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev libx11-dev trash-cli pandoc texlive-xetex ocaml opam,
+        sudo apt install -y clang-format fish neovim tmux nodejs npm curl clang fzf cargo cmake gperf pkg-config openssl libasound2-dev build-essential libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev libx11-dev trash-cli pandoc texlive-xetex ocaml opam,
         Installing dependencies,
       ]
     - [
@@ -41,7 +41,6 @@
       ]
 
 - link:
-    ~/.dotfiles: ""
     ~/.tmux.conf: tmux/.tmux.conf
     ~/.vimrc: vim/.vimrc
     ~/.config/nvim/init.vim: vim/init.vim
