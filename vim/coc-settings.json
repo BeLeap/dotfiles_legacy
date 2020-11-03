@@ -32,7 +32,7 @@
         "configFile": "/home/beleap/.dotfiles/vim/.eslintrc.js"
     },
     "eslint.packageManager": "yarn",
-    "cSpell.userWords": ["dotfiles", "clangd", "ARQ", "px"],
+    "cSpell.userWords": ["dotfiles", "clangd", "ARQ", "px", "klue"],
     "prettier.trailingComma": "all",
     "prettier.tabWidth": 4
 }
