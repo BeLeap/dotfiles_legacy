@@ -8,3 +8,6 @@ source ~/.dotfiles/fish/docker.fish
 
 # opam configuration
 source /home/beleap/.opam/opam-init/init.fish > /dev/null 2> /dev/null; or true
+# ghcup-env
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
+test -f /home/beleap/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/beleap/.ghcup/bin $PATH

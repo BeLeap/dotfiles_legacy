@@ -152,6 +152,8 @@ let g:coc_snippet_prev = '<c-k>'
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
+autocmd! FileType json set filetype=jsonc
+
 let g:coc_global_extensions = [
             \"coc-actions",
             \"coc-calc",
@@ -184,4 +186,5 @@ let g:coc_global_extensions = [
             \"coc-tasks",
             \"coc-prettier",
             \"coc-spell-checker",
+            \"coc-json",
             \]
