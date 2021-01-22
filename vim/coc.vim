@@ -176,7 +176,6 @@ let g:coc_global_extensions = [
             \"coc-rls",
             \"coc-snippets",
             \"coc-tabnine",
-            \"coc-template",
             \"coc-texlab",
             \"coc-tsserver",
             \"coc-vimlsp",
