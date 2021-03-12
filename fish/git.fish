@@ -7,25 +7,24 @@ function gacp
 
     if $inside_git_repo
         git status
+        read -p "echo 'Proceed[Y/n] >>> '" -l confirm
 
-        while true
-            read -p "echo 'Proceed[Y/n] >>> '" -l confirm
+        switch $confirm
+        case Y y
+            git add .
+            read -p "echo 'Message >>> '" -l msg
+            git commit -m $msg
+            read -p "echo 'Push[Y/n] >>> '" -l push
 
-            switch $confirm
-            case Y y
-                git add .
-                read -p "echo 'Message >>> '" -l msg
-                git commit -m $msg
-                read -p "echo 'Push[Y/n] >>> '" -l push
-                switch $push
-                    case Y y
-                        git push
-                    case '' N n
-                        return 0
-                end
-            case '' N n
-                return 1
+            switch $push
+                case Y y
+                    git push
+                case '' N n
+                    return 0
             end
+
+        case '' N n
+            return 1
         end
     end
 end
