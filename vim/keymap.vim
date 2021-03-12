@@ -1,4 +1,3 @@
-let mapleader = ","
 inoremap <leader>d <ESC>
 nnoremap <leader>d <ESC>
 vnoremap <leader>d <ESC>
@@ -37,5 +36,5 @@ nnoremap j gj
 vnoremap k gk
 vnoremap j gj
 
-nmap <leader>b :AsyncTask file-build<CR>
-nmap <leader>r :AsyncTask file-run<CR>
+nmap <leader>bi :AsyncTask file-build<CR>
+nmap <leader>ru :AsyncTask file-run<CR>

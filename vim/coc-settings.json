@@ -46,5 +46,6 @@
     "eslint.packageManager": "yarn",
     "cSpell.userWords": ["dotfiles", "clangd", "ARQ", "px", "klue"],
     "prettier.trailingComma": "all",
-    "prettier.tabWidth": 4
+    "prettier.tabWidth": 4,
+    "coc.preferences.promptInput": false
 }

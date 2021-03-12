@@ -9,15 +9,20 @@ function gacp
         git status
 
         while true
-            read -p "echo 'Proceed[Y/n]> '" -l confirm
+            read -p "echo 'Proceed[Y/n] >>> '" -l confirm
 
             switch $confirm
             case Y y
                 git add .
-                read -p "echo 'Message> '" -l msg
+                read -p "echo 'Message >>> '" -l msg
                 git commit -m $msg
-                git push
-                return 0
+                read -p "echo 'Push[Y/n] >>> '" -l push
+                switch $push
+                    case Y y
+                        git push
+                    case '' N n
+                        return 0
+                end
             case '' N n
                 return 1
             end
