@@ -54,15 +54,15 @@ function npg
 end
 
 # Rust Commands
-alias ls "~/.dotfiles/bin/exa"
-alias ll "~/.dotfiles/bin/exa -l"
-alias lt "~/.dotfiles/bin/exa -l -T -L2"
+alias ls "~/.cargo/bin/exa"
+alias ll "~/.cargo/bin/exa -l"
+alias lt "~/.cargo/bin/exa -l -T -L2"
 
-alias cat "~/.dotfiles/bin/bat"
+alias cat "~/.cargo/bin/bat"
 
-alias od "~/.dotfiles/bin/hexyl"
+alias od "~/.cargo/bin/hexyl"
 
-alias grep "~/.dotfiles/bin/rg"
+alias grep "~/.cargo/bin/rg"
 
 # Trash-cli
 #alias tput "trash-put"
