@@ -1,4 +1,8 @@
-call plug#begin('~/.vim/plugged')
+if has('win32')
+    call plug#begin('~/AppData/Local/nvim/plugged')
+else
+    call plug#begin('~/.vim/plugged')
+endif
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
