@@ -47,5 +47,10 @@
     "cSpell.userWords": ["dotfiles", "clangd", "ARQ", "px", "klue"],
     "prettier.trailingComma": "all",
     "prettier.tabWidth": 4,
-    "coc.preferences.promptInput": false
+    "coc.preferences.promptInput": false,
+    "explorer.width": 30,
+    "explorer.file.showHiddenFiles": true,
+    "explorer.file.autoReveal": false,
+    "explorer.icon.enableVimDevicons": true,
+    "explorer.icon.enableNerdfont": true
 }
