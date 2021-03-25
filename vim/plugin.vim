@@ -32,4 +32,5 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'segeljakt/vim-silicon'
 Plug 'tpope/vim-surround'
 Plug 'SirVer/ultisnips'
+Plug 'luochen1990/rainbow'
 call plug#end()
