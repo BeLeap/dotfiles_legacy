@@ -154,7 +154,7 @@ imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 autocmd! FileType json set filetype=jsonc
 
-nnoremap <space>e :CocCommand  explorer<CR>
+nnoremap <leader>e :CocCommand  explorer<CR>
 
 let g:coc_global_extensions = [
             \"coc-actions",
@@ -188,4 +188,5 @@ let g:coc_global_extensions = [
             \"coc-spell-checker",
             \"coc-json",
             \"coc-metals",
+            \"coc-git"
             \]
