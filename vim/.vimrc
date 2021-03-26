@@ -14,6 +14,7 @@ so ~/.dotfiles/vim/fzf.vim
 so ~/.dotfiles/vim/tabs.vim
 so ~/.dotfiles/vim/dap.vim
 so ~/.dotfiles/vim/treesitter.vim
+so ~/.dotfiles/vim/latex.vim
 
 set encoding=UTF-8
 
@@ -24,7 +25,7 @@ endif
 if has('win32')
     let g:python3_host_prog="C:\\Users\\ckdtj\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
     set shell=pwsh shellquote=( shellpipe=\| shellredir=> shellxquote=
-    set shellcmdflag=-NoLogo\ -NoProfile\ -ExecutionPolicy\ RemoteSigned\ -Command
+    set shellcmdflag=-NoLogo\ -ExecutionPolicy\ RemoteSigned\ -Command
 endif
 
 if has("gui_running")
