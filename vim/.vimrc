@@ -13,6 +13,7 @@ so ~/.dotfiles/vim/clang-format.vim
 so ~/.dotfiles/vim/fzf.vim
 so ~/.dotfiles/vim/tabs.vim
 so ~/.dotfiles/vim/dap.vim
+so ~/.dotfiles/vim/treesitter.vim
 
 set encoding=UTF-8
 
