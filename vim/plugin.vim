@@ -32,5 +32,5 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mfussenegger/nvim-dap'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 Plug 'mfussenegger/nvim-dap-python'
-Plug 'vim-latex/vim-latex'
+Plug 'lervag/vimtex'
 call plug#end()

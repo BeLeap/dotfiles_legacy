@@ -16,6 +16,7 @@ so ~/.dotfiles/vim/treesitter.vim
 so ~/.dotfiles/vim/latex.vim
 
 set encoding=UTF-8
+set guifont=Cascadia\ Code\ PL:h20
 
 if has('nvim')
     so ~/.dotfiles/vim/nvim.vim
@@ -25,6 +26,7 @@ if has('win32')
     let g:python3_host_prog="C:\\Users\\ckdtj\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
     set shell=pwsh shellquote=( shellpipe=\| shellredir=> shellxquote=
     set shellcmdflag=-NoLogo\ -ExecutionPolicy\ RemoteSigned\ -Command
+    let g:asyncrun_program = get(g:, 'cmd.exe', {})
 endif
 
 if has("gui_running")

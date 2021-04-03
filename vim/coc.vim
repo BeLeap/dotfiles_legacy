@@ -196,7 +196,7 @@ let g:coc_global_extensions = [
             \"coc-pyright",
             \"coc-rls",
             \"coc-snippets",
-            \"coc-texlab",
+            \"coc-vimtex",
             \"coc-tsserver",
             \"coc-vimlsp",
             \"coc-xml",

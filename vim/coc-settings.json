@@ -56,11 +56,14 @@
     "rpc.idleText": "노는 중",
     "rpc.lowerDetailsIdle": "노는 중",
     "rpc.detailsIdle": "일하는 척하는 중",
-    "rpc.lowerDetailsEditing": "{filename}",
+    "rpc.lowerDetailsEditing": "{workspace}",
     "rpc.detailsEditing": "{filename}와 씨름하는 중",
-    "rpc.lowerDetailsViewing": "{filename}",
+    "rpc.lowerDetailsViewing": "{workspace}",
     "rpc.detailsViewing": "{filename}을 분석하는 중",
     "rpc.smallImage": "세계 최고의 에디터",
     "rpc.largeImage": "{LANG}",
-    "rpc.largeImageIdle": "노는 중"
+    "rpc.largeImageIdle": "노는 중",
+    "rpc.lowerDetailsInExplorer": "{workspace}",
+    "rpc.detailsInExplorer": "{workspace}를 탐험하는 중",
+    "metals.javaHome": "C:\\Program Files\\Java\\jdk-11.0.10"
 }
