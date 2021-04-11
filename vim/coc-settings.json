@@ -44,7 +44,17 @@
         "configFile": "/home/beleap/.dotfiles/vim/.eslintrc.js"
     },
     "eslint.packageManager": "yarn",
-    "cSpell.userWords": ["dotfiles", "clangd", "ARQ", "px", "klue"],
+    "cSpell.userWords": [
+      "ARQ",
+      "clangd",
+      "dotfiles",
+      "foldl",
+      "foldr",
+      "klue",
+      "px",
+      "recip",
+      "scanl"
+    ],
     "prettier.trailingComma": "all",
     "prettier.tabWidth": 4,
     "coc.preferences.promptInput": false,

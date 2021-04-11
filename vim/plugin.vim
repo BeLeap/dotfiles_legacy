@@ -3,7 +3,6 @@ if has('win32')
 else
     call plug#begin('~/.vim/plugged')
 endif
-Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'makerj/vim-pdf'
@@ -19,7 +18,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'gko/vim-coloresque'
 Plug 'arcticicestudio/nord-vim'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
@@ -30,7 +28,11 @@ Plug 'luochen1990/rainbow'
 Plug 'easymotion/vim-easymotion'
 Plug 'ryanoasis/vim-devicons'
 Plug 'mfussenegger/nvim-dap'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
+"Plug 'romgrk/nvim-treesitter-context'
 Plug 'mfussenegger/nvim-dap-python'
 Plug 'lervag/vimtex'
+Plug 'lambdalisue/battery.vim'
+Plug 'itchyny/lightline.vim'
+"Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ap/vim-buftabline'
 call plug#end()
