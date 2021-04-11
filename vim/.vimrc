@@ -24,9 +24,6 @@ endif
 
 if has('win32')
     let g:python3_host_prog="C:\\Users\\ckdtj\\AppData\\Local\\Programs\\Python\\Python39\\python.exe"
-    set shell=pwsh shellquote=( shellpipe=\| shellredir=> shellxquote=
-    set shellcmdflag=-NoLogo\ -ExecutionPolicy\ RemoteSigned\ -Command
-    let g:asyncrun_program = get(g:, 'cmd.exe', {})
 endif
 
 if has("gui_running")
