@@ -46,11 +46,14 @@
     "eslint.packageManager": "yarn",
     "cSpell.userWords": [
       "ARQ",
+      "chrono",
       "clangd",
+      "dotenv",
       "dotfiles",
       "foldl",
       "foldr",
       "klue",
+      "postgres",
       "px",
       "recip",
       "scanl"
@@ -75,5 +78,6 @@
     "rpc.largeImageIdle": "노는 중",
     "rpc.lowerDetailsInExplorer": "{workspace}",
     "rpc.detailsInExplorer": "{workspace}를 탐험하는 중",
+    "rpc.largeImageInExplorer": "탐험 중",
     "metals.javaHome": "C:\\Program Files\\Java\\jdk-11.0.10"
 }

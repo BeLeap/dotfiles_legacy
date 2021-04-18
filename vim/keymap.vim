@@ -36,6 +36,3 @@ nnoremap j gj
 vnoremap k gk
 vnoremap j gj
 nnoremap <leader>res :vertical resize 30<CR>
-
-nmap <leader>bi :AsyncTask file-build<CR>
-nmap <leader>ru :AsyncTask file-run<CR>

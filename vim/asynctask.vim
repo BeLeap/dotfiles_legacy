@@ -7,3 +7,6 @@ let g:asyncrun_shell = 'cmd.exe'
 let g:asyncrun_program = get(g:, 'asyncrun_program', {})
 let g:asyncrun_program.custom = { opts -> 'cmd.exe' . opts.cmd }
 
+nmap <leader>bi :AsyncTask file-build<CR>
+nmap <leader>ru :AsyncTask file-run<CR>
+nmap <leader>te :AsyncTask file-test<CR>

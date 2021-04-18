@@ -5,20 +5,27 @@ function! CocCurrentFunction()
     return get(b:, 'coc_current_function', '')
 endfunction
 
+function! CurrentTime()
+    return strftime('%c')
+endfunction
+
 let g:lightline = {
       \ 'colorscheme': 'nord',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'cocstatus', 'currentfunction', 'readonly', 'filename', 'modified' ] ],
-      \   'right': [ ['battery'],
-      \              ['lineinfo'],
+      \             [ 'gitbranch', 'cocstatus',  'treesitter', 'currentfunction', 'readonly', 'filename', 'modified' ] ],
+      \   'right': [ [ 'battery', 'time' ],
+      \              [ 'lineinfo' ],
       \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ]]
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
       \   'currentfunction': 'CocCurrentFunction',
-      \   'battery': 'battery#component'
+      \   'battery': 'battery#component',
+      \   'time': 'CurrentTime',
+      \   'treesitter': 'nvim_treesitter#statusline',
+      \   'gitbranch': 'FugitiveHead'
       \ },
       \ }
 
