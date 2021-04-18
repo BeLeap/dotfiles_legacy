@@ -2,11 +2,15 @@ let g:gitgutter_max_signs = 1000
 set statusline=...%{battery#component()}...
 set tabline=...%{battery#component()}...
 function! CocCurrentFunction()
-    return get(b:, 'coc_current_function', '')
+    return winwidth(0) > 70 ? get(b:, 'coc_current_function', '') : ''
 endfunction
 
 function! CurrentTime()
-    return strftime('%c')
+    return winwidth(0) > 70 ? strftime('%c') : ''
+endfunction
+
+function! Battery()
+    return winwidth(0) > 70 ? battery#component() : ''
 endfunction
 
 let g:lightline = {
@@ -16,13 +20,12 @@ let g:lightline = {
       \             [ 'gitbranch', 'cocstatus',  'treesitter', 'currentfunction', 'readonly', 'filename', 'modified' ] ],
       \   'right': [ [ 'battery', 'time' ],
       \              [ 'lineinfo' ],
-      \              [ 'percent' ],
       \              [ 'fileformat', 'fileencoding', 'filetype' ]]
       \ },
       \ 'component_function': {
       \   'cocstatus': 'coc#status',
       \   'currentfunction': 'CocCurrentFunction',
-      \   'battery': 'battery#component',
+      \   'battery': 'Battery',
       \   'time': 'CurrentTime',
       \   'treesitter': 'nvim_treesitter#statusline',
       \   'gitbranch': 'FugitiveHead'

@@ -48,6 +48,7 @@
       "ARQ",
       "chrono",
       "clangd",
+      "codegen",
       "dotenv",
       "dotfiles",
       "foldl",
@@ -56,7 +57,9 @@
       "postgres",
       "px",
       "recip",
-      "scanl"
+      "refrences",
+      "scanl",
+      "varchar"
     ],
     "prettier.trailingComma": "all",
     "prettier.tabWidth": 4,
