@@ -3,7 +3,6 @@ let mapleader = ","
 so ~/.dotfiles/vim/plugin.vim
 so ~/.dotfiles/vim/color.vim
 so ~/.dotfiles/vim/line.vim
-so ~/.dotfiles/vim/markdown.vim
 so ~/.dotfiles/vim/asynctask.vim
 so ~/.dotfiles/vim/coc.vim
 so ~/.dotfiles/vim/keymap.vim
@@ -11,9 +10,7 @@ so ~/.dotfiles/vim/others.vim
 so ~/.dotfiles/vim/snippets.vim
 so ~/.dotfiles/vim/clang-format.vim
 so ~/.dotfiles/vim/fzf.vim
-so ~/.dotfiles/vim/dap.vim
 so ~/.dotfiles/vim/treesitter.vim
-so ~/.dotfiles/vim/latex.vim
 
 set encoding=UTF-8
 set guifont=Cascadia\ Code\ PL:h20

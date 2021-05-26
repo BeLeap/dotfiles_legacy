@@ -191,7 +191,6 @@ let g:coc_global_extensions = [
             \"coc-html",
             \"coc-java",
             \"coc-json",
-            \"coc-markdownlint",
             \"coc-powershell",
             \"coc-pyright",
             \"coc-rls",
@@ -206,7 +205,6 @@ let g:coc_global_extensions = [
             \"coc-prettier",
             \"coc-spell-checker",
             \"coc-json",
-            \"coc-metals",
             \"coc-git",
             \"coc-kotlin"
             \]
