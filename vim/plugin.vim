@@ -32,4 +32,5 @@ Plug 'lambdalisue/battery.vim'
 Plug 'itchyny/lightline.vim'
 "Plug 'kyazdani42/nvim-web-devicons'
 Plug 'ap/vim-buftabline'
+Plug 'rmagatti/auto-session'
 call plug#end()

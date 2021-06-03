@@ -28,6 +28,10 @@
                 "hie.yaml"
             ],
             "filetypes": ["haskell", "lhaskell"]
+        },
+        "kotlin": {
+            "command": "kotlin-language-server",
+            "filetypes": ["kotlin"]
         }
     },
     "coc.preferences.formatOnSaveFiletypes": ["*"],
@@ -45,21 +49,21 @@
     },
     "eslint.packageManager": "yarn",
     "cSpell.userWords": [
-      "ARQ",
-      "chrono",
-      "clangd",
-      "codegen",
-      "dotenv",
-      "dotfiles",
-      "foldl",
-      "foldr",
-      "klue",
-      "postgres",
-      "px",
-      "recip",
-      "refrences",
-      "scanl",
-      "varchar"
+        "ARQ",
+        "chrono",
+        "clangd",
+        "codegen",
+        "dotenv",
+        "dotfiles",
+        "foldl",
+        "foldr",
+        "klue",
+        "postgres",
+        "px",
+        "recip",
+        "refrences",
+        "scanl",
+        "varchar"
     ],
     "prettier.trailingComma": "all",
     "prettier.tabWidth": 4,

@@ -206,5 +206,6 @@ let g:coc_global_extensions = [
             \"coc-spell-checker",
             \"coc-json",
             \"coc-git",
-            \"coc-kotlin"
+            \"coc-deno",
+            \"coc-protobuf"
             \]

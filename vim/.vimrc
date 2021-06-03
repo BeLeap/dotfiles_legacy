@@ -1,4 +1,4 @@
-let mapleader = ","
+let mapleader = ";"
 
 so ~/.dotfiles/vim/plugin.vim
 so ~/.dotfiles/vim/color.vim
