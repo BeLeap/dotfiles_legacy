@@ -7,3 +7,6 @@ source ~/.dotfiles/fish/git.fish
 source ~/.dotfiles/fish/docker.fish
 
 set -gx GDK_SCALE 2
+
+# Install
+# fisher install edc/bass
