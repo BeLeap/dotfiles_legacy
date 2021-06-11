@@ -207,5 +207,6 @@ let g:coc_global_extensions = [
             \"coc-json",
             \"coc-git",
             \"coc-deno",
-            \"coc-protobuf"
+            \"coc-protobuf",
+            \"coc-kotlin",
             \]

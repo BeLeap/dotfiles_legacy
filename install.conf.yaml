@@ -1,54 +1,41 @@
 - defaults:
-    shell:
-      stdin: true
-      stdout: true
-      stderr: true
-    link:
-      force: true
-      create: true
-      relink: true
+      shell:
+          stdin: true
+          stdout: true
+          stderr: true
+      link:
+          force: true
+          create: true
+          relink: true
 
 - clean:
-    ~/:
-      force: true
-    ~/.config:
-      recursive: true
+      ~/:
+          force: true
+      ~/.config:
+          recursive: true
 
 - shell:
-    - [
-        sudo apt install -y clang-format fish neovim tmux curl clang fzf cmake gperf pkg-config openssl libasound2-dev build-essential libfreetype6-dev libexpat1-dev libxcb-composite0-dev libssl-dev libx11-dev trash-cli,
-        Installing dependencies,
-      ]
-    - [
-        fish -c "set -U fish_user_paths ~/.cargo/bin $fish_user_paths",
-        Add cargo to path,
-      ]
-    - [sudo npm install -g neovim]
-    - [pip3 install jedi neovim pynvim]
-    - [chsh -s /usr/bin/fish, Change default shell to fish]
-    - [git submodule update --init --recursive, Installing modules]
-    - [
-        curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim,
-        Installing vim-plug,
-      ]
-    - [
-        curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish,
-        Installin fisher,
-      ]
-    - [
-        opam pin add ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git -y && opam install ocaml-lsp-server -y && opam install ocamlformat -y
-      ]
+      - [sudo npm install -g neovim]
+      - [pip3 install jedi neovim pynvim]
+      - [chsh -s /bin/zsh, Change default shell to fish]
+      - [git submodule update --init --recursive, Installing modules]
+      - [
+            curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim,
+            Installing vim-plug,
+        ]
+      - [
+            curl -sL --proto-redir -all,
+            https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh,
+        ]
 
 - link:
-    ~/.tmux.conf: tmux/.tmux.conf
-    ~/.vimrc: vim/.vimrc
-    ~/.config/nvim/init.vim: vim/init.vim
-    ~/.config/fish/config.fish: fish/config.fish
-    ~/.gdbinit: gdb/.gdbinit
-    ~/.cargo/bin: bin/
-    ~/.config/nvim/coc-settings.json: vim/coc-settings.json
-    ~/.config/nvim/tasks.ini: vim/tasks.ini
+      ~/.tmux.conf: tmux/.tmux.conf
+      ~/.vimrc: vim/.vimrc
+      ~/.config/nvim/init.vim: vim/init.vim
+      ~/.zshrc: zsh/.zshrc
+      ~/.config/nvim/coc-settings.json: vim/coc-settings.json
+      ~/.config/nvim/tasks.ini: vim/tasks.ini
 
 - shell:
-    - [tinstall | fish, Installing tmux plugin]
-    - [vim +PlugInstall +qall, Installing vim plugins]
+      - [tinstall | zsh, Installing tmux plugin]
+      - [vim +PlugInstall +qall, Installing vim plugins]

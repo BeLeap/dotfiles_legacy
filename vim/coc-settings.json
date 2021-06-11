@@ -28,10 +28,6 @@
                 "hie.yaml"
             ],
             "filetypes": ["haskell", "lhaskell"]
-        },
-        "kotlin": {
-            "command": "kotlin-language-server",
-            "filetypes": ["kotlin"]
         }
     },
     "coc.preferences.formatOnSaveFiletypes": ["*"],
