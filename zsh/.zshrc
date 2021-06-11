@@ -37,7 +37,5 @@ source $ZSH_CONF_HOME/tmux.zsh
 source $ZSH_CONF_HOME/git.zsh
 source $ZSH_CONF_HOME/plugin.zsh
 
-source $ZSH_CONF_HOME/z.sh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

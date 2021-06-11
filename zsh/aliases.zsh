@@ -4,7 +4,7 @@ alias vim="nvim"
 # Short-handed commands
 alias v="vim"
 alias p="python3"
-alias j="z"
+alias j="fz"
 
 # Configuration Files
 alias vimrc="vim ~/.vimrc"
