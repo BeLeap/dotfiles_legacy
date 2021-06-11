@@ -10,3 +10,5 @@ source $ZSH_CONF_HOME/aliases.zsh
 source $ZSH_CONF_HOME/fzf.zsh
 source $ZSH_CONF_HOME/tmux.zsh
 source $ZSH_CONF_HOME/git.zsh
+source $ZSH_CONF_HOME/plugin.zsh
+source $ZSH_CONF_HOME/antigen.zsh
