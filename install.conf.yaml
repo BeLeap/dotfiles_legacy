@@ -31,7 +31,7 @@
 - link:
       ~/.tmux.conf: tmux/.tmux.conf
       ~/.vimrc: vim/.vimrc
-      ~/.config/nvim/init.vim: vim/init.vim
+      ~/.config/nvim: nvim
       ~/.zshrc: zsh/.zshrc
       ~/.config/nvim/coc-settings.json: vim/coc-settings.json
       ~/.config/nvim/tasks.ini: vim/tasks.ini
