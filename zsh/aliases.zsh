@@ -7,7 +7,7 @@ alias p="python3"
 alias j="z"
 
 # Configuration Files
-alias vimrc="vim ~/.vimrc"
+alias vimrc="pushd ~/.config/nvim && vim ./init.vim && popd"
 alias zshrc="vim ~/.zshrc"
 alias sozsh="source ~/.zshrc"
 alias tmuxconf="vim ~/.tmux.conf"
