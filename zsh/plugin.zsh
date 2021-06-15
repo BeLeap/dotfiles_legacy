@@ -10,3 +10,6 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit light zdharma/fast-syntax-highlighting
 zinit light rupa/z
+zinit light bossjones/boss-git-zsh-plugin
+zinit light MikeDacre/careful_rm
+zinit light mbenford/zsh-tmux-auto-title
