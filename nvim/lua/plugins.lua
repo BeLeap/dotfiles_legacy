@@ -22,6 +22,8 @@ return require('packer').startup(function()
 	use 'norcalli/nvim-colorizer.lua'
 	use 'nvim-lua/completion-nvim'
 	use 'hrsh7th/vim-vsnip'
+	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
+	use 'windwp/nvim-autopairs'
 
     -- UI
     use 'kyazdani42/nvim-tree.lua'
