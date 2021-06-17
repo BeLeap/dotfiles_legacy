@@ -14,14 +14,13 @@ return require('packer').startup(function()
     -- Code
     use 'neovim/nvim-lsp'
     use 'neovim/nvim-lspconfig'
-    use 'kabouzeid/nvim-lspinstall'
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'romgrk/nvim-treesitter-context'
     use 'simrat39/rust-tools.nvim'
 	use 'p00f/nvim-ts-rainbow'
 	use 'norcalli/nvim-colorizer.lua'
-	use 'nvim-lua/completion-nvim'
-	use 'hrsh7th/vim-vsnip'
+	use 'hrsh7th/nvim-compe'
+	use 'norcalli/snippets.nvim'
 	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
 	use 'windwp/nvim-autopairs'
 

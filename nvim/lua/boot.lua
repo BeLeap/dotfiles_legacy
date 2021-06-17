@@ -15,6 +15,6 @@ vim.api.nvim_exec([[
 
 require('plugins')
 
-require('others')
 require('keymap')
+require('others')
 require('lsp')

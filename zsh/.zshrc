@@ -38,6 +38,7 @@ source $ZSH_CONF_HOME/plugin.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 export GOPATH=/Users/beleap/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:/Users/beleap/bin:/usr/local/bin:/Users/beleap/bin:/usr/local/bin:/Users/beleap/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/Users/beleap/.zinit/polaris/bin:/Users/beleap/go/bin:/usr/local/opt/go/libexec/bin

@@ -1,3 +1,5 @@
+vim.g.mapleader = ";"
+
 local keymap = vim.api.nvim_set_keymap
 local delkeymap = vim.api.nvim_del_keymap
 

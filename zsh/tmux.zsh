@@ -1,4 +1,5 @@
 if [[ -z "$TMUX" && -z "$INTEGRATED" ]]
 then
-    exec tmux
+    tmux new-session -s beleap -d
+	tmux attach-session
 fi
