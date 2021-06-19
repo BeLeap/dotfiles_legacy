@@ -26,7 +26,3 @@ alias cat="bat"
 alias od="hexyl"
 alias grep="rg"
 
-# Trash-cli
-alias tput="trash-put"
-alias tlist="trash-list"
-alias tempty="trash-empty"

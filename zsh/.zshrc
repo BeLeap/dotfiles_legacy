@@ -42,3 +42,8 @@ source $ZSH_CONF_HOME/plugin.zsh
 export GOPATH=/Users/beleap/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:/Users/beleap/bin:/usr/local/bin:/Users/beleap/bin:/usr/local/bin:/Users/beleap/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/Users/beleap/.zinit/polaris/bin:/Users/beleap/go/bin:/usr/local/opt/go/libexec/bin
+
+# NVM
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
