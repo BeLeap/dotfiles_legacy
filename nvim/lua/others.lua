@@ -24,6 +24,7 @@ vim.wo.signcolumn = "yes"
 
 vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 vim.o.relativenumber = true
+vim.o.scrolloff = 999
 
 require'nord'.set()
 require'colorizer'.setup()

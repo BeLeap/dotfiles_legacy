@@ -13,3 +13,4 @@ zinit light rupa/z
 zinit light bossjones/boss-git-zsh-plugin
 zinit light MikeDacre/careful_rm
 zinit light mbenford/zsh-tmux-auto-title
+zinit light MichaelAquilina/zsh-autoswitch-virtualenv
