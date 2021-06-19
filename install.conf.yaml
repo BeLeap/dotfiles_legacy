@@ -30,11 +30,8 @@
 
 - link:
       ~/.tmux.conf: tmux/.tmux.conf
-      ~/.vimrc: vim/.vimrc
       ~/.config/nvim: nvim
       ~/.zshrc: zsh/.zshrc
-      ~/.config/nvim/coc-settings.json: vim/coc-settings.json
-      ~/.config/nvim/tasks.ini: vim/tasks.ini
 
 - shell:
       - [tinstall | zsh, Installing tmux plugin]
