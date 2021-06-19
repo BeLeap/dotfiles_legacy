@@ -134,7 +134,13 @@ _G.s_tab_complete = function()
   end
 end
 
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+local keymap = vim.api.nvim_set_keymap
+keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+keymap("i", "<C-Space>", "compe#complete()", {silent = true, expr = true})
+keymap("i", "<CR>", "compe#confirm('<CR>')", {silent = true, expr = true})
+keymap("i", "<C-e>", "compe#close('<C-e>')", {silent = true, expr = true})
+keymap("i", "<C-f>", "compe#scroll({ 'delta': +4 })", {silent = true, expr = true})
+keymap("i", "<C-d>", "compe#scroll({ 'delta': -4 })", {silent = true, expr = true})
