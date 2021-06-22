@@ -41,7 +41,7 @@ source $ZSH_CONF_HOME/plugin.zsh
 
 export GOPATH=/$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:$HOME/bin:/usr/local/bin:/$HOME/bin:/usr/local/bin:/$HOME/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/$HOME/.zinit/polaris/bin:/$HOME/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/$HOME/bin:/usr/local/bin:/$HOME/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/$HOME/.zinit/polaris/bin:/$HOME/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt:$HOME/.local/bin
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
