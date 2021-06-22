@@ -5,7 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#export ZSH="/Users/beleap/.oh-my-zsh"
+#export ZSH="/$HOME/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 #source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
@@ -39,11 +39,27 @@ source $ZSH_CONF_HOME/plugin.zsh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export GOPATH=/Users/beleap/go
+export GOPATH=/$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
-export PATH=$PATH:/Users/beleap/bin:/usr/local/bin:/Users/beleap/bin:/usr/local/bin:/Users/beleap/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/Users/beleap/.zinit/polaris/bin:/Users/beleap/go/bin:/usr/local/opt/go/libexec/bin
+export PATH=$PATH:$HOME/bin:/usr/local/bin:/$HOME/bin:/usr/local/bin:/$HOME/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/MacGPG2/bin:/Library/Apple/usr/bin:/$HOME/.zinit/polaris/bin:/$HOME/go/bin:/usr/local/opt/go/libexec/bin:/usr/local/opt
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# the fuck
+eval $(thefuck --alias) 
+
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+
+# Load pyenv into the shell by adding
+# the following to ~/.zshrc:
+
+eval "$(pyenv init -)"
+
+# Make sure to restart your entire logon session
+# for changes to profile files to take effect.
+
