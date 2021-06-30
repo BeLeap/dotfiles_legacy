@@ -186,5 +186,4 @@ let g:coc_global_extensions = [
 			\'coc-kotlin',
 			\'coc-java',
 			\'coc-docker',
-			\'coc-tabnine',
 			\]
