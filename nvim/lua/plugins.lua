@@ -12,14 +12,11 @@ return require('packer').startup(function()
     use 'nvim-telescope/telescope.nvim'
 
     -- Code
-    use 'neovim/nvim-lsp'
-    use 'neovim/nvim-lspconfig'
 	use 'nvim-treesitter/nvim-treesitter'
 	use 'romgrk/nvim-treesitter-context'
     use 'simrat39/rust-tools.nvim'
 	use 'p00f/nvim-ts-rainbow'
 	use 'norcalli/nvim-colorizer.lua'
-	use 'hrsh7th/nvim-compe'
 	use 'norcalli/snippets.nvim'
 	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
 	use 'windwp/nvim-autopairs'
@@ -31,6 +28,14 @@ return require('packer').startup(function()
 		}
 	  end
 	}
+    use {
+      'lewis6991/spellsitter.nvim',
+      config = function()
+        require('spellsitter').setup()
+      end
+    }
+	use 'RishabhRD/popfix'
+	use 'neoclide/coc.nvim'
 
     -- UI
     use 'kyazdani42/nvim-tree.lua'
@@ -41,6 +46,7 @@ return require('packer').startup(function()
     'hoob3rt/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
     }
+	use 'mhinz/vim-startify'
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'

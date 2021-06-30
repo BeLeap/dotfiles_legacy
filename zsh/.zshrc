@@ -63,3 +63,6 @@ eval "$(pyenv init -)"
 # Make sure to restart your entire logon session
 # for changes to profile files to take effect.
 
+# Vcpkg
+source /Users/beleap/vcpkg/scripts/vcpkg_completion.bash
+export PATH=$HOME/vcpkg:$PATH

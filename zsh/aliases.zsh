@@ -26,3 +26,5 @@ alias cat="bat"
 alias od="hexyl"
 alias grep="rg"
 
+alias vaultlogin="vault login -method=oidc -path=keycloak"
+alias awslogin="saml2aws login -p default --skip-prompt"

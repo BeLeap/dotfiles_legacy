@@ -32,7 +32,7 @@ require'colorizer'.setup()
 require'bufferline'.setup{
 	diagnostics = "nvim_lsp",
 	sections = {
-		lualine_c = { "nvim_treesitter#statusline(90)" }
+		lualine_c = { "nvim_treesitter#statusline(90)", "%{coc#status()}%{get(b:,'coc_current_function','')" }
 	}
 }
 
