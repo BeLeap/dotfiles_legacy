@@ -35,7 +35,7 @@ return require('packer').startup(function()
       end
     }
 	use 'RishabhRD/popfix'
-	use 'neoclide/coc.nvim'
+	use {'neoclide/coc.nvim', branch = 'release'}
 
     -- UI
     use 'kyazdani42/nvim-tree.lua'

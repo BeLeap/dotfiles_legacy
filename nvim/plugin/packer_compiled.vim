@@ -47,8 +47,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/Users/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/Users/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/Users/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
+local package_path_str = "/home/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?.lua;/home/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/share/lua/5.1/?/init.lua;/home/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?.lua;/home/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/home/beleap/.cache/nvim/packer_hererocks/2.1.0-beta3/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -74,75 +74,113 @@ time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
   gruvbox = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/gruvbox"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/gruvbox"
   },
   ["lualine.nvim"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/lualine.nvim"
   },
   ["nord.nvim"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/nord.nvim"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nord.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
   ["nvim-bufferline.lua"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-bufferline.lua"
   },
-  ["nvim-lsp"] = {
+  ["nvim-colorizer.lua"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/nvim-lsp"
-  },
-  ["nvim-lspconfig"] = {
-    loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
-  },
-  ["nvim-lspinstall"] = {
-    loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/nvim-lspinstall"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-colorizer.lua"
   },
   ["nvim-tree.lua"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context"
+  },
+  ["nvim-ts-rainbow"] = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/packer.nvim"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/packer.nvim"
   },
   ["plenary.nvim"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/plenary.nvim"
+  },
+  popfix = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/popfix"
   },
   ["popup.nvim"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/popup.nvim"
-  },
-  rainbow = {
-    loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/rainbow"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
   ["rust-tools.nvim"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/rust-tools.nvim"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/rust-tools.nvim"
+  },
+  ["snippets.nvim"] = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/snippets.nvim"
+  },
+  sniprun = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/sniprun"
+  },
+  ["spellsitter.nvim"] = {
+    config = { "\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16spellsitter\frequire\0" },
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/spellsitter.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
+  ["todo-comments.nvim"] = {
+    config = { "\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0" },
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/todo-comments.nvim"
   },
   ["vim-easymotion"] = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/vim-easymotion"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/vim-easymotion"
+  },
+  ["vim-startify"] = {
+    loaded = true,
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/vim-startify"
   },
   vimpeccable = {
     loaded = true,
-    path = "/Users/beleap/.local/share/nvim/site/pack/packer/start/vimpeccable"
+    path = "/home/beleap/.local/share/nvim/site/pack/packer/start/vimpeccable"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: todo-comments.nvim
+time([[Config for todo-comments.nvim]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18todo-comments\frequire\0", "config", "todo-comments.nvim")
+time([[Config for todo-comments.nvim]], false)
+-- Config for: spellsitter.nvim
+time([[Config for spellsitter.nvim]], true)
+try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\16spellsitter\frequire\0", "config", "spellsitter.nvim")
+time([[Config for spellsitter.nvim]], false)
 if should_profile then save_profiles() end
 
 END
