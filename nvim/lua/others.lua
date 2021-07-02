@@ -44,3 +44,4 @@ require'lualine'.setup {
 	extensions = { 'quickfix', 'nvim-tree' }
 }
 
+require('neoscroll').setup()

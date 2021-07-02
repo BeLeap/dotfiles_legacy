@@ -1,21 +1,21 @@
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function()
-    -- Packer manage itself
-    use 'wbthomason/packer.nvim'
+  -- Packer manage itself
+  use 'wbthomason/packer.nvim'
 
-    -- Make easier configure vim with lua
-    use 'svermeulen/vimpeccable'
-    use 'morhetz/gruvbox'
-    use 'nvim-lua/popup.nvim'
-    use 'nvim-lua/plenary.nvim'
-    use 'nvim-telescope/telescope.nvim'
+  -- Make easier configure vim with lua
+  use 'svermeulen/vimpeccable'
+  use 'morhetz/gruvbox'
+  use 'nvim-lua/popup.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'nvim-telescope/telescope.nvim'
 
-    -- Code
-	use 'nvim-treesitter/nvim-treesitter'
-	use 'romgrk/nvim-treesitter-context'
-    use 'simrat39/rust-tools.nvim'
-	use 'p00f/nvim-ts-rainbow'
+  -- Code
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'romgrk/nvim-treesitter-context'
+  use 'simrat39/rust-tools.nvim'
+  use 'p00f/nvim-ts-rainbow'
 	use 'norcalli/nvim-colorizer.lua'
 	use 'norcalli/snippets.nvim'
 	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
@@ -28,25 +28,27 @@ return require('packer').startup(function()
 		}
 	  end
 	}
-    use {
-      'lewis6991/spellsitter.nvim',
-      config = function()
-        require('spellsitter').setup()
-      end
-    }
+  use {
+    'lewis6991/spellsitter.nvim',
+    config = function()
+      require('spellsitter').setup()
+    end
+  }
 	use 'RishabhRD/popfix'
 	use {'neoclide/coc.nvim', branch = 'release'}
+	use 'rafcamlet/coc-nvim-lua'
 
     -- UI
-    use 'kyazdani42/nvim-tree.lua'
-    use 'kyazdani42/nvim-web-devicons'
-    use 'akinsho/nvim-bufferline.lua'
-    use 'shaunsingh/nord.nvim'
-    use {
-    'hoob3rt/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-    }
+  use 'kyazdani42/nvim-tree.lua'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'akinsho/nvim-bufferline.lua'
+  use 'shaunsingh/nord.nvim'
+  use {
+  'hoob3rt/lualine.nvim',
+  requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
 	use 'mhinz/vim-startify'
+	use 'karb94/neoscroll.nvim'
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'
