@@ -3,4 +3,4 @@ let &packpath=&runtimepath
 
 lua require'boot'
 
-source ./vim/coc.vim
+source ~/.dotfiles/nvim/vim/coc.vim
