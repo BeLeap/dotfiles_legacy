@@ -178,7 +178,6 @@ let g:coc_global_extensions = [
 			\'coc-pyright', 
 			\'coc-rust-analyzer',
 			\'coc-yaml',
-			\'coc-emmet',
 			\'coc-prettier',
 			\'coc-tasks',
 			\'coc-vimlsp',
