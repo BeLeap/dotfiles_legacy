@@ -13,3 +13,7 @@ gac() {
         esac
     fi
 }
+
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
