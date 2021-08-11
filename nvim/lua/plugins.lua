@@ -49,7 +49,6 @@ return require('packer').startup(function()
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	use 'mhinz/vim-startify'
-	use 'karb94/neoscroll.nvim'
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'
