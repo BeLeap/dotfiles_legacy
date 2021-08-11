@@ -182,7 +182,6 @@ let g:coc_global_extensions = [
 			\'coc-tasks',
 			\'coc-vimlsp',
 			\'coc-yank',
-			\'coc-kotlin',
 			\'coc-java',
 			\'coc-docker',
 			\'coc-spell-checker',

@@ -66,3 +66,6 @@ eval "$(pyenv init -)"
 # Vcpkg
 source /Users/beleap/vcpkg/scripts/vcpkg_completion.bash
 export PATH=$HOME/vcpkg:$PATH
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/local/bin/terraform terraform

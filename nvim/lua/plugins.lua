@@ -38,6 +38,7 @@ return require('packer').startup(function()
 	use {'neoclide/coc.nvim', branch = 'release'}
 	use 'rafcamlet/coc-nvim-lua'
 	use 'peterhurford/send.vim'
+	use 'lbrayner/vim-rzip'
 
 	-- UI
 	use 'kyazdani42/nvim-tree.lua'
