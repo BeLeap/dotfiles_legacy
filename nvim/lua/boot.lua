@@ -13,6 +13,11 @@ vim.api.nvim_exec([[
   augroup end
 ]], false)
 
+function unrequire(m)
+	package.loaded[m] = nil
+	_G[m] = nil
+end
+
 require('plugins')
 
 require('keymap')

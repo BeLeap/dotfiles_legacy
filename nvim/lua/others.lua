@@ -44,7 +44,7 @@ require'lualine'.setup {
 	extensions = { 'quickfix', 'nvim-tree' }
 }
 
-require('neoscroll').setup()
+-- require('neoscroll').setup()
 require('nvim-autopairs').setup()
 
 local remap = vim.api.nvim_set_keymap
@@ -70,11 +70,6 @@ require'nvim-treesitter.configs'.setup {
 	highlight = { enable = true },
 	incremental_selection = { enable = true },
 	textobjects = { enable = true },
-}
-
-require'treesitter-context'.setup {
-	enable = true,
-	throttle = true,
 }
 
 require'nvim-tree.view'.View.width = 50

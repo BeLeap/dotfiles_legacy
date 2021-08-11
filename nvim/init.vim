@@ -1,7 +1,6 @@
 set runtimepath^=~/.config/nvim/lua
 let &packpath=&runtimepath
 
-lua require'boot'
+lua require('boot')
 
-source ~/.dotfiles/nvim/vim/coc.vim
-source ~/.dotfiles/nvim/vim/vim-rzip.vim
+source ~/.config/nvim/vim/coc.vim
