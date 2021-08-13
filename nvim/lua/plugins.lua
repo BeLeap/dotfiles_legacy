@@ -49,6 +49,7 @@ return require('packer').startup(function()
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	use 'mhinz/vim-startify'
+	use 'tveskag/nvim-blame-line'
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'

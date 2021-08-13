@@ -73,3 +73,7 @@ require'nvim-treesitter.configs'.setup {
 }
 
 require'nvim-tree.view'.View.width = 50
+
+vim.api.nvim_exec([[
+	autocmd BufEnter * EnableBlameLine
+]], false) 
