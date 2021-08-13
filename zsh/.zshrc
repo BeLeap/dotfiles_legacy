@@ -64,7 +64,6 @@ eval "$(pyenv init -)"
 # for changes to profile files to take effect.
 
 # Vcpkg
-source $HOME/vcpkg/scripts/vcpkg_completion.zsh
 export PATH=$HOME/vcpkg:$PATH
 
 autoload -U +X bashcompinit && bashcompinit

@@ -17,7 +17,6 @@ return require('packer').startup(function()
 	use 'simrat39/rust-tools.nvim'
 	use 'p00f/nvim-ts-rainbow'
 	use 'norcalli/nvim-colorizer.lua'
-	use 'norcalli/snippets.nvim'
 	use { 'michaelb/sniprun', run = 'bash ./install.sh'}
 	use 'windwp/nvim-autopairs'
 	use {
@@ -35,9 +34,10 @@ return require('packer').startup(function()
 		end
 	}
 	use 'RishabhRD/popfix'
-	use {'neoclide/coc.nvim', branch = 'release'}
-	use 'rafcamlet/coc-nvim-lua'
 	use 'peterhurford/send.vim'
+	use 'neovim/nvim-lspconfig'
+	use 'hrsh7th/nvim-compe'
+	use 'L3MON4D3/LuaSnip'
 
 	-- UI
 	use 'kyazdani42/nvim-tree.lua'
