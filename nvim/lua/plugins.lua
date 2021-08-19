@@ -27,12 +27,6 @@ return require('packer').startup(function()
 			}
 		end
 	}
-	use {
-		'lewis6991/spellsitter.nvim',
-		config = function()
-			require('spellsitter').setup()
-		end
-	}
 	use 'RishabhRD/popfix'
 	use 'peterhurford/send.vim'
 	use 'neovim/nvim-lspconfig'
