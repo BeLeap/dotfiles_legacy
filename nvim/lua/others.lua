@@ -27,7 +27,6 @@ vim.o.relativenumber = true
 vim.o.number = true
 vim.o.scrolloff = 999
 
-require'nord'.set()
 require'colorizer'.setup()
 
 require'bufferline'.setup{
@@ -77,3 +76,4 @@ require'nvim-tree.view'.View.width = 50
 vim.api.nvim_exec([[
 	autocmd BufEnter * EnableBlameLine
 ]], false) 
+require('colorbuddy').colorscheme('onebuddy')

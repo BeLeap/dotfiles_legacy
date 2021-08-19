@@ -43,13 +43,14 @@ return require('packer').startup(function()
 	use 'kyazdani42/nvim-tree.lua'
 	use 'kyazdani42/nvim-web-devicons'
 	use 'akinsho/nvim-bufferline.lua'
-	use 'shaunsingh/nord.nvim'
 	use {
 		'hoob3rt/lualine.nvim',
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	use 'mhinz/vim-startify'
 	use 'tveskag/nvim-blame-line'
+	use 'tjdevries/colorbuddy.vim'
+	use 'Th3Whit3Wolf/onebuddy'
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'
