@@ -45,6 +45,7 @@ return require('packer').startup(function()
 	use 'tveskag/nvim-blame-line'
 	use 'tjdevries/colorbuddy.vim'
 	use 'Th3Whit3Wolf/onebuddy'
+	use 'kosayoda/nvim-lightbulb'
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'

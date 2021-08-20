@@ -75,5 +75,6 @@ require'nvim-tree.view'.View.width = 50
 
 vim.api.nvim_exec([[
 	autocmd BufEnter * EnableBlameLine
+	autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 ]], false) 
 require('colorbuddy').colorscheme('onebuddy')
