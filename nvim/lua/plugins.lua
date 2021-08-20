@@ -10,6 +10,10 @@ return require('packer').startup(function()
 	use 'nvim-lua/popup.nvim'
 	use 'nvim-lua/plenary.nvim'
 	use 'nvim-telescope/telescope.nvim'
+	use {
+		   "folke/which-key.nvim",
+			config = function() require("which-key").setup {} end
+	}
 
 	-- Code
 	use 'nvim-treesitter/nvim-treesitter'
@@ -31,8 +35,8 @@ return require('packer').startup(function()
 	use 'peterhurford/send.vim'
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-compe'
-	use 'L3MON4D3/LuaSnip'
 	use 'nvim-lua/lsp-status.nvim'
+	use 'hrsh7th/vim-vsnip'
 
 	-- UI
 	use 'kyazdani42/nvim-tree.lua'
@@ -47,6 +51,19 @@ return require('packer').startup(function()
 	use 'tjdevries/colorbuddy.vim'
 	use 'Th3Whit3Wolf/onebuddy'
 	use 'kosayoda/nvim-lightbulb'
+	use 'sbdchd/neoformat'
+	use 'glepnir/lspsaga.nvim'
+	use { 
+		'onsails/lspkind-nvim', 
+		config = function()
+			require('lspkind').init()
+		end
+	}
+	use {
+		   "folke/trouble.nvim",
+		   requires = "kyazdani42/nvim-web-devicons",
+		   config = function() require("trouble").setup {} end
+	}
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'
