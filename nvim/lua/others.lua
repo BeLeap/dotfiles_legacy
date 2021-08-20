@@ -32,7 +32,9 @@ require'colorizer'.setup()
 require'bufferline'.setup{
 	diagnostics = "nvim_lsp",
 	sections = {
-		lualine_c = { "nvim_treesitter#statusline(90)", "%{coc#status()}%{get(b:,'coc_current_function','')" }
+		lualine_a = {{'mode', lower = false}},
+		lualine_b = {'branch'},
+		lualine_c = { "nvim_treesitter#statusline(90)", require'lsp-status'.status }
 	}
 }
 
@@ -63,7 +65,8 @@ end
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 
-
+require('colorbuddy').colorscheme('onebuddy')
+require('telescope').setup{}
 require'nvim-treesitter.configs'.setup {
 	-- Modules and its options go here
 	highlight = { enable = true },
@@ -73,8 +76,19 @@ require'nvim-treesitter.configs'.setup {
 
 require'nvim-tree.view'.View.width = 50
 
+local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
+
+-- Mappings.
+local opts = { noremap=true, silent=true }
+
+-- See `:help vim.lsp.*` for documentation on any of the below functions
+buf_set_keymap('n', '<leader>ff', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>', opts)
+buf_set_keymap('n', '<leader>fg', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', opts)
+buf_set_keymap('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', opts)
+buf_set_keymap('n', '<leader>fh', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>', opts)
+
 vim.api.nvim_exec([[
 	autocmd BufEnter * EnableBlameLine
 	autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 ]], false) 
-require('colorbuddy').colorscheme('onebuddy')
+

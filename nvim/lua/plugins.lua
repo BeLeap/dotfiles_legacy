@@ -32,6 +32,7 @@ return require('packer').startup(function()
 	use 'neovim/nvim-lspconfig'
 	use 'hrsh7th/nvim-compe'
 	use 'L3MON4D3/LuaSnip'
+	use 'nvim-lua/lsp-status.nvim'
 
 	-- UI
 	use 'kyazdani42/nvim-tree.lua'
