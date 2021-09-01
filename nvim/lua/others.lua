@@ -36,10 +36,11 @@ require'bufferline'.setup{
         diagnostics = "nvim_lsp",
         offsets = {{
             filetype = "NvimTree",
-            text = "File Explorer",
+            text = "NvimTree",
             highlight = "Directory",
             text_align = "left"
-        }}
+        }},
+        separator_style = "padded_slant"
     }
 }
 
