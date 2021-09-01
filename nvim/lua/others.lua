@@ -32,19 +32,30 @@ vim.o.scrolloff = 999
 require'colorizer'.setup()
 
 require'bufferline'.setup{
-	diagnostics = "nvim_lsp"
+    options = {
+        diagnostics = "nvim_lsp",
+        offsets = {{
+            filetype = "NvimTree",
+            text = "File Explorer",
+            highlight = "Directory",
+            text_align = "left"
+        }}
+    }
 }
 
 require'lualine'.setup {
 	options = {
-		theme = 'onedark'
+		theme = 'onedark',
+        icons_enabled = 1,
 	},
 	extensions = { 'quickfix', 'nvim-tree' },
 	sections = {
 		lualine_a = {{'mode', lower = false}},
 		lualine_b = {'branch', 'diff'},
         lualine_c = {'filename'},
-		lualine_x = {'diagnostics'}
+		lualine_x = {'diagnostics', source = {'nvim_lsp'}},
+        lualine_y = {'encoding'},
+        lualine_z = {'location'}
 	}
 }
 
