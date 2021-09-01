@@ -8,8 +8,7 @@ return require('packer').startup(function()
 	use 'svermeulen/vimpeccable'
 	use 'morhetz/gruvbox'
 	use 'nvim-lua/popup.nvim'
-	use 'nvim-lua/plenary.nvim'
-	use 'nvim-telescope/telescope.nvim'
+	use 'nvim-lua/plenary.nvim' use 'nvim-telescope/telescope.nvim'
 	use {
 		   "folke/which-key.nvim",
 			config = function() require("which-key").setup {} end
@@ -37,6 +36,8 @@ return require('packer').startup(function()
 	use 'hrsh7th/nvim-compe'
 	use 'nvim-lua/lsp-status.nvim'
 	use 'hrsh7th/vim-vsnip'
+    use 'lbrayner/vim-rzip'
+    use 'editorconfig/editorconfig-vim'
 
 	-- UI
 	use 'kyazdani42/nvim-tree.lua'

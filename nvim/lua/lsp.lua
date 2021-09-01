@@ -35,7 +35,7 @@ end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
 -- map buffer local keybindings when the language server attaches
-local servers = { 'pyright', 'rust_analyzer', 'tsserver', 'kotlin_language_server', 'jsonls' }
+local servers = { 'pyright', 'rust_analyzer', 'kotlin_language_server', 'jsonls', 'gopls', 'yamlls' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -44,6 +44,14 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+nvim_lsp.tsserver.setup{
+    cmd = { "yarn", "typescript-language-server", "--stdio" },
+    on_attach = on_attach,
+    settings = {
+        documentFormatting = true,
+    },
+}
 
 nvim_lsp.efm.setup{
     init_options = {

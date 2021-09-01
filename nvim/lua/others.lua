@@ -9,6 +9,7 @@ vim.o.incsearch = true
 vim.o.tabstop = 4
 vim.o.shiftwidth = vim.o.tabstop
 vim.o.breakindent = true
+vim.o.expandtab = true
 
 vim.o.inccommand = "nosplit"
 

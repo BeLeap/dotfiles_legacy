@@ -5,6 +5,7 @@ alias vim="nvim"
 alias v="vim"
 alias p="python3"
 alias j="z"
+alias k="kubectl"
 
 # Configuration Files
 alias vimrc="pushd ~/.dotfiles/nvim && vim ./init.vim && popd"
