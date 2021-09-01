@@ -22,3 +22,4 @@
       ~/.tmux.conf: tmux/.tmux.conf
       ~/.config/nvim: nvim
       ~/.zshrc: zsh/.zshrc
+      ~/.config/fish/config.fish: fish/config.fish

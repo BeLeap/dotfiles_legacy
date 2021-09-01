@@ -49,7 +49,7 @@ return require('packer').startup(function()
 	}
 	use 'mhinz/vim-startify'
 	use 'tjdevries/colorbuddy.vim'
-	use 'Th3Whit3Wolf/onebuddy'
+    use 'tjdevries/gruvbuddy.nvim'
 	use 'kosayoda/nvim-lightbulb'
 	use 'sbdchd/neoformat'
 	use 'glepnir/lspsaga.nvim'

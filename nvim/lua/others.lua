@@ -46,7 +46,7 @@ require'bufferline'.setup{
 
 require'lualine'.setup {
 	options = {
-		theme = 'onedark',
+		theme = 'gruvbox',
         icons_enabled = 1,
 	},
 	extensions = { 'quickfix', 'nvim-tree' },
@@ -79,7 +79,7 @@ end
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 
-require('colorbuddy').colorscheme('onebuddy')
+require('colorbuddy').colorscheme('gruvbuddy')
 require('telescope').setup{}
 require'nvim-treesitter.configs'.setup {
 	-- Modules and its options go here
