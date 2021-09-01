@@ -68,4 +68,7 @@ return require('packer').startup(function()
 
 	-- Easier Movement
 	use 'easymotion/vim-easymotion'
+
+    -- Others
+    use 'lewis6991/impatient.nvim'
 end)
