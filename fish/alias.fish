@@ -29,6 +29,9 @@ end
 function j
     z $argv
 end
+function k
+    kubectl $argv
+end
 
 # Configuration Files
 function vimrc
