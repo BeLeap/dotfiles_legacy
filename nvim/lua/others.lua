@@ -32,22 +32,22 @@ vim.o.scrolloff = 999
 require'colorizer'.setup()
 
 require'bufferline'.setup{
-	diagnostics = "nvim_lsp",
-	sections = {
-		lualine_a = {{'mode', lower = false}},
-		lualine_b = {'branch'},
-		lualine_c = { "nvim_treesitter#statusline(90)", require'lsp-status'.status }
-	}
+	diagnostics = "nvim_lsp"
 }
 
 require'lualine'.setup {
 	options = {
-		theme = 'nord'
+		theme = 'onedark'
 	},
-	extensions = { 'quickfix', 'nvim-tree' }
+	extensions = { 'quickfix', 'nvim-tree' },
+	sections = {
+		lualine_a = {{'mode', lower = false}},
+		lualine_b = {'branch', 'diff'},
+        lualine_c = {'filename'},
+		lualine_x = {'diagnostics'}
+	}
 }
 
--- require('neoscroll').setup()
 require('nvim-autopairs').setup()
 
 local remap = vim.api.nvim_set_keymap
@@ -90,7 +90,6 @@ buf_set_keymap('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffe
 buf_set_keymap('n', '<leader>fh', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>', opts)
 
 vim.api.nvim_exec([[
-	autocmd BufEnter * EnableBlameLine
 	autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
 ]], false) 
 

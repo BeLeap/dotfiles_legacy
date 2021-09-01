@@ -48,7 +48,6 @@ return require('packer').startup(function()
 		requires = {'kyazdani42/nvim-web-devicons', opt = true}
 	}
 	use 'mhinz/vim-startify'
-	use 'tveskag/nvim-blame-line'
 	use 'tjdevries/colorbuddy.vim'
 	use 'Th3Whit3Wolf/onebuddy'
 	use 'kosayoda/nvim-lightbulb'
