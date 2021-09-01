@@ -11,5 +11,3 @@ set -gx GDK_SCALE 2
 # ghcup-env
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 test -f /home/beleap/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/beleap/.ghcup/bin $PATH
-
-zoxide init fish | source
