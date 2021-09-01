@@ -4,5 +4,3 @@ end
 
 status --is-interactive;and stty -ixon
 fish_vi_key_bindings
-
-zoxide init fish | source

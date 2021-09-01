@@ -27,14 +27,12 @@ function tv
     tmux split-window -dv "$argv"
 end
 function j
-    z
+    z $argv
 end
 
 # Configuration Files
 function vimrc
-    pushd ~/.config/nvim
-    vim ./init.vim
-    popd
+    pushd ~/.config/nvim && vim ./init.vim; popd
 end
 function fishrc
     vim ~/.config/fish/config.fish
