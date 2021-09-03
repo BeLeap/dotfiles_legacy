@@ -2,6 +2,9 @@
 alias vim "nvim"
 
 # Short-handed commands
+function l
+    ll $argv
+end
 function v
     vim $argv
 end
@@ -107,3 +110,7 @@ function dock
     docker start $argv
     docker attach $argv
 end
+
+alias nuget "mono /usr/local/bin/nuget.exe"
+alias awslogin "saml2aws login -p default --skip-prompt"
+alias vaultlogin "vault login -method=oidc -path=keycloak"
