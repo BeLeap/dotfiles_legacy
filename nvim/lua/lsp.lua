@@ -62,10 +62,19 @@ nvim_lsp.efm.setup{
         languages = {
             lua = {
                 {formatCommand = "lua-format -i", formatStdin = true}
+            },
+            javascript = {
+                {formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename ${INPUT}", formatStdin = true}
+            },
+            typescript = {
+                {formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename ${INPUT}", formatStdin = true}
+            },
+            typescriptreact = {
+                {formatCommand = "eslint_d --fix-to-stdout --stdin --stdin-filename ${INPUT}", formatStdin = true}
             }
         }
     },
-	filetypes = { 'lua' }
+	filetypes = { 'lua', 'javascript', 'typescript', 'typescript.tsx', 'typescriptreact' }
 }
 
 -- Compe setup
