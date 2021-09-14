@@ -24,7 +24,7 @@ vim.cmd [[set undofile]]
 vim.o.updatetime = 250
 vim.wo.signcolumn = "yes"
 
-vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
+-- vim.o.clipboard = vim.o.clipboard .. "unnamedplus"
 vim.o.relativenumber = true
 vim.o.number = true
 vim.o.scrolloff = 999
