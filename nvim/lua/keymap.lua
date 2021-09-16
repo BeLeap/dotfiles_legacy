@@ -1,7 +1,6 @@
 local keymap = vim.api.nvim_set_keymap
 local delkeymap = vim.api.nvim_del_keymap
 
-keymap('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', { noremap = true, silent = true })
 keymap('i', '<C-q>', '<esc>:q<cr>', { noremap = true, silent = true })
 keymap('n', '<C-q>', ':q<cr>', { noremap = true, silent = true })
 keymap('i', '<leader>q', '<esc>:bd<cr>', { noremap = true, silent = true })
