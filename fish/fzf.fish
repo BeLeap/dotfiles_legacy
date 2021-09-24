@@ -77,6 +77,12 @@ function fdbr -d "Fuzzy-find and delete br"
     git branch -D (echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 end
 
+function fmbr -d "Fuzzy-find and merge br"
+    set -l branches (git branch --list)
+    set -l branch (string join \n $branches | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
+    git merge (echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+end
+
 function fcoc -d "Fuzzy-find and checkout a commit"
   git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout $result
 end

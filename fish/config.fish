@@ -13,3 +13,4 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 test -f /home/beleap/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/beleap/.ghcup/bin $PATH
 status is-interactive; and pyenv init --path | source
 pyenv init - | source
+
