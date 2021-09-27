@@ -88,9 +88,22 @@ eval (starship init elvish)
 # </Prompt> #
 #############
 
-fn velvrc []{
+#########################
+# <ConfigFilesShortcut> #
+#########################
+fn elvrc []{
     current_dir = (pwd)
     cd ~/.elvish
     nvim rc.elv
     cd $current_dir
 }
+
+fn vimrc []{
+    current_dir = (pwd)
+    cd ~/.config/nvim
+    nvim init.vim
+    cd $current_dir
+}
+##########################
+# </ConfigFilesShortcut> #
+##########################
