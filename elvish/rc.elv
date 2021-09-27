@@ -11,6 +11,9 @@ paths = [
     ~/.cargo/bin
     ~/.deno/bin
 ]
+
+use tmux
+
 E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 
 ####################
