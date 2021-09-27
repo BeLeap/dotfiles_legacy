@@ -14,6 +14,7 @@ paths = [
 
 use tmux
 use fzf
+use alias
 
 E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 E:EDITOR = "nvim"
@@ -121,10 +122,3 @@ fn vimrc []{
 ##########################
 # </ConfigFilesShortcut> #
 ##########################
-
-use edit
-
-edit:insert:binding[Ctrl-R] = {
-  edit:histlist:start
-  edit:histlist:toggle-case-sensitivity
-}

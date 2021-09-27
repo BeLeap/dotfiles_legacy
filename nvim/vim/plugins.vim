@@ -36,5 +36,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'lewis6991/impatient.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'dmix/elvish.vim'
 call plug#end()
 
