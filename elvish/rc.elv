@@ -55,10 +55,21 @@ use github.com/zzamboni/elvish-completions/ssh
 # </Completion> #
 #################
 
+use github.com/zzamboni/elvish-modules/alias alias
+
+#######################
+# <ShorthandCommands> #
+#######################
+alias:new v nvim
+alias:new vim nvim
+########################
+# </ShorthandCommands> #
+########################
+
 ##############################
 # <RustTerminalReplacements> #
 ##############################
-use github.com/zzamboni/elvish-modules/alias alias
+alias:new l exa
 alias:new ls exa
 alias:new ll exa -l
 
