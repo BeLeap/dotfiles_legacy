@@ -58,6 +58,7 @@ use github.com/zzamboni/elvish-completions/ssh
 # </Completion> #
 #################
 
+use github.com/zzamboni/elvish-modules/terminal-title
 use github.com/zzamboni/elvish-modules/alias
 
 #######################
@@ -121,3 +122,9 @@ fn vimrc []{
 # </ConfigFilesShortcut> #
 ##########################
 
+use edit
+
+edit:insert:binding[Ctrl-R] = {
+  edit:histlist:start
+  edit:histlist:toggle-case-sensitivity
+}
