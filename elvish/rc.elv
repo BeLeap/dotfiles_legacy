@@ -15,6 +15,7 @@ paths = [
 use tmux
 
 E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
+E:EDITOR = "nvim"
 
 ####################
 # <InstallModules> #
@@ -62,6 +63,8 @@ use github.com/zzamboni/elvish-modules/alias alias
 #######################
 alias:new v nvim
 alias:new vim nvim
+
+alias:new k kubectl
 ########################
 # </ShorthandCommands> #
 ########################

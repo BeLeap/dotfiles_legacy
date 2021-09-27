@@ -1,6 +1,14 @@
 format = "$all"
 right_format = "$kubernetes"
 
+[aws]
+format = 'on [$symbol($profile )(\($region\) )]($style)'
+style = "bold blue"
+symbol = "🅰 "
+[aws.region_aliases]
+ap-northeast-1 = "tokyo"
+ap-northeast-2 = "seoul"
+
 [kubernetes]
 format = '[☸ $context \($namespace\)](dimmed green)'
 disabled = false
