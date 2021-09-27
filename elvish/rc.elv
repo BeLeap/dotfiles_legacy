@@ -13,9 +13,11 @@ paths = [
 ]
 
 use tmux
+use fzf
 
 E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 E:EDITOR = "nvim"
+E:BAT_THEME = "gruvbox-dark"
 
 ####################
 # <InstallModules> #
@@ -56,7 +58,7 @@ use github.com/zzamboni/elvish-completions/ssh
 # </Completion> #
 #################
 
-use github.com/zzamboni/elvish-modules/alias alias
+use github.com/zzamboni/elvish-modules/alias
 
 #######################
 # <ShorthandCommands> #
