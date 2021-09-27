@@ -1,0 +1,8 @@
+format = "$all"
+right_format = "$kubernetes"
+
+[kubernetes]
+format = '[☸ $context \($namespace\)](dimmed green)'
+disabled = false
+[kubernetes.context_aliases]
+".*/(?P<cluster>[\\w-]+).*" = "$cluster"

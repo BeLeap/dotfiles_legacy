@@ -98,6 +98,14 @@ fn elvrc []{
     cd $current_dir
 }
 
+fn soelv []{
+    # eval (slurp < ~/.elvish/rc.elv)
+}
+
+fn temp []{
+    echo "temp"
+}
+
 fn vimrc []{
     current_dir = (pwd)
     cd ~/.config/nvim
@@ -107,3 +115,4 @@ fn vimrc []{
 ##########################
 # </ConfigFilesShortcut> #
 ##########################
+

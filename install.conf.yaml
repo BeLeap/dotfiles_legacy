@@ -24,3 +24,4 @@
       ~/.zshrc: zsh/.zshrc
       ~/.config/fish: fish
       ~/.elvish: elvish
+      ~/.config/starship.toml: starship/starship.toml
