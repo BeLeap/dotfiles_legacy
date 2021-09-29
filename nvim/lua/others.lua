@@ -49,7 +49,6 @@ end
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 
-require('colorbuddy').colorscheme('gruvbuddy')
 require('telescope').setup{}
 require'nvim-treesitter.configs'.setup {
 	-- Modules and its options go here

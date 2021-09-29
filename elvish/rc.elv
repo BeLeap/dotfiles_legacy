@@ -14,7 +14,7 @@ paths = [
 
 use tmux
 use fzf
-use alias
+use git
 
 E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 E:EDITOR = "nvim"
