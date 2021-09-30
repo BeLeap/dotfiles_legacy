@@ -7,3 +7,4 @@ alias:new gf git fetch --all --prune
 alias:new gst git status
 alias:new gl git pull
 alias:new gd git diff
+alias:new gp git push
