@@ -11,5 +11,6 @@ source ~/.dotfiles/nvim/vim/trouble.vim
 source ~/.dotfiles/nvim/vim/rzip.vim
 source ~/.dotfiles/nvim/vim/airline.vim
 source ~/.dotfiles/nvim/vim/nvimtree.vim
+source ~/.dotfiles/nvim/vim/fzf.vim
 
 lua require('boot')

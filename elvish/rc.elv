@@ -76,7 +76,7 @@ alias:new k kubectl
 ##############################
 # <RustTerminalReplacements> #
 ##############################
-alias:new l exa
+alias:new l exa -l
 alias:new ls exa
 alias:new ll exa -l
 

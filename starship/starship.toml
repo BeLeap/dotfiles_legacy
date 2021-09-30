@@ -1,6 +1,12 @@
 format = "$all"
 right_format = "$kubernetes"
 
+[shell]
+fish_indicator = ""
+powershell_indicator = "_"
+unknown_indicator = "mystery shell"
+disabled = false
+
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = "bold blue"
