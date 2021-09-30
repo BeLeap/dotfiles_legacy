@@ -14,3 +14,4 @@ zinit light MikeDacre/careful_rm
 zinit light mbenford/zsh-tmux-auto-title
 zinit light MichaelAquilina/zsh-autoswitch-virtualenv
 zinit light jeffreytse/zsh-vi-mode
+zinit light tom-doerr/zsh_codex
