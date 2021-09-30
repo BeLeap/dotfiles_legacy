@@ -57,7 +57,6 @@ require'nvim-treesitter.configs'.setup {
 	textobjects = { enable = true },
 }
 
-require'nvim-tree.view'.View.width = 50
 
 local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
