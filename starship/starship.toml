@@ -5,7 +5,7 @@ right_format = "$kubernetes"
 fish_indicator = ""
 powershell_indicator = "_"
 elvish_indicator = "ﬦ"
-unknown_indicator = "mystery shell"
+unknown_indicator = ""
 disabled = false
 
 [git_branch]
