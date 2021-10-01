@@ -14,7 +14,7 @@ symbol = " "
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 style = "bold blue"
-symbol = " "
+symbol = " "
 [aws.region_aliases]
 ap-northeast-1 = "tokyo"
 ap-northeast-2 = "seoul"
