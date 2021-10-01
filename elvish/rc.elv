@@ -19,7 +19,6 @@ use git
 E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 E:EDITOR = "nvim"
 E:BAT_THEME = "gruvbox-dark"
-E:XDG_CONFIG_HOME = "~/.config"
 E:LC_CTYPE = "en_US.UTF-8"
 
 ####################

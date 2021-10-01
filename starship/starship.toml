@@ -10,13 +10,14 @@ disabled = false
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = "bold blue"
-symbol = "🅰 "
+symbol = " "
 [aws.region_aliases]
 ap-northeast-1 = "tokyo"
 ap-northeast-2 = "seoul"
 
 [kubernetes]
-format = '[☸ $context \($namespace\)](dimmed green)'
+format = '[$symbol$context \($namespace\)](dimmed green)'
 disabled = false
+symbol = "ﴱ "
 [kubernetes.context_aliases]
 ".*/(?P<cluster>[\\w-]+).*" = "$cluster"
