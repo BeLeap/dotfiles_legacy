@@ -20,6 +20,7 @@ E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 E:EDITOR = "nvim"
 E:BAT_THEME = "gruvbox-dark"
 E:LC_CTYPE = "en_US.UTF-8"
+E:XDG_CONFIG_HOME = $E:HOME/.config
 
 ####################
 # <InstallModules> #
