@@ -7,6 +7,9 @@ powershell_indicator = "_"
 unknown_indicator = "mystery shell"
 disabled = false
 
+[git_branch]
+symbol = " "
+
 [aws]
 format = 'on [$symbol($profile )(\($region\) )]($style)'
 style = "bold blue"
