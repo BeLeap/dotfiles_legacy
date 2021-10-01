@@ -4,6 +4,7 @@ right_format = "$kubernetes"
 [shell]
 fish_indicator = ""
 powershell_indicator = "_"
+elvish_indicator = "ﬦ"
 unknown_indicator = "mystery shell"
 disabled = false
 
