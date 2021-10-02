@@ -1,1 +1,1 @@
-nnoremap <leader>e :NERDTreeToggle<CR>
+nnoremap <silent><leader>e :NERDTreeToggle<CR>
