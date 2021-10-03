@@ -14,10 +14,6 @@
       ~/.config:
           recursive: true
 
-- shell:
-      - [chsh -s /bin/zsh, Change default shell to fish]
-      - [git submodule update --init --recursive, Installing modules]
-
 - link:
       ~/.tmux.conf: tmux/.tmux.conf
       ~/.config/nvim: nvim

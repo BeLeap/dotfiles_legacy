@@ -83,9 +83,10 @@ alias:new k kubectl
 ##############################
 # <RustTerminalReplacements> #
 ##############################
-alias:new l exa -l
-alias:new ls exa
-alias:new ll exa -l
+alias:new l lsd -l
+alias:new ls lsd
+alias:new ll lsd -l
+alias:new lt lsd --tree --depth 2
 
 alias:new cat bat
 
