@@ -10,11 +10,16 @@ paths = [
     ~/go/bin
     ~/.cargo/bin
     ~/.deno/bin
+    ~/.npm/bin
 ]
 
 use tmux
 use fzf
 use git
+
+if (not (eq $E:WSL_DISTRO_NAME '')) {
+  use wsl
+}
 
 E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 E:EDITOR = "nvim"
