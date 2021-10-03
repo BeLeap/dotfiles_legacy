@@ -11,11 +11,13 @@ paths = [
     ~/.cargo/bin
     ~/.deno/bin
     ~/.npm/bin
+    ~/.local/bin
 ]
 
 use tmux
 use fzf
 use git
+use direnv
 
 if (not (eq $E:WSL_DISTRO_NAME '')) {
   use wsl
