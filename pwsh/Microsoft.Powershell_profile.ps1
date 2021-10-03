@@ -1,5 +1,8 @@
 # List-Item shorcuts
-Set-Alias ll Get-ChildItem
+Set-Alias ls lsd
+function ll {
+    lsd -l $args
+}
 function .. {
     Set-Location ..
 }
