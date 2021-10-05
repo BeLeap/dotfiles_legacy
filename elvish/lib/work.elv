@@ -7,7 +7,6 @@ use github.com/zzamboni/elvish-modules/alias alias
 #######################
 alias:new awslogin saml2aws login -p default --skip-prompt
 alias:new vaultlogin vault login -method=oidc -path=keycloak
-alias:new docker podman
 ########################
 # </ShorthandCommands> #
 ########################
