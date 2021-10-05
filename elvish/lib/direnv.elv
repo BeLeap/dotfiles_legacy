@@ -1,7 +1,7 @@
 ## hook for direnv
 @edit:before-readline = $@edit:before-readline {
 	try {
-		m = [("/usr/local/bin/direnv" export elvish | from-json)]
+		m = [((which direnv) export elvish | from-json)]
 		if (> (count $m) 0) {
 			m = (all $m)
 			keys $m | each [k]{
