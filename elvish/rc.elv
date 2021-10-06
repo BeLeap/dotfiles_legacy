@@ -78,6 +78,8 @@ alias:new v nvim
 alias:new vim nvim
 
 alias:new k kubectl
+
+alias:new p python3
 ########################
 # </ShorthandCommands> #
 ########################
