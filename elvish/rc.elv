@@ -129,6 +129,13 @@ fn vimrc []{
     nvim init.vim
     cd $current_dir
 }
+
+fn tmuxconf []{
+    current_dir = (pwd)
+    cd ~/.dotfiles/tmux
+    nvim .tmux.conf
+    cd $current_dir
+}
 ##########################
 # </ConfigFilesShortcut> #
 ##########################
