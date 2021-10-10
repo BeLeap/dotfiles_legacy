@@ -29,6 +29,7 @@ E:EDITOR = "nvim"
 E:BAT_THEME = "gruvbox-dark"
 E:LC_CTYPE = "en_US.UTF-8"
 E:XDG_CONFIG_HOME = $E:HOME/.config
+E:GPG_TTY = (tty)
 
 ####################
 # <InstallModules> #
