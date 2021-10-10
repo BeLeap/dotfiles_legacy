@@ -1,0 +1,10 @@
+[user]
+	email = changseo_jang@korea.ac.kr
+	name = Changseo Jang
+	signingkey = A7CFEDD4AF6482CA
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
+[core]
+	pager = git-split-diffs --color | less -RFX
