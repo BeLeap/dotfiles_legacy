@@ -12,6 +12,7 @@ paths = [
     ~/.deno/bin
     ~/.npm/bin
     ~/.local/bin
+    ~/.config/yarn/global/node_modules/.bin
 ]
 
 use tmux
