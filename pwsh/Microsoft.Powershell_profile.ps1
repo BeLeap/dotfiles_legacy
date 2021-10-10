@@ -11,6 +11,7 @@ Set-Alias p python
 Set-Alias vim nvim
 Set-Alias v nvim
 Set-Alias j z
+Set-Alias gpg2 gpg
 function vimrc {
 	Push-Location ~/.dotfiles/nvim
 	nvim

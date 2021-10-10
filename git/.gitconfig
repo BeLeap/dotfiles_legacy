@@ -5,6 +5,6 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg2
+	program = gpg
 [core]
 	pager = git-split-diffs --color | less -RFX
