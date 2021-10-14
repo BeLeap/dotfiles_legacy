@@ -24,7 +24,7 @@ fn cz []{
 }
 
 fn fif [keyword]{
-    file = (rg --files-with-matches $keyword | fzf --border --height 80% --extended --ansi --reverse --cycle --header 'Find in File' --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --bind 'ctrl-v:execute(vim {} >/dev/tty </dev/tty)' --preview "bat --theme='gruvbox-dark' --style=numbers --color=always {} | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$argv[1]';or rg --ignore-case --pretty --context 10 '$argv[1]' {}" --preview-window noborder)
+    file = (rg --files-with-matches $keyword | fzf --border --height 80% --extended --ansi --reverse --cycle --header 'Find in File' --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --bind 'ctrl-v:execute(vim {} >/dev/tty </dev/tty)' --preview "bat --theme='gruvbox-dark' --style=numbers --color=always {} | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 "$keyword" {}" --preview-window noborder)
     if (bool $file) {
         nvim $file
     }
