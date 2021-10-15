@@ -93,6 +93,7 @@ alias:new l lsd -l
 alias:new ls lsd
 alias:new ll lsd -l
 alias:new lt lsd --tree --depth 2
+alias:new la lsd -al
 
 alias:new cat bat
 
