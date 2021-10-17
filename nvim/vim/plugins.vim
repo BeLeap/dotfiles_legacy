@@ -42,5 +42,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'towolf/vim-helm'
 Plug 'hashivim/vim-terraform'
+Plug 'mhinz/vim-crates'
 call plug#end()
 
