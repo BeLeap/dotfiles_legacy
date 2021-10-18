@@ -82,6 +82,8 @@ alias:new vim nvim
 alias:new k kubectl
 
 alias:new p python3
+
+alias:new tf terraform
 ########################
 # </ShorthandCommands> #
 ########################
