@@ -6,8 +6,12 @@ fn vaultlogin []{
   vault login -method=oidc -path=keycloak
 }
 
-fn awslogin []{
-  saml2aws login -p default --skip-prompt
+fn awsbacklogin []{
+  saml2aws login -p backend --skip-prompt
+}
+
+fn awsinfralogin []{
+  saml2aws login -p infra --skip-prompt
 }
 
 fn ecrlogin []{

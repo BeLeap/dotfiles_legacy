@@ -12,3 +12,4 @@ highlight Crates ctermfg=green ctermbg=NONE cterm=NONE
 " or link it to another highlight group
 highlight link Crates WarningMsg
 
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>

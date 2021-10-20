@@ -43,5 +43,10 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'towolf/vim-helm'
 Plug 'hashivim/vim-terraform'
 Plug 'mhinz/vim-crates'
+Plug 'udalov/kotlin-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'mfussenegger/nvim-jdtls'
 call plug#end()
 
