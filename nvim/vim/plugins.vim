@@ -48,5 +48,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'mfussenegger/nvim-jdtls'
+Plug 'folke/lsp-colors.nvim'
 call plug#end()
 
