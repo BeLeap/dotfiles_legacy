@@ -16,17 +16,11 @@ Plug 'folke/todo-comments.nvim',
 Plug 'nvim-lua/plenary.nvim'
 Plug 'RishabhRD/popfix'
 Plug 'peterhurford/send.vim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-compe'
-Plug 'nvim-lua/lsp-status.nvim'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'lbrayner/vim-rzip'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kosayoda/nvim-lightbulb'
 Plug 'sbdchd/neoformat'
-Plug 'glepnir/lspsaga.nvim'
-Plug 'onsails/lspkind-nvim', 
 Plug 'folke/trouble.nvim',
 Plug 'easymotion/vim-easymotion'
 Plug 'lewis6991/impatient.nvim'
@@ -48,6 +42,6 @@ Plug 'airblade/vim-gitgutter'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'mfussenegger/nvim-jdtls'
-Plug 'folke/lsp-colors.nvim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 

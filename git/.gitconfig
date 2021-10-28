@@ -1,7 +1,7 @@
 [user]
 	email = changseo_jang@korea.ac.kr
 	name = Changseo Jang
-	signingkey = A7CFEDD4AF6482CA
+	signingkey = EDCB969760E34B70
 [commit]
 	gpgsign = true
 [gpg]

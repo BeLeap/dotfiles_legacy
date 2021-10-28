@@ -69,7 +69,3 @@ buf_set_keymap('n', '<leader>fg', '<cmd>lua require(\'telescope.builtin\').live_
 buf_set_keymap('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', opts)
 buf_set_keymap('n', '<leader>fh', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>', opts)
 
-vim.api.nvim_exec([[
-	autocmd CursorHold,CursorHoldI * lua require'nvim-lightbulb'.update_lightbulb()
-]], false) 
-
