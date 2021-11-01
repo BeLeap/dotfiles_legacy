@@ -13,3 +13,4 @@ highlight Crates ctermfg=green ctermbg=NONE cterm=NONE
 highlight link Crates WarningMsg
 
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+

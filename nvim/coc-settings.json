@@ -1,0 +1,13 @@
+{
+  "cSpell.userWords": [
+    "filesize",
+    "intercepter",
+    "jsonb",
+    "logger",
+    "nearth",
+    "nestjs",
+    "timestamptz",
+    "typeorm"
+  ],
+  "eslint.autoFixOnSave": true
+}

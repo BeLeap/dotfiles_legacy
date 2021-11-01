@@ -1,5 +1,5 @@
 [user]
-	email = changseo_jang@korea.ac.kr
+	email = changseo.jang@nearthlab.com
 	name = Changseo Jang
 	signingkey = EDCB969760E34B70
 [commit]
@@ -8,3 +8,4 @@
 	program = gpg
 [core]
 	pager = git-split-diffs --color | less -RFX
+	excludesFile = /home/beleap/.gitignore

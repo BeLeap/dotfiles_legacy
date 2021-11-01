@@ -5,7 +5,7 @@ vim.o.smartcase = true
 vim.o.hlsearch = false
 vim.o.incsearch = true
 
-vim.o.tabstop = 4
+vim.o.tabstop = 2
 vim.o.shiftwidth = vim.o.tabstop
 vim.o.breakindent = true
 vim.o.expandtab = true
