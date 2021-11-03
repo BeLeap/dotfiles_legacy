@@ -7,6 +7,7 @@ alias:new fif &use=[fzf] fzf:fif
 alias:new fbr &use=[fzf] fzf:fbr
 alias:new fdbr &use=[fzf] fzf:fdbr
 alias:new fmbr &use=[fzf] fzf:fmbr
+alias:new frbr &use=[fzf] fzf:frbr
 alias:new fcoc &use=[fzf] fzf:fcoc
 
 fn vz []{
@@ -43,6 +44,11 @@ fn fdbr []{
 fn fmbr []{
     branch = (to-lines [(git branch --list --all | grep -v HEAD)] | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
     git merge (echo $branch | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+fn frbr []{
+    branch = (to-lines [(git branch --list --all | grep -v HEAD)] | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
+    git rebase (echo $branch | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 }
 
 fn fcoc []{

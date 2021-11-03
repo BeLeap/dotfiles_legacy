@@ -44,5 +44,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'github/copilot.vim'
+Plug 'folke/todo-comments.nvim'
 call plug#end()
 
