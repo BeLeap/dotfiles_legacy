@@ -185,4 +185,5 @@ let g:coc_global_extensions = [
             \"coc-spell-checker",
             \"coc-json",
             \"coc-git",
+            \"coc-db",
             \]

@@ -70,3 +70,4 @@ buf_set_keymap('n', '<leader>fb', '<cmd>lua require(\'telescope.builtin\').buffe
 buf_set_keymap('n', '<leader>fh', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>', opts)
 
 require('todo-comments').setup{}
+require('octo').setup()

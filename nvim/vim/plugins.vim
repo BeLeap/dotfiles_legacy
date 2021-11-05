@@ -45,5 +45,8 @@ Plug 'mfussenegger/nvim-jdtls'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'github/copilot.vim'
 Plug 'folke/todo-comments.nvim'
+Plug 'pwntester/octo.nvim'
+Plug 'tpope/vim-dadbod'
+Plug 'kristijanhusak/vim-dadbod-ui'
 call plug#end()
 
