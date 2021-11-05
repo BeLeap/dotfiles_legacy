@@ -8,10 +8,23 @@
     "nearth",
     "nestjs",
     "terraforming",
+    "testcontainer",
     "testcontainers",
     "timestamptz",
     "topbar",
     "typeorm"
   ],
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "languageserver": {
+    "terraform": {
+      "command": "terraform-ls",
+      "args": ["serve"],
+      "filetypes": [
+        "terraform",
+        "tf"
+      ],
+      "initializationOptions": {},
+      "settings": {}
+    }
+  }
 }
