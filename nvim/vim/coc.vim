@@ -188,3 +188,5 @@ let g:coc_global_extensions = [
             \"coc-db",
             \"coc-deno",
             \]
+
+"nnoremap <leader>e <Cmd>CocCommand explorer<CR>
