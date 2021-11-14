@@ -1,9 +1,6 @@
 [user]
-	email = changseo.jang@nearthlab.com
+	email = changseo.jang@korea.ac.kr
 	name = Changseo Jang
-	signingkey = EDCB969760E34B70
-[commit]
-	gpgsign = true
 [gpg]
 	program = gpg
 [core]

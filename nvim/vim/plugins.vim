@@ -48,5 +48,6 @@ Plug 'folke/todo-comments.nvim'
 Plug 'pwntester/octo.nvim'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
+Plug 'ShinKage/nvim-idris2'
 call plug#end()
 
