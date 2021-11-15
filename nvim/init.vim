@@ -10,7 +10,7 @@ source ~/.dotfiles/nvim/vim/trouble.vim
 source ~/.dotfiles/nvim/vim/rzip.vim
 source ~/.dotfiles/nvim/vim/airline.vim
 source ~/.dotfiles/nvim/vim/fzf.vim
-source ~/.dotfiles/nvim/vim/nerdtree.vim
+source ~/.dotfiles/nvim/vim/chadtree.vim
 source ~/.dotfiles/nvim/vim/coc.vim
 source ~/.dotfiles/nvim/vim/dbui.vim
 
