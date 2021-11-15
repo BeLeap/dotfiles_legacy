@@ -1,7 +1,6 @@
 call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'svermeulen/vimpeccable'
-Plug 'morhetz/gruvbox'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -27,7 +26,6 @@ Plug 'lewis6991/impatient.nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dmix/elvish.vim'
-Plug 'morhetz/gruvbox'
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -50,5 +48,6 @@ Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'ShinKage/nvim-idris2'
 Plug 'mg979/vim-visual-multi'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+Plug 'shaunsingh/nord.nvim'
 call plug#end()
 
