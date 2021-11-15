@@ -39,7 +39,6 @@ Plug 'folke/todo-comments.nvim'
 Plug 'pwntester/octo.nvim'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
-Plug 'ShinKage/nvim-idris2'
 Plug 'mg979/vim-visual-multi'
 Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
 Plug 'shaunsingh/nord.nvim'

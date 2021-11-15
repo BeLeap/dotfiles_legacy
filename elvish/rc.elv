@@ -13,6 +13,7 @@ paths = [
     ~/.npm/bin
     ~/.local/bin
     ~/.config/yarn/global/node_modules/.bin
+    ~/.idris2/bin
 ]
 
 use tmux
