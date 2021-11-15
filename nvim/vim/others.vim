@@ -10,10 +10,16 @@ nnoremap <silent><leader>sv :source ~/.config/nvim/init.vim<CR>
 
 set clipboard=unnamedplus
 
-highlight Crates ctermfg=green ctermbg=NONE cterm=NONE
+highlight CRates ctermfg=green ctermbg=NONE cterm=NONE
 " or link it to another highlight group
-highlight link Crates WarningMsg
+highlight link CRates WarningMsg
 
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<CR>
 
 let g:dashboard_default_executive='telescope.nvim'
+
+nnoremap <silent><leader>f :lua require('telescope.builtin').find_files()<CR>
+nnoremap <silent><leader>l :lua require('telescope.builtin').live_grep()<CR>
+nnoremap <silent><leader>b :lua require('telescope.builtin').buffers()<CR>
+nnoremap <silent><leader>h :lua require('telescope.builtin').help_tags()<CR>
+

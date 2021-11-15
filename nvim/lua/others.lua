@@ -63,12 +63,6 @@ local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 -- Mappings.
 local opts = { noremap=true, silent=true }
 
--- See `:help vim.lsp.*` for documentation on any of the below functions
-buf_set_keymap('n', '<leader>f', '<cmd>lua require(\'telescope.builtin\').find_files()<cr>', opts)
-buf_set_keymap('n', '<leader>l', '<cmd>lua require(\'telescope.builtin\').live_grep()<cr>', opts)
-buf_set_keymap('n', '<leader>b', '<cmd>lua require(\'telescope.builtin\').buffers()<cr>', opts)
-buf_set_keymap('n', '<leader>h', '<cmd>lua require(\'telescope.builtin\').help_tags()<cr>', opts)
-
 require('todo-comments').setup{}
 require('octo').setup()
 require('gitsigns').setup()
