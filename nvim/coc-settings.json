@@ -1,5 +1,7 @@
 {
   "cSpell.userWords": [
+    "airbnb",
+    "exif",
     "filesize",
     "ilike",
     "intercepter",
@@ -7,12 +9,14 @@
     "logger",
     "nearth",
     "nestjs",
+    "presign",
     "terraforming",
     "testcontainer",
     "testcontainers",
     "timestamptz",
     "topbar",
-    "typeorm"
+    "typeorm",
+    "ulid"
   ],
   "eslint.autoFixOnSave": true,
   "languageserver": {

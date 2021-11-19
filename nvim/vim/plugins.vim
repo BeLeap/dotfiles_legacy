@@ -46,5 +46,6 @@ Plug 'lewis6991/gitsigns.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'TimUntersberger/neogit'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 call plug#end()
 

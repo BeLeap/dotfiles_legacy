@@ -22,4 +22,3 @@ nnoremap <silent><leader>f :lua require('telescope.builtin').find_files()<CR>
 nnoremap <silent><leader>l :lua require('telescope.builtin').live_grep()<CR>
 nnoremap <silent><leader>b :lua require('telescope.builtin').buffers()<CR>
 nnoremap <silent><leader>h :lua require('telescope.builtin').help_tags()<CR>
-

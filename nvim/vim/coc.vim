@@ -189,4 +189,5 @@ let g:coc_global_extensions = [
             \"coc-deno",
             \]
 
-"nnoremap <leader>e <Cmd>CocCommand explorer<CR>
+" Golang
+autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')

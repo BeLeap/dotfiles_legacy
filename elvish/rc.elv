@@ -7,7 +7,7 @@ paths = [
     /usr/sbin
     /usr/local/bin
 
-    ~/go/bin
+    ~/.go/bin
     ~/.cargo/bin
     ~/.deno/bin
     ~/.npm/bin
