@@ -1,5 +1,5 @@
-function gitlog
-    git log --graph --decorate --oneline
+function adog
+    git log --graph --decorate --oneline --all
 end
 
 function gacp

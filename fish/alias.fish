@@ -35,6 +35,9 @@ end
 function k
     kubectl $argv
 end
+function tf
+    terraform $argv
+end
 
 # Configuration Files
 function vimrc
@@ -63,15 +66,15 @@ function npg
 end
 
 # Rust Commands
-alias ls "~/.cargo/bin/exa"
-alias ll "~/.cargo/bin/exa -l"
-alias lt "~/.cargo/bin/exa -l -T -L2"
+alias ls "lsd"
+alias ll "lsd -l"
+alias lt "lsd -l -T -L2"
 
-alias cat "~/.cargo/bin/bat"
+alias cat "bat"
 
-alias od "~/.cargo/bin/hexyl"
+alias od "hexyl"
 
-alias grep "~/.cargo/bin/rg"
+alias grep "rg"
 
 # Trash-cli
 #alias tput "trash-put"

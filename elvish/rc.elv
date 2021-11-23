@@ -124,7 +124,7 @@ fn elvrc []{
 }
 
 fn soelv []{
-    # eval (slurp < ~/.elvish/rc.elv)
+    eval (/bin/cat ~/.elvish/rc.elv | slurp)
 }
 
 fn temp []{

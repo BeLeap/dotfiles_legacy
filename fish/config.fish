@@ -14,3 +14,7 @@ test -f /home/beleap/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/beleap
 
 starship init fish | source
 
+# Load nodenv automatically by appending
+# the following to ~/.config/fish/config.fish:
+
+status --is-interactive; and source (nodenv init -|psub)

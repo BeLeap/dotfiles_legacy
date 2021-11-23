@@ -12,9 +12,7 @@ Plug 'norcalli/nvim-colorizer.lua'
 Plug 'michaelb/sniprun'
 Plug 'windwp/nvim-autopairs'
 Plug 'folke/todo-comments.nvim',
-Plug 'nvim-lua/plenary.nvim'
 Plug 'RishabhRD/popfix'
-Plug 'hrsh7th/vim-vsnip'
 Plug 'lbrayner/vim-rzip'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'kyazdani42/nvim-web-devicons'
@@ -31,7 +29,6 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'towolf/vim-helm'
 Plug 'hashivim/vim-terraform'
 Plug 'mhinz/vim-crates'
-Plug 'udalov/kotlin-vim'
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'github/copilot.vim'
@@ -47,5 +44,8 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'glepnir/dashboard-nvim'
 Plug 'TimUntersberger/neogit'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'wakatime/vim-wakatime'
 call plug#end()
 
