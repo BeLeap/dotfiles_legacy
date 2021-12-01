@@ -17,4 +17,4 @@ starship init fish | source
 # Load nodenv automatically by appending
 # the following to ~/.config/fish/config.fish:
 
-status --is-interactive; and source (nodenv init -|psub)
+status --is-interactive; and source (nodeenv init -|psub)
