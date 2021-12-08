@@ -188,7 +188,7 @@ let g:coc_global_extensions = [
             \"coc-db",
             \"coc-deno",
             \"coc-fish",
-            \"coc-diagnostics",
+            \"coc-diagnostic",
             \]
 
 " Golang
