@@ -15,9 +15,7 @@ Plug 'folke/todo-comments.nvim',
 Plug 'RishabhRD/popfix'
 Plug 'lbrayner/vim-rzip'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'sbdchd/neoformat'
-Plug 'folke/trouble.nvim',
 Plug 'easymotion/vim-easymotion'
 Plug 'lewis6991/impatient.nvim'
 Plug 'vim-airline/vim-airline'
@@ -46,5 +44,11 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'wakatime/vim-wakatime'
+Plug 'numToStr/Comment.nvim'
+Plug 'stevearc/dressing.nvim'
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
 
+lua require('Comment').setup()
+lua require('nvim-tree').setup()

@@ -1,7 +1,13 @@
 {
   "cSpell.userWords": [
+    "Changseo",
+    "Deps",
+    "HSET",
+    "Jang",
+    "WRAPUP",
     "airbnb",
     "changseo",
+    "datetime",
     "exif",
     "filesize",
     "ilike",
@@ -12,6 +18,7 @@
     "nearth",
     "nestjs",
     "presign",
+    "presigner",
     "terraforming",
     "testcontainer",
     "testcontainers",

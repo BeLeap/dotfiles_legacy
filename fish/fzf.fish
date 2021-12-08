@@ -1,3 +1,5 @@
+set -gx FZF_DEFULA_OPTS '--color=bg+:#3B4252,bg:#2E3440,spinner:#81A1C1,hl:#616E88,fg:#D8DEE9,header:#616E88,info:#81A1C1,pointer:#81A1C1,marker:#81A1C1,fg+:#D8DEE9,prompt:#81A1C1,hl+:#81A1C1'
+
 function vz
 	set -l file (fd -i . | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'gruvbox-dark' --style=numbers --color=always {} | head -100" --preview-window noborder)
 	if [ ! -z "$file" ]
@@ -83,9 +85,15 @@ function fmbr -d "Fuzzy-find and merge br"
     git merge (echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 end
 
+function frbr -d "Fuzzy-find and merge br"
+    set -l branches (git branch --list)
+    set -l branch (string join \n $branches | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
+    git rebase (echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+end
+
 function fcoc -d "Fuzzy-find and checkout a commit"
   git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}' | read -l result; and git checkout $result
 end
 
-bind -M insert \cr 'eval (history | fzf)'
+bind -M insert \cr 'eval (history | fzf +s --layout=reverse | awk \'{printf "%s", $0}\')'
 
