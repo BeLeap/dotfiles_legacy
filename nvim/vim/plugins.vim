@@ -35,8 +35,6 @@ Plug 'pwntester/octo.nvim'
 Plug 'tpope/vim-dadbod'
 Plug 'kristijanhusak/vim-dadbod-ui'
 Plug 'mg979/vim-visual-multi'
-Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
-Plug 'shaunsingh/nord.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'TimUntersberger/neogit'
@@ -48,7 +46,24 @@ Plug 'numToStr/Comment.nvim'
 Plug 'stevearc/dressing.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'andersevenrud/nordic.nvim'
+Plug 'lewis6991/spellsitter.nvim'
+Plug 'tveskag/nvim-blame-line'
+Plug 'nacro90/numb.nvim'
+Plug 'rmagatti/auto-session'
+Plug 'luukvbaal/stabilize.nvim'
+Plug 'mfussenegger/nvim-dap'
+Plug 'theHamsta/nvim-dap-virtual-text'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'David-Kunz/jester'
 call plug#end()
 
-lua require('Comment').setup()
-lua require('nvim-tree').setup()
+lua << LUA
+require('Comment').setup()
+require('nvim-tree').setup()
+require('spellsitter').setup()
+require('numb').setup()
+require('stabilize').setup()
+require('nvim-dap-virtual-text').setup()
+require('dapui').setup()
+LUA
