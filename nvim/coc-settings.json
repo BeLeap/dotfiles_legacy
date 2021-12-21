@@ -25,9 +25,11 @@
     "timestamptz",
     "topbar",
     "typeorm",
-    "ulid"
+    "ulid",
+    "yarnpkg"
   ],
   "eslint.autoFixOnSave": true,
+  "eslint.format.enable": true,
   "languageserver": {
     "terraform": {
       "command": "terraform-ls",

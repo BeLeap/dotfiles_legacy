@@ -91,7 +91,7 @@ nmap <leader>cf  <Plug>(coc-format-selected)
 augroup mygroup
   autocmd!
   " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
+  autocmd FileType typescript,json setl formatexpr=CocActionAsync('formatSelected')
   " Update signature help on jump placeholder.
   autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 augroup end
@@ -133,13 +133,13 @@ nmap <silent> <C-s> <Plug>(coc-range-select)
 xmap <silent> <C-s> <Plug>(coc-range-select)
 
 " Add `:Format` command to format current buffer.
-command! -nargs=0 Format :call CocAction('format')
+command! -nargs=0 Format :call CocActionAsync('format')
 
 " Add `:Fold` command to fold current buffer.
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
+command! -nargs=? Fold :call     CocActionAsync('fold', <f-args>)
 
 " Add `:OR` command for organize imports of the current buffer.
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
+command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
 
 " Add (Neo)Vim's native statusline support.
 " NOTE: Please see `:h coc-status` for integrations with external plugins that
@@ -167,7 +167,6 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 let g:coc_global_extensions = [
             \"coc-css",
             \"coc-eslint",
-            \"coc-git",
             \"coc-go",
             \"coc-highlight",
             \"coc-html",
@@ -184,7 +183,6 @@ let g:coc_global_extensions = [
             \"coc-prettier",
             \"coc-spell-checker",
             \"coc-json",
-            \"coc-git",
             \"coc-db",
             \"coc-deno",
             \"coc-fish",
@@ -192,4 +190,41 @@ let g:coc_global_extensions = [
             \]
 
 " Golang
-autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.organizeImport')
+autocmd BufWritePre *.go :silent call CocActionAsync('runCommand', 'editor.action.organizeImport')
+
+" Decode URI encoded characters
+function! DecodeURI(uri)
+    return substitute(a:uri, '%\([a-fA-F0-9][a-fA-F0-9]\)', '\=nr2char("0x" . submatch(1))', "g")
+endfunction
+
+" Attempt to clear non-focused buffers with matching name
+function! ClearDuplicateBuffers(uri)
+    " if our filename has URI encoded characters
+    if DecodeURI(a:uri) !=# a:uri
+        " wipeout buffer with URI decoded name - can print error if buffer in focus
+        sil! exe "bwipeout " . fnameescape(DecodeURI(a:uri))
+        " change the name of the current buffer to the URI decoded name
+        exe "keepalt file " . fnameescape(DecodeURI(a:uri))
+        " ensure we don't have any open buffer matching non-URI decoded name
+        sil! exe "bwipeout " . fnameescape(a:uri)
+    endif
+endfunction
+
+function! RzipOverride()
+    " Disable vim-rzip's autocommands
+    autocmd! zip BufReadCmd   zipfile:*,zipfile:*/*
+    exe "au! zip BufReadCmd ".g:zipPlugin_ext
+
+    " order is important here, setup name of new buffer correctly then fallback to vim-rzip's handling
+    autocmd zip BufReadCmd   zipfile:*  call ClearDuplicateBuffers(expand("<afile>"))
+    autocmd zip BufReadCmd   zipfile:*  call rzip#Read(DecodeURI(expand("<afile>")), 1)
+
+    if has("unix")
+        autocmd zip BufReadCmd   zipfile:*/*  call ClearDuplicateBuffers(expand("<afile>"))
+        autocmd zip BufReadCmd   zipfile:*/*  call rzip#Read(DecodeURI(expand("<afile>")), 1)
+    endif
+
+    exe "au zip BufReadCmd ".g:zipPlugin_ext."  call rzip#Browse(DecodeURI(expand('<afile>')))"
+endfunction
+
+autocmd VimEnter * call RzipOverride()

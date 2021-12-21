@@ -56,6 +56,7 @@ Plug 'mfussenegger/nvim-dap'
 Plug 'theHamsta/nvim-dap-virtual-text'
 Plug 'rcarriga/nvim-dap-ui'
 Plug 'David-Kunz/jester'
+Plug 'lbrayner/vim-rzip'
 call plug#end()
 
 lua << LUA

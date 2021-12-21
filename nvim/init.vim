@@ -3,7 +3,7 @@ let &packpath=&runtimepath
 
 source ~/.dotfiles/nvim/vim/plugins.vim
 
-"lua require('impatient')
+lua require('impatient')
 
 source ~/.dotfiles/nvim/vim/others.vim
 source ~/.dotfiles/nvim/vim/rzip.vim
