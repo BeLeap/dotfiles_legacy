@@ -49,15 +49,6 @@ end
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 
-require('telescope').setup{}
-require'nvim-treesitter.configs'.setup {
-	-- Modules and its options go here
-	highlight = { enable = true },
-	incremental_selection = { enable = true },
-	textobjects = { enable = true },
-}
-
-
 local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
 -- Mappings.
@@ -70,3 +61,4 @@ require('indent_blankline').setup{
   show_end_of_line = false,
 }
 require('neogit').setup()
+
