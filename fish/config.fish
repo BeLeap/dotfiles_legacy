@@ -18,3 +18,8 @@ starship init fish | source
 if type -q nodenv
   status --is-interactive; and source (nodenv init -|psub)
 end
+
+if type -q pyenv
+  status is-login; and pyenv init --path | source
+  status is-interactive; and pyenv init - | source
+end
