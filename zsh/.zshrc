@@ -54,3 +54,7 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 eval "$(starship init zsh)"
 zle -N create_completion
 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+

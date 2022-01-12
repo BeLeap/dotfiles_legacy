@@ -6,10 +6,6 @@ source ~/.dotfiles/fish/others.fish
 source ~/.dotfiles/fish/git.fish
 source ~/.dotfiles/fish/docker.fish
 
-# ghcup-env
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME
-test -f /home/beleap/.ghcup/env ; and set -gx PATH $HOME/.cabal/bin /home/beleap/.ghcup/bin $PATH
-
 starship init fish | source
 
 # Load nodenv automatically by appending
@@ -23,3 +19,7 @@ if type -q pyenv
   status is-login; and pyenv init --path | source
   status is-interactive; and pyenv init - | source
 end
+
+# Generated for envman. Do not edit.
+# test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
+

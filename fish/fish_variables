@@ -7,6 +7,7 @@ SETUVAR FZF_LEGACY_KEYBINDINGS:1
 SETUVAR FZF_PREVIEW_DIR_CMD:ls
 SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
+SETUVAR LC_CTYPE:en_US\x2eUTF\x2d8
 SETUVAR --export --path PATH:/home/beleap/\x2enpm/bin\x1e/home/beleap/\x2enodenv/shims\x1e/home/beleap/\x2enpm/bin\x1e/usr/local/go/bin\x1e/home/beleap/\x2elocal/bin\x1e/home/beleap/\x2ecargo/bin\x1e/usr/local/sbin\x1e/usr/local/bin\x1e/usr/sbin\x1e/usr/bin\x1e/sbin\x1e/bin\x1e/usr/games\x1e/usr/local/games\x1e/usr/lib/wsl/lib\x1e/mnt/c/WINDOWS/system32\x1e/mnt/c/WINDOWS\x1e/mnt/c/WINDOWS/System32/Wbem\x1e/mnt/c/WINDOWS/System32/WindowsPowerShell/v1\x2e0/\x1e/mnt/c/WINDOWS/System32/OpenSSH/\x1e/mnt/c/ProgramData/chocolatey/bin\x1e/mnt/c/Program\x20Files/Git/cmd\x1e/mnt/c/Program\x20Files/dotnet/\x1e/mnt/c/Program\x20Files/Docker/Docker/resources/bin\x1e/mnt/c/ProgramData/DockerDesktop/version\x2dbin\x1e/mnt/c/Users/Changseo\x20Jang/scoop/shims\x1e/mnt/c/Users/Changseo\x20Jang/AppData/Local/Microsoft/WindowsApps\x1e/mnt/c/Users/Changseo\x20Jang/AppData/Local/Microsoft/WindowsApps\x1e/mnt/c/Users/Changseo\x20Jang/AppData/Local/Programs/Microsoft\x20VS\x20Code/bin\x1e/mnt/c/Users/Changseo\x20Jang/AppData/Local/Programs/Azure\x20Data\x20Studio/bin\x1e/usr/bin/site_perl\x1e/usr/bin/vendor_perl\x1e/usr/bin/core_perl
 SETUVAR VIRTUAL_ENV_DISABLE_PROMPT:true
 SETUVAR __fish_initialized:3100
@@ -186,7 +187,7 @@ SETUVAR fish_pager_color_completion:\x1d
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR --export fish_user_paths:/home/beleap/\x2epyenv/bin\x1e/home/beleap/\x2elocal/npm/bin\x1e/home/beleap/\x2enpm/bin\x1e/usr/local/go/bin\x1e/home/beleap/\x2elocal/bin\x1e/home/beleap/\x2ecargo/bin
+SETUVAR --export fish_user_paths:/usr/local/lib/nodejs/node\x2dv16\x2e13\x2e2\x2dlinux\x2dx64/bin\x1e/home/beleap/\x2enodenv/bin\x1e/home/beleap/\x2epyenv/bin\x1e/home/beleap/\x2elocal/npm/bin\x1e/home/beleap/\x2enpm/bin\x1e/usr/local/go/bin\x1e/home/beleap/\x2elocal/bin\x1e/home/beleap/\x2ecargo/bin
 SETUVAR tide_character_bg_color:normal
 SETUVAR tide_character_color:5FD700
 SETUVAR tide_character_color_failure:FF0000

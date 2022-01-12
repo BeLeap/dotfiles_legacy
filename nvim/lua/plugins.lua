@@ -23,7 +23,7 @@ return require('packer').startup(function()
     },
   } end } -- Language parser for Highlighting, etc...
   use 'romgrk/nvim-treesitter-context' -- Shows current context using TreeSitter
-  use 'michaelb/sniprun' -- Select & Run (like REPL)
+  use { 'michaelb/sniprun', run = 'bash ./install.sh'} -- Select & Run (like REPL)
   use 'windwp/nvim-autopairs' -- Auto-close parentheses
   use 'lbrayner/vim-rzip' -- Zip file format support (for yarn berry)
   use 'editorconfig/editorconfig-vim' -- Use editorconfig
@@ -37,12 +37,15 @@ return require('packer').startup(function()
   use 'github/copilot.vim' -- Autocomplete with AI
   use 'tpope/vim-dadbod' -- DB support
   use 'fatih/vim-go' -- Go support
-  use 'SirVer/ultisnips' -- Snippet Engine
-  use 'honza/vim-snippets' -- Adds several snippets
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end } -- Comment out
   use { 'lewis6991/spellsitter.nvim', config = function() require('spellsitter').setup() end } -- Spell checker
   use 'mfussenegger/nvim-dap' -- Debugger support
   use 'David-Kunz/jester' -- Run test written with jest
+  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
+  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
+  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
+  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
+  use 'L3MON4D3/LuaSnip' -- Snippets plugin
   
   -- UI
   use { 'nvim-telescope/telescope.nvim', config = function() require('telescope').setup{} end } -- Shows files, buffers, live greps
