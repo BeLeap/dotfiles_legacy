@@ -38,7 +38,7 @@ local on_attach = function(client, bufnr)
 end
 
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
-local servers = { 'clangd', 'rust_analyzer', 'pyright', 'tsserver' }
+local servers = { 'clangd', 'rust_analyzer', 'pyright', 'hls', 'diagnosticls', 'dockerls', 'yamlls' }
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
     on_attach = on_attach,
@@ -48,6 +48,39 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+lspconfig.tsserver.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json")
+}
+
+lspconfig.denols.setup{
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  root_dir = lspconfig.util.root_pattern("deno.json")
+}
+lspconfig.efm.setup {
+  init_options = {documentFormatting = true},
+  settings = {
+    rootMarkers = {".git/"},
+    languages = {
+      lua = {
+        {formatCommand = "lua-format -i", formatStdin = true}
+      },
+      python = {
+        {formatCommand = "black --quiet -", formatStdin = true}
+      }
+    }
+  },
+  filetypes = {'lua', 'python'}
+}
 
 -- luasnip setup
 local luasnip = require 'luasnip'

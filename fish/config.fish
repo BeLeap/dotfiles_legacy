@@ -1,3 +1,5 @@
+set -g PATH ~/go/bin /usr/local/go/bin ~/.cargo/bin ~/.local/bin ~/.nodenv/bin ~/.pyenv/bin ~/.local/npm/bin $PATH
+
 source ~/.dotfiles/fish/alias.fish
 source ~/.dotfiles/fish/fzf.fish
 source ~/.dotfiles/fish/bash.fish
@@ -23,3 +25,4 @@ end
 # Generated for envman. Do not edit.
 # test -s "$HOME/.config/envman/load.fish"; and source "$HOME/.config/envman/load.fish"
 
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/beleap/.ghcup/bin # ghcup-env

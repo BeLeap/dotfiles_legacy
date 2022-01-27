@@ -5,6 +5,8 @@
 	program = gpg
 [core]
 	pager = git-split-diffs --color | less -RFX
-	excludesFile = /home/beleap/.gitignore
+	excludesfile = /home/beleap/.gitignore
 [init]
 	defautBranch = main
+[remote "origin"]
+	prune = true
