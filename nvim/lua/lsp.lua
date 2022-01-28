@@ -75,7 +75,10 @@ lspconfig.efm.setup {
         {formatCommand = "lua-format -i", formatStdin = true}
       },
       python = {
-        {formatCommand = "black --quiet -", formatStdin = true}
+        {lintCommand = "yapf --quiet", lintStdin = true},
+        {lintCommand = "pylint --output-format text --score no --msg-template {path}:{line}:{column}:{C}:{msg} ${INPUT}", lintStdin = false, lintFormats={
+          '%f:%l:%c:%t:%m'
+        }}
       }
     }
   },
