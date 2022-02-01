@@ -62,3 +62,11 @@ require('indent_blankline').setup{
 }
 require('neogit').setup()
 
+require('nvim-treesitter.configs').setup {
+    ensure_installed = "maintained",
+
+    highlight = { enable = true },
+    incremental_selection = { enable = true },
+    indent = { enable = true },
+    rainbow = { enable = true },
+  }

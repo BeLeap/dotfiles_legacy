@@ -8,20 +8,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Language Support
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate', config = function() require'nvim-treesitter.configs'.setup {
-    highlight = {
-      enabled = true,
-    },
-    incremental_selection = {
-      enabled = true,
-    },
-    indent = {
-      enabled = true,
-    },
-    rainbow = {
-      enabled = true, -- 'p00f/nvim-ts-rainbow'
-    },
-  } end } -- Language parser for Highlighting, etc...
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Language parser for Highlighting, etc...
   use 'romgrk/nvim-treesitter-context' -- Shows current context using TreeSitter
   use { 'michaelb/sniprun', run = 'bash ./install.sh'} -- Select & Run (like REPL)
   use 'windwp/nvim-autopairs' -- Auto-close parentheses
