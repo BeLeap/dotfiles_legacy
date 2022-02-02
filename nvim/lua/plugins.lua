@@ -58,6 +58,7 @@ return require('packer').startup(function()
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text
   use { 'rcarriga/nvim-dap-ui', config = function() require('dapui').setup() end } -- Debug UI
   use { 'j-hui/fidget.nvim', config = function() require('fidget').setup{} end } -- LSP Progress UI
+  use { 'folke/trouble.nvim', require = 'kyazdani42/nvim-web-devicons', config = function() require("trouble").setup{} end } -- Shows LSP message
 
   -- Others
   use 'tpope/vim-sensible' -- Default config that Sensible
