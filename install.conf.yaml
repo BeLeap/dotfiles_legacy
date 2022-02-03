@@ -22,4 +22,4 @@
       ~/.elvish: elvish
       ~/.config/starship.toml: starship/starship.toml
       ~/.config/k9s/skin.yml: k9s/skin.yml
-      ~/.gitconfig: git/.gitconfig
+      ~/.alacritty.yml: alacritty/alacritty.yml
