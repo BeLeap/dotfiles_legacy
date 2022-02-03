@@ -7,6 +7,7 @@ source ~/.dotfiles/fish/tmux.fish
 source ~/.dotfiles/fish/others.fish
 source ~/.dotfiles/fish/git.fish
 source ~/.dotfiles/fish/docker.fish
+source ~/.dotfiles/fish/alacritty.fish
 
 starship init fish | source
 
