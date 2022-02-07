@@ -15,14 +15,12 @@ highlight CRates ctermfg=green ctermbg=NONE cterm=NONE
 " or link it to another highlight group
 highlight link CRates WarningMsg
 
-nnoremap <leader>fg <cmd>Telescope live_grep<CR>
-
 let g:dashboard_default_executive='telescope.nvim'
 
-nnoremap <silent><leader>f :lua require('telescope.builtin').find_files()<CR>
-nnoremap <silent><leader>l :lua require('telescope.builtin').live_grep()<CR>
-nnoremap <silent><leader>b :lua require('telescope.builtin').buffers()<CR>
-nnoremap <silent><leader>h :lua require('telescope.builtin').help_tags()<CR>
+nnoremap <silent><leader>f :Telescope find_files theme=dropdown<CR>
+nnoremap <silent><leader>l :Telescope live_grep theme=dropdown<CR>
+nnoremap <silent><leader>b :Telescope buffers theme=dropdown<CR>
+nnoremap <silent><leader>h :Telescope help_tags theme=dropdown<CR>
 
 nnoremap <silent><F9> :lua require'dap'.toggle_breakpoint()<CR>
 nnoremap <silent><F5> :lua require'dap'.continue()<CR>

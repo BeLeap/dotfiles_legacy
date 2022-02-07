@@ -35,7 +35,7 @@ return require('packer').startup(function()
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
   
   -- UI
-  use { 'nvim-telescope/telescope.nvim', config = function() require('telescope').setup{} end } -- Shows files, buffers, live greps
+  use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }} -- Shows files, buffers, live greps
   use 'p00f/nvim-ts-rainbow' -- Rainbow parentheses using Treesitter
   use 'norcalli/nvim-colorizer.lua' -- Color color names
   use 'vim-airline/vim-airline' -- Use airline
