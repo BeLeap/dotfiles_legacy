@@ -59,7 +59,6 @@ lspconfig.tsserver.setup {
   },
   root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json")
 }
-
 lspconfig.denols.setup{
   on_attach = on_attach,
   capabilities = capabilities,
@@ -68,6 +67,10 @@ lspconfig.denols.setup{
   },
   root_dir = lspconfig.util.root_pattern("deno.json")
 }
+lspconfig.svelte.setup{
+  cmd = {"yarn", "svelte-language-server", "--stdio"}
+}
+
 lspconfig.efm.setup {
   init_options = {documentFormatting = true},
   settings = {
