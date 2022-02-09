@@ -57,9 +57,10 @@ local opts = { noremap=true, silent=true }
 require('todo-comments').setup{}
 require('octo').setup()
 require('gitsigns').setup()
-require('indent_blankline').setup{
-  show_end_of_line = false,
-}
+-- require('indent_blankline').setup{
+--   show_end_of_line = false,
+-- }
+
 require('neogit').setup()
 
 require('nvim-treesitter.configs').setup {

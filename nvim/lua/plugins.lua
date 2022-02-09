@@ -45,7 +45,7 @@ return require('packer').startup(function()
   use 'pwntester/octo.nvim' -- Github support
   use 'kristijanhusak/vim-dadbod-ui' -- UI for 'tpope/vim-dadbod'
   use 'lewis6991/gitsigns.nvim' -- Sign for git status
-  use 'lukas-reineke/indent-blankline.nvim' -- Shows blankline
+ -- use 'lukas-reineke/indent-blankline.nvim' -- Shows blankline
   use 'TimUntersberger/neogit' -- Git UI
   use 'folke/todo-comments.nvim' -- Highlights TODO-ish comments
   use 'RishabhRD/popfix' -- Nvim lua high-level popup api
