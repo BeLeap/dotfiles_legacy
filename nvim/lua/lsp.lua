@@ -67,9 +67,9 @@ lspconfig.denols.setup{
   },
   root_dir = lspconfig.util.root_pattern("deno.json")
 }
-lspconfig.svelte.setup{
-  cmd = {"yarn", "svelte-language-server", "--stdio"}
-}
+-- lspconfig.svelte.setup{
+--   cmd = {"yarn", "svelte-language-server", "--stdio"}
+-- }
 
 lspconfig.efm.setup {
   init_options = {documentFormatting = true},

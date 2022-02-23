@@ -4,5 +4,5 @@ require('keymap')
 require('others')
 require('dap-conf')
 require('lsp')
-require('telescope')
+require('telescope-conf')
 
