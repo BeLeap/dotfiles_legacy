@@ -71,5 +71,4 @@ return require('packer').startup(function()
   use 'mg979/vim-visual-multi' -- Easy select multi-line (sublime-like)
   use 'wakatime/vim-wakatime' -- Track work time
   use { 'nacro90/numb.nvim', config = function() require('numb').setup() end } -- Go to line with :number
-  use 'rmagatti/auto-session' -- Auto session manager
 end)
