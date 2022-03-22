@@ -1,5 +1,9 @@
 set -g PATH ~/go/bin /usr/local/go/bin ~/.cargo/bin ~/.local/bin ~/.nodenv/bin ~/.pyenv/bin ~/.local/npm/bin $PATH
 
+if not set -q XDG_CONFIG_HOME
+  set -g XDG_CONFIG_HOME ~/.config
+end
+
 source "$XDG_CONFIG_HOME/fish/alias.fish"
 source "$XDG_CONFIG_HOME/fish/fzf.fish"
 source "$XDG_CONFIG_HOME/fish/bash.fish"
