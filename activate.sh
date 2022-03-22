@@ -8,7 +8,6 @@ fi
 
 # Fish shell
 dotfiles_path="$(cd $(dirname $BASH_SOURCE) &> /dev/null && pwd)"
-echo "$dotfiles_path"
 export XDG_CONFIG_HOME="$dotfiles_path"
 
 # Starship
