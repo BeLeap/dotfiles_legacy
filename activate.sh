@@ -10,7 +10,7 @@ deactivate() {
   unset FISH_CONFIG_PATH
 }
 
-dotfiles_path = "$(dirname $BASH_SOURCE)"
+dotfiles_path="$(dirname $BASH_SOURCE)"
 echo "$dotfiles_path"
 export FISH_CONFIG_PATH="$dotfiles_path"
 
