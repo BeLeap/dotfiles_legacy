@@ -9,7 +9,9 @@ source ~/.dotfiles/fish/git.fish
 source ~/.dotfiles/fish/docker.fish
 source ~/.dotfiles/fish/alacritty.fish
 
-starship init fish | source
+if not set -q STARSHIP
+  starship init fish | source
+end
 
 # Load nodenv automatically by appending
 # the following to ~/.config/fish/config.fish:
