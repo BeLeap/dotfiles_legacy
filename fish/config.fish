@@ -1,13 +1,13 @@
 set -g PATH ~/go/bin /usr/local/go/bin ~/.cargo/bin ~/.local/bin ~/.nodenv/bin ~/.pyenv/bin ~/.local/npm/bin $PATH
 
-source $XDG_CONFIG_PATH/fish/alias.fish
-source $XDG_CONFIG_PATH/fish/fzf.fish
-source $XDG_CONFIG_PATH/fish/bash.fish
-source $XDG_CONFIG_PATH/fish/tmux.fish
-source $XDG_CONFIG_PATH/fish/others.fish
-source $XDG_CONFIG_PATH/fish/git.fish
-source $XDG_CONFIG_PATH/fish/docker.fish
-source $XDG_CONFIG_PATH/fish/alacritty.fish
+source "$XDG_CONFIG_PATH/fish/alias.fish"
+source "$XDG_CONFIG_PATH/fish/fzf.fish"
+source "$XDG_CONFIG_PATH/fish/bash.fish"
+source "$XDG_CONFIG_PATH/fish/tmux.fish"
+source "$XDG_CONFIG_PATH/fish/others.fish"
+source "$XDG_CONFIG_PATH/fish/git.fish"
+source "$XDG_CONFIG_PATH/fish/docker.fish"
+source "$XDG_CONFIG_PATH/fish/alacritty.fish"
 
 if not set -q STARSHIP
   starship init fish | source
