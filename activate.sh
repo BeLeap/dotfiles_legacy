@@ -20,4 +20,8 @@ then
   git clone --depth 1 https://github.com/wbthomason/packer.nvim $XDG_CONFIG_HOME/nvim/site/pack/packer/start/packer.nvim
 fi
 
+# pyenv
+export PYENV_ROOT="$dotfiles_path/pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
 fish
