@@ -41,13 +41,13 @@ end
 
 # Configuration Files
 function vimrc
-    pushd ~/.config/nvim && vim ./init.vim; popd
+    pushd $XDG_CONFIG_PATH/nvim && vim ./init.vim; popd
 end
 function fishrc
-    vim ~/.config/fish/config.fish
+    vim $XDG_CONFIG_PATH/config.fish
 end
 function sofish
-    source ~/.config/fish/config.fish
+    source $XDG_CONFIG_PATH/config.fish
 end
 function tmuxconf
     vim ~/.tmux.conf
