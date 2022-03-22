@@ -1,7 +1,7 @@
 if status is-interactive
 and not set -q TMUX
 and not set -q INTEGRATED_TERMINAL
-and $SHLVL < 2
+and test ($SHLVL) -lt 2
     exec tmux
 end
 
