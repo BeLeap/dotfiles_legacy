@@ -14,4 +14,10 @@ dotfiles_path="$(cd $(dirname $BASH_SOURCE) &> /dev/null && pwd)"
 echo "$dotfiles_path"
 export XDG_CONFIG_HOME="$dotfiles_path"
 
+if [ ! -d "$XDG_CONFIG_HOME/nvim/site/packer" ]
+then
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim $XDG_CONFIG_HOME/nvim/site/pack/packer/start/packer.nvim
+fi
+
+
 fish

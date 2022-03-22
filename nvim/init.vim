@@ -1,4 +1,7 @@
-set runtimepath^=~/.dotfiles/nvim/lua
+set runtimepath^=$XDG_CONFIG_HOME/nvim/lua
+let &packpath=&runtimepath
+
+set runtimepath^=$XDG_CONFIG_HOME/nvim/site
 let &packpath=&runtimepath
 
 lua require('impatient')
