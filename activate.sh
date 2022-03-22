@@ -11,6 +11,6 @@ deactivate() {
 }
 
 dotfiles_path = "$(dirname $BASH_SOURCE)"
-export FISH_CONFIG_PATH="${dotfiles_path}/fish"
+export FISH_CONFIG_PATH="$dotfiles_path/fish"
 
 fish
