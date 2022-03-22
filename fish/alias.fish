@@ -41,16 +41,16 @@ end
 
 # Configuration Files
 function vimrc
-    pushd $XDG_CONFIG_PATH/nvim && vim ./init.vim; popd
+    pushd $XDG_CONFIG_HOME/nvim && vim ./init.vim; popd
 end
 function fishrc
-    vim $XDG_CONFIG_PATH/config.fish
+    pushd $XDG_CONFIG_HOME/fish && vim $XDG_CONFIG_HOME/fish/config.fish; popd
 end
 function sofish
-    source $XDG_CONFIG_PATH/config.fish
+    source $XDG_CONFIG_HOME/config.fish
 end
 function tmuxconf
-    vim ~/.tmux.conf
+    pushd $DOTFILES_PATH/tmux && vim $DOTFILES_PATH/tmux/.tmux.conf; popd
 end
 
 # Typo
