@@ -12,6 +12,6 @@ deactivate() {
 
 dotfiles_path="$(cd $(dirname $BASH_SOURCE) &> /dev/null && pwd)"
 echo "$dotfiles_path"
-export FISH_CONFIG_PATH="$dotfiles_path/fish"
+export XDG_CONFIG_HOME="$dotfiles_path"
 
 fish
