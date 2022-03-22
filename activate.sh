@@ -11,3 +11,5 @@ deactivate() {
 }
 
 export FISH_CONFIG_PATH="${BASH_SOURCE}/fish"
+
+fish
