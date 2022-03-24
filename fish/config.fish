@@ -1,4 +1,4 @@
-set -g PATH ~/go/bin /usr/local/go/bin ~/.cargo/bin ~/.local/bin ~/.nodenv/bin ~/.pyenv/bin ~/.local/npm/bin $PATH
+set -g PATH ~/go/bin /usr/local/go/bin ~/.cargo/bin ~/.local/bin ~/.nodenv/bin ~/.local/npm/bin $PATH
 
 if not set -q DOTFILES_PATH
  set -g DOTFILES_PATH ~/.dotfiles

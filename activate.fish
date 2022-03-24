@@ -38,4 +38,4 @@ end
 set -gx __OLD_PYENV_ROOT $PYENV_ROOT
 set -gx PYENV_ROOT "$DOTFILES_PATH/pyenv"
 set -gx __OLD_PATH $PATH
-set -gx PATH "$PYENV_ROOT/bin" $PATH
+set -gx PATH "$PYENV_ROOT/bin" "$DOTFILES_PATH/.pyenv/bin" $PATH
