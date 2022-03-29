@@ -1,4 +1,5 @@
 set -g PATH ~/go/bin /usr/local/go/bin ~/.cargo/bin ~/.local/bin ~/.nodenv/bin ~/.local/npm/bin $PATH
+set -g EDITOR nvim
 
 if not set -q DOTFILES_PATH
  set -g DOTFILES_PATH ~/.dotfiles

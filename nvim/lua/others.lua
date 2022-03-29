@@ -14,7 +14,7 @@ vim.o.inccommand = "nosplit"
 
 vim.wo.number = true
 
-vim.o.mouse = "a"
+-- vim.o.mouse = "a"
 
 vim.o.wildmenu = true
 
