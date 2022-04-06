@@ -11,10 +11,10 @@ set paths = [
     ~/go/bin
     ~/.cargo/bin
     ~/.deno/bin
-    ~/.npm/bin
     ~/.local/bin
     ~/.config/yarn/global/node_modules/.bin
     ~/.idris2/bin
+    ~/.local/npm/bin
 ]
 
 set E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
