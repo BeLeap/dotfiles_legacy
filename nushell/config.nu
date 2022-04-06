@@ -3,9 +3,6 @@
 let-env STARSHIP_SHELL = "nu"
 
 def __zoxide_hook [] {
-    # shells | where active == true | get path | each {
-    #     zoxide add -- $it
-    # }
     zoxide add -- (shells | where active == true | get path | get 0)
 }
 
@@ -262,18 +259,7 @@ let $config = {
 
 let-env PATH = ($env.PATH | prepend ['/home/beleap/.cargo/bin', '/home/beleap/.local/bin', '/home/beleap/.local/npm/bin'])
 let-env XDG_CONFIG_PATH = "/home/beleap/.config"
-
-def-env z [...rest:string] {
-  cd (zoxide query --exclude ($env.PWD) -- $rest.0 | str collect | str trim)
-}
-
-alias v = nvim
-alias p = python3
-alias ll = ls -l
-alias la = ls -a
-alias ga = git add
-alias gc = git commit -v
-alias gp = git push
+let-env EDITOR = "nvim"
 
 def fbr [] {
     let branch = ((git branch --list --all | grep -v HEAD) | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
@@ -299,6 +285,20 @@ def fcoc [] {
     let result = (git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}')
     ^git checkout ($result | str trim)
 }
+
+alias v = nvim
+alias p = python3
+alias ll = ls -l
+alias la = ls -a
+alias ga = git add
+alias gc = git commit -v
+alias gp = git push
+alias gd = git diff
+
+def z [...rest:string] {
+  cd (zoxide query --exclude ($env.PWD) -- $rest.0 | str collect | str trim)
+}
+
 
 def nurc [] {
   cd ~/.config/nushell
