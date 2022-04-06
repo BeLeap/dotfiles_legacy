@@ -4,3 +4,6 @@
 [submodule ".pyenv"]
 	path = .pyenv
 	url = https://github.com/pyenv/pyenv.git
+[submodule ".nodenv"]
+	path = .nodenv
+	url = https://github.com/nodenv/nodenv
