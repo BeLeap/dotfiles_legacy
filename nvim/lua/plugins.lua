@@ -38,22 +38,18 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }} -- Shows files, buffers, live greps
   use 'p00f/nvim-ts-rainbow' -- Rainbow parentheses using Treesitter
   use 'norcalli/nvim-colorizer.lua' -- Color color names
-  -- use 'vim-airline/vim-airline' -- Use airline
-  -- use 'vim-airline/vim-airline-themes' -- Airline themes
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use 'ryanoasis/vim-devicons' -- Better icons
   use 'kyazdani42/nvim-web-devicons' -- Better icons
   use 'pwntester/octo.nvim' -- Github support
   use 'kristijanhusak/vim-dadbod-ui' -- UI for 'tpope/vim-dadbod'
   use 'lewis6991/gitsigns.nvim' -- Sign for git status
- -- use 'lukas-reineke/indent-blankline.nvim' -- Shows blankline
   use 'TimUntersberger/neogit' -- Git UI
   use 'folke/todo-comments.nvim' -- Highlights TODO-ish comments
   use 'RishabhRD/popfix' -- Nvim lua high-level popup api
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api
   use 'stevearc/dressing.nvim' -- Improve default UI
   use { 'kyazdani42/nvim-tree.lua', config = function() require'nvim-tree'.setup {} end } -- Shows file tree
-  -- use 'andersevenrud/nordic.nvim' -- Nord theme
   use 'mjlaufer/gruvbox-darker.nvim' -- Gruvbox theme
   use 'tveskag/nvim-blame-line' -- Git blame line
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
@@ -68,8 +64,6 @@ return require('packer').startup(function()
   use 'nvim-lua/plenary.nvim' -- Nvim lua helper function
   use 'easymotion/vim-easymotion' -- Easymotion
   use 'lewis6991/impatient.nvim' -- Improves startup time
-  use { 'junegunn/fzf', run = 'fzf#install()' } -- Fzf
-  use 'junegunn/fzf.vim' -- Fzf for vim
   use 'mg979/vim-visual-multi' -- Easy select multi-line (sublime-like)
   use 'wakatime/vim-wakatime' -- Track work time
   use { 'nacro90/numb.nvim', config = function() require('numb').setup() end } -- Go to line with :number

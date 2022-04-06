@@ -7,7 +7,7 @@ nnoremap <silent><leader>e :NvimTreeToggle<CR>
 nnoremap <silent><leader>d :DBUIToggle<CR>
 nnoremap <silent><leader>g :Neogit<CR>
 nnoremap <silent><leader>q :bd<CR>
-nnoremap <silent><leader>sv :source ~/.config/nvim/init.vim<CR>
+nnoremap <silent><leader>sv :source $XDG_CONFIG_HOME/nvim/init.vim<CR>
 inoremap <silent><leader>x <esc><CR>
 
 set clipboard=unnamedplus
