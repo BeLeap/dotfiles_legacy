@@ -38,8 +38,9 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }} -- Shows files, buffers, live greps
   use 'p00f/nvim-ts-rainbow' -- Rainbow parentheses using Treesitter
   use 'norcalli/nvim-colorizer.lua' -- Color color names
-  use 'vim-airline/vim-airline' -- Use airline
-  use 'vim-airline/vim-airline-themes' -- Airline themes
+  -- use 'vim-airline/vim-airline' -- Use airline
+  -- use 'vim-airline/vim-airline-themes' -- Airline themes
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
   use 'ryanoasis/vim-devicons' -- Better icons
   use 'kyazdani42/nvim-web-devicons' -- Better icons
   use 'pwntester/octo.nvim' -- Github support
@@ -52,7 +53,8 @@ return require('packer').startup(function()
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api
   use 'stevearc/dressing.nvim' -- Improve default UI
   use { 'kyazdani42/nvim-tree.lua', config = function() require'nvim-tree'.setup {} end } -- Shows file tree
-  use 'andersevenrud/nordic.nvim' -- Nord theme
+  -- use 'andersevenrud/nordic.nvim' -- Nord theme
+  use 'mjlaufer/gruvbox-darker.nvim' -- Gruvbox theme
   use 'tveskag/nvim-blame-line' -- Git blame line
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text

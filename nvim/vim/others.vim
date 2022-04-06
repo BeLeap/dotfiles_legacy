@@ -1,6 +1,7 @@
 let mapleader = ";"
 
-colorscheme nordic
+set background=dark
+colorscheme gruvbox
 
 nnoremap <silent><leader>e :NvimTreeToggle<CR>
 nnoremap <silent><leader>d :DBUIToggle<CR>
