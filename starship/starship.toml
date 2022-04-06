@@ -1,5 +1,6 @@
 format = "$all"
 right_format = "$kubernetes"
+command_timeout = 3000
 
 [shell]
 fish_indicator = ""
