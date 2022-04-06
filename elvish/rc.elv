@@ -7,7 +7,8 @@ set paths = [
     /usr/sbin
     /usr/local/bin
 
-    ~/.go/bin
+    /usr/local/go/bin
+    ~/go/bin
     ~/.cargo/bin
     ~/.deno/bin
     ~/.npm/bin
@@ -16,7 +17,7 @@ set paths = [
     ~/.idris2/bin
 ]
 
-use tmux
+# use tmux
 use fzf
 use git
 
@@ -26,10 +27,11 @@ if (not (eq $E:WSL_DISTRO_NAME '')) {
 
 set E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
 set E:EDITOR = "nvim"
-set E:BAT_THEME = "Nord"
+set E:BAT_THEME = "gruvbox-dark"
 set E:LC_CTYPE = "en_US.UTF-8"
 set E:XDG_CONFIG_HOME = $E:HOME/.config
 set E:GPG_TTY = (tty)
+set E:DOTFILES_PATH = $E:HOME/.config
 
 ####################
 # <InstallModules> #
@@ -107,7 +109,7 @@ eval (zoxide init elvish | slurp)
 ############
 # <Prompt> #
 ############
-eval (starship init elvish)
+eval (starship init elvish) 2> /dev/null
 #############
 # </Prompt> #
 #############
@@ -115,6 +117,13 @@ eval (starship init elvish)
 #########################
 # <ConfigFilesShortcut> #
 #########################
+fn elvrc {
+    var current_dir = (pwd)
+    cd ~/.config/elvish
+    nvim rc.elv
+    cd $current_dir
+}
+
 fn vimrc {
     var current_dir = (pwd)
     cd ~/.config/nvim
