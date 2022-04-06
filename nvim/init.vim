@@ -15,7 +15,7 @@ endif
 lua require('impatient')
 lua require('boot')
 
-source $XDG_CONFIG_HOME/nvim/vim/others.vim
-source $XDG_CONFIG_HOME/nvim/vim/rzip.vim
-source $XDG_CONFIG_HOME/nvim/vim/dbui.vim
+runtime vim/others.vim
+runtime vim/rzip.vim
+runtime vim/dbui.vim
 

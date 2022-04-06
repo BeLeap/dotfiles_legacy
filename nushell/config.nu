@@ -1,22 +1,23 @@
 # Nushell Config File
 
-def create_left_prompt [] {
-    let path_segment = ($env.PWD)
+let-env STARSHIP_SHELL = "nu"
 
-    $path_segment
+def __zoxide_hook [] {
+    # shells | where active == true | get path | each {
+    #     zoxide add -- $it
+    # }
+    zoxide add -- (shells | where active == true | get path | get 0)
 }
 
-def create_right_prompt [] {
-    let time_segment = ([
-        (date now | date format '%m/%d/%Y %r')
-    ] | str collect)
+def create_left_prompt [] {
+    __zoxide_hook
 
-    $time_segment
+    starship prompt --cmd-duration $env.CMD_DURATION_MS $'--status=($env.LAST_EXIT_CODE)'
 }
 
 # Use nushell functions to define your right and left prompt
 let-env PROMPT_COMMAND = { create_left_prompt }
-let-env PROMPT_COMMAND_RIGHT = { create_right_prompt }
+let-env PROMPT_COMMAND_RIGHT = ""
 
 # The prompt indicators are environmental variables that represent
 # the state of the prompt
@@ -183,7 +184,7 @@ let default_theme = {
 # The default config record. This is where much of your global configuration is setup.
 let $config = {
   filesize_metric: false
-  table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
+  table_mode: compact # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
   use_ls_colors: true
   rm_always_trash: false
   color_config: $default_theme
@@ -259,7 +260,47 @@ let $config = {
   ]
 }
 
-let-env PATH = ($env.PATH | prepend '/home/beleap/.cargo/bin')
+let-env PATH = ($env.PATH | prepend ['/home/beleap/.cargo/bin', '/home/beleap/.local/bin', '/home/beleap/.local/npm/bin'])
+let-env XDG_CONFIG_PATH = "/home/beleap/.config"
 
-starship init nu | save ~/.cache/starship/init.nu
-source ~/.cache/starship/init.nu
+def-env z [...rest:string] {
+  cd (zoxide query --exclude ($env.PWD) -- $rest.0 | str collect | str trim)
+}
+
+alias v = nvim
+alias ll = ls -l
+alias la = ls -a
+
+def fbr [] {
+    let branch = ((git branch --list --all | grep -v HEAD) | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
+    ^git checkout ($branch | sed "s/.* //" | sed "s#remotes/[^/]*/##" | str trim)
+}
+
+def fdbr [] {
+    let branch = ((git branch --list --all | grep -v HEAD) | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
+    ^git branch -D ($branch | sed "s/.* //" | sed "s#remotes/[^/]*/##" | str trim)
+}
+
+def fmbr [] {
+    let branch = ((git branch --list --all | grep -v HEAD) | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
+    ^git merge ($branch | sed "s/.* //" | sed "s#remotes/[^/]*/##" | str trim)
+}
+
+def frbr [] {
+    let branch = ((git branch --list --all | grep -v HEAD) | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
+    ^git rebase ($branch | sed "s/.* //" | sed "s#remotes/[^/]*/##" | str trim)
+}
+
+def fcoc [] {
+    let result = (git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}')
+    ^git checkout ($result | str trim)
+}
+
+def nurc [] {
+  cd ~/.config/nushell
+  nvim config.nu
+}
+def vimrc [] {
+  cd ~/.config/nvim
+  nvim init.vim
+}
