@@ -268,8 +268,12 @@ def-env z [...rest:string] {
 }
 
 alias v = nvim
+alias p = python3
 alias ll = ls -l
 alias la = ls -a
+alias ga = git add
+alias gc = git commit -v
+alias gp = git push
 
 def fbr [] {
     let branch = ((git branch --list --all | grep -v HEAD) | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
