@@ -1,6 +1,4 @@
 set paths = [
-    $@paths
-
     /bin
     /sbin
     /usr/bin
@@ -16,6 +14,10 @@ set paths = [
     $E:HOME/.idris2/bin
     $E:HOME/.local/npm/bin
     $E:HOME/.config/.nodenv/bin
+    /usr/local/nodejs/bin
+    $E:HOME/.local/kotlin-language-server/bin
+
+    $@paths
 ]
 
 set E:MANPAGER = "sh -c 'col -bx | bat -l man -p'"
@@ -128,7 +130,7 @@ fn vimrc {
 
 fn tmuxconf {
     var current_dir = (pwd)
-    cd $E:HOME/.dotfiles/tmux
+    cd $E:HOME/.config/tmux
     nvim .tmux.conf
     cd $current_dir
 }

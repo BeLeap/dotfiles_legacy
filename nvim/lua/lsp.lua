@@ -56,7 +56,7 @@ end
 -- Enable some language servers with the additional completion capabilities offered by nvim-cmp
 local servers = {
     'clangd', 'rust_analyzer', 'pyright', 'hls', 'diagnosticls', 'dockerls',
-    'yamlls', 'svelte', 'gopls'
+    'yamlls', 'svelte', 'gopls', 'kotlin_language_server'
 }
 for _, lsp in ipairs(servers) do
     lspconfig[lsp].setup {

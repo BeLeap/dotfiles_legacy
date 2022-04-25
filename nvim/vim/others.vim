@@ -8,7 +8,6 @@ nnoremap <silent><leader>d :DBUIToggle<CR>
 nnoremap <silent><leader>g :Neogit<CR>
 nnoremap <silent><leader>q :bd<CR>
 nnoremap <silent><leader>sv :source $XDG_CONFIG_HOME/nvim/init.vim<CR>
-inoremap <silent><leader>x <esc><CR>
 
 set clipboard=unnamedplus
 
@@ -33,3 +32,7 @@ au BufEnter *.spec.ts nnoremap <silent><F6> :lua require'jester'.debug()<CR>
 
 imap <silent><script><expr> <Right> copilot#Accept("\<Right>")
 let g:copilot_no_tab_map = v:true
+
+inoremap <silent>,d <ESC>
+nnoremap <silent>,d <ESC>
+onoremap <silent>,d <ESC>
