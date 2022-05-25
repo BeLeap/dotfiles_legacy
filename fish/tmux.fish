@@ -6,6 +6,3 @@ and test $SHLVL -lt 4
 end
 
 alias sotmux "tmux source $DOTFILES_PATH/tmux/.tmux.conf"
-alias tinstall "$DOTFILES_PATH/tmux/plugins/tpm/bin/install_plugins"
-alias tupdate "$DOTFILES_PATH/tmux/plugins/tpm/bin/update_plugins"
-alias tclean "$DOTFILES_PATH/tmux/plugins/tpm/bin/clean_plugins"

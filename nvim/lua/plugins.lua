@@ -36,6 +36,7 @@ return require('packer').startup(function()
   use 'udalov/kotlin-vim' -- Kotlin support
   
   -- UI
+  use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
   use { 'nvim-telescope/telescope.nvim', requires = { {'nvim-lua/plenary.nvim'} }} -- Shows files, buffers, live greps
   use 'p00f/nvim-ts-rainbow' -- Rainbow parentheses using Treesitter
   use 'norcalli/nvim-colorizer.lua' -- Color color names

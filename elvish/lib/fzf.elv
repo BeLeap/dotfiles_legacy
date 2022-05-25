@@ -9,6 +9,7 @@ alias:new fdbr &use=[fzf] fzf:fdbr
 alias:new fmbr &use=[fzf] fzf:fmbr
 alias:new frbr &use=[fzf] fzf:frbr
 alias:new fcoc &use=[fzf] fzf:fcoc
+alias:new frc &use=[fzf] fzf:frc
 
 fn vz {
     var file = (fd -i -tf | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down' --preview "bat --theme 'gruvbox-dark' --style=numbers --color=always {} | head -100" --preview-window noborder)
@@ -54,4 +55,9 @@ fn frbr {
 fn fcoc {
     var result = (git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}')
     git checkout $result
+}
+
+fn frc {
+    var result = (git log --pretty=oneline --abbrev-commit --reverse | fzf --tac +s -e | awk '{print $1;}')
+    git reset --hard $result
 }
