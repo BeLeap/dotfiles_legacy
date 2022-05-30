@@ -29,11 +29,10 @@ return require('packer').startup(function()
   use 'mfussenegger/nvim-dap' -- Debugger support
   use 'David-Kunz/jester' -- Run test written with jest
   use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
-  use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
-  use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
-  use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
   use 'udalov/kotlin-vim' -- Kotlin support
+  use { 'ms-jpq/coq_nvim', branch = 'coq' } -- Compeletion
+  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
+  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
