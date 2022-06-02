@@ -3,7 +3,7 @@ let mapleader = ";"
 set background=dark
 colorscheme gruvbox
 
-nnoremap <silent><leader>e :NvimTreeToggle<CR>
+nnoremap <silent><leader>e :CHADopen<CR>
 nnoremap <silent><leader>d :DBUIToggle<CR>
 nnoremap <silent><leader>g :Neogit<CR>
 nnoremap <silent><leader>q :bd<CR>

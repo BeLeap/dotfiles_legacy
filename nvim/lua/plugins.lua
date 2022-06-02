@@ -50,7 +50,7 @@ return require('packer').startup(function()
   use 'RishabhRD/popfix' -- Nvim lua high-level popup api
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api
   use 'stevearc/dressing.nvim' -- Improve default UI
-  use { 'kyazdani42/nvim-tree.lua', config = function() require'nvim-tree'.setup {} end } -- Shows file tree
+  use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
   use 'mjlaufer/gruvbox-darker.nvim' -- Gruvbox theme
   use 'tveskag/nvim-blame-line' -- Git blame line
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
