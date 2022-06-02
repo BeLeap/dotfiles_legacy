@@ -91,24 +91,6 @@ function pbuild
     pandoc $argv -o $file".pdf" --pdf-engine=xelatex --from markdown --listing
 end
 
-# for Windows Subsystem Linux
-function open
-    set -l file (echo $argv | rev | cut -f 1 -d '/' | rev)
-    if [ ! -z "$path" ]
-        echo "Incorrect parameter."
-        return 1;
-    end
-    set -l curr (pwd)
-    set -l targ (echo $argv | rev | cut -f 2- -d '/' | rev)
-    if [ $file = $targ ]
-        explorer.exe $file
-    else
-        cd $targ
-        explorer.exe $file
-        cd $curr
-    end
-end
-
 function dock
     docker start $argv
     docker attach $argv

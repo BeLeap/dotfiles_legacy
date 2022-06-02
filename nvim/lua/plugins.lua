@@ -28,11 +28,11 @@ return require('packer').startup(function()
   use { 'lewis6991/spellsitter.nvim', config = function() require('spellsitter').setup() end } -- Spell checker
   use 'mfussenegger/nvim-dap' -- Debugger support
   use 'David-Kunz/jester' -- Run test written with jest
-  use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
   use 'udalov/kotlin-vim' -- Kotlin support
   use { 'ms-jpq/coq_nvim', branch = 'coq' } -- Compeletion
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
   use { 'ms-jpq/coq.thirdparty', branch = '3p' }
+  use { 'williamboman/nvim-lsp-installer', 'neovim/nvim-lspconfig' } -- LSP installer
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
