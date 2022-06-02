@@ -7,7 +7,6 @@ if not set -q XDG_CONFIG_HOME
 end
 
 set -g PYENV_ROOT $DOTFILES_PATH/.pyenv
-set -g PATH ~/go/bin /usr/local/go/bin ~/.cargo/bin ~/.local/bin ~/.nodenv/bin ~/.local/npm/bin $PYENV_ROOT/bin $PATH
 set -gx EDITOR nvim
 
 source "$XDG_CONFIG_HOME/fish/alias.fish"
