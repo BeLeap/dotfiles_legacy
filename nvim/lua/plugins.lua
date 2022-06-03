@@ -56,7 +56,8 @@ return require('packer').startup(function()
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api
   use 'stevearc/dressing.nvim' -- Improve default UI
   use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
-  use 'mjlaufer/gruvbox-darker.nvim' -- Gruvbox theme
+  -- use 'mjlaufer/gruvbox-darker.nvim' -- Gruvbox theme
+  use { 'sainnhe/gruvbox-material' }
   use 'tveskag/nvim-blame-line' -- Git blame line
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text
@@ -68,6 +69,8 @@ return require('packer').startup(function()
     'kdheepak/tabline.nvim',
     requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
   }
+  use { 'folke/twilight.nvim', config = function() require('twilight').setup {} end } -- Dim inactive code portion
+  use { 'folke/zen-mode.nvim', config = function() require('zen-mode').setup {} end } -- Zen mode
 
   -- Others
   use 'tpope/vim-sensible' -- Default config that Sensible

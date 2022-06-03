@@ -1,4 +1,8 @@
-require('lualine').setup()
+require('lualine').setup {
+  options = {
+    theme = 'gruvbox-material'
+  }
+}
 
 require'tabline'.setup {
   -- Defaults configuration options

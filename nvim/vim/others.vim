@@ -1,7 +1,16 @@
 let mapleader = ";"
 
+if has('termguicolors')
+  set termguicolors
+endif
+
 set background=dark
-colorscheme gruvbox
+
+let g:gruvbox_material_better_performance = 1
+let g:gruvbox_material_enable_bold = 1
+let g:gruvbox_material_enable_italic = 1
+
+colorscheme gruvbox-material
 
 nnoremap <silent><leader>e :CHADopen<CR>
 nnoremap <silent><leader>d :DBUIToggle<CR>
