@@ -63,31 +63,9 @@ return require('packer').startup(function()
   use { 'rcarriga/nvim-dap-ui', config = function() require('dapui').setup() end } -- Debug UI
   use { 'j-hui/fidget.nvim', config = function() require('fidget').setup{} end } -- LSP Progress UI
   use { 'folke/trouble.nvim', require = 'kyazdani42/nvim-web-devicons', config = function() require("trouble").setup{} end } -- Shows LSP message
+  use { 'lukas-reineke/indent-blankline.nvim', tag = 'v2.18.4' } -- Show ident line
   use {
     'kdheepak/tabline.nvim',
-    config = function()
-      require'tabline'.setup {
-        -- Defaults configuration options
-        enable = true,
-        options = {
-        -- If lualine is installed tabline will use separators configured in lualine by default.
-        -- These options can be used to override those settings.
-          section_separators = {'', ''},
-          component_separators = {'', ''},
-          max_bufferline_percent = 66, -- set to nil by default, and it uses vim.o.columns * 2/3
-          show_tabs_always = false, -- this shows tabs only when there are more than one tab or if the first tab is named
-          show_devicons = true, -- this shows devicons in buffer section
-          show_bufnr = false, -- this appends [bufnr] to buffer section,
-          show_filename_only = false, -- shows base filename only instead of relative path in filename
-          modified_icon = "+ ", -- change the default modified icon
-          modified_italic = false, -- set to true by default; this determines whether the filename turns italic if modified
-        }
-      }
-      vim.cmd[[
-        set guioptions-=e " Use showtabline in gui vim
-        set sessionoptions+=tabpages,globals " store tabpages and globals in session
-      ]]
-    end,
     requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
   }
 
