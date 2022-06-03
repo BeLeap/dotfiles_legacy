@@ -15,7 +15,7 @@ return require('packer').startup(function()
   -- Language Support
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Language parser for Highlighting, etc...
   use 'romgrk/nvim-treesitter-context' -- Shows current context using TreeSitter
-  use { 'michaelb/sniprun', run = 'bash ./install.sh'} -- Select & Run (like REPL)
+  use { 'michaelb/sniprun', run = 'bash install.sh'} -- Select & Run (like REPL)
   use 'windwp/nvim-autopairs' -- Auto-close parentheses
   use 'lbrayner/vim-rzip' -- Zip file format support (for yarn berry)
   use 'editorconfig/editorconfig-vim' -- Use editorconfig
