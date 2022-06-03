@@ -1,3 +1,8 @@
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+end
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
@@ -32,7 +37,7 @@ return require('packer').startup(function()
   use { 'ms-jpq/coq_nvim', branch = 'coq' } -- Compeletion
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
   use { 'ms-jpq/coq.thirdparty', branch = '3p' }
-  use { 'williamboman/nvim-lsp-installer', 'neovim/nvim-lspconfig' } -- LSP installer
+  use { 'williamboman/nvim-lsp-installer', { 'neovim/nvim-lspconfig', tag = 'v0.1.3' } } -- LSP installer
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
@@ -95,4 +100,10 @@ return require('packer').startup(function()
   use 'mg979/vim-visual-multi' -- Easy select multi-line (sublime-like)
   use 'wakatime/vim-wakatime' -- Track work time
   use { 'nacro90/numb.nvim', config = function() require('numb').setup() end } -- Go to line with :number
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
