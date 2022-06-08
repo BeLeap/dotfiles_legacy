@@ -30,12 +30,13 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-  local format = function()
-    vim.lsp.buf.formatting()
-  end
-  vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-    callback = format,
-  })
+  -- local format = function()
+  --   vim.lsp.buf.formatting()
+  -- end
+  -- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  --   callback = format,
+  -- })
+  vim.api.nvim_buf_set_keymap(bufnr, 'n', 'fo', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
 local lspconfig = require('lspconfig')
@@ -57,6 +58,10 @@ for _, lsp in ipairs(servers) do
   })
 end
 
+setup('jdtls', {
+  on_attach = on_attach,
+  filetypes = { 'java', 'kotlin' },
+})
 setup('tsserver', {
     on_attach = on_attach,
     capabilities = capabilities,
