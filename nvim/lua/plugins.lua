@@ -26,7 +26,6 @@ return require('packer').startup(function()
   use 'simrat39/rust-tools.nvim' -- Rust support
   use 'mhinz/vim-crates' -- Check rust crates
   use 'mfussenegger/nvim-jdtls' -- JVM language supports
-  use 'github/copilot.vim' -- Autocomplete with AI
   use 'tpope/vim-dadbod' -- DB support
   use 'fatih/vim-go' -- Go support
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end } -- Comment out

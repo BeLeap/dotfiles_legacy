@@ -47,7 +47,7 @@ function fishrc
     pushd $XDG_CONFIG_HOME/fish && vim $XDG_CONFIG_HOME/fish/config.fish; popd
 end
 function sofish
-    source $XDG_CONFIG_HOME/config.fish
+    source $XDG_CONFIG_HOME/fish/config.fish
 end
 function tmuxconf
     pushd $DOTFILES_PATH/tmux && vim $DOTFILES_PATH/tmux/.tmux.conf; popd
@@ -74,7 +74,7 @@ alias cat "bat"
 
 alias od "hexyl"
 
-alias grep "rg"
+# alias grep "rg"
 
 # Trash-cli
 #alias tput "trash-put"
@@ -99,3 +99,5 @@ end
 alias nuget "mono /usr/local/bin/nuget.exe"
 alias awslogin "saml2aws login -p default --skip-prompt"
 alias vaultlogin "vault login -method=oidc -path=keycloak"
+
+abbr -a -g dc docker-compose

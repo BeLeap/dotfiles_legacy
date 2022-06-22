@@ -32,3 +32,7 @@ if type -q pyenv
 end
 
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/beleap/.ghcup/bin # ghcup-env
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/beleap/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
