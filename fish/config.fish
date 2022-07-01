@@ -17,6 +17,7 @@ source "$XDG_CONFIG_HOME/fish/others.fish"
 source "$XDG_CONFIG_HOME/fish/git.fish"
 source "$XDG_CONFIG_HOME/fish/docker.fish"
 source "$XDG_CONFIG_HOME/fish/alacritty.fish"
+source "$XDG_CONFIG_HOME/fish/gradle.fish"
 
 if not set -q STARSHIP
   starship init fish | source
