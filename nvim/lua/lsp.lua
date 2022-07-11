@@ -72,6 +72,6 @@ setup('denols', {
     on_attach = on_attach,
     capabilities = capabilities,
     flags = {debounce_text_changes = 150},
-    root_dir = lspconfig.util.root_pattern("deno.json")
+    root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
 })
 
