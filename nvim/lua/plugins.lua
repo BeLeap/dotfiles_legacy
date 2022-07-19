@@ -55,7 +55,6 @@ return require('packer').startup(function()
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api
   use 'stevearc/dressing.nvim' -- Improve default UI
   use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
-  -- use 'mjlaufer/gruvbox-darker.nvim' -- Gruvbox theme
   use { 'sainnhe/gruvbox-material' }
   use 'tveskag/nvim-blame-line' -- Git blame line
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
