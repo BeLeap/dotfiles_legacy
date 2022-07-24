@@ -13,6 +13,7 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- Language Support
+  use 'neovim/nvim-lspconfig' -- LSP Support
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Language parser for Highlighting, etc...
   use 'romgrk/nvim-treesitter-context' -- Shows current context using TreeSitter
   use { 'michaelb/sniprun', run = 'bash install.sh'} -- Select & Run (like REPL)
@@ -36,7 +37,7 @@ return require('packer').startup(function()
   use { 'ms-jpq/coq_nvim', branch = 'coq' } -- Compeletion
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
   use { 'ms-jpq/coq.thirdparty', branch = '3p' }
-  use { 'williamboman/nvim-lsp-installer', { 'neovim/nvim-lspconfig', tag = 'v0.1.3' } } -- LSP installer
+  use { 'williamboman/mason.nvim' } -- install external components(e.g. lsp)
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview

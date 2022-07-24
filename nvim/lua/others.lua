@@ -75,3 +75,4 @@ require('presence'):setup({
     'mindslab',
   }
 })
+require('mason').setup()
