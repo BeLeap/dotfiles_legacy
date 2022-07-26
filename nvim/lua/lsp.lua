@@ -46,7 +46,7 @@ vim.g.coq_settings = { auto_start = 'shut-up' }
 -- Enable some language servers with the additional completion capabilities offered by coq_nvim
 local servers = {
     'clangd', 'rust_analyzer', 'pyright', 'hls', 'diagnosticls', 'dockerls',
-    'yamlls', 'svelte', 'gopls', 'kotlin_language_server', 'jdtls', 'jsonls',
+    'yamlls', 'svelte', 'gopls', 'kotlin_language_server', 'jsonls',
     'metals'
 }
 for _, lsp in ipairs(servers) do
