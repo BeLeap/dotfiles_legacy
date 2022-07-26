@@ -72,3 +72,5 @@ setup('denols', {
     root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
 })
 
+require("lsp_lines").setup()
+vim.diagnostic.config({ virtual_text = false })

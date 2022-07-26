@@ -16,7 +16,6 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig' -- LSP Support
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' } -- Language parser for Highlighting, etc...
   use 'romgrk/nvim-treesitter-context' -- Shows current context using TreeSitter
-  use { 'michaelb/sniprun', run = 'bash install.sh'} -- Select & Run (like REPL)
   use 'windwp/nvim-autopairs' -- Auto-close parentheses
   use 'lbrayner/vim-rzip' -- Zip file format support (for yarn berry)
   use 'editorconfig/editorconfig-vim' -- Use editorconfig
@@ -31,6 +30,7 @@ return require('packer').startup(function()
   use 'fatih/vim-go' -- Go support
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end } -- Comment out
   use { 'lewis6991/spellsitter.nvim', config = function() require('spellsitter').setup() end } -- Spell checker
+  use({ "https://git.sr.ht/~whynothugo/lsp_lines.nvim", }) -- Shows lsp diagnostics
   use 'mfussenegger/nvim-dap' -- Debugger support
   use 'David-Kunz/jester' -- Run test written with jest
   use 'udalov/kotlin-vim' -- Kotlin support
@@ -62,7 +62,6 @@ return require('packer').startup(function()
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text
   use { 'rcarriga/nvim-dap-ui', config = function() require('dapui').setup() end } -- Debug UI
   use { 'j-hui/fidget.nvim', config = function() require('fidget').setup{} end } -- LSP Progress UI
-  use { 'folke/trouble.nvim', require = 'kyazdani42/nvim-web-devicons', config = function() require("trouble").setup{} end } -- Shows LSP message
   use { 'lukas-reineke/indent-blankline.nvim', tag = 'v2.18.4' } -- Show ident line
   use {
     'kdheepak/tabline.nvim',
