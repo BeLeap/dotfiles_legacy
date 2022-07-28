@@ -57,7 +57,6 @@ return require('packer').startup(function()
   use 'stevearc/dressing.nvim' -- Improve default UI
   use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
   use { 'sainnhe/gruvbox-material' }
-  use 'tveskag/nvim-blame-line' -- Git blame line
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text
   use { 'rcarriga/nvim-dap-ui', config = function() require('dapui').setup() end } -- Debug UI
@@ -80,6 +79,7 @@ return require('packer').startup(function()
   use 'wakatime/vim-wakatime' -- Track work time
   use { 'nacro90/numb.nvim', config = function() require('numb').setup() end } -- Go to line with :number
   use 'andweeb/presence.nvim' -- Discord Rich Presence
+  use 'tpope/vim-fugitive' -- Git support
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
