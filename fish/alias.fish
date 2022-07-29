@@ -100,6 +100,6 @@ alias nuget "mono /usr/local/bin/nuget.exe"
 alias awslogin "saml2aws login -p default --skip-prompt"
 alias vaultlogin "vault login -method=oidc -path=keycloak"
 
-abbr -a -g dc docker-compose
+abbr -a -g dc docker compose
 
 alias gek "got -f 'en' -t 'ko' -o"
