@@ -12,7 +12,7 @@ set -gx EDITOR nvim
 source "$XDG_CONFIG_HOME/fish/alias.fish"
 source "$XDG_CONFIG_HOME/fish/fzf.fish"
 source "$XDG_CONFIG_HOME/fish/bash.fish"
-source "$XDG_CONFIG_HOME/fish/tmux.fish"
+# source "$XDG_CONFIG_HOME/fish/tmux.fish"
 source "$XDG_CONFIG_HOME/fish/others.fish"
 source "$XDG_CONFIG_HOME/fish/git.fish"
 source "$XDG_CONFIG_HOME/fish/docker.fish"
