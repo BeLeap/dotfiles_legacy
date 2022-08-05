@@ -2,8 +2,7 @@
 
 # Import additional configuration files
 #
-# Imports are loaded in order, skipping all missing files, with the importing
-# file being loaded last. If a field is already present in a previous import, it
+# Imports are loaded in order, skipping all missing files, with the importing file being loaded last. If a field is already present in a previous import, it
 # will be replaced.
 #
 # All imports must either be absolute paths starting with `/`, or paths relative
@@ -78,13 +77,13 @@ window:
   #
   # Values for `startup_mode` (macOS only):
   #   - SimpleFullscreen
-  startup_mode: Windowed
+  startup_mode: Maximized
 
   # Window title
   #title: Alacritty
 
   # Allow terminal applications to change Alacritty's window title.
-  dynamic_title: true
+  #dynamic_title: true
 
   # Window class (Linux/BSD only):
   #class:
