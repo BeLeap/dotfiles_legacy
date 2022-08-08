@@ -60,16 +60,17 @@ setup('jdtls', {
   filetypes = { 'java', 'kotlin' },
 })
 setup('tsserver', {
-    on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {debounce_text_changes = 150},
-    root_dir = lspconfig.util.root_pattern("package.json", "tsconfig.json")
+  on_attach = on_attach,
+  capabilities = capabilities,
+  flags = {debounce_text_changes = 150},
+  root_dir = lspconfig.util.root_pattern("package.json"),
 })
 setup('denols', {
     on_attach = on_attach,
-    capabilities = capabilities,
-    flags = {debounce_text_changes = 150},
-    root_dir = lspconfig.util.root_pattern("deno.json", "deno.jsonc")
+  capabilities = capabilities,
+  flags = {debounce_text_changes = 150},
+  root_dir = lspconfig.util.root_pattern("deno.json"),
+  single_file_support = false
 })
 
 require("lsp_lines").setup()
