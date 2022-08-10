@@ -39,6 +39,7 @@ return require('packer').startup(function()
   use { 'ms-jpq/coq.thirdparty', branch = '3p' }
   use { 'williamboman/mason.nvim' } -- install external components(e.g. lsp)
   use { 'williamboman/mason-lspconfig.nvim' } -- mason lspconfig bridge
+  use { 'windwp/nvim-ts-autotag' } -- Autoclose & Autorename html tag
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
@@ -51,7 +52,6 @@ return require('packer').startup(function()
   use 'pwntester/octo.nvim' -- Github support
   use 'kristijanhusak/vim-dadbod-ui' -- UI for 'tpope/vim-dadbod'
   use 'lewis6991/gitsigns.nvim' -- Sign for git status
-  use 'TimUntersberger/neogit' -- Git UI
   use 'folke/todo-comments.nvim' -- Highlights TODO-ish comments
   use 'RishabhRD/popfix' -- Nvim lua high-level popup api
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api

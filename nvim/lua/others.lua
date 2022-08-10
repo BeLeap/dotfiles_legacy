@@ -61,8 +61,7 @@ require('gitsigns').setup()
 --   show_end_of_line = false,
 -- }
 
-require('neogit').setup()
-
+require('nvim-ts-autotag').setup()
 require('nvim-treesitter.configs').setup {
     highlight = { enable = true },
     incremental_selection = { enable = true },
