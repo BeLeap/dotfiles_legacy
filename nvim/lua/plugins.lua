@@ -38,6 +38,7 @@ return require('packer').startup(function()
   use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
   use { 'ms-jpq/coq.thirdparty', branch = '3p' }
   use { 'williamboman/mason.nvim' } -- install external components(e.g. lsp)
+  use { 'williamboman/mason-lspconfig.nvim' } -- mason lspconfig bridge
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
@@ -79,7 +80,7 @@ return require('packer').startup(function()
   use 'wakatime/vim-wakatime' -- Track work time
   use { 'nacro90/numb.nvim', config = function() require('numb').setup() end } -- Go to line with :number
   use 'andweeb/presence.nvim' -- Discord Rich Presence
-  use 'tpope/vim-fugitive' -- Git support
+  use 'dinhhuy258/git.nvim' -- Git support
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

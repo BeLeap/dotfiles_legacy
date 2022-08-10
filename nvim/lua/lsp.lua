@@ -75,3 +75,8 @@ setup('denols', {
 
 require("lsp_lines").setup()
 vim.diagnostic.config({ virtual_text = false })
+
+require('mason').setup()
+require('mason-lspconfig').setup({
+  automatic_installation = true,
+})
