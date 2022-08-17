@@ -9,29 +9,29 @@ keybinds:
     unbind: true
     normal:
         - action: [SwitchToMode: Locked,]
-          key: [Ctrl: 'g',]
+          key: [Ctrl: 'G',]
         - action: [SwitchToMode: Pane,]
-          key: [Ctrl: 'p',]
+          key: [Ctrl: 'P',]
         - action: [SwitchToMode: Resize,]
-          key: [Ctrl: 'n',]
+          key: [Ctrl: 'N',]
         - action: [SwitchToMode: Tab,]
-          key: [Ctrl: 't',]
+          key: [Ctrl: 'T',]
         - action: [SwitchToMode: Scroll,]
           key: [Ctrl: 'S',]
         - action: [SwitchToMode: Session,]
           key: [Ctrl: 'O',]
         - action: [SwitchToMode: Move,]
-          key: [Ctrl: 'h',]
+          key: [Ctrl: 'H',]
         - action: [SwitchToMode: Tmux,]
-          key: [Ctrl: 'b',]
+          key: [Ctrl: 'B',]
         - action: [Quit,]
           key: [Ctrl: 'Q',]
         - action: [NewPane: ]
-          key: [ Alt: 'n',]
+          key: [ Alt: 'N',]
         - action: [MoveFocusOrTab: Left,]
-          key: [ Alt: 'h', Alt: Left]
+          key: [ Alt: 'H', Alt: Left]
         - action: [MoveFocusOrTab: Right,]
-          key: [ Alt: 'l', Alt: Right ]
+          key: [ Alt: 'L', Alt: Right ]
         - action: [MoveFocus: Down,]
           key: [ Alt: 'j', Alt: Down]
         - action: [MoveFocus: Up,]
@@ -650,4 +650,4 @@ themes:
 #copy_on_select: true
 
 # Path to the default editor to use to edit pane scrollbuffer
-# scrollback_editor: /usr/bin/nano
+scrollback_editor: nvim
