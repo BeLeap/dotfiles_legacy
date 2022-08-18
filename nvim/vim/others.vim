@@ -38,9 +38,6 @@ nnoremap <silent><leader>db :lua require'dapui'.toggle()<CR>
 
 au BufEnter *.spec.ts nnoremap <silent><F6> :lua require'jester'.debug()<CR>
 
-imap <silent><script><expr> <Right> copilot#Accept("\<Right>")
-let g:copilot_no_tab_map = v:true
-
 inoremap <silent>,d <ESC>
 nnoremap <silent>,d <ESC>
 onoremap <silent>,d <ESC>
