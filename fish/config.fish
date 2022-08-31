@@ -37,3 +37,4 @@ set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; se
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 set --export --prepend PATH "/Users/beleap/.rd/bin"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
