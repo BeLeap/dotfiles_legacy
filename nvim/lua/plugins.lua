@@ -40,6 +40,7 @@ return require('packer').startup(function()
   use { 'williamboman/mason.nvim' } -- install external components(e.g. lsp)
   use { 'williamboman/mason-lspconfig.nvim' } -- mason lspconfig bridge
   use { 'windwp/nvim-ts-autotag' } -- Autoclose & Autorename html tag
+  use { 'andrewstuart/vim-kubernetes' } -- k8s Support
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview

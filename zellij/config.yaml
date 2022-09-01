@@ -598,7 +598,7 @@ theme: gruvbox-dark
 
 themes:
   gruvbox-dark:
-    bg: [10, 10, 10]
+    bg: [40, 40, 40]
     red: [204, 36, 29]
     green: [152, 151, 26]
     yellow: [215, 153, 33]
