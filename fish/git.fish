@@ -33,7 +33,7 @@ abbr -a -g gco git checkout
 abbr -a -g ga git add
 abbr -a -g gst git status
 abbr -a -g gl git pull
-abbr -a -g gd git diff
+abbr -a -g gd git difftool
 abbr -a -g gp git push
 abbr -a -g gc git commit -v
 abbr -a -g gf git fetch --prune --all

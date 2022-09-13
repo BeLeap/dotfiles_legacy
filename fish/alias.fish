@@ -102,4 +102,5 @@ alias vaultlogin "vault login -method=oidc -path=keycloak"
 
 abbr -a -g dc docker compose
 
-alias gek "got -f 'en' -t 'ko' -o"
+alias gek "got -s 'en' -t 'ko' -o"
+alias gke "got -s 'ko' -t 'en' -o"
