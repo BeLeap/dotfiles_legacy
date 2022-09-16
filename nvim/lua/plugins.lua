@@ -41,6 +41,7 @@ return require('packer').startup(function()
   use { 'williamboman/mason-lspconfig.nvim' } -- mason lspconfig bridge
   use { 'windwp/nvim-ts-autotag' } -- Autoclose & Autorename html tag
   use { 'andrewstuart/vim-kubernetes' } -- k8s Support
+  use { 'ziglang/zig.vim' } -- Zig support
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
