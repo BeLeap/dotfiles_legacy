@@ -32,9 +32,6 @@ end
 function j
     z $argv
 end
-function k
-    kubectl $argv
-end
 function tf
     terraform $argv
 end
@@ -101,6 +98,7 @@ alias awslogin "saml2aws login -p default --skip-prompt"
 alias vaultlogin "vault login -method=oidc -path=keycloak"
 
 abbr -a -g dc docker compose
+abbr -a -g k kubectl
 
 alias gek "got -s 'en' -t 'ko' -o"
 alias gke "got -s 'ko' -t 'en' -o"

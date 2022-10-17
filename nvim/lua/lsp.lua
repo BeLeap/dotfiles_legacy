@@ -61,13 +61,11 @@ setup('jdtls', {
 })
 setup('tsserver', {
   on_attach = on_attach,
-  capabilities = capabilities,
   flags = {debounce_text_changes = 150},
   root_dir = lspconfig.util.root_pattern("package.json"),
 })
 setup('denols', {
-    on_attach = on_attach,
-  capabilities = capabilities,
+  on_attach = on_attach,
   flags = {debounce_text_changes = 150},
   root_dir = lspconfig.util.root_pattern("deno.json"),
   single_file_support = false

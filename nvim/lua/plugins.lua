@@ -53,7 +53,8 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons' -- Better icons
   use 'pwntester/octo.nvim' -- Github support
   use 'kristijanhusak/vim-dadbod-ui' -- UI for 'tpope/vim-dadbod'
-  use 'lewis6991/gitsigns.nvim' -- Sign for git status
+  -- use 'lewis6991/gitsigns.nvim' -- Sign for git status
+  use 'airblade/vim-gitgutter' -- Sign for git status
   use 'folke/todo-comments.nvim' -- Highlights TODO-ish comments
   use 'RishabhRD/popfix' -- Nvim lua high-level popup api
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api
