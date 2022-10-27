@@ -44,9 +44,9 @@ window:
   #
   # Blank space added around the window in pixels. This padding is scaled
   # by DPI and the specified value is always added at both opposing sides.
-  #padding:
-  #  x: 10
-  #  y: 10
+  padding:
+    x: 10
+    y: 10
 
   # Spread additional padding evenly around the terminal content.
   #dynamic_padding: false
@@ -853,6 +853,7 @@ key_bindings:
   - { key: L, mods: Alt, chars: "\x1bl" }
   - { key: T, mods: Alt, chars: "\x1bt" }
   - { key: P, mods: Alt, chars: "\x1bp" }
+  - { key: S, mods: Alt, chars: "\x1bs" }
 
 #debug:
   # Display the time it takes to redraw each frame.
