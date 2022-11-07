@@ -157,7 +157,7 @@ keybinds clear-defaults=true {
         bind "Alt t" { SwitchToMode "Tab"; }
     }
     shared_except "move" "locked" {
-        bind "Alt h" { SwitchToMode "Move"; }
+        bind "Alt m" { SwitchToMode "Move"; }
     }
     shared_except "tmux" "locked" {
         bind "Alt b" { SwitchToMode "Tmux"; }
