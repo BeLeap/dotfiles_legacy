@@ -8,7 +8,7 @@ set background=dark
 
 let g:gruvbox_material_better_performance = 1
 let g:gruvbox_material_enable_bold = 1
-" let g:gruvbox_material_enable_italic = 0
+let g:gruvbox_material_enable_italic = 1
 
 colorscheme gruvbox-material
 

@@ -98,7 +98,10 @@ alias awslogin "saml2aws login -p default --skip-prompt"
 alias vaultlogin "vault login -method=oidc -path=keycloak"
 
 abbr -a -g dc docker compose
+
 abbr -a -g k kubectl
+abbr -a -g ktx kubectx
+abbr -a -g kns kubens
 
 alias gek "got -s 'en' -t 'ko' -o"
 alias gke "got -s 'ko' -t 'en' -o"
