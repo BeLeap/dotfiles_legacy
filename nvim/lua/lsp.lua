@@ -49,14 +49,25 @@ vim.g.coq_settings = { auto_start = 'shut-up' }
 local servers = {
     'clangd', 'rust_analyzer', 'pyright', 'hls', 'dockerls',
     'svelte', 'gopls', 'kotlin_language_server', 'jsonls',
-    'metals', 'dartls', 'terraformls', 'zls', 'vimls', 'luau_lsp',
-    'marksman'
+    'metals', 'dartls', 'terraformls', 'zls', 'vimls', 'marksman'
 }
 for _, lsp in ipairs(servers) do
   setup(lsp, {
     on_attach = on_attach,
   })
 end
+
+setup('sumneko_lua', {
+  on_attach = on_attach,
+  filetypes = { 'lua' },
+  settings = {
+    Lua = {
+      diagnostics = {
+        globals = { 'vim' }
+      }
+    }
+  }
+})
 
 setup('jdtls', {
   on_attach = on_attach,
