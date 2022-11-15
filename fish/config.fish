@@ -36,6 +36,10 @@ if type -q kubectl
   kubectl completion fish | source
 end
 
+if type -q helm
+  helm completion fish | source
+end
+
 set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/beleap/.ghcup/bin # ghcup-env
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
