@@ -1,4 +1,5 @@
-nmap <leader>tg :TagbarToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
+
 let g:tagbar_type_tf = {
   \ 'ctagstype': 'tf',
   \ 'kinds': [
