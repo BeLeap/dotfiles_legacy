@@ -72,7 +72,7 @@ return require('packer').startup(function()
   }
   use { 'folke/twilight.nvim', config = function() require('twilight').setup {} end } -- Dim inactive code portion
   use { 'folke/zen-mode.nvim', config = function() require('zen-mode').setup {} end } -- Zen mode
-  use { 'majutsushi/tagbar' } -- Show tag bar(ctags)
+  use { 'liuchengxu/vista.vim' } -- Symbol sidebar
 
   -- Others
   use 'tpope/vim-sensible' -- Default config that Sensible
