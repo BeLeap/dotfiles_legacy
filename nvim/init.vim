@@ -18,4 +18,4 @@ lua require('boot')
 runtime vim/others.vim
 runtime vim/rzip.vim
 runtime vim/dbui.vim
-
+runtime vim/vista.vim
