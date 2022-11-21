@@ -107,4 +107,6 @@ alias gke "got -s 'ko' -t 'en' -o"
 
 if type -q trash-list
   alias rm trash-put
+  alias rmlist trash-list
+  alias rmclear "trash-rm '*'"
 end
