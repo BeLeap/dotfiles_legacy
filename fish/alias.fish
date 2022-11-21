@@ -104,3 +104,7 @@ abbr -a -g kns kubens
 
 alias gek "got -s 'en' -t 'ko' -o"
 alias gke "got -s 'ko' -t 'en' -o"
+
+if type -q trash-list
+  alias rm trash-put
+end
