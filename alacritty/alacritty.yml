@@ -116,7 +116,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: FuraCode Nerd Font
+    family: "CaskaydiaCove Nerd Font"
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -737,7 +737,7 @@ font:
 #
 # If the same trigger is assigned to multiple actions, all of them are executed
 # in the order they were defined in.
-key_bindings:
+# key_bindings:
   #- { key: Paste,                                       action: Paste          }
   #- { key: Copy,                                        action: Copy           }
   #- { key: L,         mods: Control,                    action: ClearLogNotice }
@@ -847,13 +847,13 @@ key_bindings:
   #- { key: F,              mods: Command|Control,            action: ToggleFullscreen      }
   #- { key: F,              mods: Command, mode: ~Search,     action: SearchForward         }
   #- { key: B,              mods: Command, mode: ~Search,     action: SearchBackward        }
-  - { key: J, mods: Alt, chars: "\x1bj" }
-  - { key: K, mods: Alt, chars: "\x1bk" }
-  - { key: H, mods: Alt, chars: "\x1bh" }
-  - { key: L, mods: Alt, chars: "\x1bl" }
-  - { key: T, mods: Alt, chars: "\x1bt" }
-  - { key: P, mods: Alt, chars: "\x1bp" }
-  - { key: S, mods: Alt, chars: "\x1bs" }
+  # - { key: J, mods: Alt, chars: "\x1bj" }
+  # - { key: K, mods: Alt, chars: "\x1bk" }
+  # - { key: H, mods: Alt, chars: "\x1bh" }
+  # - { key: L, mods: Alt, chars: "\x1bl" }
+  # - { key: T, mods: Alt, chars: "\x1bt" }
+  # - { key: P, mods: Alt, chars: "\x1bp" }
+  # - { key: S, mods: Alt, chars: "\x1bs" }
 
 #debug:
   # Display the time it takes to redraw each frame.

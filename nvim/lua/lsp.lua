@@ -49,7 +49,8 @@ vim.g.coq_settings = { auto_start = 'shut-up' }
 local servers = {
     'clangd', 'rust_analyzer', 'pyright', 'hls', 'dockerls',
     'svelte', 'gopls', 'kotlin_language_server', 'jsonls',
-    'metals', 'dartls', 'zls', 'vimls', 'marksman', 'terraformls'
+    'metals', 'dartls', 'zls', 'vimls', 'marksman', 'terraformls',
+    'graphql'
 }
 for _, lsp in ipairs(servers) do
   setup(lsp, {
