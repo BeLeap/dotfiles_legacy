@@ -46,3 +46,4 @@ onoremap <silent>,d <ESC>
 " let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
 
 set foldmethod=manual
+nnoremap <leader>t :let $VIM_DIR=expand('%:p:h')<CR>:split<CR>:terminal cd $VIM_DIR; $SHELL<CR>
