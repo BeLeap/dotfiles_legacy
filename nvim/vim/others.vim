@@ -47,3 +47,4 @@ onoremap <silent>,d <ESC>
 
 set foldmethod=manual
 nnoremap <leader>t :let $VIM_DIR=expand('%:p:h')<CR>:split<CR>:terminal cd $VIM_DIR; $SHELL<CR>
+
