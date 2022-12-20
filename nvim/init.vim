@@ -1,9 +1,6 @@
 set runtimepath^=~/.config/nvim/lua
 let &packpath=&runtimepath
 
-set runtimepath^=~/.config/nvim/site
-let &packpath=&runtimepath
-
 lua require('impatient')
 lua require('boot')
 
