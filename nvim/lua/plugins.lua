@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text
   use { 'rcarriga/nvim-dap-ui', config = function() require('dapui').setup() end } -- Debug UI
   use { 'j-hui/fidget.nvim', config = function() require('fidget').setup{} end } -- LSP Progress UI
-  use { 'lukas-reineke/indent-blankline.nvim', tag = 'v2.18.4' } -- Show ident line
+  use { 'lukas-reineke/indent-blankline.nvim' } -- Show ident line
   use {
     'kdheepak/tabline.nvim',
     requires = { { 'hoob3rt/lualine.nvim', opt=true }, {'kyazdani42/nvim-web-devicons', opt = true} }
