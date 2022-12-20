@@ -63,11 +63,11 @@ require('octo').setup()
 
 require('nvim-ts-autotag').setup()
 require('nvim-treesitter.configs').setup {
-    highlight = { enable = true },
-    incremental_selection = { enable = true },
-    indent = { enable = true },
-    rainbow = { enable = true },
-  }
+  highlight = { enable = true },
+  incremental_selection = { enable = true },
+  indent = { enable = true },
+  rainbow = { enable = true },
+}
 
 require('presence'):setup({
   blacklist = {
