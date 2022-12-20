@@ -49,11 +49,7 @@ end
 
 remap('i' , '<CR>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
 
-local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-
 -- Mappings.
-local opts = { noremap=true, silent=true }
-
 require('todo-comments').setup{}
 require('octo').setup()
 -- require('gitsigns').setup()
