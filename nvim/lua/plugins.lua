@@ -91,6 +91,17 @@ return require('packer').startup(function(use)
   use { 'nacro90/numb.nvim', config = function() require('numb').setup() end } -- Go to line with :number
   use 'andweeb/presence.nvim' -- Discord Rich Presence
   use 'dinhhuy258/git.nvim' -- Git support
+  use {
+    "kode-team/mastodon.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "rcarriga/nvim-notify",
+      "kkharji/sqlite.lua",
+    },
+    config = function()
+      require("mastodon").setup()
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
