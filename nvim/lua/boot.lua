@@ -8,3 +8,5 @@ require('telescope-conf')
 require('line-conf')
 require('chadtree-conf')
 
+require('mastodon').setup()
+
