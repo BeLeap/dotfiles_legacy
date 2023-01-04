@@ -93,17 +93,17 @@ return require('packer').startup(function(use)
   use 'dinhhuy258/git.nvim' -- Git support
   use 'rcarriga/nvim-notify'
   use 'kkharji/sqlite.lua'
-  -- use {
-  --   "kode-team/mastodon.nvim",
-  --   requires = {
-  --     "nvim-lua/plenary.nvim",
-  --     "rcarriga/nvim-notify",
-  --     "kkharji/sqlite.lua",
-  --   },
-  --   config = function()
-  --     require("mastodon").setup()
-  --   end
-  -- }
+  use {
+    "kode-team/mastodon.nvim",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "rcarriga/nvim-notify",
+      "kkharji/sqlite.lua",
+    },
+    config = function()
+      require("mastodon").setup()
+    end
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
