@@ -86,8 +86,11 @@ setup('denols', {
   single_file_support = false
 })
 
-require("lsp_lines").setup()
-vim.diagnostic.config({ virtual_text = false })
+if vim.fn.has('win32') then
+else
+  require("lsp_lines").setup()
+  vim.diagnostic.config({ virtual_text = false })
+end
 
 require('mason').setup()
 require('mason-lspconfig').setup({

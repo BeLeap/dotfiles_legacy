@@ -36,7 +36,6 @@ return require('packer').startup(function(use)
   use 'fatih/vim-go' -- Go support
   use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end } -- Comment out
   use { 'lewis6991/spellsitter.nvim', config = function() require('spellsitter').setup() end } -- Spell checker
-  use({ "https://git.sr.ht/~whynothugo/lsp_lines.nvim", }) -- Shows lsp diagnostics
   use 'mfussenegger/nvim-dap' -- Debugger support
   use 'David-Kunz/jester' -- Run test written with jest
   use 'udalov/kotlin-vim' -- Kotlin support
@@ -104,6 +103,11 @@ return require('packer').startup(function(use)
       require("mastodon").setup()
     end
   }
+
+  if vim.fn.has('win32') then
+  else
+    use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" } -- Shows lsp diagnostics
+  end
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
