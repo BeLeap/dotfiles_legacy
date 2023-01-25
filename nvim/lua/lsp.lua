@@ -45,54 +45,41 @@ end
 -- Automatically start coq
 vim.g.coq_settings = { auto_start = 'shut-up' }
 
--- Enable some language servers with the additional completion capabilities offered by coq_nvim
-local servers = {
-    'clangd', 'rust_analyzer', 'pyright', 'hls', 'dockerls',
-    'svelte', 'gopls', 'kotlin_language_server', 'jsonls',
-    'metals', 'dartls', 'zls', 'vimls', 'marksman', 'terraformls',
-    'graphql'
-}
-for _, lsp in ipairs(servers) do
-  setup(lsp, {
-    on_attach = on_attach,
-  })
-end
-
-setup('sumneko_lua', {
-  on_attach = on_attach,
-  filetypes = { 'lua' },
-  settings = {
-    Lua = {
-      diagnostics = {
-        globals = { 'vim' }
-      }
-    }
-  }
-})
-
-setup('jdtls', {
-  on_attach = on_attach,
-  filetypes = { 'java', 'kotlin' },
-})
-setup('tsserver', {
-  on_attach = on_attach,
-  flags = {debounce_text_changes = 150},
-  root_dir = lspconfig.util.root_pattern("package.json"),
-})
-setup('denols', {
-  on_attach = on_attach,
-  flags = {debounce_text_changes = 150},
-  root_dir = lspconfig.util.root_pattern("deno.json"),
-  single_file_support = false
-})
-
 if vim.fn.has('win32') then
 else
   require("lsp_lines").setup()
   vim.diagnostic.config({ virtual_text = false })
 end
 
-require('mason').setup()
-require('mason-lspconfig').setup({
+require("mason").setup()
+require("mason-lspconfig").setup({
   automatic_installation = true,
 })
+
+require("mason-lspconfig").setup_handlers {
+  -- The first entry (without a key) will be the default handler
+  -- and will be called for each installed server that doesn't have
+  -- a dedicated handler.
+  function (server_name) -- default handler (optional)
+    setup(server_name, {
+      on_attach = on_attach
+    })
+  end,
+  -- Next, you can provide a dedicated handler for specific servers.
+  -- For example, a handler override for the `rust_analyzer`:
+  ["tsserver"] = function ()
+    setup('tsserver', {
+      on_attach = on_attach,
+      flags = {debounce_text_changes = 150},
+      root_dir = lspconfig.util.root_pattern("package.json"),
+    })
+  end,
+  ["denols"] = function ()
+    setup('denols', {
+      on_attach = on_attach,
+      flags = {debounce_text_changes = 150},
+      root_dir = lspconfig.util.root_pattern("deno.json"),
+      single_file_support = false
+    })
+  end,
+}
