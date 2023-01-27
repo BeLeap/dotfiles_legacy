@@ -58,3 +58,4 @@ else
   nnoremap <leader>t :let $VIM_DIR=expand('%:p:h')<CR>:vsplit<CR>:terminal cd $VIM_DIR; $SHELL<CR>
 endif
 
+set guifont=Fira\ Code\ Nerd\ Font:h14

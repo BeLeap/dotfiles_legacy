@@ -103,11 +103,16 @@ return require('packer').startup(function(use)
       require("mastodon").setup()
     end
   }
+  use {
+    'phaazon/mind.nvim',
+    branch = 'v2.2',
+    requires = { 'nvim-lua/plenary.nvim' },
+    config = function()
+      require'mind'.setup()
+    end
+  } -- Todo-list
 
-  if vim.fn.has('win32') then
-  else
-    use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" } -- Shows lsp diagnostics
-  end
+  use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" } -- Shows lsp diagnostics
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
