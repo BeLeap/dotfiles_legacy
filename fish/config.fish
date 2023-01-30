@@ -9,15 +9,15 @@ end
 set -g PYENV_ROOT $DOTFILES_PATH/.pyenv
 set -gx EDITOR nvim
 
-source "$XDG_CONFIG_HOME/fish/alias.fish"
-source "$XDG_CONFIG_HOME/fish/fzf.fish"
-source "$XDG_CONFIG_HOME/fish/bash.fish"
-source "$XDG_CONFIG_HOME/fish/zellij.fish"
-source "$XDG_CONFIG_HOME/fish/others.fish"
-source "$XDG_CONFIG_HOME/fish/git.fish"
-source "$XDG_CONFIG_HOME/fish/docker.fish"
-source "$XDG_CONFIG_HOME/fish/alacritty.fish"
-source "$XDG_CONFIG_HOME/fish/gradle.fish"
+source ~/.config/fish/alias.fish
+source ~/.config/fish/fzf.fish
+source ~/.config/fish/bash.fish
+source ~/.config/fish/zellij.fish
+source ~/.config/fish/others.fish
+source ~/.config/fish/git.fish
+source ~/.config/fish/docker.fish
+source ~/.config/fish/alacritty.fish
+source ~/.config/fish/gradle.fish
 
 if not set -q STARSHIP
   starship init fish | source
@@ -38,15 +38,4 @@ end
 
 if type -q helm
   helm completion fish | source
-end
-
-set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/beleap/.ghcup/bin # ghcup-env
-
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-set --export --prepend PATH "/Users/beleap/.rd/bin"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-switch (uname)
-  case Linux:
-    eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end

@@ -47,6 +47,13 @@ return require('packer').startup(function(use)
   use { 'windwp/nvim-ts-autotag' } -- Autoclose & Autorename html tag
   use { 'andrewstuart/vim-kubernetes' } -- k8s Support
   use { 'ziglang/zig.vim' } -- Zig support
+  use {
+    'antosha417/nvim-lsp-file-operations',
+    requires = {
+      { "nvim-lua/plenary.nvim" },
+      { "nvim-tree/nvim-tree.lua" },
+    }
+  } -- File operation support with nvim-tree
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
@@ -64,7 +71,13 @@ return require('packer').startup(function(use)
   use 'RishabhRD/popfix' -- Nvim lua high-level popup api
   use 'nvim-lua/popup.nvim' -- Nvim lua popup api
   use 'stevearc/dressing.nvim' -- Improve default UI
-  use { 'ms-jpq/chadtree', branch = 'chad', run = 'python3 -m chadtree deps' }
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
   use { 'sainnhe/gruvbox-material' }
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text
