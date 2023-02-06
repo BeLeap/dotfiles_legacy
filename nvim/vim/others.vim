@@ -12,7 +12,7 @@ let g:gruvbox_material_enable_italic = 1
 
 colorscheme gruvbox-material
 
-nnoremap <silent><leader>e :NvimTreeToggle<CR>
+" nnoremap <silent><leader>e :NvimTreeToggle<CR>
 nnoremap <silent><leader>d :DBUIToggle<CR>
 nnoremap <silent><leader>q :bd<CR>
 nnoremap <silent><leader>sv :source $XDG_CONFIG_HOME/nvim/init.vim<CR>
