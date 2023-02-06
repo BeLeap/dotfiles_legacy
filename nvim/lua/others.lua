@@ -25,6 +25,12 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 999
 
+vim.g.gruvbox_material_better_performance = true
+vim.g.gruvbox_material_enable_bold = true
+vim.g.gruvbox_material_enable_italic = true
+
+vim.cmd.colorscheme("gruvbox-material")
+
 require'colorizer'.setup()
 require('nvim-autopairs').setup()
 require('todo-comments').setup{}
