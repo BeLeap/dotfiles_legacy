@@ -12,4 +12,5 @@ require('line-conf')
 require('nvimtree-conf')
 require('treesitter-conf')
 require('dbui-conf')
+require('git-conf')
 
