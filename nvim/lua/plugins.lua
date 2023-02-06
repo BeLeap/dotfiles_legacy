@@ -125,14 +125,6 @@ return require('packer').startup(function(use)
       require("mastodon").setup()
     end
   }
-  use {
-    'phaazon/mind.nvim',
-    branch = 'v2.2',
-    requires = { 'nvim-lua/plenary.nvim' },
-    config = function()
-      require'mind'.setup()
-    end
-  } -- Todo-list
 
   if not(string.find(vim.loop.os_uname().sysname, "Windows")) then
     use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" } -- Shows lsp diagnostics
