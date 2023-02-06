@@ -99,16 +99,3 @@ require('git').setup({
   -- Default target branch when create a pull request
   target_branch = "master",
 })
-
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
---
--- -- empty setup using defaults
--- require("nvim-tree").setup({
---   sync_root_with_cwd = true,
---   reload_on_bufenter = true,
---   git = {
---     ignore = false,
---   },
--- })
---
