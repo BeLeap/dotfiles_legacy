@@ -12,7 +12,7 @@ if has('win32')
   let &shellredir = '-RedirectStandardOutput %s -NoNewWindow -Wait'
   let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
   set shellquote= shellxquote=
-  nnoremap <leader>t :let $VIM_DIR=expand('%:p:h')<CR>:vsplit<CR>:terminal<CR>cd $VIM_DIR<CR>
+  nnoremap <leader>t :let $VIM_DIR=expand('%:p:h')<CR>:vsplit<CR>:terminal<CR>
 else
   nnoremap <leader>t :let $VIM_DIR=expand('%:p:h')<CR>:vsplit<CR>:terminal cd $VIM_DIR; $SHELL<CR>
 endif
