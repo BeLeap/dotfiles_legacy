@@ -16,3 +16,34 @@ require('telescope').setup{
     }
   }
 }
+
+vim.g.dashboard_default_executive = 'telescope.nvim'
+vim.keymap.set(
+  'n', '<leader>f',
+  function()
+    require('telescope.builtin').find_files()
+  end,
+  { silent = true }
+)
+vim.keymap.set(
+  'n', '<leader>l',
+  function()
+    require('telescope.builtin').live_grep()
+  end,
+  { silent = true }
+)
+vim.keymap.set(
+  'n', '<leader>b',
+  function()
+    require('telescope.builtin').buffers()
+  end,
+  { silent = true }
+)
+vim.keymap.set(
+  'n', '<leader>h',
+  function()
+    require('telescope.builtin').help_tags()
+  end,
+  { silent = true }
+)
+
