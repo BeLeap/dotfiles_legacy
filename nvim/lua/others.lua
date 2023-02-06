@@ -14,7 +14,7 @@ vim.o.inccommand = "nosplit"
 
 vim.o.wildmenu = true
 
-vim.cmd [[set undofile]]
+vim.cmd([[set undofile]])
 
 vim.o.updatetime = 250
 vim.wo.signcolumn = "yes"
@@ -27,10 +27,10 @@ vim.o.scrolloff = 999
 
 vim.cmd.colorscheme("gruvbox")
 
-require'colorizer'.setup()
-require('nvim-autopairs').setup()
-require('todo-comments').setup{}
-require('presence'):setup()
+require("colorizer").setup()
+require("nvim-autopairs").setup()
+require("todo-comments").setup({})
+require("presence"):setup()
 
-vim.keymap.set({ 'n', 'i', 'o', 't' }, ',d', '<esc>', { silent = true, remap = true })
-vim.keymap.set('t', '<esc>', '<C-\\><C-N>', { silent = true })
+vim.keymap.set({ "n", "i", "o", "t" }, ",d", "<esc>", { silent = true, remap = true })
+vim.keymap.set("t", "<esc>", "<C-\\><C-N>", { silent = true })
