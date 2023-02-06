@@ -88,7 +88,7 @@ return require('packer').startup(function(use)
       'nvim-tree/nvim-web-devicons', -- optional, for file icons
     },
   }
-  use { 'sainnhe/gruvbox-material' }
+  use { 'morhetz/gruvbox' } -- Gruvbox colorscheme
   use { 'luukvbaal/stabilize.nvim', config = function() require('stabilize').setup() end } -- Stablize UI movement
   use { 'theHamsta/nvim-dap-virtual-text', config = function() require('nvim-dap-virtual-text').setup() end } -- Shows debug info using virtual text
   use { 'rcarriga/nvim-dap-ui', config = function() require('dapui').setup() end } -- Debug UI
@@ -122,7 +122,7 @@ return require('packer').startup(function(use)
   use {
     'folke/lsp-colors.nvim',
     config = function()
-      require('lsp-colors').setup(
+      require('lsp-colors').setup()
     end
   }
 
