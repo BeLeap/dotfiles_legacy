@@ -1,9 +1,3 @@
-let g:gruvbox_material_better_performance = 1
-let g:gruvbox_material_enable_bold = 1
-let g:gruvbox_material_enable_italic = 1
-
-colorscheme gruvbox-material
-
 highlight CRates ctermfg=green ctermbg=NONE cterm=NONE
 " or link it to another highlight group
 highlight link CRates WarningMsg
