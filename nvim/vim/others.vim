@@ -2,12 +2,6 @@ highlight CRates ctermfg=green ctermbg=NONE cterm=NONE
 " or link it to another highlight group
 highlight link CRates WarningMsg
 
-nnoremap <silent><F9> :lua require'dap'.toggle_breakpoint()<CR>
-nnoremap <silent><F5> :lua require'dap'.continue()<CR>
-nnoremap <silent><F10> :lua require'dap'.step_over()<CR>
-nnoremap <silent><F11> :lua require'dap'.step_into()<CR>
-nnoremap <silent><leader>db :lua require'dapui'.toggle()<CR>
-
 au BufEnter *.spec.ts nnoremap <silent><F6> :lua require'jester'.debug()<CR>
 
 set foldmethod=manual
