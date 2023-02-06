@@ -1,2 +1,3 @@
 *
 !/nvim
+!.pre-commit-config.yaml
