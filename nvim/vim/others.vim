@@ -1,20 +1,8 @@
-let mapleader = ";"
-
-if has('termguicolors')
-  set termguicolors
-endif
-
-set background=dark
-
 let g:gruvbox_material_better_performance = 1
 let g:gruvbox_material_enable_bold = 1
 let g:gruvbox_material_enable_italic = 1
 
 colorscheme gruvbox-material
-
-nnoremap <silent><leader>sv :source $XDG_CONFIG_HOME/nvim/init.vim<CR>
-
-set clipboard=unnamedplus
 
 highlight CRates ctermfg=green ctermbg=NONE cterm=NONE
 " or link it to another highlight group
@@ -39,9 +27,6 @@ inoremap <silent>,d <ESC>
 nnoremap <silent>,d <ESC>
 onoremap <silent>,d <ESC>
 
-" let g:EditorConfig_core_mode = 'external_command'
-" let g:EditorConfig_exec_path = '/usr/local/bin/editorconfig'
-
 set foldmethod=manual
 
 if has('win32')
@@ -54,5 +39,3 @@ if has('win32')
 else
   nnoremap <leader>t :let $VIM_DIR=expand('%:p:h')<CR>:vsplit<CR>:terminal cd $VIM_DIR; $SHELL<CR>
 endif
-
-set guifont=Fira\ Code\ Nerd\ Font:h14
