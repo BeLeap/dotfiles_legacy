@@ -110,6 +110,21 @@ return require('packer').startup(function(use)
       require('orgmode').setup{}
     end,
   }
+  use {
+    "folke/trouble.nvim",
+    requires = "nvim-tree/nvim-web-devicons",
+    config = function()
+      require("trouble").setup{
+        auto_open = true,
+      }
+    end
+  }
+  use {
+    'folke/lsp-colors.nvim',
+    config = function()
+      require('lsp-colors').setup(
+    end
+  }
 
   -- Others
   use 'tpope/vim-sensible' -- Default config that Sensible
@@ -135,10 +150,6 @@ return require('packer').startup(function(use)
       require("mastodon").setup()
     end
   }
-
-  if not(string.find(vim.loop.os_uname().sysname, "Windows")) then
-    use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim" } -- Shows lsp diagnostics
-  end
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
