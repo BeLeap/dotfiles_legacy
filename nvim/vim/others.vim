@@ -17,10 +17,6 @@ nnoremap <silent><leader>db :lua require'dapui'.toggle()<CR>
 
 au BufEnter *.spec.ts nnoremap <silent><F6> :lua require'jester'.debug()<CR>
 
-inoremap <silent>,d <ESC>
-nnoremap <silent>,d <ESC>
-onoremap <silent>,d <ESC>
-
 set foldmethod=manual
 
 if has('win32')

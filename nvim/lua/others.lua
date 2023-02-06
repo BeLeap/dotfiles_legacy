@@ -36,3 +36,4 @@ require('nvim-autopairs').setup()
 require('todo-comments').setup{}
 require('presence'):setup()
 
+vim.keymap.set({ 'n', 'i', 'o' }, ',d', '<ESC>', { silent = true })
