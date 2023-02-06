@@ -15,6 +15,5 @@ vim.keymap.set(
   function()
     local nvimtree_api = require("nvim-tree.api")
     nvimtree_api.tree.toggle()
-    print('hi')
   end
 )
