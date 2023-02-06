@@ -124,4 +124,14 @@ require("mason-lspconfig").setup_handlers {
       single_file_support = false
     })
   end,
+  ["yamlls"] = function()
+    local cfg = require("yaml-companion").setup({
+      lspconfig = {
+        on_attach = on_attach,
+        capabilities = capabilities,
+      }
+    })
+
+    lspconfig['yamlls'].setup(cfg)
+  end,
 }

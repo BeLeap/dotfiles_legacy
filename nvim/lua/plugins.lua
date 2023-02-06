@@ -55,6 +55,17 @@ return require('packer').startup(function(use)
   use { 'hrsh7th/cmp-nvim-lsp' } -- LSP source for nvim-cmp
   use { 'saadparwaiz1/cmp_luasnip'} -- Snippets source for nvim-cmp
   use { 'L3MON4D3/LuaSnip' } -- Snippets plugin
+  use {
+    "someone-stole-my-name/yaml-companion.nvim",
+    requires = {
+        { "neovim/nvim-lspconfig" },
+        { "nvim-lua/plenary.nvim" },
+        { "nvim-telescope/telescope.nvim" },
+    },
+    config = function()
+      require("telescope").load_extension("yaml_schema")
+    end,
+  }
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview
