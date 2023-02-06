@@ -92,6 +92,15 @@ return require('packer').startup(function(use)
   use { 'folke/twilight.nvim', config = function() require('twilight').setup {} end } -- Dim inactive code portion
   use { 'folke/zen-mode.nvim', config = function() require('zen-mode').setup {} end } -- Zen mode
   use { 'liuchengxu/vista.vim' } -- Symbol sidebar
+  use {
+    'nvim-orgmode/orgmode',
+    requires = {
+      'nvim-treesitter/nvim-treesitter'
+    },
+    config = function()
+      require('orgmode').setup{}
+    end,
+  }
 
   -- Others
   use 'tpope/vim-sensible' -- Default config that Sensible
