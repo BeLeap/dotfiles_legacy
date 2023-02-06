@@ -39,9 +39,6 @@ return require('packer').startup(function(use)
   use 'mfussenegger/nvim-dap' -- Debugger support
   use 'David-Kunz/jester' -- Run test written with jest
   use 'udalov/kotlin-vim' -- Kotlin support
-  use { 'ms-jpq/coq_nvim', branch = 'coq' } -- Compeletion
-  use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
-  use { 'ms-jpq/coq.thirdparty', branch = '3p' }
   use { 'williamboman/mason.nvim' } -- install external components(e.g. lsp)
   use { 'williamboman/mason-lspconfig.nvim' } -- mason lspconfig bridge
   use { 'windwp/nvim-ts-autotag' } -- Autoclose & Autorename html tag
@@ -54,6 +51,10 @@ return require('packer').startup(function(use)
       { "nvim-tree/nvim-tree.lua" },
     }
   } -- File operation support with nvim-tree
+  use { 'hrsh7th/nvim-cmp' } -- Autocomplete
+  use { 'hrsh7th/cmp-nvim-lsp' } -- LSP source for nvim-cmp
+  use { 'saadparwaiz1/cmp_luasnip'} -- Snippets source for nvim-cmp
+  use { 'L3MON4D3/LuaSnip' } -- Snippets plugin
   
   -- UI
   use { 'iamcco/markdown-preview.nvim', run = function() vim.fn["mkdp#util#install"]() end } -- Show markdown preview

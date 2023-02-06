@@ -37,19 +37,57 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', 'fo', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
+-- Add additional capabilities supported by nvim-cmp
+local capabilities = require("cmp_nvim_lsp").default_capabilities()
+
 local lspconfig = require('lspconfig')
-local setup = function(lsp, options)
-  lspconfig[lsp].setup(require('coq').lsp_ensure_capabilities(options))
-end
 
--- Automatically start coq
-vim.g.coq_settings = { auto_start = 'shut-up' }
+-- luasnip setup
+local luasnip = require 'luasnip'
 
-if vim.fn.has('win32') then
-else
-  require("lsp_lines").setup()
-  vim.diagnostic.config({ virtual_text = false })
-end
+-- nvim-cmp setup
+local cmp = require 'cmp'
+cmp.setup {
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  mapping = cmp.mapping.preset.insert({
+    ['<C-u>'] = cmp.mapping.scroll_docs(-4), -- Up
+    ['<C-d>'] = cmp.mapping.scroll_docs(4), -- Down
+    -- C-b (back) C-f (forward) for snippet placeholder navigation.
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<CR>'] = cmp.mapping.confirm {
+      behavior = cmp.ConfirmBehavior.Replace,
+      select = true,
+    },
+    ['<Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        luasnip.expand_or_jump()
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+    ['<S-Tab>'] = cmp.mapping(function(fallback)
+      if cmp.visible() then
+        cmp.select_prev_item()
+      elseif luasnip.jumpable(-1) then
+        luasnip.jump(-1)
+      else
+        fallback()
+      end
+    end, { 'i', 's' }),
+  }),
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+}
+
+local lspconfig = require('lspconfig')
 
 require("mason").setup()
 require("mason-lspconfig").setup({
@@ -61,22 +99,25 @@ require("mason-lspconfig").setup_handlers {
   -- and will be called for each installed server that doesn't have
   -- a dedicated handler.
   function (server_name) -- default handler (optional)
-    setup(server_name, {
-      on_attach = on_attach
+    lspconfig[server_name].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
     })
   end,
   -- Next, you can provide a dedicated handler for specific servers.
   -- For example, a handler override for the `rust_analyzer`:
   ["tsserver"] = function ()
-    setup('tsserver', {
+    lspconfig['tsserver'].setup({
       on_attach = on_attach,
+      capabilities = capabilities,
       flags = {debounce_text_changes = 150},
       root_dir = lspconfig.util.root_pattern("package.json"),
     })
   end,
   ["denols"] = function ()
-    setup('denols', {
+    lspconfig['denols'].setup({
       on_attach = on_attach,
+      capabilities = capabilities,
       flags = {debounce_text_changes = 150},
       root_dir = lspconfig.util.root_pattern("deno.json"),
       single_file_support = false
