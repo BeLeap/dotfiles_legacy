@@ -187,6 +187,15 @@ return require("packer").startup(function(use)
 	}) -- Go to line with :number
 	use("andweeb/presence.nvim") -- Discord Rich Presence
 	use("dinhhuy258/git.nvim") -- Git support
+	use({
+		"TimUntersberger/neogit",
+		requires = {
+			"nvim-lua/plenary.nvim",
+		},
+		config = function()
+			require("neogit").setup({})
+		end,
+	})
 	use("rcarriga/nvim-notify")
 	use("kkharji/sqlite.lua")
 	use({
