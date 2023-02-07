@@ -9,29 +9,21 @@ vim.keymap.set("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
-  local buf_opts = {
-    noremap = true,
-    silent = true,
-    buffer = bufnr,
-  }
+	local buf_opts = {
+		noremap = true,
+		silent = true,
+		buffer = bufnr,
+	}
 
 	-- Enable completion triggered by <c-x><c-o>
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	vim.keymap.set(
-		"n", "<leader>s",
-		'<cmd>lua require"telescope.builtin".lsp_document_symbols()<CR>',
-		buf_opts
-	)
+	vim.keymap.set("n", "<leader>s", '<cmd>lua require"telescope.builtin".lsp_document_symbols()<CR>', buf_opts)
 	vim.keymap.set("n", "gd", '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', buf_opts)
 	vim.keymap.set("n", "gi", '<cmd>lua require"telescope.builtin".lsp_implementations()<CR>', buf_opts)
-	vim.keymap.set(
-		"n", "gt",
-		'<cmd>lua require"telescope.builtin".lsp_type_definitions()<CR>',
-		buf_opts
-	)
+	vim.keymap.set("n", "gt", '<cmd>lua require"telescope.builtin".lsp_type_definitions()<CR>', buf_opts)
 	vim.keymap.set("n", "gr", '<cmd>lua require"telescope.builtin".lsp_references()<CR>', buf_opts)
 
 	vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", buf_opts)
@@ -39,12 +31,7 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", buf_opts)
 	vim.keymap.set("n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", buf_opts)
 	vim.keymap.set("n", "<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", buf_opts)
-	vim.keymap.set(
-		"n",
-		"<leader>wl",
-		"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
-		buf_opts
-	)
+	vim.keymap.set("n", "<leader>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>", buf_opts)
 	vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", buf_opts)
 	vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", buf_opts)
 	vim.keymap.set("n", "fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", buf_opts)
@@ -136,20 +123,20 @@ require("mason-lspconfig").setup_handlers({
 
 		lspconfig["yamlls"].setup(cfg)
 	end,
-  ["sumneko_lua"] = function()
-    lspconfig["sumneko_lua"].setup({
-      on_attach = on_attach,
-      capabilities = capabilities,
-      settings = {
-        Lua = {
-          diagnostics = {
-            globals = {'vim'},
-          },
-          workspace = {
-            library = vim.api.nvim_get_runtime_file("", true),
-          },
-        },
-      },
-    })
-  end,
+	["sumneko_lua"] = function()
+		lspconfig["sumneko_lua"].setup({
+			on_attach = on_attach,
+			capabilities = capabilities,
+			settings = {
+				Lua = {
+					diagnostics = {
+						globals = { "vim" },
+					},
+					workspace = {
+						library = vim.api.nvim_get_runtime_file("", true),
+					},
+				},
+			},
+		})
+	end,
 })
