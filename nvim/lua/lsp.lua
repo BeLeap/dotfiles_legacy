@@ -1,69 +1,58 @@
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
-vim.api.nvim_set_keymap("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
-vim.api.nvim_set_keymap("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-vim.api.nvim_set_keymap("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+vim.keymap.set("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+vim.keymap.set("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
+  local buf_opts = {
+    noremap = true,
+    silent = true,
+    buffer = bufnr,
+  }
+
 	-- Enable completion triggered by <c-x><c-o>
 	vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
 
 	-- Mappings.
 	-- See `:help vim.lsp.*` for documentation on any of the below functions
-	vim.api.nvim_buf_set_keymap(
-		bufnr,
-		"n",
-		"<leader>s",
+	vim.keymap.set(
+		"n", "<leader>s",
 		'<cmd>lua require"telescope.builtin".lsp_document_symbols()<CR>',
-		opts
+		buf_opts
 	)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gi", '<cmd>lua require"telescope.builtin".lsp_implementations()<CR>', opts)
-	vim.api.nvim_buf_set_keymap(
-		bufnr,
-		"n",
-		"gt",
+	vim.keymap.set("n", "gd", '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', buf_opts)
+	vim.keymap.set("n", "gi", '<cmd>lua require"telescope.builtin".lsp_implementations()<CR>', buf_opts)
+	vim.keymap.set(
+		"n", "gt",
 		'<cmd>lua require"telescope.builtin".lsp_type_definitions()<CR>',
-		opts
+		buf_opts
 	)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gr", '<cmd>lua require"telescope.builtin".lsp_references()<CR>', opts)
+	vim.keymap.set("n", "gr", '<cmd>lua require"telescope.builtin".lsp_references()<CR>', buf_opts)
 
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(
-		bufnr,
+	vim.keymap.set("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", buf_opts)
+	vim.keymap.set("n", "K", "<cmd>lua vim.lsp.buf.hover()<CR>", buf_opts)
+	vim.keymap.set("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>", buf_opts)
+	vim.keymap.set("n", "<leader>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>", buf_opts)
+	vim.keymap.set("n", "<leader>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>", buf_opts)
+	vim.keymap.set(
 		"n",
 		"<leader>wl",
 		"<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>",
-		opts
+		buf_opts
 	)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	-- local format = function()
-	--   vim.lsp.buf.formatting()
-	-- end
-	-- vim.api.nvim_create_autocmd({ "BufWritePre" }, {
-	--   callback = format,
-	-- })
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+	vim.keymap.set("n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", buf_opts)
+	vim.keymap.set("n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", buf_opts)
+	vim.keymap.set("n", "fo", "<cmd>lua vim.lsp.buf.formatting()<CR>", buf_opts)
 end
 
--- Add additional capabilities supported by nvim-cmp
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-local lspconfig = require("lspconfig")
-
--- luasnip setup
 local luasnip = require("luasnip")
 
--- nvim-cmp setup
 local cmp = require("cmp")
 cmp.setup({
 	snippet = {
@@ -114,17 +103,12 @@ require("mason-lspconfig").setup({
 })
 
 require("mason-lspconfig").setup_handlers({
-	-- The first entry (without a key) will be the default handler
-	-- and will be called for each installed server that doesn't have
-	-- a dedicated handler.
-	function(server_name) -- default handler (optional)
+	function(server_name)
 		lspconfig[server_name].setup({
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
 	end,
-	-- Next, you can provide a dedicated handler for specific servers.
-	-- For example, a handler override for the `rust_analyzer`:
 	["tsserver"] = function()
 		lspconfig["tsserver"].setup({
 			on_attach = on_attach,
@@ -152,4 +136,20 @@ require("mason-lspconfig").setup_handlers({
 
 		lspconfig["yamlls"].setup(cfg)
 	end,
+  ["sumneko_lua"] = function()
+    lspconfig["sumneko_lua"].setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          diagnostics = {
+            globals = {'vim'},
+          },
+          workspace = {
+            library = vim.api.nvim_get_runtime_file("", true),
+          },
+        },
+      },
+    })
+  end,
 })

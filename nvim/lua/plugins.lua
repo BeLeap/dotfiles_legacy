@@ -113,7 +113,7 @@ return require("packer").startup(function(use)
 	use({
 		"theHamsta/nvim-dap-virtual-text",
 		config = function()
-			require("nvim-dap-virtual-text").setup()
+			require("nvim-dap-virtual-text").setup({})
 		end,
 	}) -- Shows debug info using virtual text
 	use({
