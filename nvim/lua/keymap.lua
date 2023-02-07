@@ -8,3 +8,6 @@ vim.keymap.set("n", "<C-s>", ":update<cr>", { noremap = true, silent = true })
 
 vim.keymap.set("i", "<Tab>", 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { expr = true, noremap = true, silent = true })
 vim.keymap.set("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', { expr = true, noremap = true, silent = true })
+
+vim.keymap.set({ "n", "i", "o" }, ",d", "<esc>", { silent = true, remap = true })
+vim.keymap.set("t", ",d", "<C-\\><C-N>", { silent = true })

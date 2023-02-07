@@ -31,6 +31,3 @@ require("colorizer").setup()
 require("nvim-autopairs").setup()
 require("todo-comments").setup({})
 require("presence"):setup()
-
-vim.keymap.set({ "n", "i", "o", "t" }, ",d", "<esc>", { silent = true, remap = true })
-vim.keymap.set("t", "<esc>", "<C-\\><C-N>", { silent = true })
