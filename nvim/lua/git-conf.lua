@@ -14,3 +14,8 @@ require("git").setup({
 	},
 	target_branch = "main",
 })
+require("neogit").setup({
+	integrations = {
+		diffview = true,
+	},
+})
