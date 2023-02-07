@@ -19,5 +19,3 @@ require("neogit").setup({
 		diffview = true,
 	},
 })
-
-vim.keymap.set("n", "<leader>gg", ":LazyGit<cr>", { silent = true, noremap = true })

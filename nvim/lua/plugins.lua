@@ -194,9 +194,6 @@ return require("packer").startup(function(use)
 			"sindrets/diffview.nvim",
 		},
 	})
-	use({
-		"kdheepak/lazygit.nvim",
-	})
 	use("rcarriga/nvim-notify")
 	use("kkharji/sqlite.lua")
 	use({
