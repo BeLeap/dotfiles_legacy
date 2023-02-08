@@ -19,3 +19,5 @@ require("neogit").setup({
 		diffview = true,
 	},
 })
+
+vim.keymap.set("n", "<leader>gg", ":Neogit<cr>", { silent = true })
