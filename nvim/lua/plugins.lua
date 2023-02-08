@@ -150,6 +150,7 @@ return require("packer").startup(function(use)
 		"nvim-orgmode/orgmode",
 		requires = {
 			"nvim-treesitter/nvim-treesitter",
+			"dhruvasagar/vim-table-mode",
 		},
 		config = function()
 			require("orgmode").setup({})
