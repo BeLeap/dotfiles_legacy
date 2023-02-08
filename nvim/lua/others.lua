@@ -25,6 +25,8 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 999
 
+vim.g.gruvbox_contrast_dark = "soft"
+vim.g.gruvbox_invert_selection = false
 vim.cmd.colorscheme("gruvbox")
 
 require("colorizer").setup()
