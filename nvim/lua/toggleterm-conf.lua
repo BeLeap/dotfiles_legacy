@@ -10,7 +10,8 @@ vim.keymap.set("n", "<leader>bt", function()
 		{ silent = true, noremap = true, buffer = bufferTerminal.bufnr }
 	)
 
-	bufferTerminal:toggle()
+	local size = vim.api.nvim_win_get_height(0)
+	bufferTerminal:toggle(size / 2)
 end, { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>t", function()
 	local terminal = require("toggleterm.terminal")
@@ -23,5 +24,6 @@ vim.keymap.set("n", "<leader>t", function()
 		{ silent = true, noremap = true, buffer = wdTerminal.bufnr }
 	)
 
-	wdTerminal:toggle()
+	local size = vim.api.nvim_win_get_height(0)
+	wdTerminal:toggle(size / 2)
 end, { noremap = true, silent = true })
