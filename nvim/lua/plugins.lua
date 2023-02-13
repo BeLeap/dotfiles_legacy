@@ -169,6 +169,13 @@ return require("packer").startup(function(use)
 			require("lsp-colors").setup()
 		end,
 	})
+	use({
+		"akinsho/toggleterm.nvim",
+		tag = "*",
+		config = function()
+			require("toggleterm").setup()
+		end,
+	})
 
 	-- Others
 	use("tpope/vim-sensible") -- Default config that Sensible
