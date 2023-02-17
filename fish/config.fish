@@ -11,7 +11,6 @@ set -gx EDITOR nvim
 
 source ~/.config/fish/alias.fish
 source ~/.config/fish/fzf.fish
-source ~/.config/fish/bash.fish
 source ~/.config/fish/zellij.fish
 source ~/.config/fish/others.fish
 source ~/.config/fish/git.fish
