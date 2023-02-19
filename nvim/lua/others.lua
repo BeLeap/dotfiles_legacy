@@ -33,3 +33,8 @@ require("colorizer").setup()
 require("nvim-autopairs").setup()
 require("todo-comments").setup({})
 require("presence"):setup()
+
+require("notify").setup({
+	render = "compact",
+	top_down = false,
+})
