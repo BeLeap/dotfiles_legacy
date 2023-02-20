@@ -85,7 +85,6 @@ return require("packer").startup(function(use)
 		end,
 	}) -- Show markdown preview
 	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }) -- Shows files, buffers, live greps
-	use("p00f/nvim-ts-rainbow") -- Rainbow parentheses using Treesitter
 	use("norcalli/nvim-colorizer.lua") -- Color color names
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("ryanoasis/vim-devicons") -- Better icons
@@ -176,6 +175,7 @@ return require("packer").startup(function(use)
 			require("toggleterm").setup()
 		end,
 	})
+	use("HiPhish/nvim-ts-rainbow2") -- Rainbow parentheses using Treesitter
 
 	-- Others
 	use("tpope/vim-sensible") -- Default config that Sensible
