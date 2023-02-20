@@ -40,12 +40,6 @@ return require("packer").startup(function(use)
 			require("Comment").setup()
 		end,
 	}) -- Comment out
-	use({
-		"lewis6991/spellsitter.nvim",
-		config = function()
-			require("spellsitter").setup()
-		end,
-	}) -- Spell checker
 	use("mfussenegger/nvim-dap") -- Debugger support
 	use("David-Kunz/jester") -- Run test written with jest
 	use("udalov/kotlin-vim") -- Kotlin support
@@ -76,6 +70,11 @@ return require("packer").startup(function(use)
 			require("telescope").load_extension("yaml_schema")
 		end,
 	})
+	use({
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		after = "nvim-treesitter",
+		requires = "nvim-treesitter/nvim-treesitter",
+	}) -- Provides textobject using TreeSitter
 
 	-- UI
 	use({
