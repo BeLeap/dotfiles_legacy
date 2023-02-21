@@ -15,6 +15,7 @@ require("dbui-conf")
 require("git-conf")
 require("toggleterm-conf")
 require("syntax-tree-surfer-conf")
+require("sidebar-conf")
 
 if vim.g.neovide then
 	require("neovide-conf")

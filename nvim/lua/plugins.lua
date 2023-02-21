@@ -214,6 +214,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("nathom/filetype.nvim") -- Better filetype loading
+	use("sidebar-nvim/sidebar.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
