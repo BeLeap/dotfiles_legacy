@@ -213,7 +213,6 @@ return require("packer").startup(function(use)
 			require("mastodon").setup()
 		end,
 	})
-	use("nathom/filetype.nvim") -- Better filetype loading
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
