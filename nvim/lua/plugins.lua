@@ -48,13 +48,13 @@ return require("packer").startup(function(use)
 	use({ "windwp/nvim-ts-autotag" }) -- Autoclose & Autorename html tag
 	use({ "andrewstuart/vim-kubernetes" }) -- k8s Support
 	use({ "ziglang/zig.vim" }) -- Zig support
-	use({
-		"antosha417/nvim-lsp-file-operations",
-		requires = {
-			{ "nvim-lua/plenary.nvim" },
-			{ "nvim-tree/nvim-tree.lua" },
-		},
-	}) -- File operation support with nvim-tree
+	-- use({
+	-- 	"antosha417/nvim-lsp-file-operations",
+	-- 	requires = {
+	-- 		{ "nvim-lua/plenary.nvim" },
+	-- 		{ "nvim-tree/nvim-tree.lua" },
+	-- 	},
+	-- }) -- File operation support with nvim-tree
 	use({ "hrsh7th/nvim-cmp" }) -- Autocomplete
 	use({ "hrsh7th/cmp-nvim-lsp" }) -- LSP source for nvim-cmp
 	use({ "saadparwaiz1/cmp_luasnip" }) -- Snippets source for nvim-cmp
@@ -96,12 +96,12 @@ return require("packer").startup(function(use)
 	use("RishabhRD/popfix") -- Nvim lua high-level popup api
 	use("nvim-lua/popup.nvim") -- Nvim lua popup api
 	use("stevearc/dressing.nvim") -- Improve default UI
-	use({
-		"nvim-tree/nvim-tree.lua",
-		requires = {
-			"nvim-tree/nvim-web-devicons", -- optional, for file icons
-		},
-	})
+	-- use({
+	-- 	"nvim-tree/nvim-tree.lua",
+	-- 	requires = {
+	-- 		"nvim-tree/nvim-web-devicons", -- optional, for file icons
+	-- 	},
+	-- })
 	use({ "morhetz/gruvbox" }) -- Gruvbox colorscheme
 	use({
 		"luukvbaal/stabilize.nvim",
