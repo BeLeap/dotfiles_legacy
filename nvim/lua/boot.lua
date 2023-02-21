@@ -14,6 +14,7 @@ require("treesitter-conf")
 require("dbui-conf")
 require("git-conf")
 require("toggleterm-conf")
+require("syntax-tree-surfer-conf")
 
 if vim.g.neovide then
 	require("neovide-conf")

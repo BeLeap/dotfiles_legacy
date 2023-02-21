@@ -75,6 +75,7 @@ return require("packer").startup(function(use)
 		after = "nvim-treesitter",
 		requires = "nvim-treesitter/nvim-treesitter",
 	}) -- Provides textobject using TreeSitter
+	use("ziontee113/syntax-tree-surfer")
 
 	-- UI
 	use({
