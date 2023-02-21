@@ -10,4 +10,5 @@ require("lualine").setup({
 			},
 		},
 	},
+	tabline = {},
 })
