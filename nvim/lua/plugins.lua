@@ -176,6 +176,7 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("HiPhish/nvim-ts-rainbow2") -- Rainbow parentheses using Treesitter
+	use("sidebar-nvim/sidebar.nvim") -- Sidebar
 
 	-- Others
 	use("tpope/vim-sensible") -- Default config that Sensible
@@ -214,7 +215,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("nathom/filetype.nvim") -- Better filetype loading
-	use("sidebar-nvim/sidebar.nvim")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
