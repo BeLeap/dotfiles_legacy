@@ -104,12 +104,6 @@ return require("packer").startup(function(use)
 	-- })
 	use({ "morhetz/gruvbox" }) -- Gruvbox colorscheme
 	use({
-		"luukvbaal/stabilize.nvim",
-		config = function()
-			require("stabilize").setup()
-		end,
-	}) -- Stablize UI movement
-	use({
 		"theHamsta/nvim-dap-virtual-text",
 		config = function()
 			require("nvim-dap-virtual-text").setup({})
