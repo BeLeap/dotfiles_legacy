@@ -38,3 +38,7 @@ end
 if type -q helm
   helm completion fish | source
 end
+
+if type -q direnv
+  direnv hook fish | source
+end

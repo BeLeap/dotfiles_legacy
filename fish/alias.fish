@@ -94,7 +94,7 @@ alias nuget "mono /usr/local/bin/nuget.exe"
 alias awslogin "saml2aws login -p default --skip-prompt"
 alias vaultlogin "vault login -method=oidc -path=keycloak"
 
-alias tf terraform
+abbr -a -g tf terraform
 
 abbr -a -g dc docker compose
 
