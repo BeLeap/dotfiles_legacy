@@ -144,7 +144,6 @@ return require("packer").startup(function(use)
 			require("zen-mode").setup({})
 		end,
 	}) -- Zen mode
-	use({ "liuchengxu/vista.vim" }) -- Symbol sidebar
 	use({
 		"nvim-orgmode/orgmode",
 		requires = {
