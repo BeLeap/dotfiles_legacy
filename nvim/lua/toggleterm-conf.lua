@@ -5,10 +5,11 @@ vim.keymap.set("n", "<leader>bt", function()
 
 	vim.keymap.set(
 		"t",
-		",d",
+		",c",
 		"<c-\\><c-N>:ToggleTerm<cr>",
 		{ silent = true, noremap = true, buffer = bufferTerminal.bufnr }
 	)
+	vim.keymap.set("t", ",d", "<c-\\><c-N>", { silent = true, noremap = true, buffer = bufferTerminal.bufnr })
 
 	local size = vim.api.nvim_win_get_height(0)
 	bufferTerminal:toggle(size / 2)
