@@ -17,6 +17,9 @@ require("sidebar-nvim").setup({
 		"diagnostics",
 		"todos",
 	},
+	files = {
+		show_hidden = true,
+	},
 })
 
 local timer = vim.loop.new_timer()
