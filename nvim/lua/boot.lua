@@ -20,6 +20,3 @@ require("sidebar-conf")
 if vim.g.neovide then
 	require("neovide-conf")
 end
-
--- Unused Configurations
--- require("nvimtree-conf")
