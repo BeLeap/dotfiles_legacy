@@ -88,7 +88,7 @@ end
 function frbr -d "Fuzzy-find and merge br"
     set -l branches (git branch --list)
     set -l branch (string join \n $branches | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
-    git rebase (echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+    git rebase --interactive (echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
 end
 
 function fcoc -d "Fuzzy-find and checkout a commit"
