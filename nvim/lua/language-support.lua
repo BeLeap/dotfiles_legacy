@@ -227,4 +227,13 @@ return {
 			require("trouble").setup()
 		end,
 	},
+	["folke/lsp-colors.nvim"] = {
+		"folke/lsp-colors.nvim",
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+		config = function()
+			require("lsp-colors").setup()
+		end,
+	},
 }

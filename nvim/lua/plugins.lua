@@ -19,7 +19,6 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- Language Support
-	use("romgrk/nvim-treesitter-context") -- Shows current context using TreeSitter
 	use("lbrayner/vim-rzip") -- Zip file format support (for yarn berry)
 	use("editorconfig/editorconfig-vim") -- Use editorconfig
 	use("sbdchd/neoformat") -- Format codes
@@ -103,19 +102,6 @@ return require("packer").startup(function(use)
 		},
 		config = function()
 			require("orgmode").setup({})
-		end,
-	})
-	use({
-		"folke/trouble.nvim",
-		requires = "nvim-tree/nvim-web-devicons",
-		config = function()
-			require("trouble").setup({})
-		end,
-	})
-	use({
-		"folke/lsp-colors.nvim",
-		config = function()
-			require("lsp-colors").setup()
 		end,
 	})
 	use("HiPhish/nvim-ts-rainbow2") -- Rainbow parentheses using Treesitter

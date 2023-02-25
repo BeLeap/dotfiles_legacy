@@ -28,6 +28,7 @@ require("lazy").setup({
 	require("language-support")["williamboman/mason-lspconfig.nvim"],
 	require("language-support")["windwp/nvim-autopairs"],
 	require("language-support")["folke/trouble.nvim"],
+	require("language-support")["folke/lsp-colors.nvim"],
 }, {
 	install = {
 		colorscheme = { "gruvbox" },
