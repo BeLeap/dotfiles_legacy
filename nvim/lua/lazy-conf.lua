@@ -18,6 +18,7 @@ require("lazy").setup({
 	require("treesitter-conf")["nvim-treesitter/nvim-treesitter"],
 	require("treesitter-conf")["nvim-treesitter/nvim-treesitter-context"],
 	require("toggleterm-conf"),
+	{ "tpope/vim-dadbod" },
 
 	-- Language
 	require("language-support")["neovim/nvim-lspconfig"],
@@ -29,6 +30,20 @@ require("lazy").setup({
 	require("language-support")["windwp/nvim-autopairs"],
 	require("language-support")["folke/trouble.nvim"],
 	require("language-support")["folke/lsp-colors.nvim"],
+	{ "lbrayner/vim-rzip" },
+	{ "dmix/elvish.vim" },
+	{ "towolf/vim-helm" },
+	{ "hashivim/vim-terraform" },
+	{ "simrat39/rust-tools.nvim" },
+	{ "mhinz/vim-crates" },
+	{ "mfussenegger/nvim-jdtls" },
+	{ "fatih/vim-go" },
+	{
+		"numToStr/Comment.nvim",
+		config = function()
+			require("Comment").setup()
+		end,
+	},
 }, {
 	install = {
 		colorscheme = { "gruvbox" },

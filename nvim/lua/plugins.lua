@@ -19,23 +19,6 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- Language Support
-	use("lbrayner/vim-rzip") -- Zip file format support (for yarn berry)
-	use("editorconfig/editorconfig-vim") -- Use editorconfig
-	use("sbdchd/neoformat") -- Format codes
-	use("dmix/elvish.vim") -- Elvish language support
-	use("towolf/vim-helm") -- Helm chart support
-	use("hashivim/vim-terraform") -- Terraform support
-	use("simrat39/rust-tools.nvim") -- Rust support
-	use("mhinz/vim-crates") -- Check rust crates
-	use("mfussenegger/nvim-jdtls") -- JVM language supports
-	use("tpope/vim-dadbod") -- DB support
-	use("fatih/vim-go") -- Go support
-	use({
-		"numToStr/Comment.nvim",
-		config = function()
-			require("Comment").setup()
-		end,
-	}) -- Comment out
 	use("mfussenegger/nvim-dap") -- Debugger support
 	use("David-Kunz/jester") -- Run test written with jest
 	use("udalov/kotlin-vim") -- Kotlin support
