@@ -15,7 +15,8 @@ require("lazy").setup({
 	-- UI
 	require("sidebar-conf"),
 	require("colorscheme-conf"),
-	require("treesitter-conf")["nvim-treesitter"],
+	require("treesitter-conf")["nvim-treesitter/nvim-treesitter"],
+	require("treesitter-conf")["nvim-treesitter/nvim-treesitter-context"],
 
 	-- Language
 	require("language-support")["neovim/nvim-lspconfig"],
