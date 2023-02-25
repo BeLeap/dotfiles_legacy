@@ -83,12 +83,6 @@ return require("packer").startup(function(use)
 			require("dapui").setup()
 		end,
 	}) -- Debug UI
-	use({
-		"j-hui/fidget.nvim",
-		config = function()
-			require("fidget").setup({})
-		end,
-	}) -- LSP Progress UI
 	use({ "lukas-reineke/indent-blankline.nvim" }) -- Show ident line
 	use({
 		"folke/twilight.nvim",

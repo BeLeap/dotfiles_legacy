@@ -16,6 +16,7 @@ require("lazy").setup({
 	require("colorscheme-conf"),
 	require("treesitter-conf")["nvim-treesitter"],
 	require("language-support")["neovim/nvim-lspconfig"],
+	require("language-support")["j-hui/fidget.nvim"],
 	require("language-support")["hrsh7th/nvim-cmp"],
 	require("language-support")["someone-stole-my-name/yaml-companion.nvim"],
 	require("language-support")["williamboman/mason.nvim"],
