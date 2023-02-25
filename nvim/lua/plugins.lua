@@ -20,7 +20,6 @@ return require("packer").startup(function(use)
 
 	-- Language Support
 	use("romgrk/nvim-treesitter-context") -- Shows current context using TreeSitter
-	use("windwp/nvim-autopairs") -- Auto-close parentheses
 	use("lbrayner/vim-rzip") -- Zip file format support (for yarn berry)
 	use("editorconfig/editorconfig-vim") -- Use editorconfig
 	use("sbdchd/neoformat") -- Format codes
