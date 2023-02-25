@@ -17,6 +17,8 @@ require("toggleterm-conf")
 require("syntax-tree-surfer-conf")
 require("sidebar-conf")
 
+require("lazy-conf")
+
 if vim.g.neovide then
 	require("neovide-conf")
 end
