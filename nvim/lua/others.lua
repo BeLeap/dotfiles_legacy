@@ -25,16 +25,12 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 999
 
-vim.g.gruvbox_contrast_dark = "soft"
-vim.g.gruvbox_invert_selection = false
-vim.cmd.colorscheme("gruvbox")
+-- require("colorizer").setup()
+-- require("nvim-autopairs").setup()
+-- require("todo-comments").setup({})
+-- require("presence"):setup()
 
-require("colorizer").setup()
-require("nvim-autopairs").setup()
-require("todo-comments").setup({})
-require("presence"):setup()
-
-require("notify").setup({
-	render = "compact",
-	top_down = false,
-})
+-- require("notify").setup({
+-- 	render = "compact",
+-- 	top_down = false,
+-- })
