@@ -2,7 +2,7 @@ vim.g.mapleader = ";"
 
 require("plugins")
 
-require("custom-filetype")
+-- require("custom-filetype")
 require("orgmode-conf")
 require("keymap")
 require("others")
