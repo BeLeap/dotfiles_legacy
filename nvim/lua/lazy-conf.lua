@@ -21,4 +21,8 @@ require("lazy").setup({
 	require("language-support")["someone-stole-my-name/yaml-companion.nvim"],
 	require("language-support")["williamboman/mason.nvim"],
 	require("language-support")["williamboman/mason-lspconfig.nvim"],
+}, {
+	install = {
+		colorscheme = { "gruvbox" },
+	},
 })
