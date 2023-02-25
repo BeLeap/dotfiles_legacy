@@ -1,12 +1,16 @@
 return {
 	["neovim/nvim-lspconfig"] = {
 		"neovim/nvim-lspconfig",
+		lazy = true,
 		dependencies = {
 			"hrsh7th/nvim-cmp",
+			"folke/lsp-colors.nvim",
+			"j-hui/fidget.nvim",
 		},
 	},
 	["hrsh7th/nvim-cmp"] = {
 		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
 		dependencies = {
 			"saadparwaiz1/cmp_luasnip",
 			"L3MON4D3/LuaSnip",
@@ -63,7 +67,6 @@ return {
 	["someone-stole-my-name/yaml-companion.nvim"] = {
 		"someone-stole-my-name/yaml-companion.nvim",
 		dependencies = {
-			"neovim/nvim-lspconfig",
 			"nvim-lua/plenary.nvim",
 			"nvim-telescope/telescope.nvim",
 		},
@@ -198,9 +201,6 @@ return {
 	},
 	["j-hui/fidget.nvim"] = {
 		"j-hui/fidget.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-		},
 		config = function()
 			require("fidget").setup()
 		end,
@@ -229,9 +229,6 @@ return {
 	},
 	["folke/lsp-colors.nvim"] = {
 		"folke/lsp-colors.nvim",
-		dependencies = {
-			"neovim/nvim-lspconfig",
-		},
 		config = function()
 			require("lsp-colors").setup()
 		end,

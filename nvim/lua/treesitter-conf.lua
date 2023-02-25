@@ -3,6 +3,10 @@
 return {
 	["nvim-treesitter/nvim-treesitter"] = {
 		"nvim-treesitter/nvim-treesitter",
+		event = { "BufReadPre", "BufNewFile" },
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter-context",
+		},
 		config = function()
 			require("nvim-treesitter.configs").setup({
 				highlight = {
@@ -45,8 +49,5 @@ return {
 	},
 	["nvim-treesitter/nvim-treesitter-context"] = {
 		"nvim-treesitter/nvim-treesitter-context",
-		dependencies = {
-			"nvim-treesitter/nvim-treesitter",
-		},
 	},
 }

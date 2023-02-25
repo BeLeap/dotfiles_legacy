@@ -19,6 +19,10 @@ require("lazy").setup({
 	require("treesitter-conf")["nvim-treesitter/nvim-treesitter-context"],
 	require("toggleterm-conf"),
 	{ "tpope/vim-dadbod" },
+	{
+		"dstein64/vim-startuptime",
+		cmd = "StartupTime",
+	},
 
 	-- Language
 	require("language-support")["neovim/nvim-lspconfig"],
@@ -40,12 +44,13 @@ require("lazy").setup({
 	{ "fatih/vim-go" },
 	{
 		"numToStr/Comment.nvim",
+		event = { "BufReadPre", "BufNewFile" },
 		config = function()
 			require("Comment").setup()
 		end,
 	},
 }, {
-	install = {
-		colorscheme = { "gruvbox" },
+	defaults = {
+		lazy = true,
 	},
 })
