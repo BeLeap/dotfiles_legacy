@@ -12,7 +12,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	require("sidebar-conf"), -- Sidebar
-	require("colorscheme-conf"), -- Colorscheme
-	require("treesitter-conf")["nvim-treesitter"], -- Treesitter
+	require("sidebar-conf"),
+	require("colorscheme-conf"),
+	require("treesitter-conf")["nvim-treesitter"],
+	require("language-support")["neovim/nvim-lspconfig"],
+	require("language-support")["hrsh7th/nvim-cmp"],
+	require("language-support")["someone-stole-my-name/yaml-companion.nvim"],
+	require("language-support")["williamboman/mason.nvim"],
+	require("language-support")["williamboman/mason-lspconfig.nvim"],
 })

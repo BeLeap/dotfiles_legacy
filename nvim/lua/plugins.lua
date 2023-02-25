@@ -19,7 +19,6 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- Language Support
-	use("neovim/nvim-lspconfig") -- LSP Support
 	use("romgrk/nvim-treesitter-context") -- Shows current context using TreeSitter
 	use("windwp/nvim-autopairs") -- Auto-close parentheses
 	use("lbrayner/vim-rzip") -- Zip file format support (for yarn berry)
@@ -42,26 +41,10 @@ return require("packer").startup(function(use)
 	use("mfussenegger/nvim-dap") -- Debugger support
 	use("David-Kunz/jester") -- Run test written with jest
 	use("udalov/kotlin-vim") -- Kotlin support
-	use({ "williamboman/mason.nvim" }) -- install external components(e.g. lsp)
-	use({ "williamboman/mason-lspconfig.nvim" }) -- mason lspconfig bridge
+	use({ "" }) -- mason lspconfig bridge
 	use({ "windwp/nvim-ts-autotag" }) -- Autoclose & Autorename html tag
 	use({ "andrewstuart/vim-kubernetes" }) -- k8s Support
 	use({ "ziglang/zig.vim" }) -- Zig support
-	use({ "hrsh7th/nvim-cmp" }) -- Autocomplete
-	use({ "hrsh7th/cmp-nvim-lsp" }) -- LSP source for nvim-cmp
-	use({ "saadparwaiz1/cmp_luasnip" }) -- Snippets source for nvim-cmp
-	use({ "L3MON4D3/LuaSnip" }) -- Snippets plugin
-	use({
-		"someone-stole-my-name/yaml-companion.nvim",
-		requires = {
-			{ "neovim/nvim-lspconfig" },
-			{ "nvim-lua/plenary.nvim" },
-			{ "nvim-telescope/telescope.nvim" },
-		},
-		config = function()
-			require("telescope").load_extension("yaml_schema")
-		end,
-	})
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",
