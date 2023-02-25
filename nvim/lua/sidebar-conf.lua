@@ -3,6 +3,9 @@ vim.g.loaded_netrw = 1
 
 return {
 	"sidebar-nvim/sidebar.nvim",
+	dependencies = {
+		"nvim-tree/nvim-web-devicons",
+	},
 	keys = {
 		{
 			"<leader>e",
