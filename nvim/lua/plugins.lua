@@ -20,7 +20,6 @@ return require("packer").startup(function(use)
 
 	-- Language Support
 	use("neovim/nvim-lspconfig") -- LSP Support
-	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Language parser for Highlighting, etc...
 	use("romgrk/nvim-treesitter-context") -- Shows current context using TreeSitter
 	use("windwp/nvim-autopairs") -- Auto-close parentheses
 	use("lbrayner/vim-rzip") -- Zip file format support (for yarn berry)
@@ -89,7 +88,6 @@ return require("packer").startup(function(use)
 	use("RishabhRD/popfix") -- Nvim lua high-level popup api
 	use("nvim-lua/popup.nvim") -- Nvim lua popup api
 	use("stevearc/dressing.nvim") -- Improve default UI
-	use({ "morhetz/gruvbox" }) -- Gruvbox colorscheme
 	use({
 		"theHamsta/nvim-dap-virtual-text",
 		config = function()
@@ -152,7 +150,6 @@ return require("packer").startup(function(use)
 		end,
 	})
 	use("HiPhish/nvim-ts-rainbow2") -- Rainbow parentheses using Treesitter
-	use("sidebar-nvim/sidebar.nvim") -- Sidebar
 
 	-- Others
 	use("tpope/vim-sensible") -- Default config that Sensible
