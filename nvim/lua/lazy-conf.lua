@@ -14,4 +14,5 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	require("sidebar-conf"), -- Sidebar
 	require("colorscheme-conf"), -- Colorscheme
+	require("treesitter-conf")["nvim-treesitter"], -- Treesitter
 })
