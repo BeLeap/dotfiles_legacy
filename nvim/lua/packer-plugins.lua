@@ -19,9 +19,7 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- Language Support
-	use("mfussenegger/nvim-dap") -- Debugger support
 	use("David-Kunz/jester") -- Run test written with jest
-	use("ziontee113/syntax-tree-surfer")
 
 	-- UI
 	use({
@@ -35,18 +33,6 @@ return require("packer").startup(function(use)
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("ryanoasis/vim-devicons") -- Better icons
 	use("kyazdani42/nvim-web-devicons") -- Better icons
-	use({
-		"theHamsta/nvim-dap-virtual-text",
-		config = function()
-			require("nvim-dap-virtual-text").setup({})
-		end,
-	}) -- Shows debug info using virtual text
-	use({
-		"rcarriga/nvim-dap-ui",
-		config = function()
-			require("dapui").setup()
-		end,
-	}) -- Debug UI
 	use({ "lukas-reineke/indent-blankline.nvim" }) -- Show ident line
 	use({
 		"folke/twilight.nvim",
