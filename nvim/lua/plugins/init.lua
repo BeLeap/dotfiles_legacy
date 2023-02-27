@@ -30,6 +30,10 @@ return {
 			require("dressing").setup()
 		end,
 	},
+	{
+		"lukas-reineke/indent-blankline.nvim",
+		event = { "BufEnter" },
+	},
 
 	-- Language
 	{ "lbrayner/vim-rzip" },
