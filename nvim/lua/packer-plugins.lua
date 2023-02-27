@@ -27,18 +27,6 @@ return require("packer").startup(function(use)
 	}) -- Show markdown preview
 	use("norcalli/nvim-colorizer.lua") -- Color color names
 	use({
-		"folke/twilight.nvim",
-		config = function()
-			require("twilight").setup({})
-		end,
-	}) -- Dim inactive code portion
-	use({
-		"folke/zen-mode.nvim",
-		config = function()
-			require("zen-mode").setup({})
-		end,
-	}) -- Zen mode
-	use({
 		"nvim-orgmode/orgmode",
 		requires = {
 			"nvim-treesitter/nvim-treesitter",
