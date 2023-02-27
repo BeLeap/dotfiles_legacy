@@ -1,15 +1,18 @@
 return {
-	["pwntester/octo.nvim"] = {
+	{
 		"pwntester/octo.nvim",
+		event = { "BufEnter" },
 		config = function()
 			require("octo").setup()
 		end,
 	},
-	["airblade/vim-gitgutter"] = {
+	{
 		"airblade/vim-gitgutter",
+		event = { "BufEnter" },
 	},
-	["dinhhuy258/git.nvim"] = {
+	{
 		"dinhhuy258/git.nvim",
+		cmd = "Git",
 		config = function()
 			require("git").setup({
 				keymaps = {
@@ -28,7 +31,7 @@ return {
 			})
 		end,
 	},
-	["TimUntersberger/neogit"] = {
+	{
 		"TimUntersberger/neogit",
 		keys = {
 			{ "<leader>gg", "<cmd>Neogit<cr>", silent = true },

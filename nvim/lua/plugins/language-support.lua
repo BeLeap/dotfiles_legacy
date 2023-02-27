@@ -1,5 +1,5 @@
 return {
-	["neovim/nvim-lspconfig"] = {
+	{
 		"neovim/nvim-lspconfig",
 		lazy = true,
 		dependencies = {
@@ -8,7 +8,7 @@ return {
 			"j-hui/fidget.nvim",
 		},
 	},
-	["hrsh7th/nvim-cmp"] = {
+	{
 		"hrsh7th/nvim-cmp",
 		event = "InsertEnter",
 		dependencies = {
@@ -64,7 +64,7 @@ return {
 			})
 		end,
 	},
-	["someone-stole-my-name/yaml-companion.nvim"] = {
+	{
 		"someone-stole-my-name/yaml-companion.nvim",
 		dependencies = {
 			"nvim-lua/plenary.nvim",
@@ -74,13 +74,13 @@ return {
 			require("telescope").load_extension("yaml_schema")
 		end,
 	},
-	["williamboman/mason.nvim"] = {
+	{
 		"williamboman/mason.nvim",
 		config = function()
 			require("mason").setup()
 		end,
 	},
-	["williamboman/mason-lspconfig.nvim"] = {
+	{
 		"williamboman/mason-lspconfig.nvim",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
@@ -199,13 +199,13 @@ return {
 			})
 		end,
 	},
-	["j-hui/fidget.nvim"] = {
+	{
 		"j-hui/fidget.nvim",
 		config = function()
 			require("fidget").setup()
 		end,
 	},
-	["windwp/nvim-autopairs"] = {
+	{
 		"windwp/nvim-autopairs",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
@@ -219,7 +219,7 @@ return {
 			cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done())
 		end,
 	},
-	["folke/trouble.nvim"] = {
+	{
 		"folke/trouble.nvim",
 		dependencies = {
 			"nvim-tree/nvim-web-devicons",
@@ -228,7 +228,7 @@ return {
 			require("trouble").setup()
 		end,
 	},
-	["folke/lsp-colors.nvim"] = {
+	{
 		"folke/lsp-colors.nvim",
 		config = function()
 			require("lsp-colors").setup()

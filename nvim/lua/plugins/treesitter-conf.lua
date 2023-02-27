@@ -1,7 +1,7 @@
 return {
-	["nvim-treesitter/nvim-treesitter"] = {
+	{
 		"nvim-treesitter/nvim-treesitter",
-		event = { "BufReadPre", "BufNewFile" },
+		event = { "BufEnter" },
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context",
 			"nvim-treesitter/nvim-treesitter-textobjects",
@@ -47,16 +47,16 @@ return {
 			})
 		end,
 	},
-	["nvim-treesitter/nvim-treesitter-context"] = {
+	{
 		"nvim-treesitter/nvim-treesitter-context",
 		config = function()
 			require("treesitter-context").setup()
 		end,
 	},
-	["nvim-treesitter/nvim-treesitter-textobjects"] = {
+	{
 		"nvim-treesitter/nvim-treesitter-textobjects",
 	},
-	["ziontee113/syntax-tree-surfer"] = {
+	{
 		"ziontee113/syntax-tree-surfer",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
