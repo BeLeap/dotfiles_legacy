@@ -30,4 +30,58 @@ return {
 			require("dressing").setup()
 		end,
 	},
+
+	-- Language
+	{ "lbrayner/vim-rzip" },
+	{ "dmix/elvish.vim" },
+	{ "towolf/vim-helm" },
+	{
+		"hashivim/vim-terraform",
+		event = { "BufEnter *.tf" },
+	},
+	{
+		"simrat39/rust-tools.nvim",
+		event = { "BufEnter *.rs", "BufEnter *.toml" },
+	},
+	{
+		"mhinz/vim-crates",
+		event = { "BufEnter Cargo.toml" },
+	},
+	{
+		"mfussenegger/nvim-jdtls",
+		event = { "BufEnter *.java", "BufEnter *.kt" },
+	},
+	{
+		"fatih/vim-go",
+		event = {
+			"BufEnter *.go",
+			"BufEnter go.mod",
+			"BufEnter go.sum",
+		},
+	},
+	{
+		"udalov/kotlin-vim",
+		event = { "BufEnter *.kt" },
+	},
+	{
+		"andrewstuart/vim-kubernetes",
+		cmd = {
+			"KubeApply",
+			"KubeDelete",
+			"KubeCreate",
+			"KubeApplyDir",
+			"KubeDeleteDir",
+		},
+	},
+	{
+		"ziglang/zig.vim",
+		event = { "BufEnter *.zig" },
+	},
+	{
+		"numToStr/Comment.nvim",
+		event = { "BufEnter" },
+		config = function()
+			require("Comment").setup()
+		end,
+	},
 }
