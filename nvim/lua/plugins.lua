@@ -21,11 +21,7 @@ return require("packer").startup(function(use)
 	-- Language Support
 	use("mfussenegger/nvim-dap") -- Debugger support
 	use("David-Kunz/jester") -- Run test written with jest
-	use("udalov/kotlin-vim") -- Kotlin support
-	use({ "" }) -- mason lspconfig bridge
 	use({ "windwp/nvim-ts-autotag" }) -- Autoclose & Autorename html tag
-	use({ "andrewstuart/vim-kubernetes" }) -- k8s Support
-	use({ "ziglang/zig.vim" }) -- Zig support
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
 		after = "nvim-treesitter",

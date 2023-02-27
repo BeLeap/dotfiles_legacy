@@ -42,6 +42,9 @@ require("lazy").setup({
 	{ "mhinz/vim-crates" },
 	{ "mfussenegger/nvim-jdtls" },
 	{ "fatih/vim-go" },
+	{ "udalov/kotlin-vim" },
+	{ "andrewstuart/vim-kubernetes" },
+	{ "ziglang/zig.vim" },
 	{
 		"numToStr/Comment.nvim",
 		event = { "BufReadPre", "BufNewFile" },
