@@ -10,7 +10,7 @@ return {
 		{
 			"<leader>e",
 			function()
-				require("sidebar-nvim").toggle()
+				require("sidebar-nvim").focus()
 			end,
 			noremap = true,
 			silent = true,
