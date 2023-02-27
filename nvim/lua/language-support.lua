@@ -207,6 +207,7 @@ return {
 	},
 	["windwp/nvim-autopairs"] = {
 		"windwp/nvim-autopairs",
+		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"hrsh7th/nvim-cmp",
 		},
