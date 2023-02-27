@@ -30,6 +30,18 @@ return {
 		"lukas-reineke/indent-blankline.nvim",
 		event = { "BufEnter" },
 	},
+	{
+		"rcarriga/nvim-notify",
+		lazy = false,
+		config = function()
+			vim.o.termguicolors = true
+
+			require("notify").setup({
+				render = "compact",
+				top_down = false,
+			})
+		end,
+	},
 
 	-- Language
 	{ "lbrayner/vim-rzip" },
@@ -111,13 +123,5 @@ return {
 	{
 		"andweeb/presence.nvim",
 		event = { "BufEnter" },
-	},
-	{
-		"rcarriga/nvim-notify",
-		lazy = false,
-		opts = {
-			render = "compact",
-			top_down = false,
-		},
 	},
 }
