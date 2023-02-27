@@ -17,6 +17,7 @@ require("lazy").setup({
 	require("colorscheme-conf"),
 	require("treesitter-conf")["nvim-treesitter/nvim-treesitter"],
 	require("treesitter-conf")["nvim-treesitter/nvim-treesitter-context"],
+	require("treesitter-conf")["nvim-treesitter/nvim-treesitter-textobjects"],
 	require("toggleterm-conf"),
 	{
 		"kristijanhusak/vim-dadbod-ui",

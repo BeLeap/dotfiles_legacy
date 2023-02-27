@@ -21,12 +21,6 @@ return require("packer").startup(function(use)
 	-- Language Support
 	use("mfussenegger/nvim-dap") -- Debugger support
 	use("David-Kunz/jester") -- Run test written with jest
-	use({ "windwp/nvim-ts-autotag" }) -- Autoclose & Autorename html tag
-	use({
-		"nvim-treesitter/nvim-treesitter-textobjects",
-		after = "nvim-treesitter",
-		requires = "nvim-treesitter/nvim-treesitter",
-	}) -- Provides textobject using TreeSitter
 	use("ziontee113/syntax-tree-surfer")
 
 	-- UI

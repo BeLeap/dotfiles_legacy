@@ -1,11 +1,11 @@
--- require("nvim-ts-autotag").setup()
-
 return {
 	["nvim-treesitter/nvim-treesitter"] = {
 		"nvim-treesitter/nvim-treesitter",
 		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter-context",
+			"nvim-treesitter/nvim-treesitter-textobjects",
+			"HiPhish/nvim-ts-rainbow2",
 		},
 		config = function()
 			require("nvim-treesitter.configs").setup({
@@ -49,5 +49,11 @@ return {
 	},
 	["nvim-treesitter/nvim-treesitter-context"] = {
 		"nvim-treesitter/nvim-treesitter-context",
+		config = function()
+			require("treesitter-context").setup()
+		end,
+	},
+	["nvim-treesitter/nvim-treesitter-textobjects"] = {
+		"nvim-treesitter/nvim-treesitter-textobjects",
 	},
 }
