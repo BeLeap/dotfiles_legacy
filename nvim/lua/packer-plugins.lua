@@ -18,9 +18,6 @@ return require("packer").startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim")
 
-	-- Language Support
-	use("David-Kunz/jester") -- Run test written with jest
-
 	-- UI
 	use({
 		"iamcco/markdown-preview.nvim",
@@ -28,7 +25,6 @@ return require("packer").startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	}) -- Show markdown preview
-	use({ "nvim-telescope/telescope.nvim", requires = { { "nvim-lua/plenary.nvim" } } }) -- Shows files, buffers, live greps
 	use("norcalli/nvim-colorizer.lua") -- Color color names
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("ryanoasis/vim-devicons") -- Better icons
