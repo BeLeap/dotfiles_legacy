@@ -41,9 +41,7 @@ return require("packer").startup(function(use)
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("ryanoasis/vim-devicons") -- Better icons
 	use("kyazdani42/nvim-web-devicons") -- Better icons
-	use("pwntester/octo.nvim") -- Github support
 	use("kristijanhusak/vim-dadbod-ui") -- UI for 'tpope/vim-dadbod'
-	use("airblade/vim-gitgutter") -- Sign for git status
 	use("folke/todo-comments.nvim") -- Highlights TODO-ish comments
 	use("RishabhRD/popfix") -- Nvim lua high-level popup api
 	use("nvim-lua/popup.nvim") -- Nvim lua popup api
@@ -100,14 +98,6 @@ return require("packer").startup(function(use)
 		end,
 	}) -- Go to line with :number
 	use("andweeb/presence.nvim") -- Discord Rich Presence
-	use("dinhhuy258/git.nvim") -- Git support
-	use({
-		"TimUntersberger/neogit",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"sindrets/diffview.nvim",
-		},
-	})
 	use("rcarriga/nvim-notify")
 	use("kkharji/sqlite.lua")
 	use({

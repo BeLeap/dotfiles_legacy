@@ -24,6 +24,12 @@ require("lazy").setup({
 		cmd = "StartupTime",
 	},
 
+	-- Git
+	require("git-conf")["pwntester/octo.nvim"],
+	require("git-conf")["airblade/vim-gitgutter"],
+	require("git-conf")["dinhhuy258/git.nvim"],
+	require("git-conf")["TimUntersberger/neogit"],
+
 	-- Language
 	require("language-support")["neovim/nvim-lspconfig"],
 	require("language-support")["j-hui/fidget.nvim"],
