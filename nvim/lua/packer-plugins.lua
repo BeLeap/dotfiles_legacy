@@ -26,7 +26,6 @@ return require("packer").startup(function(use)
 		end,
 	}) -- Show markdown preview
 	use("norcalli/nvim-colorizer.lua") -- Color color names
-	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("ryanoasis/vim-devicons") -- Better icons
 	use("kyazdani42/nvim-web-devicons") -- Better icons
 	use({ "lukas-reineke/indent-blankline.nvim" }) -- Show ident line
