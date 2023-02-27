@@ -19,39 +19,6 @@ return require("packer").startup(function(use)
 	use("wbthomason/packer.nvim")
 
 	-- UI
-	use({
-		"iamcco/markdown-preview.nvim",
-		run = function()
-			vim.fn["mkdp#util#install"]()
-		end,
-	}) -- Show markdown preview
-	use("norcalli/nvim-colorizer.lua") -- Color color names
-	use({
-		"nvim-orgmode/orgmode",
-		requires = {
-			"nvim-treesitter/nvim-treesitter",
-			"dhruvasagar/vim-table-mode",
-		},
-		config = function()
-			require("orgmode").setup({})
-		end,
-	})
-
-	-- Others
-	use("tpope/vim-sensible") -- Default config that Sensible
-	use("svermeulen/vimpeccable") -- Help writing vimrc in lua
-	use("nvim-lua/plenary.nvim") -- Nvim lua helper function
-	use("easymotion/vim-easymotion") -- Easymotion
-	use("mg979/vim-visual-multi") -- Easy select multi-line (sublime-like)
-	use("wakatime/vim-wakatime") -- Track work time
-	use({
-		"nacro90/numb.nvim",
-		config = function()
-			require("numb").setup()
-		end,
-	}) -- Go to line with :number
-	use("andweeb/presence.nvim") -- Discord Rich Presence
-	use("rcarriga/nvim-notify")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

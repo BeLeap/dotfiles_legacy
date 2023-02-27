@@ -30,7 +30,4 @@ vim.o.scrolloff = 999
 -- require("todo-comments").setup({})
 -- require("presence"):setup()
 
--- require("notify").setup({
--- 	render = "compact",
--- 	top_down = false,
--- })
+require("notify").setup({})

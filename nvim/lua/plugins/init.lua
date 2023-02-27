@@ -82,4 +82,42 @@ return {
 		event = { "BufEnter" },
 		config = true,
 	},
+	{
+		"iamcco/markdown-preview.nvim",
+		event = { "BufEnter *.md" },
+		build = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	},
+
+	-- Others
+	{
+		"tpope/vim-sensible",
+		event = { "BufEnter" },
+	},
+	{
+		"mg979/vim-visual-multi",
+		event = { "BufEnter" },
+	},
+	{
+		"wakatime/vim-wakatime",
+		event = { "BufEnter" },
+	},
+	{
+		"nacro90/numb.nvim",
+		event = { "BufEnter" },
+		config = true,
+	},
+	{
+		"andweeb/presence.nvim",
+		event = { "BufEnter" },
+	},
+	{
+		"rcarriga/nvim-notify",
+		lazy = false,
+		opts = {
+			render = "compact",
+			top_down = false,
+		},
+	},
 }
