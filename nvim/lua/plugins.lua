@@ -41,7 +41,6 @@ return require("packer").startup(function(use)
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("ryanoasis/vim-devicons") -- Better icons
 	use("kyazdani42/nvim-web-devicons") -- Better icons
-	use("kristijanhusak/vim-dadbod-ui") -- UI for 'tpope/vim-dadbod'
 	use("folke/todo-comments.nvim") -- Highlights TODO-ish comments
 	use("RishabhRD/popfix") -- Nvim lua high-level popup api
 	use("nvim-lua/popup.nvim") -- Nvim lua popup api
