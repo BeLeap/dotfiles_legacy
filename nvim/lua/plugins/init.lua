@@ -19,16 +19,12 @@ return {
 	{
 		"folke/todo-comments.nvim",
 		event = { "BufEnter" },
-		config = function()
-			require("todo-comments").setup()
-		end,
+		config = true,
 	},
 	{
 		"stevearc/dressing.nvim",
 		event = { "BufEnter" },
-		config = function()
-			require("dressing").setup()
-		end,
+		config = true,
 	},
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -84,8 +80,6 @@ return {
 	{
 		"numToStr/Comment.nvim",
 		event = { "BufEnter" },
-		config = function()
-			require("Comment").setup()
-		end,
+		config = true,
 	},
 }

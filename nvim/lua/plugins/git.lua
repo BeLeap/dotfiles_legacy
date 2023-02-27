@@ -2,9 +2,7 @@ return {
 	{
 		"pwntester/octo.nvim",
 		event = { "BufEnter" },
-		config = function()
-			require("octo").setup()
-		end,
+		config = true,
 	},
 	{
 		"airblade/vim-gitgutter",
@@ -13,23 +11,21 @@ return {
 	{
 		"dinhhuy258/git.nvim",
 		cmd = "Git",
-		config = function()
-			require("git").setup({
-				keymaps = {
-					blame = "<Leader>gb",
-					quit_blame = "q",
-					blame_commit = "<CR>",
-					browse = "<Leader>go",
-					open_pull_request = "<Leader>gp",
-					create_pull_request = "<Leader>gn",
-					diff = "<Leader>gd",
-					diff_close = "<Leader>gD",
-					revert = "<Leader>gr",
-					revert_file = "<Leader>gR",
-				},
-				target_branch = "main",
-			})
-		end,
+		opts = {
+			keymaps = {
+				blame = "<Leader>gb",
+				quit_blame = "q",
+				blame_commit = "<CR>",
+				browse = "<Leader>go",
+				open_pull_request = "<Leader>gp",
+				create_pull_request = "<Leader>gn",
+				diff = "<Leader>gd",
+				diff_close = "<Leader>gD",
+				revert = "<Leader>gr",
+				revert_file = "<Leader>gR",
+			},
+			target_branch = "main",
+		},
 	},
 	{
 		"TimUntersberger/neogit",
@@ -40,12 +36,10 @@ return {
 			"nvim-lua/plenary.nvim",
 			"sindrets/diffview.nvim",
 		},
-		config = function()
-			require("neogit").setup({
-				integrations = {
-					diffview = true,
-				},
-			})
-		end,
+		opts = {
+			integrations = {
+				diffview = true,
+			},
+		},
 	},
 }
