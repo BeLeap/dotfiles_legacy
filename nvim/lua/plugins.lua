@@ -35,10 +35,6 @@ return require("packer").startup(function(use)
 	use({ "nvim-lualine/lualine.nvim", requires = { "kyazdani42/nvim-web-devicons", opt = true } })
 	use("ryanoasis/vim-devicons") -- Better icons
 	use("kyazdani42/nvim-web-devicons") -- Better icons
-	use("folke/todo-comments.nvim") -- Highlights TODO-ish comments
-	use("RishabhRD/popfix") -- Nvim lua high-level popup api
-	use("nvim-lua/popup.nvim") -- Nvim lua popup api
-	use("stevearc/dressing.nvim") -- Improve default UI
 	use({
 		"theHamsta/nvim-dap-virtual-text",
 		config = function()
@@ -74,14 +70,12 @@ return require("packer").startup(function(use)
 			require("orgmode").setup({})
 		end,
 	})
-	use("HiPhish/nvim-ts-rainbow2") -- Rainbow parentheses using Treesitter
 
 	-- Others
 	use("tpope/vim-sensible") -- Default config that Sensible
 	use("svermeulen/vimpeccable") -- Help writing vimrc in lua
 	use("nvim-lua/plenary.nvim") -- Nvim lua helper function
 	use("easymotion/vim-easymotion") -- Easymotion
-	use("lewis6991/impatient.nvim") -- Improves startup time
 	use("mg979/vim-visual-multi") -- Easy select multi-line (sublime-like)
 	use("wakatime/vim-wakatime") -- Track work time
 	use({
@@ -92,18 +86,6 @@ return require("packer").startup(function(use)
 	}) -- Go to line with :number
 	use("andweeb/presence.nvim") -- Discord Rich Presence
 	use("rcarriga/nvim-notify")
-	use("kkharji/sqlite.lua")
-	use({
-		"kode-team/mastodon.nvim",
-		requires = {
-			"nvim-lua/plenary.nvim",
-			"rcarriga/nvim-notify",
-			"kkharji/sqlite.lua",
-		},
-		config = function()
-			require("mastodon").setup()
-		end,
-	})
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

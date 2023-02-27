@@ -36,6 +36,20 @@ require("lazy").setup({
 		"dstein64/vim-startuptime",
 		cmd = "StartupTime",
 	},
+	{
+		"folke/todo-comments.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("todo-comments").setup()
+		end,
+	},
+	{
+		"stevearc/dressing.nvim",
+		event = { "BufReadPre", "BufNewFile" },
+		config = function()
+			require("dressing").setup()
+		end,
+	},
 
 	-- Git
 	require("git-conf")["pwntester/octo.nvim"],
