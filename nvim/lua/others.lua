@@ -14,7 +14,7 @@ vim.o.inccommand = "nosplit"
 
 vim.o.wildmenu = true
 
-vim.cmd([[set undofile]])
+vim.o.undofile = true
 
 vim.o.updatetime = 250
 vim.wo.signcolumn = "yes"
@@ -25,9 +25,4 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 999
 
--- require("colorizer").setup()
--- require("nvim-autopairs").setup()
--- require("todo-comments").setup({})
--- require("presence"):setup()
-
-require("notify").setup({})
+vim.cmd.colorscheme("gruvbox")

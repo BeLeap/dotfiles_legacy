@@ -13,7 +13,12 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("plugins", { defaults = { lazy = true } })
+require("lazy").setup("plugins", {
+	diff = {
+		cmd = "diffview.nvim",
+	},
+	defaults = { lazy = true },
+})
 
 require("keymap")
 require("others")
