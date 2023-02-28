@@ -35,7 +35,7 @@ end
 
 # Configuration Files
 function vimrc
-    pushd $XDG_CONFIG_HOME/nvim && vim ./init.vim; popd
+    pushd $XDG_CONFIG_HOME/nvim && vim ./init.lua; popd
 end
 function fishrc
     pushd $XDG_CONFIG_HOME/fish && vim $XDG_CONFIG_HOME/fish/config.fish; popd
