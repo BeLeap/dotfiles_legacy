@@ -1,3 +1,6 @@
 *
-!/nvim
+
+!nvim
+!nvim/*
+!nvim/**
 !.pre-commit-config.yaml
