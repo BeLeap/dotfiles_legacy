@@ -1,3 +1,4 @@
+-- Replace orgmode when GTD done
 return {
 	{
 		"nvim-neorg/neorg",
