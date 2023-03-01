@@ -17,7 +17,12 @@ require("lazy").setup("plugins", {
 	diff = {
 		cmd = "diffview.nvim",
 	},
-	defaults = { lazy = true },
+	defaults = {
+		lazy = true,
+	},
+	install = {
+		colorscheme = { "gruvbox" },
+	},
 })
 
 require("keymap")
