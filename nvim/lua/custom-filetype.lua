@@ -4,7 +4,7 @@ vim.filetype.add({
 			priority = 1,
 			function(path)
 				if string.find(path, "templates") then
-					return "helm"
+					return "yaml.helm"
 				end
 			end,
 		},
