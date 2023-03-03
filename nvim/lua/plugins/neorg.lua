@@ -3,6 +3,7 @@ return {
 	{
 		"nvim-neorg/neorg",
 		ft = "norg",
+		cmd = "Neorg",
 		build = ":Neorg sync-parsers",
 		opts = {
 			load = {
