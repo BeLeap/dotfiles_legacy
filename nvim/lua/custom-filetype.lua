@@ -8,5 +8,8 @@ vim.filetype.add({
 				end
 			end,
 		},
+		[".*%.tpl"] = {
+			"yaml.tpl",
+		},
 	},
 })
