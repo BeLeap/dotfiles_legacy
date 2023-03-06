@@ -85,7 +85,8 @@ output * bg /usr/share/backgrounds/default.png fill
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
-    bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
+    bindsym $mod+Shift+e exec swaymsg exit
+    bindsym $mod+q exec swaylock -c 000000
 #
 # Moving around:
 #
@@ -205,7 +206,6 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
   swaybar_command waybar
-  workspace_buttons yes
 }
 
 include /etc/sway/config.d/*
@@ -224,5 +224,3 @@ exec kime
 input type:keyboard {
     xkb_options "korean:ralt_hangul"
 }
-
-bindsym $mod+l exec swaylock -f -c 000000
