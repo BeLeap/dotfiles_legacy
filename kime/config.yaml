@@ -2,4 +2,5 @@ indicator:
   icon_color: Black
 engine:
   hangul:
-    layout: sebeolsik-3-90
+    layout: dubeolsik
+    # layout: sebeolsik-3-90
