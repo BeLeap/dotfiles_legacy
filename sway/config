@@ -224,3 +224,5 @@ exec kime
 input type:keyboard {
     xkb_options "korean:ralt_hangul"
 }
+
+bindsym $mod+Shift+s exec sway-interactive-screenshot
