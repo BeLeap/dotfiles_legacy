@@ -102,8 +102,8 @@ exec_always ~/.config/sway/detect_laptop_lid.sh
 for_window [app_id="firefox"] border none, layout stacking
 for_window [app_id="ulauncher"] border none
 
-assign [app_id="firefox"] 2
 assign [app_id="org.wezfurlong.wezterm"] 1
+assign [app_id="firefox"] 2
 
 bindsym $mod+Shift+s exec sway-interactive-screenshot
 
