@@ -223,6 +223,7 @@ exec kime
 
 input type:keyboard {
     xkb_options "korean:ralt_hangul"
+    xkb_options "ctrl:nocaps"
 }
 
 bindsym $mod+Shift+s exec sway-interactive-screenshot
