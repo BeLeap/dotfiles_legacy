@@ -5,10 +5,6 @@ return {
 		config = true,
 	},
 	{
-		"airblade/vim-gitgutter",
-		event = { "BufEnter" },
-	},
-	{
 		"dinhhuy258/git.nvim",
 		cmd = "Git",
 		opts = {
@@ -41,5 +37,12 @@ return {
 				diffview = true,
 			},
 		},
+	},
+	{
+		"lewis6991/gitsigns.nvim",
+		event = { "BufEnter" },
+		config = function()
+			require("gitsigns").setup()
+		end,
 	},
 }
