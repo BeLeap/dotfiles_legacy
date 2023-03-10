@@ -88,6 +88,8 @@ return {
 			"neovim/nvim-lspconfig",
 			"hrsh7th/cmp-nvim-lsp",
 			"someone-stole-my-name/yaml-companion.nvim",
+			"lukas-reineke/lsp-format.nvim",
+			"jay-babu/mason-null-ls.nvim",
 		},
 		config = function()
 			-- Mappings.
@@ -101,6 +103,8 @@ return {
 			-- Use an on_attach function to only map the following keys
 			-- after the language server attaches to the current buffer
 			local on_attach = function(client, bufnr)
+				require("lsp-format").on_attach(client)
+
 				local buf_opts = {
 					noremap = true,
 					silent = true,
@@ -197,6 +201,45 @@ return {
 					})
 				end,
 			})
+
+			local null_ls = require("null-ls")
+
+			null_ls.setup({
+				sources = {
+					null_ls.builtins.code_actions.gitrebase,
+					null_ls.builtins.code_actions.gitsigns,
+
+					null_ls.builtins.completion.spell,
+
+					null_ls.builtins.diagnostics.ansiblelint,
+					null_ls.builtins.diagnostics.codespell,
+					null_ls.builtins.diagnostics.commitlint,
+					null_ls.builtins.diagnostics.editorconfig_checker,
+					null_ls.builtins.diagnostics.eslint,
+					null_ls.builtins.diagnostics.fish,
+					null_ls.builtins.diagnostics.markdownlint,
+					null_ls.builtins.diagnostics.misspell,
+					null_ls.builtins.diagnostics.tfsec,
+					null_ls.builtins.diagnostics.yamllint,
+
+					null_ls.builtins.formatting.jq,
+					null_ls.builtins.formatting.rustfmt,
+					null_ls.builtins.formatting.shellharden,
+					null_ls.builtins.formatting.stylua,
+					null_ls.builtins.formatting.terrafmt,
+					null_ls.builtins.formatting.yq,
+
+					null_ls.builtins.hover.dictionary,
+					null_ls.builtins.hover.printenv,
+				},
+				on_attach = on_attach,
+				diagnostics_format = "#{m} (#{s})",
+			})
+			require("mason-null-ls").setup({
+				ensure_installed = nil,
+				automatic_installation = true,
+				automatic_setup = false,
+			})
 		end,
 	},
 	{
@@ -236,7 +279,6 @@ return {
 	},
 	{
 		"jose-elias-alvarez/null-ls.nvim",
-		event = { "BufReadPre", "BufNewFile" },
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
@@ -244,47 +286,7 @@ return {
 	{
 		"jay-babu/mason-null-ls.nvim",
 		dependencies = {
-			"williamboman/mason.nvim",
 			"jose-elias-alvarez/null-ls.nvim",
 		},
-		config = function()
-			local null_ls = require("null-ls")
-
-			null_ls.setup({
-				sources = {
-					null_ls.builtins.code_actions.gitrebase,
-					null_ls.builtins.code_actions.gitsigns,
-
-					null_ls.builtins.completion.spell,
-
-					null_ls.builtins.diagnostics.ansiblelint,
-					null_ls.builtins.diagnostics.codespell,
-					null_ls.builtins.diagnostics.commitlint,
-					null_ls.builtins.diagnostics.cspell,
-					null_ls.builtins.diagnostics.editorconfig_checker,
-					null_ls.builtins.diagnostics.eslint,
-					null_ls.builtins.diagnostics.fish,
-					null_ls.builtins.diagnostics.markdownlint,
-					null_ls.builtins.diagnostics.misspell,
-					null_ls.builtins.diagnostics.tfsec,
-					null_ls.builtins.diagnostics.yamllint,
-
-					null_ls.builtins.formatting.jq,
-					null_ls.builtins.formatting.rustfmt,
-					null_ls.builtins.formatting.shellharden,
-					null_ls.builtins.formatting.stylua,
-					null_ls.builtins.formatting.terrafmt,
-					null_ls.builtins.formatting.yq,
-
-					null_ls.builtins.hover.dictionary,
-					null_ls.builtins.hover.printenv,
-				},
-			})
-			require("mason-null-ls").setup({
-				ensure_installed = nil,
-				automatic_installation = true,
-				automatic_setup = false,
-			})
-		end,
 	},
 }
