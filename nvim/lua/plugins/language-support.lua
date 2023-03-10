@@ -228,6 +228,7 @@ return {
 					null_ls.builtins.formatting.stylua,
 					null_ls.builtins.formatting.terrafmt,
 					null_ls.builtins.formatting.yq,
+					null_ls.builtins.formatting.markdownlint,
 
 					null_ls.builtins.hover.dictionary,
 					null_ls.builtins.hover.printenv,
