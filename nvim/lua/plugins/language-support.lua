@@ -290,4 +290,9 @@ return {
 			"jose-elias-alvarez/null-ls.nvim",
 		},
 	},
+	{
+		"lukas-reineke/lsp-format.nvim",
+		cmd = { "Format", "FormatToggle", "FormatEnable", "FormatDisable" },
+		config = true,
+	},
 }
