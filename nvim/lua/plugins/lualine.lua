@@ -28,12 +28,18 @@ return {
 					},
 				},
 				lualine_c = {
-					"diagnostics",
+					{
+						"diagnostics",
+						source = {
+							"nvim_lsp",
+							"nvim_diagnostic",
+						},
+					},
 				},
 			},
 			tabline = {
 				lualine_a = { "branch" },
-				lualine_b = { "filename" },
+				lualine_b = { "diff" },
 				lualine_c = {
 					{
 						"buffers",
