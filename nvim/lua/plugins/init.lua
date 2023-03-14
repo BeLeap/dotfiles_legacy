@@ -124,4 +124,9 @@ return {
 		"andweeb/presence.nvim",
 		event = { "BufEnter" },
 	},
+	{
+		"max397574/better-escape.nvim",
+		event = { "BufEnter" },
+		config = true,
+	},
 }
