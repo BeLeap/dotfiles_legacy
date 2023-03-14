@@ -21,7 +21,7 @@ require("lazy").setup("plugins", {
 		lazy = true,
 	},
 	install = {
-		colorscheme = { "gruvbox" },
+		colorscheme = { "catppuccin" },
 	},
 })
 
