@@ -1,3 +1,5 @@
+include catppuccin-mocha
+
 set $mod Mod4
 
 set $left h
