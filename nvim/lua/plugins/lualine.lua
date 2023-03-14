@@ -18,7 +18,7 @@ return {
 		},
 		opts = {
 			options = {
-				theme = "gruvbox-material",
+				theme = "auto",
 			},
 			sections = {
 				lualine_b = {

@@ -25,4 +25,4 @@ vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 999
 
-vim.cmd.colorscheme("gruvbox")
+vim.cmd.colorscheme("catppuccin")
