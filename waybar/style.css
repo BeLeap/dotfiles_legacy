@@ -103,7 +103,7 @@ window#waybar.hidden {
 	background: @blue;
 }
 
-#network {
+#pulseaudio {
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 16px;
@@ -115,7 +115,7 @@ window#waybar.hidden {
 	background: @lavender;
 }
 
-#pulseaudio {
+#network {
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 16px;
@@ -127,7 +127,7 @@ window#waybar.hidden {
 	background: @sapphire;
 }
 
-#temperature {
+#cpu {
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 16px;
@@ -139,7 +139,7 @@ window#waybar.hidden {
 	background: @sky;
 }
 
-#cpu {
+#memory {
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 16px;
@@ -151,7 +151,7 @@ window#waybar.hidden {
 	background: @teal;
 }
 
-#memory {
+#temperature {
 	margin-top: 8px;
 	margin-left: 8px;
 	padding-left: 16px;
@@ -161,6 +161,30 @@ window#waybar.hidden {
 	transition: none;
 	color: @surface0;
 	background: @green;
+}
+
+#language {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @yellow;
+}
+
+#battery {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @peach;
 }
 
 #clock {
@@ -173,5 +197,18 @@ window#waybar.hidden {
 	border-radius: 26px;
 	transition: none;
 	color: @surface0;
-	background: @yellow;
+	background: @maroon;
+}
+
+#tray {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @red;
 }
