@@ -1,0 +1,177 @@
+@import "mocha.css";
+
+/*
+ ********************************************
+ *░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*
+ *░░█▀█░█░░░█░█░█▀▀░░░█░█░█░░░▀█▀░█▀▄░█▀█░░*
+ *░░█▀▀░█░░░█░█░▀▀█░░░█░█░█░░░░█░░█▀▄░█▀█░░*
+ *░░▀░░░▀▀▀░▀▀▀░▀▀▀░░░▀▀▀░▀▀▀░░▀░░▀░▀░▀░▀░░*
+ *░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░*
+ ********************************************
+ */
+
+* {
+	border: none;
+	border-radius: 0;
+	font-family: Caskaydia Cove Nerd Font;
+	font-size: 14px;
+	min-height: 24px;
+}
+
+window#waybar {
+	background-color: shade(@base, 0.9);
+  border: 2px solid alpha(@crust, 0.3);
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd {
+  color: @text;
+  padding: 0 8px;
+}
+
+#window {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+	border-radius: 26px;
+	transition: none;
+  color: transparent;
+	background: transparent;
+}
+
+#workspaces {
+	margin-top: 8px;
+	margin-left: 12px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	background: #282a36;
+	transition: none;
+}
+
+#workspaces button {
+	transition: none;
+	color: @overlay0;
+	background: transparent;
+	font-size: 16px;
+}
+
+#workspaces button.focused {
+	color: @text;
+}
+
+#workspaces button:hover {
+	transition: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	color: @subtext0;
+}
+
+#mpd {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @blue;
+}
+
+#mpd.disconnected,
+#mpd.stopped {
+	color: @surface2;
+	background: @blue;
+}
+
+#network {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @lavender;
+}
+
+#pulseaudio {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @sapphire;
+}
+
+#temperature {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @sky;
+}
+
+#cpu {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @teal;
+}
+
+#memory {
+	margin-top: 8px;
+	margin-left: 8px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @green;
+}
+
+#clock {
+	margin-top: 8px;
+	margin-left: 8px;
+	margin-right: 12px;
+	padding-left: 16px;
+	padding-right: 16px;
+	margin-bottom: 8px;
+	border-radius: 26px;
+	transition: none;
+	color: @surface0;
+	background: @yellow;
+}
