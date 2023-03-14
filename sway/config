@@ -8,7 +8,7 @@ set $right l
 set $term flatpak run org.wezfurlong.wezterm
 set $menu ulauncher
 
-output * bg /usr/share/backgrounds/default.png fill
+output * bg cat_pacman.png fill
 
 bindsym $mod+Return exec $term
 bindsym $mod+Shift+q kill
@@ -16,7 +16,7 @@ bindsym $mod+d exec $menu
 floating_modifier $mod normal
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+e exec swaymsg exit
-bindsym $mod+q exec swaylock -c 000000
+bindsym $mod+q exec swaylock
 
 bindsym $mod+$left focus left
 bindsym $mod+$down focus down
@@ -85,6 +85,7 @@ bar {
 include /etc/sway/config.d/*
 
 output DP-2 scale 1.5
+output DP-3 scale 1.5
 
 input type:touchpad {
     tap enabled
