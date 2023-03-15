@@ -44,7 +44,6 @@ window#waybar.hidden {
 #scratchpad,
 #mpd {
   color: @text;
-  padding: 0 8px;
 }
 
 #window {
@@ -89,9 +88,9 @@ window#waybar.hidden {
   color: @red;
 }
 
-#mpd {
+#custom-github {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -101,15 +100,9 @@ window#waybar.hidden {
 	background: @blue;
 }
 
-#mpd.disconnected,
-#mpd.stopped {
-	color: @surface2;
-	background: @blue;
-}
-
 #pulseaudio {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -121,7 +114,7 @@ window#waybar.hidden {
 
 #network {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -133,7 +126,7 @@ window#waybar.hidden {
 
 #cpu {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -145,7 +138,7 @@ window#waybar.hidden {
 
 #memory {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -157,7 +150,7 @@ window#waybar.hidden {
 
 #temperature {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -169,7 +162,7 @@ window#waybar.hidden {
 
 #language {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -181,7 +174,7 @@ window#waybar.hidden {
 
 #battery {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
@@ -193,7 +186,7 @@ window#waybar.hidden {
 
 #clock {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	margin-right: 12px;
 	padding-left: 16px;
 	padding-right: 16px;
@@ -206,7 +199,7 @@ window#waybar.hidden {
 
 #tray {
 	margin-top: 8px;
-	margin-left: 8px;
+	margin-left: 4px;
 	margin-right: 12px;
 	padding-left: 16px;
 	padding-right: 16px;
