@@ -38,7 +38,11 @@
       "default": "🎜"
     },
     "escape": true,
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl stop",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous",
+    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
   },
   "custom/github": {
     "format": "{} ",
