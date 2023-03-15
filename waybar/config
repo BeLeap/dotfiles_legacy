@@ -15,21 +15,10 @@
     "memory",
     "temperature",
     "backlight",
-    "keyboard-state",
-    "sway/language",
     "battery",
     "clock",
-    "tray",
+    "tray"
   ],
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
-  },
   "sway/mode": {
     "format": "<span style=\"italic\">{}</span>"
   },
@@ -93,12 +82,12 @@
   },
   "temperature": {
     "critical-threshold": 80,
-    "format": "{temperatureC}°C {icon}",
-    "format-icons": ["", "", ""]
+    "format": "{temperatureC}°C "
   },
   "backlight": {
+    "device": "intel_backlight",
     "format": "{percent}% {icon}",
-    "format-icons": ["", "", "", "", "", "", "", "", ""]
+    "format-icons": ["", ""]
   },
   "battery": {
     "states": {
@@ -117,6 +106,6 @@
     "format-alt": "{:%Y-%m-%d}"
   },
   "tray": {
-    "spacing": 10
+    "spacing": 4
   }
 }
