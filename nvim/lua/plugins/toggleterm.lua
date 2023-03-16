@@ -12,12 +12,13 @@ return {
 			silent = true,
 		},
 		{
-			"t",
-			"<cmd>ToggleTermSendVisualSelection<cr>",
+			"<leader>t",
+			"<cmd>'<,'>ToggleTermSendVisualSelection<cr>",
 			mode = "v",
 			noremap = true,
 		},
 	},
+	cmd = { "ToggleTerm", "ToggleTermSendVisualSeleection" },
 	config = function()
 		if vim.loop.os_uname().sysname == "Windows_NT" then
 			local powershell_options = {
