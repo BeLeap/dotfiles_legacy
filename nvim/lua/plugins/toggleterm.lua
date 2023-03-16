@@ -13,8 +13,8 @@ return {
 		},
 		{
 			"<leader>t",
-			"<cmd>'<,'>ToggleTermSendVisualSelection<cr>",
-			mode = "v",
+			":'<,'>ToggleTermSendVisualSelection<cr>",
+			mode = "x",
 			noremap = true,
 		},
 	},
