@@ -26,8 +26,8 @@ return {
 				end,
 			},
 			sections = {
-				"git",
 				"files",
+				"git",
 				"symbols",
 				"diagnostics",
 				"todos",
