@@ -12,7 +12,7 @@ return {
 			silent = true,
 		},
 		{
-			"<leader>t",
+			"t",
 			"<cmd>ToggleTermSendVisualSelection<cr>",
 			mode = "v",
 			noremap = true,
