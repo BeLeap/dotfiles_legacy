@@ -20,6 +20,7 @@ symbol = " "
 [aws.region_aliases]
 ap-northeast-1 = "tokyo"
 ap-northeast-2 = "seoul"
+us-west-2 = "oregon"
 
 [kubernetes]
 format = '\[[$symbol$context( \($namespace\))]($style)\]'

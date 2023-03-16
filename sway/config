@@ -95,11 +95,11 @@ input type:touchpad {
 }
 
 input type:keyboard {
-    xkb_options "korean:ralt_hangul"
+    xkb_options "ralt:hangul"
     xkb_options "ctrl:nocaps"
 }
 
-exec kime
+exec ibus-daemon -drx
 exec_always ~/.config/sway/detect_laptop_lid.sh
 
 for_window [app_id="firefox"] border none, layout stacking
