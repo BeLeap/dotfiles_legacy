@@ -3,13 +3,19 @@ return {
 	keys = {
 		{ "<leader>t", "<cmd>ToggleTerm<cr>", noremap = true, silent = true },
 		{
-			"<leader>bt",
+			"<leader>tb",
 			function()
 				local buffer_dir = vim.fn.expand("%:p:h")
 				require("toggleterm").toggle_command("dir=" .. buffer_dir, 1)
 			end,
 			noremap = true,
 			silent = true,
+		},
+		{
+			"<leader>t",
+			"<cmd>ToggleTermSendVisualSelection<cr>",
+			mode = "v",
+			noremap = true,
 		},
 	},
 	config = function()
