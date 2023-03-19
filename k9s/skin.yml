@@ -1,94 +1,158 @@
- # K9s Gruvbox Dark Skin Contributed by [@indiebrain](https://github.com/indiebrain)
-foreground: &foreground "#ebdbb2"
-background: &background "#272727"
-current_line: &current_line "#ebdbb2"
-selection: &selection "#3c3735"
-comment: &comment "#bdad93"
-cyan: &cyan "#689d69"
-green: &green "#989719"
-orange: &orange "#d79920"
-magenta: &magenta "#b16185"
-blue: &blue "#448488"
-red: &red "#cc231c"
+base: &base "#1e1e2e"
+blue: &blue "#89b4fa"
+crust: &crust "#11111b"
+flamingo: &flamingo "#f2cdcd"
+green: &green "#a6e3a1"
+lavender: &lavender "#b4befe"
+mantle: &mantle "#181825"
+maroon: &maroon "#eba0ac"
+mauve: &mauve "#cba6f7"
+overlay0: &overlay0 "#6c7086"
+overlay1: &overlay1 "#7f849c"
+overlay2: &overlay2 "#9399b2"
+peach: &peach "#fab387"
+pink: &pink "#f5c2e7"
+red: &red "#f38ba8"
+rosewater: &rosewater "#f5e0dc"
+sapphire: &sapphire "#74c7ec"
+sky: &sky "#89dceb"
+subtext0: &subtext0 "#a6adc8"
+subtext1: &subtext1 "#bac2de"
+surface0: &surface0 "#313244"
+surface1: &surface1 "#45475a"
+surface2: &surface2 "#585b70"
+teal: &teal "#94e2d5"
+text: &text "#cdd6f4"
+yellow: &yellow "#f9e2af"
 
+# Skin...
 k9s:
+  # General K9s styles
   body:
-    fgColor: *foreground
-    bgColor: *background
-    logoColor: *blue
+    fgColor: *text
+    bgColor: *base
+    logoColor: *mauve
+
+  # Command prompt styles
   prompt:
-    fgColor: *foreground
-    bgColor: *background
-    suggestColor: *orange
+    fgColor: *text
+    bgColor: *mantle
+    suggestColor: *blue
+
+  # ClusterInfoView styles.
   info:
-    fgColor: *magenta
-    sectionColor: *foreground
+    fgColor: *peach
+    sectionColor: *text
+
+  # Dialog styles.
   dialog:
-    fgColor: *foreground
-    bgColor: *background
-    buttonFgColor: *foreground
-    buttonBgColor: *magenta
-    buttonFocusFgColor: white
-    buttonFocusBgColor: *cyan
-    labelFgColor: *orange
-    fieldFgColor: *foreground
+    fgColor: *yellow
+    bgColor: *overlay2
+    buttonFgColor: *base
+    buttonBgColor: *overlay1
+    buttonFocusFgColor: *base
+    buttonFocusBgColor: *pink
+    labelFgColor: *rosewater
+    fieldFgColor: *text
+
   frame:
+    # Borders styles.
     border:
-      fgColor: *selection
-      focusColor: *current_line
+      fgColor: *mauve
+      focusColor: *lavender
+
+    # MenuView attributes and styles
     menu:
-      fgColor: *foreground
-      keyColor: *magenta
-      numKeyColor: *magenta
+      fgColor: *text
+      keyColor: *blue
+      # Used for favorite namespaces
+      numKeyColor: *maroon
+
+    # CrumbView attributes for history navigation.
     crumbs:
-      fgColor: *foreground
-      bgColor: *comment
-      activeColor: *blue
+      fgColor: *base
+      bgColor: *maroon
+      activeColor: *flamingo
+
+    # Resource status and update styles
     status:
-      newColor: *cyan
-      modifyColor: *blue
+      newColor: *blue
+      modifyColor: *lavender
       addColor: *green
+      pendingColor: *peach
       errorColor: *red
-      highlightcolor: *orange
-      killColor: *comment
-      completedColor: *comment
+      highlightColor: *sky
+      killColor: *mauve
+      completedColor: *overlay0
+
+    # Border title styles.
     title:
-      fgColor: *foreground
-      bgColor: *background
-      highlightColor: *orange
-      counterColor: *blue
-      filterColor: *magenta
+      fgColor: *teal
+      bgColor: *base
+      highlightColor: *pink
+      counterColor: *yellow
+      filterColor: *green
+
   views:
+    # Charts skins...
     charts:
-      bgColor: background
+      bgColor: *base
+      chartBgColor: *base
+      dialBgColor: *base
       defaultDialColors:
-        - *blue
+        - *green
         - *red
       defaultChartColors:
-        - *blue
+        - *green
         - *red
+      resourceColors:
+        cpu:
+          - *mauve
+          - *blue
+        mem:
+          - *yellow
+          - *peach
+
+    # TableView attributes.
     table:
-      fgColor: *foreground
-      bgColor: *background
-      cursorFgColor: *background
-      cursorBgColor: *current_line
+      fgColor: *text #Doesn't Work
+      bgColor: *base
+      cursorFgColor: *surface0 # Doesn't Work
+      cursorBgColor: *surface1 # should be rosewater
+      markColor: *rosewater # Doesn't Work
+      # Header row styles.
       header:
-        fgColor: *foreground
-        bgColor: *background
-        sorterColor: *selection
+        fgColor: *yellow
+        bgColor: *base
+        sorterColor: *sky
+
+    # Xray view attributes.
     xray:
-      fgColor: *foreground
-      bgColor: *background
-      cursorColor: *current_line
-      graphicColor: *blue
-      showIcons: false
+      fgColor: *text #Doesn't Work
+      bgColor: *base
+      # Need to set this to a dark color since color text can't be changed
+      # Ideally this would be rosewater
+      cursorColor: *surface1
+      cursorTextColor: *base #Doesn't Work
+      graphicColor: *pink
+
+    # YAML info styles.
     yaml:
-      keyColor: *magenta
-      colonColor: *blue
-      valueColor: *foreground
+      keyColor: *blue
+      colonColor: *subtext0
+      valueColor: *text
+
+    # Logs styles.
     logs:
-      fgColor: *foreground
-      bgColor: *background
+      fgColor: *text
+      bgColor: *base
       indicator:
-        fgColor: *foreground
-        bgColor: *background
+        fgColor: *lavender
+        bgColor: *base
+
+  help:
+    fgColor: *text
+    bgColor: *base
+    sectionColor: *green
+    keyColor: *blue
+    numKeyColor: *maroon
