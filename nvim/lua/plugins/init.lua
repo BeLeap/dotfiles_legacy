@@ -134,7 +134,13 @@ return {
 	{
 		"kylechui/nvim-surround",
 		event = { "BufEnter" },
-		tag = "*",
+		version = "*",
 		config = true,
+	},
+	{
+		"willothy/flatten.nvim",
+		config = true,
+		lazy = false,
+		priority = 1001,
 	},
 }
