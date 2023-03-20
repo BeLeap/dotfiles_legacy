@@ -131,4 +131,10 @@ return {
 			mapping = { ",d" },
 		},
 	},
+	{
+		"kylechui/nvim-surround",
+		event = { "BufEnter" },
+		tag = "*",
+		config = true,
+	},
 }
