@@ -7,7 +7,8 @@ if not set -q XDG_CONFIG_HOME
 end
 
 set -g PYENV_ROOT $DOTFILES_PATH/.pyenv
-set -gx EDITOR nvim
+set -gx EDITOR "nvim --cmd 'let g:flatten_wait=1'"
+set -gx VISUAL $EDITOR
 
 source ~/.config/fish/alias.fish
 source ~/.config/fish/fzf.fish

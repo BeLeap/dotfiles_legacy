@@ -142,5 +142,21 @@ return {
 		config = true,
 		lazy = false,
 		priority = 1001,
+		opts = {
+			callbacks = {
+				pre_open = function()
+					require("toggleterm").toggle(0)
+				end,
+				post_open = function(bufnr, winnr, ft, is_blocking)
+					if not is_blocking then
+						require("toggleterm").toggle(0)
+						vim.api.nvim_set_current_win(winnr)
+					end
+				end,
+				block_end = function()
+					require("toggleterm").toggle(0)
+				end,
+			},
+		},
 	},
 }
