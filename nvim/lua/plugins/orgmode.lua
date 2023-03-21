@@ -1,10 +1,7 @@
 return {
 	{
 		"nvim-orgmode/orgmode",
-		keys = {
-			{ "<leader>oa" },
-			{ "<leader>oc" },
-		},
+		lazy = false,
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
 			"dhruvasagar/vim-table-mode",
