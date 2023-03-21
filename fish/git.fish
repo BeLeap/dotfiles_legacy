@@ -38,3 +38,8 @@ abbr -a -g gp git push
 abbr -a -g gc git commit -v
 abbr -a -g gf git fetch --prune --all
 abbr -a -g adog git log --graph --decorate --oneline --all
+
+abbr -a -g ghpr gh pr create --fill --assignee @me
+function ghdraftpr
+  gh pr create --fill --assignee @me --draft
+end
