@@ -19,6 +19,8 @@ source ~/.config/fish/docker.fish
 source ~/.config/fish/alacritty.fish
 source ~/.config/fish/gradle.fish
 
+source ~/.config/fish/riiid.fish
+
 if not set -q STARSHIP
   starship init fish | source
 end
