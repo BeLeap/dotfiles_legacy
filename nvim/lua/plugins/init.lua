@@ -157,6 +157,9 @@ return {
 					require("toggleterm").toggle(0)
 				end,
 			},
+			window = {
+				open = "split",
+			},
 		},
 	},
 }
