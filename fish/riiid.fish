@@ -6,3 +6,7 @@ function kbuild
 
   mv kustomization.yaml.bak kustomization.yaml
 end
+
+function upchart
+  find -path "./deploy/*/$ENV/kustomization.yaml" -exec yq -i '(.helmCharts.[] | select(.name == "'"$CHART"'")).version = "'"$VERSION"'"' {} \;
+end
