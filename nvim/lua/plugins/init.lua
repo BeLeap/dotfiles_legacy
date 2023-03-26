@@ -162,4 +162,11 @@ return {
 			},
 		},
 	},
+
+	{
+		"BeLeap/k8s-lua.nvim",
+		config = true,
+		dev = true,
+		lazy = false,
+	},
 }
