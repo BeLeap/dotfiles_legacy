@@ -13,6 +13,10 @@ return {
 					enable = true,
 					additional_vim_regex_highlighting = { "org" },
 				},
+				playground = {
+					enable = true,
+					persist_queries = true,
+				},
 				auto_install = true,
 				incremental_selection = { enable = true },
 				indent = { enable = true },
@@ -114,5 +118,10 @@ return {
 				},
 			})
 		end,
+	},
+	{
+		"nvim-treesitter/playground",
+		cmd = { "TSPlaygroundToggle", "TSHighlightCapturesUnderCursor", "TSNodeUnderCursor" },
+		config = true,
 	},
 }
