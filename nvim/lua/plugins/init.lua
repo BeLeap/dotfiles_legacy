@@ -1,6 +1,16 @@
 return {
 	-- UI
 	{
+		"nvim-tree/nvim-tree.lua",
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		keys = {
+			{ "<leader>e", ":NvimTreeToggle<CR>", desc = "Toggle tree" },
+		},
+		config = true,
+	},
+	{
 		"kristijanhusak/vim-dadbod-ui",
 		keys = {
 			{ "<leader>d", ":DBUIToggle<cr>", silent = true },
