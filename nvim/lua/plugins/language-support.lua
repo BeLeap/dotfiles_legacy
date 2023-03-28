@@ -179,6 +179,7 @@ return {
 						lspconfig = {
 							on_attach = on_attach,
 							capabilities = capabilities,
+							filetypes = { "yaml", "yaml.docker-compose", "yaml.ansible" },
 						},
 					})
 

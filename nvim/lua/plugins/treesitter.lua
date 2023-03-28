@@ -13,6 +13,7 @@ return {
 					enable = true,
 					additional_vim_regex_highlighting = { "org" },
 				},
+				auto_install = true,
 				incremental_selection = { enable = true },
 				indent = { enable = true },
 				rainbow = { enable = true },
@@ -29,7 +30,6 @@ return {
 					select = {
 						enable = true,
 						lookahead = true,
-
 						keymaps = {
 							["af"] = "@function.outer",
 							["if"] = "@function.inner",
