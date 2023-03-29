@@ -20,6 +20,9 @@ return {
 				custom = {},
 				exclude = {},
 			},
+			git = {
+				ignore = false,
+			},
 		},
 	},
 	{
