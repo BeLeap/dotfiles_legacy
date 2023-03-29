@@ -110,4 +110,5 @@ assign [app_id="org.wezfurlong.wezterm"] 1
 assign [class="Microsoft-edge"] 2
 
 bindsym $mod+Shift+s exec sway-interactive-screenshot
+bindsym $mod+Ctrl+s exec grimshot copy active
 
