@@ -13,6 +13,13 @@ return {
 			hijack_netrw = true,
 			prefer_startup_root = false,
 			sync_root_with_cwd = true,
+			filters = {
+				dotfiles = false,
+				git_clean = false,
+				no_buffer = false,
+				custom = {},
+				exclude = {},
+			},
 		},
 	},
 	{
