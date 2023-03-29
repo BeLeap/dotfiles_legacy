@@ -8,7 +8,9 @@ return {
 		keys = {
 			{ "<leader>e", ":NvimTreeToggle<CR>", desc = "Toggle tree" },
 		},
-		config = true,
+		opts = {
+			sync_root_with_cwd = true,
+		},
 	},
 	{
 		"kristijanhusak/vim-dadbod-ui",
