@@ -183,5 +183,6 @@ return {
 		config = true,
 		dev = true,
 		lazy = false,
+		opts = {},
 	},
 }
