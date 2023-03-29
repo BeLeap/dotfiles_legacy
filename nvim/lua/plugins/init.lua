@@ -190,9 +190,11 @@ return {
 
 	{
 		"BeLeap/k8s-lua.nvim",
-		config = true,
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		cmd = { "K8sContextSelect" },
 		dev = true,
-		lazy = false,
 		opts = {},
 	},
 }
