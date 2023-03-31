@@ -14,6 +14,7 @@ return {
 				end,
 				silent = true,
 			},
+			{ "<leader>gg", "<cmd>Neotree git_status<cr>", silent = true },
 		},
 		config = function()
 			require("project_nvim").setup({

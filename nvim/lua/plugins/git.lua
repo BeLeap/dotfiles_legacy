@@ -25,9 +25,9 @@ return {
 	},
 	{
 		"TimUntersberger/neogit",
-		keys = {
-			{ "<leader>gg", "<cmd>Neogit<cr>", silent = true },
-		},
+		-- keys = {
+		-- 	{ "<leader>gg", "<cmd>Neogit<cr>", silent = true },
+		-- },
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 			"sindrets/diffview.nvim",
