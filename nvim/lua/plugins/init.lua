@@ -1,27 +1,115 @@
 return {
 	-- UI
 	{
-		"nvim-tree/nvim-tree.lua",
+		"ahmedkhalf/project.nvim",
+		lazy = false,
 		dependencies = {
-			"nvim-tree/nvim-web-devicons",
+			"nvim-telescope/telescope.nvim",
 		},
 		keys = {
-			{ "<leader>e", ":NvimTreeToggle<CR>" },
-		},
-		opts = {
-			disable_netrw = true,
-			hijack_netrw = true,
-			prefer_startup_root = false,
-			sync_root_with_cwd = true,
-			filters = {
-				dotfiles = false,
-				git_clean = false,
-				no_buffer = false,
-				custom = {},
-				exclude = {},
+			{
+				"<leader>p",
+				function()
+					require("telescope").extensions.projects.projects()
+				end,
+				silent = true,
 			},
-			git = {
-				ignore = false,
+		},
+		config = function()
+			require("project_nvim").setup({
+				detection_methods = { "pattern" },
+				silent_chdir = false,
+				exclude_dirs = { "~/.config/*" },
+			})
+			require("telescope").load_extension("projects")
+		end,
+	},
+	{
+		"nvim-neo-tree/neo-tree.nvim",
+		branch = "v2.x",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+			"MunifTanjim/nui.nvim",
+		},
+		cmd = "Neotree",
+		keys = {
+			{
+				"<leader>e",
+				function()
+					require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+				end,
+				desc = "Explorer NeoTree (cwd)",
+			},
+		},
+		deactivate = function()
+			vim.cmd([[Neotree close]])
+		end,
+		init = function()
+			vim.g.neo_tree_remove_legacy_commands = 1
+			if vim.fn.argc() == 1 then
+				local stat = vim.loop.fs_stat(vim.fn.argv(0))
+				if stat and stat.type == "directory" then
+					require("neo-tree")
+				end
+			end
+		end,
+		opts = {
+			source_selector = {
+				winbar = false,
+				statusline = false,
+			},
+			filesystem = {
+				bind_to_cwd = false,
+				follow_current_file = true,
+				filtered_items = {
+					visible = true,
+					never_show_by_pattern = { -- uses glob style patterns
+						".null-ls_*",
+					},
+				},
+			},
+			window = {
+				mappings = {
+					["<space>"] = "none",
+				},
+			},
+			git_status = {
+				window = {
+					position = "float",
+					mappings = {
+						["A"] = "git_add_all",
+						["gu"] = "git_unstage_file",
+						["ga"] = "git_add_file",
+						["gr"] = "git_revert_file",
+						["gc"] = "git_commit",
+						["gp"] = "git_push",
+						["gg"] = "git_commit_and_push",
+					},
+				},
+			},
+			default_component_configs = {
+				indent = {
+					with_expanders = true, -- if nil and file nesting is enabled, will enable expanders
+					expander_collapsed = "",
+					expander_expanded = "",
+					expander_highlight = "NeoTreeExpander",
+				},
+				git_status = {
+					symbols = {
+						-- Change type
+						added = "✚",
+						modified = "",
+						deleted = "✖",
+						renamed = "",
+						-- Status type
+						untracked = "",
+						ignored = "",
+						unstaged = "",
+						staged = "",
+						conflict = "",
+					},
+				},
 			},
 		},
 	},
@@ -195,6 +283,7 @@ return {
 		},
 		cmd = { "K8sContextSelect" },
 		dev = true,
+		lazy = false,
 		opts = {},
 	},
 }
