@@ -192,6 +192,7 @@ return {
 		"BeLeap/k8s-lua.nvim",
 		dependencies = {
 			"nvim-treesitter/nvim-treesitter",
+			"nvim-telescope/telescope.nvim",
 		},
 		cmd = { "K8sContextSelect" },
 		dev = true,
