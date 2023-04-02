@@ -1,4 +1,5 @@
 if status is-interactive
+and type -q zellij
 and not set -q INTEGRATED_TERMINAL
   set -gx ZELLIJ_AUTO_ATTACH true
   set -gx ZELLIJ_AUTO_EXIT true
