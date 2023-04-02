@@ -27,25 +27,6 @@ window#waybar.hidden {
 	opacity: 0.2;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
-#pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#mpd {
-  color: @text;
-}
-
 #window {
   margin-top: 8px;
   margin-bottom: 8px;
@@ -88,124 +69,79 @@ window#waybar.hidden {
   color: @red;
 }
 
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#mode,
+#idle_inhibitor,
+#scratchpad,
+#mpd,
 #custom-github {
 	margin-top: 8px;
 	margin-left: 4px;
+	margin-right: 4px;
 	padding-left: 16px;
 	padding-right: 16px;
 	margin-bottom: 8px;
 	border-radius: 26px;
-	transition: none;
+  color: @text;
+}
+
+#custom-github {
 	color: @surface0;
 	background: @blue;
 }
 
 #pulseaudio {
-	margin-top: 8px;
-	margin-left: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @lavender;
 }
 
 #network {
-	margin-top: 8px;
-	margin-left: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @sapphire;
 }
 
 #cpu {
-	margin-top: 8px;
-	margin-left: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @sky;
 }
 
 #memory {
-	margin-top: 8px;
-	margin-left: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @teal;
 }
 
 #temperature {
-	margin-top: 8px;
-	margin-left: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @green;
 }
 
 #language {
-	margin-top: 8px;
-	margin-left: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @yellow;
 }
 
 #battery {
-	margin-top: 8px;
-	margin-left: 4px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @peach;
 }
 
 #clock {
-	margin-top: 8px;
-	margin-left: 4px;
-	margin-right: 12px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @maroon;
 }
 
 #tray {
-	margin-top: 8px;
-	margin-left: 4px;
-	margin-right: 12px;
-	padding-left: 16px;
-	padding-right: 16px;
-	margin-bottom: 8px;
-	border-radius: 26px;
-	transition: none;
 	color: @surface0;
 	background: @red;
 }
