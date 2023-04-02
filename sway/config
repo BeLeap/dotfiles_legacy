@@ -8,7 +8,7 @@ set $up k
 set $right l
 
 set $term wezterm
-set $menu ulauncher
+set $menu rofi -show run
 
 output * bg cat_pacman.png fill
 
