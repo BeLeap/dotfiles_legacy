@@ -94,6 +94,7 @@ window#waybar.hidden {
 	margin-bottom: 8px;
 	border-radius: 26px;
   color: @text;
+  background: @surface0;
 }
 
 #custom-github {
