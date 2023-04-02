@@ -69,23 +69,23 @@ window#waybar.hidden {
   color: @red;
 }
 
-#clock,
-#battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
 #backlight,
+#battery,
+#clock,
+#cpu,
+#custom-github,
+#custom-media,
+#disk,
+#idle_inhibitor,
+#memory,
+#mode,
+#mpd,
 #network,
 #pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
 #scratchpad,
-#mpd,
-#custom-github {
+#temperature,
+#tray,
+#wireplumber {
 	margin-top: 8px;
 	margin-left: 4px;
 	margin-right: 4px;
