@@ -110,4 +110,5 @@ assign [app_id="wezterm"] 1
 assign [app_id="firefox"] 2
 
 bindsym $mod+Ctrl+s exec grimshot copy active
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
 
