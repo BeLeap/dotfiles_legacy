@@ -49,7 +49,7 @@ return {
 		opts = {
 			source_selector = {
 				winbar = true,
-				statusline = false,
+				statusline = true,
 			},
 			filesystem = {
 				filtered_items = {
@@ -63,9 +63,6 @@ return {
 				mappings = {
 					["<space>"] = "none",
 				},
-			},
-			buffer = {
-				follow_current_file = false,
 			},
 			default_component_configs = {
 				indent = {
