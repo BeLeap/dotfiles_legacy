@@ -1,30 +1,28 @@
 return {
 	-- UI
-	-- {
-	-- 	"ahmedkhalf/project.nvim",
-	-- 	lazy = false,
-	-- 	dependencies = {
-	-- 		"nvim-telescope/telescope.nvim",
-	-- 	},
-	-- 	keys = {
-	-- 		{
-	-- 			"<leader>p",
-	-- 			function()
-	-- 				require("telescope").extensions.projects.projects()
-	-- 			end,
-	-- 			silent = true,
-	-- 		},
-	-- 		{ "<leader>gg", "<cmd>Neotree git_status<cr>", silent = true },
-	-- 	},
-	-- 	config = function()
-	-- 		require("project_nvim").setup({
-	-- 			detection_methods = { "pattern" },
-	-- 			silent_chdir = false,
-	-- 			exclude_dirs = { "~/.config/*" },
-	-- 		})
-	-- 		require("telescope").load_extension("projects")
-	-- 	end,
-	-- },
+	{
+		"ahmedkhalf/project.nvim",
+		lazy = false,
+		dependencies = {
+			"nvim-telescope/telescope.nvim",
+		},
+		keys = {
+			{
+				"<leader>p",
+				function()
+					require("telescope").extensions.projects.projects()
+				end,
+				silent = true,
+			},
+		},
+		config = function()
+			require("project_nvim").setup({
+				detection_methods = { "pattern", "lsp" },
+				silent_chdir = false,
+			})
+			require("telescope").load_extension("projects")
+		end,
+	},
 	{
 		"kristijanhusak/vim-dadbod-ui",
 		keys = {
