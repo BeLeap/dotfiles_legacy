@@ -17,8 +17,16 @@ return {
 				desc = "Explorer NeoTree (cwd)",
 			},
 			{
-				"<leader>gg",
+				"<leader>ng",
 				"<cmd>Neotree git_status<cr>",
+			},
+			{
+				"<leader>nf",
+				"<cmd>Neotree filesystem<cr>",
+			},
+			{
+				"<leader>nb",
+				"<cmd>Neotree buffers<cr>",
 			},
 		},
 		deactivate = function()
@@ -40,7 +48,7 @@ return {
 		end,
 		opts = {
 			source_selector = {
-				winbar = false,
+				winbar = true,
 				statusline = false,
 			},
 			filesystem = {
