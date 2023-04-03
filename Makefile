@@ -137,7 +137,7 @@ fzf_exists := $(shell fzf --version 2>/dev/null)
 bat_exists := $(shell bat --version 2>/dev/null)
 lsd_exists := $(shell lsd --version 2>/dev/null)
 others:
-	@echo "==== othres ===="
+	@echo "==== others ===="
 
 ifdef yay_exists
 	@echo yay exists.
