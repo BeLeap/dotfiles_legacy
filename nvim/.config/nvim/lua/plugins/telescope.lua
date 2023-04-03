@@ -39,6 +39,7 @@ return {
 		config = function()
 			require("telescope").setup({
 				defaults = {
+					dynamic_preview_title = true,
 					mappings = {
 						-- i = { ["<c-t>"] = trouble.open_with_trouble },
 						-- n = { ["<c-t>"] = trouble.open_with_trouble },
