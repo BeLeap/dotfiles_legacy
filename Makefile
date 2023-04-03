@@ -1,7 +1,7 @@
 distro := $(shell awk -F "=" '/^ID/ {print $$2}' /etc/os-release)
 
-.PHONY: all fish kubernetes nvim starship sway wezterm zellij
-all: fish kubernetes nvim starship sway wezterm zellij
+.PHONY: all othres fish kubernetes nvim starship sway wezterm zellij
+all: others fish kubernetes nvim starship sway wezterm zellij
 
 fish_exists := $(shell fish --version 2>/dev/null)
 fish:
@@ -12,7 +12,7 @@ ifdef fish_exists
 else ifeq ($(distro), arch)
 	@sudo pacman --needed -S fish
 else
-	@echo Install fish manually.
+	$(error Install fish manually)
 endif
 
 	@stow fish
@@ -28,7 +28,7 @@ ifdef kubectl_exists
 else ifeq ($(distro), arch)
 	@sudo pacman --needed -S kubectl
 else
-	@echo Install kubectl manually.
+	$(error Install kubectl manually)
 endif
 
 ifdef kubectx_exists
@@ -36,7 +36,7 @@ ifdef kubectx_exists
 else ifeq ($(distro), arch)
 	@sudo pacman --needed -S kubectx
 else
-	@echo Install kubectx manually.
+	$(error Install kubectx manually)
 endif
 
 ifdef k9s_exists
@@ -44,7 +44,7 @@ ifdef k9s_exists
 else ifeq ($(distro), arch)
 	@sudo pacman --needed -S k9s
 else
-	@echo Install k9s manually.
+	$(error Install k9s manually)
 endif
 
 	@stow k9s
@@ -58,7 +58,7 @@ ifdef nvim_exists
 else ifeq ($(distro), arch)
 	@yay --needed -S neovim-nightly-bin 
 else
-	@echo Install neovim manually.
+	$(error Install neovim manually)
 endif
 
 	@stow nvim
@@ -89,7 +89,7 @@ else ifeq ($(distro), arch)
 else ifeq ($(distro), fedora)
 	@sudo dnf install -y rofi
 else
-	@echo Install rofi manually.
+	$(error Install rofi manually)
 endif
 
 ifdef waybar_exists
@@ -99,7 +99,7 @@ else ifeq ($(distro), arch)
 else ifeq ($(distro), fedora)
 	@sudo dnf install -y waybar
 else
-	@echo Install waybar manually.
+	$(error Install waybar manually)
 endif
 
 	@stow sway
@@ -113,7 +113,7 @@ ifdef wezterm_exists
 else ifeq ($(distro), arch)
 	@sudo pacman --needed -S wezterm
 else
-	@echo Install wezterm manually.
+	$(error Install wezterm manually)
 endif
 
 	@stow wezterm
@@ -127,7 +127,52 @@ ifdef zellij_exists
 else ifeq ($(distro), arch)
 	@sudo pacman --needed -S zellij
 else
-	@echo Install zellij manually.
+	$(error Install zellij manually)
 endif
 
 	@stow zellij
+
+yay_exists := $(shell yay -V 2>/dev/null)
+fzf_exists := $(shell fzf --version 2>/dev/null)
+bat_exists := $(shell bat --version 2>/dev/null)
+lsd_exists := $(shell lsd --version 2>/dev/null)
+others:
+	@echo "==== othres ===="
+
+ifdef yay_exists
+	@echo yay exists.
+else ifeq ($(distro), arch)
+	@sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si && cd .. && rm -rf yay
+else
+	@echo yay not needed.
+endif
+
+ifdef fzf_exists
+	@echo fzf exists.
+else ifeq ($(distro), arch)
+	@sudo pacman --needed -S fzf
+else ifeq ($(distro), fedora)
+	@sudo dnf install -y fzf
+else
+	$(error Install fzf manually)
+endif
+
+ifdef bat_exists
+	@echo bat exists.
+else ifeq ($(distro), arch)
+	@sudo pacman --needed -S bat
+else ifeq ($(distro), fedora)
+	@sudo dnf install -y bat
+else
+	$(error Install bat manually)
+endif
+
+ifdef lsd_exists
+	@echo lsd exists.
+else ifeq ($(distro), arch)
+	@sudo pacman --needed -S lsd
+else ifeq ($(distro), fedora)
+	@sudo dnf install -y lsd
+else
+	$(error Install lsd manually)
+endif
