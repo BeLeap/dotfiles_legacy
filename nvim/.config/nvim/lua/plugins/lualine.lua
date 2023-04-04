@@ -21,6 +21,7 @@ return {
 				theme = "auto",
 			},
 			sections = {
+				lualine_a = { "mode" },
 				lualine_b = {
 					{
 						"filename",
@@ -36,19 +37,9 @@ return {
 						},
 					},
 				},
-			},
-			tabline = {
-				lualine_a = { "branch" },
-				lualine_b = { "diff" },
-				lualine_c = {
-					{
-						"buffers",
-						mode = 2,
-					},
-				},
-				lualine_x = {},
-				lualine_y = {},
-				lualine_z = { "tabs" },
+				lualine_x = { "branch" },
+				lualine_y = { "filetype" },
+				lualine_z = { "location" },
 			},
 		},
 	},
