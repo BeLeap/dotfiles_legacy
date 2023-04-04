@@ -54,6 +54,7 @@ return {
 			filesystem = {
 				filtered_items = {
 					visible = true,
+					hide_dotfiles = false,
 					never_show_by_pattern = { -- uses glob style patterns
 						".null-ls_*",
 					},
