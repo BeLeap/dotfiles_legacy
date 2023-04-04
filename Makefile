@@ -77,20 +77,18 @@ endif
 
 	@stow starship
 
-rofi_exists := $(shell rofi -v 2>/dev/null)
+tofi_exists := $(shell tofi --help 2>/dev/null)
 waybar_exists := $(shell waybar -v 2>/dev/null)
 wl-mirror_exists := $(shell wl-mirror --version 2>/dev/null)
 sway:
 	@echo "==== sway ===="
 
-ifdef rofi_exists
-	@echo rofi exists.
+ifdef tofi_exists
+	@echo tofi exists.
 else ifeq ($(distro), arch)
-	@sudo pacman --needed -S rofi
-else ifeq ($(distro), fedora)
-	@sudo dnf install -y rofi
+	@yay -S tofi
 else
-	$(error Install rofi manually)
+	$(error Install tofi manually)
 endif
 
 ifdef waybar_exists
