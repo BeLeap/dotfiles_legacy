@@ -49,7 +49,7 @@ return {
 		opts = {
 			source_selector = {
 				winbar = true,
-				statusline = true,
+				statusline = false,
 			},
 			filesystem = {
 				filtered_items = {
