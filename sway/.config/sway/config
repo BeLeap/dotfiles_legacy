@@ -101,7 +101,7 @@ input type:keyboard {
 
 exec ibus-daemon -drx
 exec_always swaybg --image cat_pacman.png --mode fill
-# exec_always ~/.config/sway/detect_laptop_lid.sh
+exec_always ~/.config/sway/detect_laptop_lid.sh
 
 for_window [app_id="firefox"] border none, layout stacking
 for_window [app_id="ulauncher"] border none
