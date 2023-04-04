@@ -7,13 +7,13 @@ require-match      = true
 hide-input         = false
 hidden-character   = *
 drun-launch        = false
-; terminal         = alacritty
+terminal           = wezterm
 late-keyboard-init = false
 multi-instance     = false
 ascii-input        = true
 
 ; Style options
-font            = Iosevka Fixed
+font            = Caskaydia Cove Nerd Font
 font-size       = 12
 font-features   = ""
 font-variations = ""
