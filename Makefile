@@ -79,6 +79,7 @@ endif
 
 rofi_exists := $(shell rofi -v 2>/dev/null)
 waybar_exists := $(shell waybar -v 2>/dev/null)
+wl-mirror_exists := $(shell wl-mirror --version 2>/dev/null)
 sway:
 	@echo "==== sway ===="
 
@@ -101,6 +102,17 @@ else ifeq ($(distro), fedora)
 else
 	$(error Install waybar manually)
 endif
+
+ifdef wl-mirror_exists
+	@echo wl-mirror exists.
+else ifeq ($(distro), arch)
+	@yay --needed -S wl-mirror
+else ifeq ($(distro), fedora)
+	@sudo dnf install -y wl-mirror
+else
+	$(error Install wl-mirror manually)
+endif
+
 
 	@stow sway
 
