@@ -99,6 +99,7 @@ input type:keyboard {
     xkb_options "ctrl:nocaps"
 }
 
+exec mako
 exec ibus-daemon -drx
 exec_always swaybg --image cat_pacman.png --mode fill
 exec_always ~/.config/sway/detect_laptop_lid.sh

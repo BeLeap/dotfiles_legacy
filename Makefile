@@ -77,11 +77,20 @@ endif
 
 	@stow starship
 
+mako_exists := $(shell mako --help 2>/dev/null)
 tofi_exists := $(shell tofi --help 2>/dev/null)
 waybar_exists := $(shell waybar -v 2>/dev/null)
 wl-mirror_exists := $(shell wl-mirror --version 2>/dev/null)
 sway:
 	@echo "==== sway ===="
+
+ifdef mako_exists
+	@echo mako exists.
+else ifeq ($(distro), arch)
+	@yay -S mako
+else
+	$(error Install mako manually)
+endif
 
 ifdef tofi_exists
 	@echo tofi exists.
