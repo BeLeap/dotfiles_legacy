@@ -110,3 +110,7 @@ assign [app_id="firefox"] 2
 
 bindsym $mod+Ctrl+s exec grim - | wl-copy
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
+gaps inner all set 8
+gaps outer all set 8
+smart_gaps inverse_outer
