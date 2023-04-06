@@ -18,7 +18,7 @@ return {
 		config = function()
 			require("project_nvim").setup({
 				detection_methods = { "pattern", "lsp" },
-				silent_chdir = false,
+				silent_chdir = true,
 				show_hidden = true,
 			})
 			require("telescope").load_extension("projects")
