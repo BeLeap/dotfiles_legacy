@@ -29,7 +29,7 @@ function ggr
     cd (git rev-parse --show-toplevel)
 end
 
-abbr -a -g gco git checkout
+abbr -a -g gsw git switch
 abbr -a -g ga git add
 abbr -a -g gst git status
 abbr -a -g gl git pull
