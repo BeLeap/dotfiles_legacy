@@ -47,7 +47,7 @@ else
 	$(error Install k9s manually)
 endif
 
-	@stow k9s
+	@stow kubernetes
 
 nvim_exists := $(shell nvim --version 2>/dev/null)
 nvim:
