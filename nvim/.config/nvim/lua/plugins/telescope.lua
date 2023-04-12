@@ -35,6 +35,13 @@ return {
 				end,
 				silent = true,
 			},
+			{
+				"<leader>b",
+				function()
+					require("telescope.builtin").git_branches()
+				end,
+				silent = true,
+			},
 		},
 		config = function()
 			require("telescope").setup({
