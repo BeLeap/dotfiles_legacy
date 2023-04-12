@@ -8,35 +8,42 @@ return {
 		cmd = "Telescope",
 		keys = {
 			{
-				"<leader>f",
+				"<leader>tl",
+				function()
+					require("telescope.builtin").builtin()
+				end,
+				silent = true,
+			},
+			{
+				"<leader>tf",
 				function()
 					require("telescope.builtin").find_files()
 				end,
 				silent = true,
 			},
 			{
-				"<leader>l",
+				"<leader>tg",
 				function()
 					require("telescope.builtin").live_grep()
 				end,
 				silent = true,
 			},
 			{
-				"<leader>b",
+				"<leader>tb",
 				function()
 					require("telescope.builtin").buffers()
 				end,
 				silent = true,
 			},
 			{
-				"<leader>h",
+				"<leader>th",
 				function()
 					require("telescope.builtin").help_tags()
 				end,
 				silent = true,
 			},
 			{
-				"<leader>b",
+				"<leader>tb",
 				function()
 					require("telescope.builtin").git_branches()
 				end,

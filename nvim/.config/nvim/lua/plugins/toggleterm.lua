@@ -1,9 +1,9 @@
 return {
 	"akinsho/toggleterm.nvim",
 	keys = {
-		{ "<leader>t", "<cmd>ToggleTerm<cr>", noremap = true, silent = true },
+		{ "<leader>sg", "<cmd>ToggleTerm<cr>", noremap = true, silent = true },
 		{
-			"<leader>tb",
+			"<leader>sb",
 			function()
 				local buffer_dir = vim.fn.expand("%:p:h")
 				require("toggleterm").toggle_command("dir=" .. buffer_dir, 1)
@@ -12,7 +12,7 @@ return {
 			silent = true,
 		},
 		{
-			"<leader>t",
+			"<leader>ss",
 			":'<,'>ToggleTermSendVisualSelection<cr>",
 			mode = "x",
 			noremap = true,

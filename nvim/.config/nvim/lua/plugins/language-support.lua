@@ -126,7 +126,7 @@ return {
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
 				vim.keymap.set(
 					"n",
-					"<leader>s",
+					"<leader>ts",
 					'<cmd>lua require"telescope.builtin".lsp_document_symbols()<CR>',
 					buf_opts
 				)
