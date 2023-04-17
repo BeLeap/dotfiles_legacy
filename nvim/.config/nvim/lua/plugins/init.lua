@@ -100,16 +100,6 @@ return {
 		event = { "BufEnter *.kt" },
 	},
 	{
-		"andrewstuart/vim-kubernetes",
-		cmd = {
-			"KubeApply",
-			"KubeDelete",
-			"KubeCreate",
-			"KubeApplyDir",
-			"KubeDeleteDir",
-		},
-	},
-	{
 		"ziglang/zig.vim",
 		event = { "BufEnter *.zig" },
 	},

@@ -4,16 +4,18 @@ vim.o.ignorecase = true
 vim.o.smartcase = true
 vim.o.hlsearch = true
 vim.o.incsearch = true
+vim.o.wildignorecase = true
 vim.o.wildmenu = true
+vim.o.wildchar = "<Tab>"
 
 vim.o.tabstop = 2
 vim.o.shiftwidth = vim.o.tabstop
 vim.o.breakindent = true
 vim.o.expandtab = true
+vim.o.smartindent = true
+vim.o.smarttab = true
 
 vim.o.inccommand = "nosplit"
-
-vim.o.wildmenu = true
 
 vim.o.undofile = true
 
