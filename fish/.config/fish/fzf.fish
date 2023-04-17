@@ -61,12 +61,6 @@ function fif
     end
 end
 
-function fzf-bcd-widget -d 'cd backwards'
-	pwd | awk -v RS=/ '/\n/ {exit} {p=p $0 "/"; print p}' | tac | eval (__fzfcmd) +m --select-1 --exit-0 $FZF_BCD_OPTS | read -l result
-	[ $result ]; and cd $result
-	commandline -f repaint
-end
-
 function fbr -d "Fuzzy-find and checkout br"
     set -l branches (git branch --list --all | grep -v HEAD)
     set -l branch (string join \n $branches | fzf -i +m --border --height 80% --extended --reverse --cycle --bind 'ctrl-u:preview-up,ctrl-d:preview-down')
