@@ -17,6 +17,12 @@ return {
 			mode = "x",
 			noremap = true,
 		},
+		{
+			"<c-t>",
+			"<cmd>exe v:count1 . 'ToggleTerm'<cr>",
+			noremap = true,
+			silent = true,
+		},
 	},
 	cmd = { "ToggleTerm", "ToggleTermSendVisualSeleection" },
 	config = function()
