@@ -13,5 +13,8 @@ vim.filetype.add({
 		[".*%.tpl"] = {
 			"yaml.tpl",
 		},
+		[".*mdx"] = {
+			"markdown",
+		},
 	},
 })
