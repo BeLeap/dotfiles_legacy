@@ -30,4 +30,15 @@ return {
 			require("gitsigns").setup()
 		end,
 	},
+  {
+    "TimUntersberger/neogit",
+    cmd = "Neogit",
+    keys = {
+      { "<leader>gg", "<cmd>Neogit<cr>" }
+    },
+    dependencies = {
+      "nvim-lua/plenary.nvim"
+    },
+    config = true,
+  },
 }

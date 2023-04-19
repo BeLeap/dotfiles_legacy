@@ -22,6 +22,12 @@ return {
 			noremap = true,
 			silent = true,
 		},
+		{
+			"<leader>sp",
+			function()
+				open_pr()
+			end,
+		},
 	},
 	cmd = { "ToggleTerm", "ToggleTermSendVisualSeleection" },
 	config = function()
@@ -42,7 +48,21 @@ return {
 
 		require("toggleterm").setup()
 
-		function _G.set_terminal_keymaps()
+		local Terminal = require("toggleterm.terminal").Terminal
+		local pr = Terminal:new({
+			cmd = "gh pr create --fill --assignee @me",
+			hidden = true,
+			direction = "float",
+			on_open = function(term)
+				vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
+			end,
+		})
+
+		_G.open_pr = function()
+			pr:toggle()
+		end
+
+		_G.set_terminal_keymaps = function()
 			local opts = { buffer = 0 }
 			vim.keymap.set("t", ",d", [[<c-\><c-n>]], opts)
 			vim.keymap.set("t", ",c", [[<c-\><c-n>:ToggleTerm<cr>]], opts)
