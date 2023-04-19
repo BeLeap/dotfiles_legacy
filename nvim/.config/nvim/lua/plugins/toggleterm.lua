@@ -1,7 +1,6 @@
 return {
 	"akinsho/toggleterm.nvim",
 	keys = {
-		{ "<leader>sg", "<cmd>ToggleTerm<cr>", noremap = true, silent = true },
 		{
 			"<leader>sb",
 			function()
