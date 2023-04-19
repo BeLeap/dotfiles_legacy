@@ -20,6 +20,9 @@ return {
 				detection_methods = { "pattern", "lsp" },
 				silent_chdir = true,
 				show_hidden = true,
+        excluder_dirs= {
+          "*/node_modules/*"
+        },
 			})
 			require("telescope").load_extension("projects")
 		end,
