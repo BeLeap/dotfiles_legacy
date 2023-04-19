@@ -1,2 +1,4 @@
 plugin/
 site/
+.luarc.json
+**/.luarc.json
