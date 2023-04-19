@@ -25,7 +25,22 @@ return {
 		{
 			"<leader>sp",
 			function()
-				open_pr()
+				local Terminal = require("toggleterm.terminal").Terminal
+				local pr = Terminal:new({
+					cmd = "gh pr create --fill --assignee @me",
+					hidden = true,
+					direction = "float",
+					on_open = function(term)
+						vim.api.nvim_buf_set_keymap(
+							term.bufnr,
+							"n",
+							"q",
+							"<cmd>close<CR>",
+							{ noremap = true, silent = true }
+						)
+					end,
+				})
+				pr:toggle()
 			end,
 		},
 	},
@@ -45,29 +60,19 @@ return {
 				vim.opt[option] = value
 			end
 		end
+		vim.env.INTEGRATED_TERMINAL = true
 
-		require("toggleterm").setup()
-
-		local Terminal = require("toggleterm.terminal").Terminal
-		local pr = Terminal:new({
-			cmd = "gh pr create --fill --assignee @me",
-			hidden = true,
-			direction = "float",
-			on_open = function(term)
-				vim.api.nvim_buf_set_keymap(term.bufnr, "n", "q", "<cmd>close<CR>", { noremap = true, silent = true })
-			end,
+		require("toggleterm").setup({
+			autochdir = false,
 		})
 
-		_G.open_pr = function()
-			pr:toggle()
-		end
-
-		_G.set_terminal_keymaps = function()
-			local opts = { buffer = 0 }
-			vim.keymap.set("t", ",d", [[<c-\><c-n>]], opts)
-			vim.keymap.set("t", ",c", [[<c-\><c-n>:ToggleTerm<cr>]], opts)
-		end
-
-		vim.cmd("autocmd! TermOpen term://* lua set_terminal_keymaps()")
+		vim.api.nvim_create_autocmd({ "TermOpen" }, {
+			pattern = { "term://*" },
+			callback = function()
+				local opts = { buffer = 0 }
+				vim.keymap.set("t", ",d", [[<c-\><c-n>]], opts)
+				vim.keymap.set("t", ",c", [[<c-\><c-n>:ToggleTerm<cr>]], opts)
+			end,
+		})
 	end,
 }
