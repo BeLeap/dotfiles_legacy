@@ -27,7 +27,7 @@ return {
       function()
         local Terminal = require("toggleterm.terminal").Terminal
         local pr = Terminal:new({
-          cmd = "gh pr create --fill --assignee @me --draft",
+          cmd = "gh pr create --assignee @me --draft",
           hidden = true,
           direction = "float",
           on_open = function(term)
