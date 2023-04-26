@@ -9,14 +9,4 @@ return {
 		config = true,
 		dev = true,
 	},
-	{
-		"andrewstuart/vim-kubernetes",
-		cmd = {
-			"KubeApply",
-			"KubeDelete",
-			"KubeCreate",
-			"KubeApplyDir",
-			"KubeDeleteDir",
-		},
-	},
 }
