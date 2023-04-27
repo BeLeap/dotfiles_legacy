@@ -10,6 +10,7 @@ vim.o.wildchar = "<Tab>"
 
 vim.o.tabstop = 2
 vim.o.shiftwidth = vim.o.tabstop
+vim.o.shiftround = true
 vim.o.breakindent = true
 vim.o.expandtab = true
 vim.o.smartindent = true
