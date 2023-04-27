@@ -66,6 +66,15 @@ return {
 				pickers = {
 					find_files = {
 						theme = "dropdown",
+						find_command = {
+							"fd",
+							"--type",
+							"f",
+							"--no-ignore",
+							"--strip-cwd-prefix",
+							"--exclude",
+							"**/.git/*",
+						},
 					},
 				},
 			})
