@@ -44,7 +44,7 @@ return {
         silent = true,
       },
       {
-        "<leader>ts",
+        "<leader>tc",
         function()
           require("telescope.builtin").git_branches()
         end,
