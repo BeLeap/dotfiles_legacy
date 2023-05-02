@@ -200,6 +200,7 @@ return {
 	},
 	{
 		"axkirillov/hbac.nvim",
+		event = "VeryLazy",
 		config = function()
 			require("hbac").setup()
 		end,

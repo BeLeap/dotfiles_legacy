@@ -325,4 +325,14 @@ return {
 		"VidocqH/lsp-lens.nvim",
 		config = true,
 	},
+	{
+		"lewis6991/satellite.nvim",
+		event = "VeryLazy",
+		config = true,
+	},
+	{
+		"nmac427/guess-indent.nvim",
+		event = "InsertEnter",
+		config = true,
+	},
 }
