@@ -195,3 +195,8 @@ else ifeq ($(distro), fedora)
 else
 	$(error Install lsd manually)
 endif
+
+private:
+	@echo "===== private ===="
+
+	@stow private_dotfiles
