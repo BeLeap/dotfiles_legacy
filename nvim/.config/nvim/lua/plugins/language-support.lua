@@ -7,6 +7,7 @@ return {
 			"folke/lsp-colors.nvim",
 			"j-hui/fidget.nvim",
 			"ray-x/lsp_signature.nvim",
+			"VidocqH/lsp-lens.nvim",
 		},
 	},
 	{
@@ -318,6 +319,10 @@ return {
 	},
 	{
 		"ray-x/lsp_signature.nvim",
+		config = true,
+	},
+	{
+		"VidocqH/lsp-lens.nvim",
 		config = true,
 	},
 }
