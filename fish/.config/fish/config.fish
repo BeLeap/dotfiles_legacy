@@ -1,25 +1,17 @@
-if not set -q DOTFILES_PATH
- set -g DOTFILES_PATH ~/.config
-end
-
-if not set -q XDG_CONFIG_HOME
-  set -g XDG_CONFIG_HOME ~/.config
-end
-
 set -g PYENV_ROOT $DOTFILES_PATH/.pyenv
 set -gx EDITOR "nvim --cmd 'let g:flatten_wait=1'"
 set -gx VISUAL $EDITOR
 
-source ~/.config/fish/alias.fish
-source ~/.config/fish/fzf.fish
-source ~/.config/fish/zellij.fish
-source ~/.config/fish/others.fish
-source ~/.config/fish/git.fish
-source ~/.config/fish/docker.fish
-source ~/.config/fish/alacritty.fish
-source ~/.config/fish/gradle.fish
+source $XDG_CONFIG_HOME/fish/alias.fish
+source $XDG_CONFIG_HOME/fish/fzf.fish
+source $XDG_CONFIG_HOME/fish/zellij.fish
+source $XDG_CONFIG_HOME/fish/others.fish
+source $XDG_CONFIG_HOME/fish/git.fish
+source $XDG_CONFIG_HOME/fish/docker.fish
+source $XDG_CONFIG_HOME/fish/alacritty.fish
+source $XDG_CONFIG_HOME/fish/gradle.fish
 
-source ~/.config/fish/riiid.fish
+source $XDG_CONFIG_HOME/fish/riiid.fish
 
 if not set -q STARSHIP
   starship init fish | source
