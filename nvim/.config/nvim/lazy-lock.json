@@ -18,6 +18,7 @@
   "guess-indent.nvim": { "branch": "main", "commit": "b8ae749fce17aa4c267eec80a6984130b94f80b2" },
   "hbac.nvim": { "branch": "main", "commit": "377522bad63feff9ddb63f041ddfcf825f8a5112" },
   "indent-blankline.nvim": { "branch": "master", "commit": "018bd04d80c9a73d399c1061fa0c3b14a7614399" },
+  "k8s-lua.nvim": { "branch": "main", "commit": "3ee9f1113b3451b35b8eff053e50463a23299015" },
   "kotlin-vim": { "branch": "master", "commit": "53fe045906df8eeb07cb77b078fc93acda6c90b8" },
   "lazy.nvim": { "branch": "main", "commit": "ceb413678dfcf3d5455208959185e3db1f7892c7" },
   "litee.nvim": { "branch": "main", "commit": "bf366a1414fd0f9401631ac8884f2f9fa4bf18d2" },
