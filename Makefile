@@ -1,6 +1,6 @@
 distro := $(shell awk -F "=" '/^ID/ {print $$2}' /etc/os-release)
 
-.PHONY: all othres fish kubernetes nvim starship sway wezterm zellij
+.PHONY: all others fish kubernetes nvim starship sway wezterm zellij private
 all: others fish kubernetes nvim starship sway wezterm zellij
 
 fish_exists := $(shell fish --version 2>/dev/null)
@@ -197,6 +197,6 @@ else
 endif
 
 private:
-	@echo "===== private ===="
+	@echo "==== private ===="
 
-	@stow private_dotfiles
+	$(MAKE) -C private_dotfiles
