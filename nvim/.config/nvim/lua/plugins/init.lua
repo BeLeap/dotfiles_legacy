@@ -84,7 +84,6 @@ return {
 			vim.o.foldcolumn = "1" -- "0" is not bad
 			vim.o.foldlevel = 99 -- Using ufo provider need a large value, feel free to decrease the value
 			vim.o.foldlevelstart = 99
-			vim.o.foldenable = true
 
 			vim.keymap.set("n", "zR", require("ufo").openAllFolds)
 			vim.keymap.set("n", "zM", require("ufo").closeAllFolds)
@@ -203,6 +202,14 @@ return {
 		event = "VeryLazy",
 		config = function()
 			require("hbac").setup()
+		end,
+	},
+	{
+		"https://git.sr.ht/~soywod/himalaya-vim",
+		cmd = { "Himalaya" },
+		init = function()
+			vim.g.himalaya_folder_picker = "telescope"
+			vim.g.himalaya_folder_picker_telescope_preview = 1
 		end,
 	},
 }
