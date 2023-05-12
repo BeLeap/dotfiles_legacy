@@ -339,7 +339,8 @@ return {
 		cmd = { "HFccSuggestion" },
 		config = function()
 			local api_token = vim.fn.getenv("HFCC_API_TOKEN")
-			require("hfcc").config({
+			print(api_token)
+			require("hfcc").setup({
 				api_token = api_token,
 				model = "bigcode/starcoder", -- can be a model ID or an http endpoint
 			})
