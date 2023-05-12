@@ -237,7 +237,6 @@ return {
 					null_ls.builtins.diagnostics.fish,
 					null_ls.builtins.diagnostics.markdownlint,
 					null_ls.builtins.diagnostics.misspell,
-					null_ls.builtins.diagnostics.tfsec,
 					null_ls.builtins.diagnostics.yamllint,
 
 					null_ls.builtins.formatting.jq,
@@ -334,5 +333,16 @@ return {
 		"nmac427/guess-indent.nvim",
 		event = "InsertEnter",
 		config = true,
+	},
+	{
+		"huggingface/hfcc.nvim",
+		cmd = { "HFccSuggestion" },
+		config = function()
+			local api_token = vim.fn.getenv("HFCC_API_TOKEN")
+			require("hfcc").config({
+				api_token = api_token,
+				model = "bigcode/starcoder", -- can be a model ID or an http endpoint
+			})
+		end,
 	},
 }
