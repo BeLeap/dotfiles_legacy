@@ -336,10 +336,12 @@ return {
 	},
 	{
 		"huggingface/hfcc.nvim",
+		keys = {
+			{ "<leader>hf", "<esc><cmd>HFccSuggestion<cr>a", mode = "i" },
+		},
 		cmd = { "HFccSuggestion" },
 		config = function()
 			local api_token = vim.fn.getenv("HFCC_API_TOKEN")
-			print(api_token)
 			require("hfcc").setup({
 				api_token = api_token,
 				model = "bigcode/starcoder", -- can be a model ID or an http endpoint
