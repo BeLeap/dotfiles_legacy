@@ -11,4 +11,5 @@ return {
 	font_size = 14.0,
 	color_scheme = "Catppuccin Mocha",
 	enable_tab_bar = false,
+	check_for_updates = false,
 }
