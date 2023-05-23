@@ -53,6 +53,7 @@ return {
 					hide_dotfiles = false,
 					never_show_by_pattern = { -- uses glob style patterns
 						".null-ls_*",
+						".git/*",
 					},
 				},
 			},
