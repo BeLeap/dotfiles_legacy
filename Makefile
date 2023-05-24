@@ -1,7 +1,7 @@
 distro := $(shell awk -F "=" '/^ID/ {print $$2}' /etc/os-release)
 
 .PHONY: all others fish kubernetes nvim starship sway wezterm zellij private
-all: others fish kubernetes nvim starship sway wezterm zellij
+all: others fish kubernetes nvim starship zellij
 
 fish_exists := $(shell fish --version 2>/dev/null)
 fish:
