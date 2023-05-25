@@ -25,6 +25,21 @@ vim.wo.signcolumn = "yes"
 
 vim.o.clipboard = "unnamedplus"
 
+if vim.loop.os_uname().sysname == "Linux" and vim.fn.executable("clip.exe") and vim.fn.executable("powershell.exe") then
+  vim.g.clipboard = {
+    name = "WslClipboard",
+    copy = {
+      ["+"] = "clip.exe",
+      ["*"] = "clip.exe",
+    },
+    paste = {
+      ["+"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+      ["*"] = "powershell.exe -c [Console]::Out.Write($(Get-Clipboard -Raw).tostring().replace(\"`r\", \"\"))",
+    },
+    cache_enabled = 0,
+  }
+end
+
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.scrolloff = 999

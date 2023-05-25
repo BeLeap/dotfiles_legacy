@@ -20,6 +20,7 @@
   "hfcc.nvim": { "branch": "main", "commit": "1bbee50b8d9a57de637e51d6c178f275aa50fbd3" },
   "himalaya-vim": { "branch": "master", "commit": "64fb17067cf5dbf5349726b9ed1b1b38065cdb82" },
   "indent-blankline.nvim": { "branch": "master", "commit": "018bd04d80c9a73d399c1061fa0c3b14a7614399" },
+  "k8s-lua.nvim": { "branch": "main", "commit": "aa914468b1d153b3456fd3e3cd9bc80d5dc9248c" },
   "kotlin-vim": { "branch": "master", "commit": "53fe045906df8eeb07cb77b078fc93acda6c90b8" },
   "lazy.nvim": { "branch": "main", "commit": "761b8388af5bcb451e30d886163fcd129278e1d1" },
   "litee.nvim": { "branch": "main", "commit": "bf366a1414fd0f9401631ac8884f2f9fa4bf18d2" },
