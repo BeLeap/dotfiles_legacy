@@ -165,10 +165,7 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
 			local lspconfig = require("lspconfig")
 
-			local is_deno = false
-			if require("lspconfig.util").root_pattern("deno.json", "deno.jsonc") then
-				is_deno = true
-			end
+			local is_deno = lspconfig.util.root_pattern("deno.json", "deno.jsonc")() or false
 
 			require("mason-lspconfig").setup({
 				automatic_installation = true,

@@ -25,7 +25,7 @@ vim.wo.signcolumn = "yes"
 
 vim.o.clipboard = "unnamedplus"
 
-if vim.loop.os_uname().sysname == "Linux" and vim.fn.executable("clip.exe") and vim.fn.executable("powershell.exe") then
+if vim.loop.os_uname().sysname == "Linux" and vim.fn.executable("clip.exe") ~= 0 and vim.fn.executable("powershell.exe") ~= 0 then
   vim.g.clipboard = {
     name = "WslClipboard",
     copy = {
