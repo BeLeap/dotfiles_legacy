@@ -6,7 +6,6 @@ vim.o.hlsearch = true
 vim.o.incsearch = true
 vim.o.wildignorecase = true
 vim.o.wildmenu = true
-vim.o.wildchar = "<Tab>"
 
 vim.o.tabstop = 2
 vim.o.shiftwidth = vim.o.tabstop
@@ -45,9 +44,6 @@ vim.o.relativenumber = true
 vim.o.scrolloff = 999
 
 vim.cmd.colorscheme("catppuccin")
-
-vim.o.splitbottom = true
-vim.o.splitright = true
 
 vim.o.autochdir = false
 
