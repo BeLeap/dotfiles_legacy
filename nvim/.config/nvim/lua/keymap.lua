@@ -11,3 +11,5 @@ vim.keymap.set("i", "<S-Tab>", 'pumvisible() ? "\\<C-p>" : "\\<S-Tab>"', { expr 
 
 vim.keymap.set("t", "jj", "<C-\\><C-N>", { silent = true })
 vim.keymap.set("t", "jk", "<C-\\><C-N>", { silent = true })
+
+vim.keymap.set("n", "<leader>u", "<esc>:undo<cr>", { silent = true, desc = "Undo" })
