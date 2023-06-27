@@ -222,4 +222,9 @@ return {
 			wk.setup({})
 		end,
 	},
+  {
+    "m4xshen/hardtime.nvim",
+    event = "VeryLazy",
+    opts = {}
+  },
 }
