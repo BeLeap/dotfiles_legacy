@@ -225,6 +225,8 @@ return {
   {
     "m4xshen/hardtime.nvim",
     event = "VeryLazy",
-    opts = {}
+    opts = {
+			disabled_filetypes = [ "neo-tree" ],
+		}
   },
 }
