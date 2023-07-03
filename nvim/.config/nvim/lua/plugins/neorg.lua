@@ -12,6 +12,7 @@ return {
 		opts = {
 			load = {
 				["core.defaults"] = {},
+				["core.keybinds"] = {},
 				["core.concealer"] = {},
 				["core.dirman"] = {
 					config = {
