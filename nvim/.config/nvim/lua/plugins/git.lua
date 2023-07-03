@@ -31,7 +31,7 @@ return {
 		end,
 	},
 	{
-		"TimUntersberger/neogit",
+		"NeogitOrg/neogit",
 		cmd = "Neogit",
 		keys = {
 			{ "<leader>gg", "<cmd>Neogit<cr>" },
