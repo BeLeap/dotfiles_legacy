@@ -65,6 +65,7 @@ return {
 
     require("toggleterm").setup({
       autochdir = false,
+      persist_size = false,
     })
 
     vim.api.nvim_create_autocmd({ "TermOpen" }, {
