@@ -29,7 +29,7 @@ return {
         local pr = Terminal:new({
           cmd = "gh pr create --assignee @me --draft",
           hidden = true,
-          direction = "float",
+          direction = "vertical",
           on_open = function(term)
             vim.api.nvim_buf_set_keymap(
               term.bufnr,
