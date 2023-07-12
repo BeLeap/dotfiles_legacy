@@ -164,6 +164,10 @@ return {
       local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
 
+      lspconfig['hls'].setup({
+        filetypes = { 'haskell', 'lhaskell', 'cabal' }
+      })
+
       local is_deno = false
       if lspconfig.util.root_pattern("deno.json", "deno.jsonc")(".") then
         is_deno = true
