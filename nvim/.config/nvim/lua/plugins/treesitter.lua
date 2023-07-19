@@ -11,6 +11,7 @@ return {
 			require("nvim-treesitter.configs").setup({
 				highlight = {
 					enable = true,
+          disable = { "NeogitCommitMessage" },
 					additional_vim_regex_highlighting = { "org" },
 				},
 				playground = {
