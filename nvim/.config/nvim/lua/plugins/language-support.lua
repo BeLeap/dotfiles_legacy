@@ -311,16 +311,4 @@ return {
       })
     end,
   },
-  {
-    "Bekaboo/dropbar.nvim",
-    keys = {
-      {
-        "<leader>dp",
-        function()
-          require("dropbar.api").pick()
-        end,
-      },
-    },
-    lazy = false,
-  },
 }
