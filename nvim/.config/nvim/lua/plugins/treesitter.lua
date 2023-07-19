@@ -18,6 +18,7 @@ return {
 					persist_queries = true,
 				},
 				auto_install = true,
+        ignore_install = { "NeogitCommitMessage" },
 				incremental_selection = { enable = true },
 				indent = { enable = true },
 				rainbow = { enable = true },
@@ -124,4 +125,4 @@ return {
 		cmd = { "TSPlaygroundToggle", "TSHighlightCapturesUnderCursor", "TSNodeUnderCursor" },
 		config = true,
 	},
-}
+azurerm_management_group_subscription_association}
