@@ -1,3 +1,0 @@
-[submodule "private_dotfiles"]
-	path = private_dotfiles
-	url = git@github.com:BeLeap/private_dotfiles.git
