@@ -20,7 +20,7 @@
   "himalaya-vim": { "branch": "master", "commit": "479c49fd46899144d24b78dbd81d64cc0c05ffc7" },
   "indent-blankline.nvim": { "branch": "master", "commit": "4541d690816cb99a7fc248f1486aa87f3abce91c" },
   "kotlin-vim": { "branch": "master", "commit": "53fe045906df8eeb07cb77b078fc93acda6c90b8" },
-  "lazy.nvim": { "branch": "main", "commit": "ed15f6b39422f46412212005f6d12c6f353b0293" },
+  "lazy.nvim": { "branch": "main", "commit": "af4d24b8d03ba5851f1099b024a417b62d8b6d48" },
   "litee.nvim": { "branch": "main", "commit": "bf366a1414fd0f9401631ac8884f2f9fa4bf18d2" },
   "lsp-colors.nvim": { "branch": "main", "commit": "2bbe7541747fd339bdd8923fc45631a09bb4f1e5" },
   "lsp-format.nvim": { "branch": "master", "commit": "ca0df5c8544e51517209ea7b86ecc522c98d4f0a" },
@@ -32,7 +32,7 @@
   "mason-lspconfig.nvim": { "branch": "main", "commit": "e86a4c84ff35240639643ffed56ee1c4d55f538e" },
   "mason.nvim": { "branch": "main", "commit": "3f6b544c75c01549f7a2a9e395e0f1cea42b25dd" },
   "neo-tree.nvim": { "branch": "v2.x", "commit": "80dc74d081823649809f78370fa5b204aa9a853a" },
-  "neodev.nvim": { "branch": "main", "commit": "62515f64dfb196e8abe1263e17e2546559e41292" },
+  "neodev.nvim": { "branch": "main", "commit": "866b6b6e687a93ba98851a03a74bf6d9211b7299" },
   "neogit": { "branch": "master", "commit": "c8b3b3fd7e933259bbd4318fad4ed8a97697d556" },
   "neorg": { "branch": "main", "commit": "774f5dd80d15aa11d0221aba767da699f9533e32" },
   "nui.nvim": { "branch": "main", "commit": "9e3916e784660f55f47daa6f26053ad044db5d6a" },
@@ -82,5 +82,5 @@
   "which-key.nvim": { "branch": "main", "commit": "38b990f6eabf62014018b4aae70a97d7a6c2eb88" },
   "yaml-companion.nvim": { "branch": "main", "commit": "4de1e1546abc461f62dee02fcac6a02debd6eb9e" },
   "zen-mode.nvim": { "branch": "main", "commit": "68f554702de63f4b7b6b6d4bcb10178f41a0acc7" },
-  "zig.vim": { "branch": "master", "commit": "0c4f965468259ab6e47fd7c6b2127583a8860eb1" }
+  "zig.vim": { "branch": "master", "commit": "15841fc4fecfb1b6c02da9b4cc17ced135edbf8e" }
 }
