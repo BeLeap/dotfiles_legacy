@@ -28,7 +28,7 @@ return {
         local Terminal = require("toggleterm.terminal").Terminal
         local pr = Terminal:new({
           count = 5,
-          cmd = "gh pr create --assignee @me --draft",
+          cmd = "gh pr create --assignee @me",
           direction = "float",
           float_opts = {
             border = "curved",
