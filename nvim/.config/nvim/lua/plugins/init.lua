@@ -274,11 +274,4 @@ return {
       }, { prefix = "<leader>" })
 		end,
 	},
-  {
-    "m4xshen/hardtime.nvim",
-    event = "VeryLazy",
-    opts = {
-			disabled_filetypes = { "neo-tree", "mason", "toggleterm", "NeogitStatus" },
-		},
-  },
 }
