@@ -17,7 +17,7 @@ return {
       noremap = true,
     },
     {
-      "<c-t>",
+      "<leader>st",
       "<cmd>exe v:count1 . 'ToggleTerm'<cr>",
       noremap = true,
       silent = true,
