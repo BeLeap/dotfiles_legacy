@@ -92,6 +92,15 @@ return {
 							"**/.git/*",
 						},
 					},
+					live_grep = {
+						glob_pattern = {
+							"!.git/*",
+						},
+						additional_args = {
+							"--no-ignore",
+							"--hidden",
+						},
+					},
 				},
 			})
 

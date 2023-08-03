@@ -72,7 +72,6 @@
   "vim-dadbod": { "branch": "master", "commit": "7d80bbd11c407a09e0f7b869c38f3dec3902805f" },
   "vim-dadbod-ui": { "branch": "master", "commit": "200aebf70e6fc4b0eb1d3ecf0d57028e198d8dc6" },
   "vim-go": { "branch": "master", "commit": "12de6c0bc0efce3cedc5e28d4fe0ecc3a4aaeb77" },
-  "vim-helm": { "branch": "master", "commit": "c2e7b85711d410e1d73e64eb5df7b70b1c4c10eb" },
   "vim-rzip": { "branch": "master", "commit": "f65400fed27b27c7cff7ef8d428c4e5ff749bf28" },
   "vim-sensible": { "branch": "master", "commit": "3e878abfd6ddc6fb5dba48b41f2b72c3a2f8249f" },
   "vim-startuptime": { "branch": "master", "commit": "454b3de856b7bd298700de33d79774ca9b9e3875" },

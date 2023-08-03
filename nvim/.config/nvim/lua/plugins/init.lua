@@ -99,7 +99,6 @@ return {
 	-- Language
 	{ "lbrayner/vim-rzip" },
 	{ "dmix/elvish.vim" },
-	{ "towolf/vim-helm" },
 	{
 		"hashivim/vim-terraform",
 		event = { "BufEnter *.tf" },
