@@ -9,9 +9,11 @@ return {
 		},
 		config = function()
 			require("nvim-treesitter.configs").setup({
+				ensure_installed = "all",
+				sync_install = false,
 				highlight = {
 					enable = true,
-          disable = { "NeogitCommitMessage" },
+					disable = { "NeogitCommitMessage" },
 					additional_vim_regex_highlighting = { "org" },
 				},
 				playground = {
@@ -19,7 +21,7 @@ return {
 					persist_queries = true,
 				},
 				auto_install = true,
-        ignore_install = { "NeogitCommitMessage" },
+				ignore_install = { "NeogitCommitMessage" },
 				incremental_selection = { enable = true },
 				indent = { enable = true },
 				rainbow = { enable = true },
@@ -52,15 +54,17 @@ return {
 				},
 			})
 
-			local parser_config = require'nvim-treesitter.parsers'.get_parser_configs()
+			local parser_config = require 'nvim-treesitter.parsers'.get_parser_configs()
 			parser_config.gotmpl = {
 				install_info = {
 					url = "https://github.com/ngalaiko/tree-sitter-go-template",
-					files = {"src/parser.c"}
+					files = { "src/parser.c" }
 				},
 				filetype = "gotmpl",
-				used_by = {"gohtmltmpl", "gotexttmpl", "gotmpl", "yaml", "helm"}
+				used_by = { "gohtmltmpl", "gotexttmpl", "gotmpl", "yaml", "helm" }
 			}
+
+			vim.treesitter.language.register('python', 'helm')
 		end,
 	},
 	{
@@ -136,4 +140,4 @@ return {
 		cmd = { "TSPlaygroundToggle", "TSHighlightCapturesUnderCursor", "TSNodeUnderCursor" },
 		config = true,
 	},
-azurerm_management_group_subscription_association}
+	azurerm_management_group_subscription_association }
