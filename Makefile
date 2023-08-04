@@ -1,7 +1,4 @@
-distro := $(shell awk -F "=" '/^ID/ {print $$2}' /etc/os-release)
-
-.PHONY: all others fish kubernetes nvim starship sway wezterm zellij private
-all: others fish kubernetes nvim starship zellij
+.PHONY: tui gui
 
 tui:
 	@stow fish
