@@ -87,7 +87,7 @@ bar {
 include /etc/sway/config.d/*
 
 output DP-2 scale 1.5
-output DP-3 scale 1.5
+output DP-3 scale 1
 
 input type:touchpad {
     tap enabled
@@ -113,3 +113,11 @@ for_window [app_id="firefox" title="^Picture-in-Picture$"] floating enable, stic
 
 bindsym $mod+Ctrl+s exec grim - | wl-copy
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
+workspace 1 output eDP-1
+workspace 2 output eDP-1
+workspace 3 output eDP-1
+
+workspace 7 output DP-3
+workspace 8 output DP-3
+workspace 9 output DP-3
