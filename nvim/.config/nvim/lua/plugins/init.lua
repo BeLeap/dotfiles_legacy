@@ -29,6 +29,15 @@ return {
 		end,
 	},
 	{
+		"stevearc/overseer.nvim",
+		event = "VeryLazy",
+		config = function()
+			require("overseer").setup({
+				templates = { "builtin", },
+			})
+		end,
+	},
+	{
 		"kristijanhusak/vim-dadbod-ui",
 		keys = {
 			{ "<leader>d", ":DBUIToggle<cr>", silent = true },
