@@ -8,7 +8,7 @@ return {
       "HiPhish/nvim-ts-rainbow2",
     },
     config = function()
-      require("nvim-treesitter.install").compilers = { 'zig' }
+      require("nvim-treesitter.install").compilers = { 'gcc' }
       require("nvim-treesitter.configs").setup({
         ensure_installed = "all",
         sync_install = false,
