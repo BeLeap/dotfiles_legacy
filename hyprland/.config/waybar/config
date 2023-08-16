@@ -13,6 +13,7 @@
     "cpu",
     "memory",
     "battery",
+    "backlight",
     "clock",
     "tray"
   ],
