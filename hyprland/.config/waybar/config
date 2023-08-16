@@ -2,8 +2,7 @@
   "layer": "top",
   "spacing": 8,
   "modules-left": [
-    "wlr/workspaces",
-    "custom/media"
+    "wlr/workspaces"
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
@@ -33,22 +32,6 @@
       "(.*) — Mozilla Firefox": "🌎 $1",
     },
     "separate-outputs": true
-  },
-  "custom/media": {
-    "format": "{icon} {}",
-    "return-type": "json",
-    "max-length": 40,
-    "format-icons": {
-      "spotify": "",
-      "default": "🎜"
-    },
-    "interval": 60,
-    "escape": true,
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl stop",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous",
-    "exec": "$HOME/.config/waybar/scripts/media.sh"
   },
   "custom/github": {
     "format": " {}",
