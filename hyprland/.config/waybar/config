@@ -42,6 +42,7 @@
       "spotify": "",
       "default": "🎜"
     },
+    "interval": 60,
     "escape": true,
     "on-click": "playerctl play-pause",
     "on-click-right": "playerctl stop",
@@ -50,18 +51,18 @@
     "exec": "$HOME/.config/waybar/scripts/media.sh"
   },
   "custom/github": {
-    "format": "{} ",
+    "format": " {}",
     "return-type": "json",
     "interval": 60,
     "exec": "$HOME/.config/waybar/scripts/github.sh",
     "on-click": "xdg-open https://github.com/notifications"
   },
   "pulseaudio": {
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}% {format_source}",
     "format-bluetooth-muted": "Muted {icon} {format_source}",
     "format-muted": "Muted {format_source}",
-    "format-source": "{volume}% ",
+    "format-source": " {volume}%",
     "format-source-muted": "",
     "format-icons": {
       "headphone": "Headphone",
@@ -75,27 +76,27 @@
     "on-click": "pavucontrol"
   },
   "network": {
-    "format-wifi": "{essid} ({signalStrength}%) ",
-    "format-ethernet": "{ipaddr}/{cidr} ",
-    "tooltip-format": "{ifname} via {gwaddr} ",
-    "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "Disconnected ⚠",
+    "format-wifi": " {essid} ({signalStrength}%)",
+    "format-ethernet": "󰈀 {ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "⚠ Disconnected",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "cpu": {
-    "format": "{usage}% ",
+    "format": " {usage}%",
     "tooltip": false
   },
   "memory": {
-    "format": "{}% "
+    "format": "󰍛 {}%"
   },
   "temperature": {
     "critical-threshold": 80,
-    "format": "{temperatureC}°C "
+    "format": " {temperatureC}°C"
   },
   "backlight": {
     "device": "intel_backlight",
-    "format": "{percent}% {icon}",
+    "format": "{icon} {percent}%",
     "format-icons": ["", ""]
   },
   "battery": {
@@ -104,11 +105,11 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
-    "format-charging": "{capacity}% Charging",
-    "format-plugged": "{capacity}% Plugged",
-    "format-alt": "{time} {icon}",
-    "format-icons": ["", "", "", "", ""]
+    "format": "{icon} {capacity}%",
+    "format-charging": "Charging {capacity}%",
+    "format-plugged": "Plugged {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": [" ", " ", " ", " ", " "]
   },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
