@@ -9,6 +9,7 @@
   "modules-right": [
     "custom/github",
     "pulseaudio",
+    "bluetooth",
     "network",
     "cpu",
     "memory",
@@ -46,26 +47,26 @@
     "on-click-right": "playerctl stop",
     "on-scroll-up": "playerctl next",
     "on-scroll-down": "playerctl previous",
-    "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null"
+    "exec": "$HOME/.config/waybar/scripts/media.sh"
   },
   "custom/github": {
     "format": "{} ",
     "return-type": "json",
     "interval": 60,
-    "exec": "$HOME/.config/waybar/github.sh",
+    "exec": "$HOME/.config/waybar/scripts/github.sh",
     "on-click": "xdg-open https://github.com/notifications"
   },
   "pulseaudio": {
     "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": "Muted {icon} {format_source}",
+    "format-muted": "Muted {format_source}",
     "format-source": "{volume}% ",
     "format-source-muted": "",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
+      "headphone": "Headphone",
+      "hands-free": "HandsFree",
+      "headset": "Headset",
       "phone": "",
       "portable": "",
       "car": "",
@@ -115,5 +116,14 @@
   },
   "tray": {
     "spacing": 4
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "", // an empty format will hide the module
+    "format-connected": " {num_connections} connected",
+    "tooltip-format": "{controller_alias}\t{controller_address}",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+    "on-click": "blueman-manager"
   }
 }
