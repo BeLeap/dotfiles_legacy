@@ -77,6 +77,7 @@ return {
 			notify.setup({
 				render = "compact",
 				top_down = false,
+				max_height = 3,
 			})
 
 			vim.notify = notify
