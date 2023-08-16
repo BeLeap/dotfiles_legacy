@@ -5,5 +5,5 @@ tui:
 	@stow nvim
 
 gui:
-	@stow sway
+	@stow hyprland
 	@stow wezterm
