@@ -4,7 +4,7 @@ daemon:
   - Wayland
   - Indicator
 indicator:
-  icon_color: Black
+  icon_color: White
 log:
   global_level: DEBUG
 engine:
@@ -82,7 +82,7 @@ engine:
     layout: Qwerty
     preferred_direct: true
   hangul:
-    layout: sebeolsik-3-90
+    layout: dubeolsik
     word_commit: false
     preedit_johab: Needed
     addons:
@@ -90,3 +90,6 @@ engine:
       - ComposeChoseongSsang
       dubeolsik:
       - TreatJongseongAsChoseong
+      sebeolsik-3-90:
+      - ComposeJungseongSsang
+      - FlexibleComposeOrder
