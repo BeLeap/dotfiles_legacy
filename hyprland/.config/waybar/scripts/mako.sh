@@ -1,8 +1,10 @@
 #!/bin/bash
 COUNT=$(makoctl list | yq -r '.data[] | length')
 
-if [[ count > 0 ]]; then
-  echo "\n$COUNT"
+if [[ $COUNT > 0 ]]; then
+  echo " "
+  echo "$COUNT notifications"
 else
-  echo ""
+  echo " "
+  echo "No notifications"
 fi

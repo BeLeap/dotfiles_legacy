@@ -102,7 +102,7 @@
     "format-icons": [" ", " ", " ", " ", " "]
   },
   "clock": {
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
   "tray": {
@@ -119,7 +119,7 @@
   },
   "custom/mako": {
     "exec-if": "command -v makoctl",
-    "exec": "scripts/mako.sh",
+    "exec": "$HOME/.config/waybar/scripts/mako.sh",
     "format": "{}",
     "on-click": "makoctl dismiss -a",
     "interval": 3,
