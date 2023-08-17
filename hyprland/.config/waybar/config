@@ -15,7 +15,8 @@
     "battery",
     "backlight",
     "clock",
-    "tray"
+    "tray",
+    "custom/mako"
   ],
   "wlr/workspaces": {
     "format": "{name}: {icon}",
@@ -115,5 +116,12 @@
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
     "on-click": "blueman-manager"
+  },
+  "custom/mako": {
+    "exec-if": "command -v makoctl",
+    "exec": "scripts/mako.sh",
+    "format": "{}",
+    "on-click": "makoctl dismiss -a",
+    "interval": 3,
   }
 }
