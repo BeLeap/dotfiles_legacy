@@ -15,8 +15,8 @@
     "battery",
     "backlight",
     "clock",
-    "tray",
-    "custom/mako"
+    "custom/mako",
+    "tray"
   ],
   "wlr/workspaces": {
     "format": "{name}: {icon}",
