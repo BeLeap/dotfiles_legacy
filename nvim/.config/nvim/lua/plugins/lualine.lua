@@ -18,7 +18,7 @@ return {
 		},
 		opts = {
 			options = {
-				theme = "auto",
+				theme = "catppuccin",
 			},
 			sections = {
 				lualine_a = { "mode" },

@@ -8,6 +8,7 @@ return {
       "j-hui/fidget.nvim",
       "ray-x/lsp_signature.nvim",
       "VidocqH/lsp-lens.nvim",
+      "folke/trouble.nvim",
     },
   },
   {
@@ -238,7 +239,11 @@ return {
   {
     "j-hui/fidget.nvim",
     config = function()
-      require("fidget").setup()
+      require("fidget").setup({
+        window = {
+          blend = 0,
+        },
+      })
     end,
   },
   {
@@ -297,6 +302,7 @@ return {
     event = "VeryLazy",
     config = function()
       require('aerial').setup({
+        filter_kind = false,
         -- optionally use on_attach to set keymaps when aerial has attached to a buffer
         on_attach = function(bufnr)
           -- Jump forwards/backwards with '{' and '}'
