@@ -135,5 +135,6 @@
     "status-icons": {
       "paused": "⏸"
     },
+    "on-click": "playerctl play-pause"
   }
 }
