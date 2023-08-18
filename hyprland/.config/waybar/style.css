@@ -56,6 +56,7 @@ window#waybar.hidden {
 	color: @red;
 }
 
+#mipris,
 #backlight,
 #battery,
 #clock,
