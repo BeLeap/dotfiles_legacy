@@ -2,7 +2,8 @@
   "layer": "top",
   "spacing": 8,
   "modules-left": [
-    "wlr/workspaces"
+    "wlr/workspaces",
+    "mpris"
   ],
   "modules-center": ["hyprland/window"],
   "modules-right": [
@@ -123,5 +124,16 @@
     "format": "{}",
     "on-click": "makoctl dismiss -a",
     "interval": 3,
+  },
+  "mpris": {
+    "format": "{player_icon} {dynamic}",
+    "format-paused": "{status_icon} <i>{dynamic}</i>",
+    "player-icons": {
+      "default": "▶",
+      "mpv": "🎵"
+    },
+    "status-icons": {
+      "paused": "⏸"
+    },
   }
 }
