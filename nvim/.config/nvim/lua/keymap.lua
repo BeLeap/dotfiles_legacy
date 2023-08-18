@@ -2,7 +2,7 @@ vim.keymap.set("i", "<C-q>", "<esc>:qa<cr>", { noremap = true, silent = true, de
 vim.keymap.set("n", "<C-q>", ":qa<cr>", { noremap = true, silent = true, desc = "Quit all" })
 vim.keymap.set("i", "<leader>q", "<esc>:bd<cr>", { noremap = true, silent = true, desc = "Delete buffer" })
 vim.keymap.set("n", "<leader>q", ":bd<cr>", { noremap = true, silent = true, desc = "Delete buffer" })
-vim.keymap.set("n", "<leader>e", "<cmd>Lexplore<cr>", { noremap = true, silent = true, desc = "Open Netrw" })
+vim.keymap.set("n", "<leader>e", "<cmd>20Lexplore<cr>", { noremap = true, silent = true, desc = "Open Netrw" })
 vim.keymap.set("i", "<leader>s", "<esc>:update<cr>", { noremap = true, silent = true })
 vim.keymap.set("n", "<leader>s", ":update<cr>", { noremap = true, silent = true })
 
