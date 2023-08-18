@@ -41,7 +41,7 @@ return {
         },
         mapping = cmp.mapping.preset.insert({
           ["<C-u>"] = cmp.mapping.scroll_docs(-4), -- Up
-          ["<C-d>"] = cmp.mapping.scroll_docs(4), -- Down
+          ["<C-d>"] = cmp.mapping.scroll_docs(4),  -- Down
           -- C-b (back) C-f (forward) for snippet placeholder navigation.
           ["<C-Space>"] = cmp.mapping.complete(),
           ["<CR>"] = cmp.mapping.confirm({
@@ -288,27 +288,16 @@ return {
     config = true,
   },
   {
-    "lewis6991/satellite.nvim",
-    event = "VeryLazy",
-    config = true,
-  },
-  {
     "nmac427/guess-indent.nvim",
     event = "InsertEnter",
     config = true,
   },
   {
-    "huggingface/hfcc.nvim",
-    keys = {
-      { "<leader>hf", "<esc><cmd>HFccSuggestion<cr>a", mode = "i" },
-    },
-    cmd = { "HFccSuggestion" },
-    config = function()
-      local api_token = vim.fn.getenv("HFCC_API_TOKEN")
-      require("hfcc").setup({
-        api_token = api_token,
-        model = "bigcode/starcoder", -- can be a model ID or an http endpoint
-      })
-    end,
+    "ludovicchabant/vim-gutentags",
+    event = "VeryLazy",
+  },
+  {
+    "preservim/tagbar",
+    event = "VeryLazy",
   },
 }
