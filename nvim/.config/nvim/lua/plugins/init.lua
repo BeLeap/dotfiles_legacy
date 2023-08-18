@@ -105,6 +105,32 @@ return {
 			})
 		end,
 	},
+	{
+		"nvim-tree/nvim-tree.lua",
+		version = "*",
+		lazy = false,
+		dependencies = {
+			"nvim-tree/nvim-web-devicons",
+		},
+		config = function()
+			vim.g.loaded_netrw = 1
+			vim.g.loaded_netrwPlugin = 1
+			vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<cr>")
+
+			require("nvim-tree").setup({
+				sync_root_with_cwd = true,
+				respect_buf_cwd = true,
+				update_focused_file = {
+					enable = true,
+					update_root = true
+				},
+				filters = {
+					git_ignored = false,
+				},
+			})
+		end,
+	},
+
 
 	-- Language
 	{ "lbrayner/vim-rzip" },

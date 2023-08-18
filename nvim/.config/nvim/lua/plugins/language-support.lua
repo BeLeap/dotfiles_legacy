@@ -297,30 +297,10 @@ return {
     event = "VeryLazy",
   },
   {
-    "preservim/tagbar",
+    "liuchengxu/vista.vim",
+    event = "VeryLazy",
     keys = {
-      { "<leader>c", "<cmd>TagbarToggle<cr>" }
+      { "<leader>v", "<cmd>Vista!!<cr>", desc = "Vista" }
     },
-    config = function()
-      local tagbar_type_yaml = {
-        ctagstype = "yaml",
-        kinds = {
-          "a:anchors",
-          "s:section",
-          "e:entry",
-        },
-        sro = ".",
-        scope2kind = {
-          section = "s",
-          entry = "e",
-        },
-        kind2scope = {
-          s = "section",
-          e = "entry",
-        },
-        sort = 0,
-      }
-      vim.g.tagbar_type_yaml = tagbar_type_yaml
-    end
   },
 }
