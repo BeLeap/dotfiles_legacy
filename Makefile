@@ -3,7 +3,6 @@
 tui:
 	@stow kubernetes
 	@stow nvim
-	@stow ctags
 
 gui:
 	@stow hyprland

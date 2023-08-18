@@ -130,7 +130,10 @@ return {
 			})
 		end,
 	},
-
+	{
+		'stevearc/stickybuf.nvim',
+		opts = {},
+	},
 
 	-- Language
 	{ "lbrayner/vim-rzip" },
