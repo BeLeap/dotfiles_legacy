@@ -7,7 +7,6 @@ return {
     config = function()
       require("catppuccin").setup({
         flavour = "mocha",
-        transparent_background = true,
         term_colors = true,
         integrations = {
           aerial = true,
@@ -53,7 +52,7 @@ return {
         which_key = true,
       })
 
-      vim.cmd.colorscheme [[catppuccin]]
+      vim.cmd.colorscheme "catppuccin"
     end,
   },
 }
