@@ -5,7 +5,6 @@ return {
     dependencies = {
       "hrsh7th/nvim-cmp",
       "folke/lsp-colors.nvim",
-      "j-hui/fidget.nvim",
       "ray-x/lsp_signature.nvim",
       "VidocqH/lsp-lens.nvim",
       "folke/trouble.nvim",
@@ -238,13 +237,8 @@ return {
   },
   {
     "j-hui/fidget.nvim",
-    config = function()
-      require("fidget").setup({
-        window = {
-          blend = 0,
-        },
-      })
-    end,
+    event = "LspAttach",
+    opts = {},
   },
   {
     "windwp/nvim-autopairs",

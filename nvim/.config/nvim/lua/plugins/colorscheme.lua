@@ -10,7 +10,6 @@ return {
         term_colors = true,
         integrations = {
           aerial = true,
-          fidget = true,
           indent_blankline = {
             enable = true,
             colored_indent_levels = true,
