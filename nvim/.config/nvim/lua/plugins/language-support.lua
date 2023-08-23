@@ -304,8 +304,10 @@ return {
         end,
         close_automatic_events = {
           "unsupported",
+          "unfocus",
         },
         open_automatic = true,
+        autojump = true,
       })
       -- You probably also want to set a keymap to toggle aerial
       vim.keymap.set('n', '<leader>a', '<cmd>AerialToggle!<CR>', { desc = "Open code outline" })
