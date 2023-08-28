@@ -176,6 +176,7 @@ return {
   },
   {
     'stevearc/stickybuf.nvim',
+    event = "VeryLazy",
     opts = {},
   },
 
@@ -261,23 +262,6 @@ return {
     event = { "BufEnter" },
     version = "*",
     config = true,
-  },
-  {
-    "samjwill/nvim-unception",
-    lazy = false,
-    init = function()
-      -- Optional settings go here!
-      -- e.g.) vim.g.unception_open_buffer_in_new_tab = true
-      vim.g.unception_block_while_host_edits = true
-      vim.g.unception_open_buffer_in_new_tab = true
-
-      vim.api.nvim_create_autocmd("User", {
-        pattern = "UnceptionEditRequestReceived",
-        callback = function()
-          require("toggleterm").toggle()
-        end,
-      })
-    end,
   },
   {
     "axkirillov/hbac.nvim",
