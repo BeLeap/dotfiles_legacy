@@ -5,7 +5,9 @@ return {
 		dependencies = {
 			"nvim-lua/plenary.nvim",
 		},
-		config = true,
+		opts = {
+			kind = "auto",
+		},
 	},
 	{
 		"sindrets/diffview.nvim",
@@ -21,14 +23,14 @@ return {
 			require("litee.gh").setup()
 		end,
 	},
-  {
-    'tanvirtin/vgit.nvim',
-    event = "VeryLazy",
-    dependencies = {
-      'nvim-lua/plenary.nvim',
-    },
-    config = function()
-      require('vgit').setup()
-    end,
-  }
+	{
+		'tanvirtin/vgit.nvim',
+		event = "VeryLazy",
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+		},
+		config = function()
+			require('vgit').setup()
+		end,
+	}
 }
