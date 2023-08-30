@@ -15,15 +15,6 @@ return {
 		dependencies = "nvim-lua/plenary.nvim",
 	},
 	{
-		"ldelossa/gh.nvim",
-		event = "VeryLazy",
-		dependencies = { "ldelossa/litee.nvim" },
-		config = function()
-			require("litee.lib").setup()
-			require("litee.gh").setup()
-		end,
-	},
-	{
 		'tanvirtin/vgit.nvim',
 		event = "VeryLazy",
 		dependencies = {
@@ -32,5 +23,15 @@ return {
 		config = function()
 			require('vgit').setup()
 		end,
-	}
+	},
+	{
+		'pwntester/octo.nvim',
+		cmd = "Octo",
+		dependencies = {
+			'nvim-lua/plenary.nvim',
+			'nvim-telescope/telescope.nvim',
+			'nvim-tree/nvim-web-devicons',
+		},
+		opts = {},
+	},
 }
