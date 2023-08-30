@@ -316,6 +316,9 @@ return {
   {
     'huggingface/llm.nvim',
     event = "VeryLazy",
-    opts = {},
+    opts = {
+      accept_keymap = "<Left>",
+      dismiss_keymap = "<Right>",
+    },
   },
 }
