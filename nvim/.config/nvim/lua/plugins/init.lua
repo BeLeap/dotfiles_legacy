@@ -248,7 +248,12 @@ return {
   },
   {
     "andweeb/presence.nvim",
-    event = { "BufEnter" },
+    event = "VeryLazy",
+    opts = {
+      blacklist = {
+        "~/work/*",
+      },
+    },
   },
   {
     "max397574/better-escape.nvim",
