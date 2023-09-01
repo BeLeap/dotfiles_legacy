@@ -294,7 +294,7 @@ return {
               name = "+Pull Request",
               l = { "<cmd>Octo pr list<cr>", "List" },
               m = { "<cmd>Octo pr merge<cr>", "Merge" },
-              sd = { "<cmd>Octo pr squash delete<cr>", "Squash and Delete" },
+              sd = { "<cmd>Octo pr merge squash delete<cr>", "Squash and Delete" },
               c = { "<cmd>Octo pr create<cr>", "Create" },
               d = { "<cmd>Octo pr close<cr>", "Close" },
             },
