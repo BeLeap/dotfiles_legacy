@@ -113,10 +113,10 @@ return {
       -- Mappings.
       -- See `:help vim.diagnostic.*` for documentation on any of the below functions
       local opts = { noremap = true, silent = true }
-      vim.keymap.set("n", "<space>e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+      vim.keymap.set("n", ",e", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
       vim.keymap.set("n", "[d", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
       vim.keymap.set("n", "]d", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
-      vim.keymap.set("n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
+      vim.keymap.set("n", ",q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
       -- Use an on_attach function to only map the following keys
       -- after the language server attaches to the current buffer
@@ -297,11 +297,6 @@ return {
     config = function()
       require('aerial').setup({
         filter_kind = false,
-        -- optionally use on_attach to set keymaps when aerial has attached to a buffer
-        on_attach = function(bufnr)
-          vim.keymap.set('n', 'a{', '<cmd>AerialPrev<CR>', { buffer = bufnr })
-          vim.keymap.set('n', 'a}', '<cmd>AerialNext<CR>', { buffer = bufnr })
-        end,
         close_automatic_events = {
           "unsupported",
           "unfocus",
