@@ -297,6 +297,11 @@ return {
               c = { "<cmd>Octo pr create<cr>", "Create" },
               d = { "<cmd>Octo pr close<cr>", "Close" },
             },
+            c = {
+              name = "+Comment",
+              a = { "<cmd>Octo comment add<cr>", "Add" },
+              d = { "<cmd>Octo comment delete<cr>", "Delete" },
+            },
           },
           n = { "<cmd>Neogit<cr>", "Neogit" },
         },
