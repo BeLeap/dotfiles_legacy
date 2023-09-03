@@ -15,16 +15,6 @@ return {
 		dependencies = "nvim-lua/plenary.nvim",
 	},
 	{
-		'tanvirtin/vgit.nvim',
-		event = "VeryLazy",
-		dependencies = {
-			'nvim-lua/plenary.nvim',
-		},
-		config = function()
-			require('vgit').setup()
-		end,
-	},
-	{
 		'pwntester/octo.nvim',
 		cmd = "Octo",
 		dependencies = {
