@@ -2,15 +2,11 @@ local is_helm = function(path)
 	local is_helm = false
 
 	if string.find(path, "templates") then
-		local parent = vim.split(path, "templates")[1]
-		local files_raw = vim.fn.system("ls " .. parent)
-		local files = vim.split(files_raw, "\n")
-
-		for _, v in ipairs(files) do
-			if v == "Chart.yaml" then
-				is_helm = true
-			end
-		end
+		local parent = vim.fs.dirname(vim.fs.dirname(path))
+		is_helm = vim.fs.find("Chart.yaml", {
+			path = parent,
+			type = "file",
+		})
 	end
 
 	return is_helm
