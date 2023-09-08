@@ -134,12 +134,6 @@ return {
 
 				-- Mappings.
 				-- See `:help vim.lsp.*` for documentation on any of the below functions
-				vim.keymap.set(
-					"n",
-					"<leader>ts",
-					'<cmd>lua require"telescope.builtin".lsp_document_symbols()<CR>',
-					buf_opts
-				)
 				vim.keymap.set("n", "gd", '<cmd>lua require"telescope.builtin".lsp_definitions()<CR>', buf_opts)
 				vim.keymap.set("n", "gi", '<cmd>lua require"telescope.builtin".lsp_implementations()<CR>', buf_opts)
 				vim.keymap.set("n", "gt", '<cmd>lua require"telescope.builtin".lsp_type_definitions()<CR>', buf_opts)

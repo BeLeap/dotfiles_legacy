@@ -29,32 +29,40 @@ return {
 		end,
 	},
 	{
-		"stevearc/overseer.nvim",
+		"GustavoKatel/tasks.nvim",
 		event = "VeryLazy",
+		dependencies = {
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
 		config = function()
-			local overseer = require("overseer")
-			overseer.setup({
-				templates = { "builtin" },
-				strategy = "toggleterm",
-			})
+			require("telescope").load_extension("tasks")
 
-			overseer.register_template({
-				name = "terraform apply",
-				builder = function(_params)
-					local file_dir = vim.fs.dirname(vim.fn.expand("%:p"))
+			local tasks = require("tasks")
 
-					return {
-						cmd = { "terraform" },
-						args = { "apply" },
-						cwd = file_dir,
-						components = { "default", "on_output_quickfix" },
-					}
-				end,
-				desc = "Apply terraform",
-				tags = { overseer.TAG.BUILD },
-				condition = {
-					filetype = { "terraform", "tf" },
-					dir = vim.fn.getcwd(),
+			local source_npm = require("tasks.sources.npm")
+			local source_tasksjson = require("tasks.sources.tasksjson")
+
+			local builtin = require("tasks.sources.builtin")
+
+			tasks.setup({
+				sources = {
+					npm = source_npm,
+					vscode = source_tasksjson,
+					terraform = builtin.new_builtin_source({
+						plan = {
+							fn = function()
+								local Terminal = require("toggleterm.terminal").Terminal
+								local file_dir = vim.fs.dirname(vim.fn.expand("%:p"))
+								local term = Terminal:new({
+									cmd = "cd " .. file_dir .. "; direnv exec " .. file_dir .. " terraform plan",
+									cwd = file_dir,
+									close_on_exit = false,
+								})
+								term:toggle()
+							end,
+						},
+					}),
 				},
 			})
 		end,
@@ -300,6 +308,58 @@ return {
 						},
 					},
 					n = { "<cmd>Neogit<cr>", "Neogit" },
+				},
+				t = {
+					name = "+Telescope",
+					x = {
+						function()
+							require("telescope.builtin").builtin()
+						end,
+						"Builtin",
+					},
+					f = {
+						function()
+							require("telescope.builtin").find_files()
+						end,
+						"Find Files",
+					},
+					g = {
+						function()
+							require("telescope.builtin").live_grep()
+						end,
+						"Live Grep",
+					},
+					b = {
+						function()
+							require("telescope.builtin").buffers()
+						end,
+						"Buffers",
+					},
+					h = {
+						function()
+							require("telescope.builtin").help_tags()
+						end,
+						"Helps",
+					},
+					c = {
+						function()
+							require("telescope.builtin").git_branches()
+						end,
+						"Git Branches",
+					},
+					l = {
+						name = "+LSP",
+						s = {
+							function()
+								require("telescope.builtin").lsp_document_symbols()
+							end,
+							"Symbols",
+						},
+					},
+					t = {
+						"<cmd>Telescope tasks specs<cr>",
+						"Spawn Tasks",
+					},
 				},
 			}, { prefix = "<leader>" })
 		end,

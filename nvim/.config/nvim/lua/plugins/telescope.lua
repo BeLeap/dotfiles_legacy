@@ -7,56 +7,6 @@ return {
 			"nvim-telescope/telescope-fzf-native.nvim",
 		},
 		cmd = "Telescope",
-		keys = {
-			{
-				"<leader>tl",
-				function()
-					require("telescope.builtin").builtin()
-				end,
-				silent = true,
-				desc = "telescope builtin",
-			},
-			{
-				"<leader>tf",
-				function()
-					require("telescope.builtin").find_files()
-				end,
-				silent = true,
-				desc = "telescope find file",
-			},
-			{
-				"<leader>tg",
-				function()
-					require("telescope.builtin").live_grep()
-				end,
-				silent = true,
-				desc = "telescope live grep",
-			},
-			{
-				"<leader>tb",
-				function()
-					require("telescope.builtin").buffers()
-				end,
-				silent = true,
-				desc = "telescope buffers",
-			},
-			{
-				"<leader>th",
-				function()
-					require("telescope.builtin").help_tags()
-				end,
-				silent = true,
-				desc = "telescope helps",
-			},
-			{
-				"<leader>tc",
-				function()
-					require("telescope.builtin").git_branches()
-				end,
-				silent = true,
-				desc = "telescope git branches",
-			},
-		},
 		config = function()
 			require("telescope").setup({
 				defaults = {
@@ -76,8 +26,8 @@ return {
 						"--line-number",
 						"--column",
 						"--smart-case",
-						"--trim" -- add this value
-					}
+						"--trim", -- add this value
+					},
 				},
 				pickers = {
 					find_files = {
@@ -110,7 +60,6 @@ return {
 	},
 	{
 		"nvim-telescope/telescope-fzf-native.nvim",
-		build =
-		"cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+		build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
 	},
 }
