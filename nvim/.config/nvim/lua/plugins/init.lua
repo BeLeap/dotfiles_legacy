@@ -62,6 +62,18 @@ return {
 								term:toggle()
 							end,
 						},
+						apply = {
+							fn = function()
+								local Terminal = require("toggleterm.terminal").Terminal
+								local file_dir = vim.fs.dirname(vim.fn.expand("%:p"))
+								local term = Terminal:new({
+									cmd = "cd " .. file_dir .. "; direnv exec " .. file_dir .. " terraform apply",
+									cwd = file_dir,
+									close_on_exit = false,
+								})
+								term:toggle()
+							end,
+						},
 					}),
 				},
 			})
