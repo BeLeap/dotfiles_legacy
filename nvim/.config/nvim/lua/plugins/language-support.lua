@@ -168,6 +168,7 @@ return {
 			end
 
 			require("mason-lspconfig").setup({
+				ensure_installed = { "lua_ls", "stylua", "codespell" },
 				automatic_installation = true,
 			})
 
