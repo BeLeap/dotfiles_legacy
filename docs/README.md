@@ -2,6 +2,8 @@
 
 Personal Dotfiles
 
+All configurations are moved to https://github.com/beleap/nixos-configuration
+
 ## Prerequisite
 
 - [`make`](https://www.gnu.org/software/make/)
