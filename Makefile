@@ -8,6 +8,7 @@ tui:
 	@stow starship
 	@stow xplr
 	@stow helix
+	@stow tmux
 	@stow tmuxp
 
 gui:
