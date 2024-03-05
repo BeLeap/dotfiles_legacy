@@ -1,7 +1,7 @@
 theme = "nord"
 
 [editor.file-picker]
-hidden = false;
+hidden = false
 
 [keys.normal]
 C-q = ":q"
