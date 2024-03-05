@@ -7,4 +7,4 @@ hidden = false
 C-q = ":q"
 
 [keys.insert]
-"," = { d = "nomal_mode" }
+"," = { d = "normal_mode" }
