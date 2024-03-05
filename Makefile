@@ -3,3 +3,4 @@
 tui:
 	@stow kubernetes
 	@stow nvim
+	@stow fish
