@@ -12,3 +12,6 @@ tui:
 
 gui:
 	@stow wezterm
+
+others:
+	@stow scripts
