@@ -3,11 +3,7 @@ right_format = "$kubernetes"
 command_timeout = 3000
 
 [shell]
-fish_indicator = ""
-powershell_indicator = "_"
-elvish_indicator = "ﬦ"
-unknown_indicator = ""
-disabled = false
+disabled = true
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
