@@ -1,0 +1,10 @@
+theme = "nord"
+
+[editor.file-picker]
+hidden = false;
+
+[keys.normal]
+C-q = ":q"
+
+[keys.insert]
+"," = { d = "nomal_mode" }
