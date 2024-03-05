@@ -22,4 +22,5 @@ if status is-interactive
     abbr kns "kubens"
 
     starship init fish | source
+    zoxide init fish | source
 end
