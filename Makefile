@@ -10,6 +10,7 @@ tui:
 	@stow helix
 	@stow tmux
 	@stow tmuxp
+	@stow git
 
 gui:
 	@stow wezterm

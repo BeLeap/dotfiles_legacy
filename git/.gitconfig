@@ -1,0 +1,6 @@
+[user]
+email = "beleap@beleap.dev"
+name = "BeLeap"
+
+[includeIf "gitdir:~/work/"]
+	path = ~/work/.gitconfig
