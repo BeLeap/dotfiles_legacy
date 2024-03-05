@@ -7,6 +7,7 @@ tui:
 	@stow nvim
 	@stow fish
 	@stow starship
+	@stow xplr
 
 gui:
 	@stow wezterm
