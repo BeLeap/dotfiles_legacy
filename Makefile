@@ -14,7 +14,6 @@ tui:
 
 gui:
 	@stow wezterm
-	@stow hammerspoon
 
 others:
 	@stow scripts
