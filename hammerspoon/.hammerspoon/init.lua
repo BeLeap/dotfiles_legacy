@@ -1,0 +1,5 @@
+hs.hotkey.bind({'cmd'}, 'N', function()
+  local win = hs.window.focusedWindow()
+  local screen = win:screen()
+  win:move(win:frame():toUnitRect(screen:frame()), screen:next(), true, 0)
+end)
