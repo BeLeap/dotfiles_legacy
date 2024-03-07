@@ -1,9 +1,9 @@
-cmd - h : yabai -m window --focus west
-cmd - j : yabai -m window --focus down
-cmd - k : yabai -m window --focus up
-cmd - l : yabai -m window --focus east
+alt - h : yabai -m window --focus west
+alt - j : yabai -m window --focus down
+alt - k : yabai -m window --focus up
+alt - l : yabai -m window --focus east
 
-shift + cmd - h : yabai -m window --warp west
-shift + cmd - j : yabai -m window --warp down
-shift + cmd - k : yabai -m window --warp up
-shift + cmd - l : yabai -m window --warp east
+shift + alt - h : yabai -m window --warp west
+shift + alt - j : yabai -m window --warp down
+shift + alt - k : yabai -m window --warp up
+shift + alt - l : yabai -m window --warp east
