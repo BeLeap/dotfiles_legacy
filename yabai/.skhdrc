@@ -1,12 +1,9 @@
-alt - h : yabai -m window --focus west
-alt - j : yabai -m window --focus down
-alt - k : yabai -m window --focus up
-alt - l : yabai -m window --focus right
+cmd - h : yabai -m window --focus west
+cmd - j : yabai -m window --focus down
+cmd - k : yabai -m window --focus up
+cmd - l : yabai -m window --focus right
 
 shift + cmd - h : yabai -m window --warp west
 shift + cmd - j : yabai -m window --warp down
 shift + cmd - k : yabai -m window --warp up
 shift + cmd - l : yabai -m window --warp right
-
-shift + alt - h : yabai -m display --focus prev
-shift + alt - l : yabai -m display --focus next
