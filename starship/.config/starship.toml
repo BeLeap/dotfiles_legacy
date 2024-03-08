@@ -21,7 +21,7 @@ us-west-2 = "oregon"
 [kubernetes]
 format = '\[[$symbol$context( \($namespace\))]($style)\]'
 disabled = false
-symbol = "ﴱ "
+symbol = "󱃾 "
 [kubernetes.context_aliases]
 ".*/(?P<cluster>[\\w-]+).*" = "$cluster"
 
