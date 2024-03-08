@@ -26,5 +26,8 @@ fetch = "+refs/pull/*:refs/remotes/origin/pull/*"
 [help]
 autocorrect = prompt
 
+[alias]
+adog = "log --all --decorate --oneline --graph"
+
 [includeIf "gitdir:~/work/"]
 	path = ~/work/.gitconfig
