@@ -21,6 +21,15 @@ if status is-interactive
     abbr ktx "kubectx"
     abbr kns "kubens"
 
-    starship init fish | source
-    zoxide init fish | source
+    if type -q starship 
+        starship init fish | source
+    end
+    if type -q zoxide
+        zoxide init fish | source
+    end
+    if type -q lsd
+        alias ls "lsd"
+        alias ll "lsd -l"
+        alias lla "lsd -la"
+    end
 end
