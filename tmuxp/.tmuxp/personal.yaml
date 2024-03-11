@@ -1,0 +1,8 @@
+session_name: personal
+start_directory: ~/personal
+
+windows:
+  - window_name: editor
+    panes:
+      - xplr
+  - window_name: shell
