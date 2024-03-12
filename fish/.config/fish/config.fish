@@ -32,4 +32,8 @@ if status is-interactive
         alias ll "lsd -l"
         alias lla "lsd -la"
     end
+
+    if type -q nodenv
+        source (nodenv init -|psub)
+    end
 end
