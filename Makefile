@@ -11,6 +11,7 @@ tui:
 	@stow tmux
 	@stow tmuxp
 	@stow git
+	@stow neovim
 
 gui:
 	@stow wezterm
