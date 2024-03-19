@@ -4,5 +4,5 @@ start_directory: ~/personal
 windows:
   - window_name: editor
     panes:
-      - xplr
+      - nvim
   - window_name: shell
