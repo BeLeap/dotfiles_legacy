@@ -6,6 +6,8 @@ if status is-interactive
 
     alias sofish "source ~/.config/fish/config.fish"
 
+    abbr v "nvim"
+
     abbr gst "git status"
     abbr gsw "git switch"
     abbr gd "git diff"
