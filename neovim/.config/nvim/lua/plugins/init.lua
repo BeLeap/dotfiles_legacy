@@ -51,10 +51,6 @@ return {
     event = { "BufEnter" },
   },
   {
-    "wakatime/vim-wakatime",
-    event = { "BufEnter" },
-  },
-  {
     "andweeb/presence.nvim",
     event = "VeryLazy",
     opts = {
