@@ -64,7 +64,6 @@ return {
         ensure_installed = {
           "lua_ls",
           "tsserver",
-          "nil_ls",
         },
         handlers = {
           lsp_zero.default_setup,
