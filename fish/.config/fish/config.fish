@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
     fish_vi_key_bindings
 
-    set -x EDITOR hx
+    set -x EDITOR nvim
 
     alias sofish "source ~/.config/fish/config.fish"
 
