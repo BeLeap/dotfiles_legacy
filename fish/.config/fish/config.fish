@@ -38,4 +38,8 @@ if status is-interactive
     if type -q nodenv
         source (nodenv init -|psub)
     end
+
+    if type -q direnv
+        direnv hook fish | source
+    end
 end
