@@ -1,9 +1,0 @@
-alt - h : yabai -m window --focus west || yabai -m display --focus west
-alt - j : yabai -m window --focus south || yabai -m display --focus south
-alt - k : yabai -m window --focus north || yabai -m display --focus north
-alt - l : yabai -m window --focus east || yabai -m display --focus east
-
-shift + alt - h : yabai -m window --swap west || begin; yabai -m window --display west; yabai -m display --focus west; end;
-shift + alt - j : yabai -m window --swap south || begin; yabai -m window --display south; yabai -m display --focus south; end;
-shift + alt - k : yabai -m window --swap north || begin; yabai -m window --display north; yabai -m display --focus north; end;
-shift + alt - l : yabai -m window --swap east || begin; yabai -m window --display east; yabai -m display --focus east; end;
