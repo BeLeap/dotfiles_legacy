@@ -21,3 +21,17 @@ hs.hotkey.bind({ "option" }, "l", function()
   focusScreen(hs.window.focusedWindow():screen():next())
   leftClickCurrPos()
 end)
+
+hs.hotkey.bind({ "option" }, "n", function()
+  local script = [[
+    on run {input, parameters}
+      tell application "System Events" to tell process "Notification Center"
+          try
+              click last item of windows
+          end try
+      end tell
+      return input
+    end run
+  ]]
+  hs.osascript.applescript(script)
+end)
