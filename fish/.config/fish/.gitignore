@@ -1,3 +1,4 @@
 conf.d/
 fish_variables
 functions/
+completions/
