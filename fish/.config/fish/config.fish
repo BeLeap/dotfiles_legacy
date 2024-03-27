@@ -5,6 +5,7 @@ if status is-interactive
     set -x EDITOR nvim
 
     alias sofish "source ~/.config/fish/config.fish"
+    alias docker "podman"
 
     abbr v "nvim"
 
