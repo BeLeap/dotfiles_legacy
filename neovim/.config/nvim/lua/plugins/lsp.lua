@@ -58,7 +58,6 @@ return {
       -- This is where all the LSP shenanigans will live
       local lsp_zero = require('lsp-zero')
       lsp_zero.preset('recommended')
-      lsp_zero.extend_lspconfig()
 
       require('mason-lspconfig').setup({
         ensure_installed = {
@@ -72,12 +71,11 @@ return {
       lsp_zero.configure('clangd', {})
       lsp_zero.configure('tsserver', {
         single_file_support = false,
-        root_dir = require('lspconfig.util').root_pattern('package.json'),
+        root_dir = require('lspconfig.util').root_pattern('package.json')
       })
-      lsp_zero.configure('denols', {
-        single_file_support = false,
-        root_dir = require('lspconfig.util').root_pattern('deno.json'),
-      })
+      -- lsp_zero.configure('denols', {
+      --   single_file_support = false,
+      -- })
       lsp_zero.configure('nil_ls', {
         autostart = true,
         settings = {
