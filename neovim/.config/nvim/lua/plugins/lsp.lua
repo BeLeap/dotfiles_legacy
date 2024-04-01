@@ -94,6 +94,7 @@ return {
 
         vim.keymap.set('n', '<leader>rn', function() vim.lsp.buf.rename() end, { buffer = bufnr })
         vim.keymap.set('n', '<leader>ca', function() vim.lsp.buf.code_action() end, { buffer = bufnr })
+        vim.keymap.set('n', '<leader>fo', function() vim.lsp.buf.format() end, { buffer = bufnr })
       end)
 
       local lua_opts = lsp_zero.nvim_lua_ls()
