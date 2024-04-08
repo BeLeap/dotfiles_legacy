@@ -8,3 +8,6 @@ size = 16
 
 [window]
 padding = { x = 10, y = 10 }
+
+[shell]
+program = "/opt/homebrew/bin/fish"
