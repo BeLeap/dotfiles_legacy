@@ -24,6 +24,8 @@ if status is-interactive
     abbr ktx "kubectx"
     abbr kns "kubens"
 
+    abbr gmd "gh pr merge -d"
+
     if type -q starship 
         starship init fish | source
     end
