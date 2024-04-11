@@ -25,6 +25,7 @@ if status is-interactive
     abbr kns "kubens"
 
     abbr prmd "gh pr merge -d"
+    abbr prvw "gh pr view -w"
 
     if type -q starship 
         starship init fish | source
