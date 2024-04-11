@@ -26,6 +26,7 @@ if status is-interactive
 
     abbr prmd "gh pr merge -d"
     abbr prvw "gh pr view -w"
+    abbr prv "gh pr view"
 
     if type -q starship 
         starship init fish | source
