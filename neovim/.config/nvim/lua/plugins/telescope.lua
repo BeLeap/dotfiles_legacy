@@ -91,6 +91,8 @@ return {
               "--strip-cwd-prefix",
               "--exclude",
               "**/.git/*",
+              "--exclude",
+              "node_modules",
             },
           },
           live_grep = {
