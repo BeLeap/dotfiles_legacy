@@ -2,7 +2,11 @@ return {
   {
     'stevearc/oil.nvim',
     cmd = "Oil",
-    opts = {},
+    opts = {
+      view_options = {
+        show_hidden = true,
+      }
+    },
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   }
