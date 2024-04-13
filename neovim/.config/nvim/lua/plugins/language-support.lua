@@ -96,10 +96,6 @@ return {
     event = { "BufEnter *.tf" },
   },
   {
-    "simrat39/rust-tools.nvim",
-    event = { "BufEnter *.rs", "BufEnter *.toml" },
-  },
-  {
     "mhinz/vim-crates",
     event = { "BufEnter Cargo.toml" },
   },
