@@ -52,4 +52,8 @@ if status is-interactive
     if type -q carapace
         carapace _carapace | source
     end
+
+    if type -q rbenv
+        status --is-interactive; and rbenv init - fish | source
+    end
 end
