@@ -7,8 +7,7 @@ normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
 size = 16
 
 [window]
-padding = { x = 10, y = 30 }
-decorations = "Transparent"
+padding = { x = 10, y = 10 }
 startup_mode = "Maximized"
 
 [shell]
