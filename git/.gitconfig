@@ -35,4 +35,4 @@
 [includeIf "gitdir:~/work/"]
   path = ~/work/.gitconfig
 [commit]
-	template = /Users/beleap/.gitmessage
+	template = ~/.gitmessage
