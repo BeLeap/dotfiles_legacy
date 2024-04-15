@@ -7,7 +7,14 @@ normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
 size = 16
 
 [window]
-padding = { x = 10, y = 10 }
+padding = { x = 10, y = 30 }
+decorations = "Transparent"
+startup_mode = "Maximized"
 
 [shell]
 program = "/opt/homebrew/bin/fish"
+
+[keyboard]
+bindings = [
+  { key = "T", mods = "Command", action = "None" }
+]
