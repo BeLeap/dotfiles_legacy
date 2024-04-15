@@ -56,4 +56,8 @@ if status is-interactive
     if type -q rbenv
         status --is-interactive; and rbenv init - fish | source
     end
+
+    if type -q fzf
+        fzf --fish | source
+    end
 end
