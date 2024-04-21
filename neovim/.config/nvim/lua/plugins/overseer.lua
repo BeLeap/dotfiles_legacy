@@ -56,6 +56,23 @@ return {
           filetype = { "terraform", "tfvars" },
         },
       })
+
+      overseer.register_template({
+        name = "Run Test",
+        builder = function()
+          local file = vim.fn.expand("%:p")
+          local cmd = { "go", "test", file }
+          return {
+            cmd = cmd,
+            components = {
+              { "on_output_quickfix", set_diagnostics = true },
+              "on_result_diagnostics",
+              "default",
+            },
+          }
+        end,
+        filetype = { "go" },
+      })
     end
   },
 }
