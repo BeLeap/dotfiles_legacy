@@ -61,7 +61,7 @@ return {
         name = "Run Test",
         builder = function()
           local file = vim.fn.expand("%:p")
-          local cmd = { "go", "test", file }
+          local cmd = { "go", "test", "-v", file }
           return {
             cmd = cmd,
             components = {
