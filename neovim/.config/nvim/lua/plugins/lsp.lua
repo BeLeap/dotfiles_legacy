@@ -22,7 +22,9 @@ return {
 		event = "InsertEnter",
 		dependencies = {
 			{ "L3MON4D3/LuaSnip" },
-      { "hrsh7th/cmp-nvim-lsp-signature-help" },
+			{ "saadparwaiz1/cmp_luasnip" },
+			{ "hrsh7th/cmp-nvim-lsp-signature-help" },
+			{ "hrsh7th/cmp-path" },
 		},
 		config = function()
 			-- Here is where you configure the autocompletion settings.
@@ -35,7 +37,10 @@ return {
 
 			cmp.setup({
 				sources = {
+					{ name = "nvim_lsp" },
+					{ name = "luasnip" },
 					{ name = "nvim_lsp_signature_help" },
+					{ name = "path" },
 				},
 				formatting = lsp_zero.cmp_format(),
 				mapping = cmp.mapping.preset.insert({
