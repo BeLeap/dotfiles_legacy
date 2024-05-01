@@ -60,4 +60,8 @@ if status is-interactive
   if type -q fzf
     fzf --fish | source
   end
+
+  if type -q pyenv
+    status --is-interactive; and pyenv init - | source
+  end
 end
