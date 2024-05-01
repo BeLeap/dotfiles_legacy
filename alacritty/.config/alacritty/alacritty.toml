@@ -3,7 +3,7 @@ import = [
 ]
 
 [font]
-normal = { family = "CaskaydiaMono Nerd Font Mono", style = "Regular" }
+normal = { family = "Cascadia Code NF", style = "Regular" }
 size = 16
 
 [window]
