@@ -35,22 +35,20 @@ return {
 		"elkowar/yuck.vim",
 		event = "VeryLazy",
 	},
-	{
-		"ray-x/go.nvim",
-		-- FIXME: https://github.com/ray-x/go.nvim/issues/456
-		tag = "v0.2.0",
-		dependencies = { -- optional packages
-			"ray-x/guihua.lua",
-			"neovim/nvim-lspconfig",
-			"nvim-treesitter/nvim-treesitter",
-		},
-		config = function()
-			require("go").setup()
-		end,
-		event = { "CmdlineEnter" },
-		ft = { "go", "gomod" },
-		build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
-	},
+	-- {
+	-- 	"ray-x/go.nvim",
+	-- 	dependencies = { -- optional packages
+	-- 		"ray-x/guihua.lua",
+	-- 		"neovim/nvim-lspconfig",
+	-- 		"nvim-treesitter/nvim-treesitter",
+	-- 	},
+	-- 	config = function()
+	-- 		require("go").setup()
+	-- 	end,
+	-- 	event = { "CmdlineEnter" },
+	-- 	ft = { "go", "gomod" },
+	-- 	build = ':lua require("go.install").update_all_sync()', -- if you need to install/update all binaries
+	-- },
 	{
 		"folke/todo-comments.nvim",
 		event = { "BufEnter" },
