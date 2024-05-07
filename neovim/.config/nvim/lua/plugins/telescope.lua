@@ -93,6 +93,8 @@ return {
               "**/.git/*",
               "--exclude",
               "node_modules",
+              "--exclude",
+              "**/dist/*"
             },
           },
           live_grep = {
