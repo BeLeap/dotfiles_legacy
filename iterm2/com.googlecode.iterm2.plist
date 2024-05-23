@@ -4,8 +4,6 @@
 <dict>
 	<key>AllowClipboardAccess</key>
 	<true/>
-	<key>AlternateMouseScroll</key>
-	<true/>
 	<key>Command</key>
 	<string></string>
 	<key>Custom Color Presets</key>
@@ -369,6 +367,8 @@
 	<string>6656FFB4-B0FD-4E9E-A097-F3B43CD74944</string>
 	<key>DisableFullscreenTransparency</key>
 	<false/>
+	<key>DoubleClickPerformsSmartSelection</key>
+	<true/>
 	<key>HapticFeedbackForEsc</key>
 	<false/>
 	<key>HideScrollbar</key>
@@ -1156,12 +1156,18 @@
 			<string>kNextWindowPointerAction</string>
 		</dict>
 	</dict>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>PromptOnQuit</key>
 	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
+	<key>TmuxSyncClipboard</key>
+	<true/>
+	<key>TmuxUnpauseAutomatically</key>
+	<true/>
 	<key>UseBorder</key>
 	<false/>
 	<key>VisualIndicatorForEsc</key>
