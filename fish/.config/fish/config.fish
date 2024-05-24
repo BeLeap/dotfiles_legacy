@@ -36,9 +36,9 @@ if status is-interactive
     zoxide init fish | source
   end
   if type -q lsd
-    alias ls "lsd"
-    alias ll "lsd -l"
-    alias lla "lsd -la"
+    alias ls "lsd --group-directories-first"
+    alias ll "lsd --group-directories-first -l"
+    alias lla "lsd --group-directories-first -la"
   end
 
   if type -q nodenv
