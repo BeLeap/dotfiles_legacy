@@ -24,7 +24,7 @@ require("lazy").setup("plugins", {
     lazy = true,
   },
   install = {
-    colorscheme = { "nord" },
+    colorscheme = { "gruvbox" },
   },
 })
 
