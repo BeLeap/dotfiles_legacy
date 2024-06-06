@@ -29,6 +29,8 @@ if status is-interactive
   abbr prv "gh pr view"
   abbr prcm "gh pr create --assignee @me"
 
+  abbr tf "terraform"
+
   if type -q starship 
     starship init fish | source
   end
