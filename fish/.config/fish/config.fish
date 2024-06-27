@@ -19,6 +19,7 @@ if status is-interactive
   abbr gf "git fetch --prune --all"
   abbr gl "git pull"
   abbr gco "git checkout"
+  abbr glp "git pull --rebase && git push"
 
   abbr k "kubectl"
   abbr ktx "kubectx"
